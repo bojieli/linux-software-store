@@ -293,9 +293,9 @@ body {
 }
 .dock div a{display:block; width:70px;height:70px; outline:none;}
  
-.dock div a img{width:70px; height:70px; position:absolute; left:0; top:0; padding:3px; }
+.dock div a img{width:70px; height:70px; position:absolute; left:0; top:0; padding:3px; border:0px; }
 
-.dock div a img.on{border:1px solid #828da1;}
+/*.dock div a img.on{border:1px solid #828da1;}*/
 
 .dock div a img.hover{padding:10px; border:none;}
 
