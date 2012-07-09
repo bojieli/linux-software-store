@@ -8,23 +8,26 @@
 
 body {
   font-family: Geneva, Arial, Helvetica, sans-serif, Microsoft YaHei;
-  text-align: left;
+  text-align: center;
   font-size: small;
+  margin:0 auto; 
 }
+#container{ margin-left:auto; margin-right:auto;width: 1204px;}
 
 /* You named this layer login-background */
 #login-bg{
-    position: absolute;
-    left: 100px;
-    top:0px;
-  width: 1024px;
-  height: 768px;
-  z-index: 1;
+  position:absolute;
+  left: 170px;
+  top: 0;
+   width: 1024px;
+   height: 768px;
+   z-index: 1;
 }
 
 /* You named this layer CentOS-text */
 #Layer-2 {
-  position: absolute;
+ 
+  position:absolute;
   left: 672px;
   top: 705px;
   width: 80px;
@@ -34,7 +37,7 @@ body {
 
 /* You named this layer Gentoo-text */
 #Layer-3 {
-  position: absolute;
+  position:absolute;
   left: 800px;
   top: 201px;
   width: 70px;
@@ -44,7 +47,7 @@ body {
 
 /* You named this layer Fedora-text */
 #Layer-4 {
-  position: absolute;
+  position:absolute;
   left: 877px;
   top: 289px;
   width: 75px;
@@ -147,23 +150,22 @@ body {
   position: absolute;
   left: 34px;
   top: 197px;
-  width: 715px;
+  width: 346px;
   height: 411px;
   z-index: 14;
+    font-family: Microsoft YaHei;
+    font-size:20px;
+    text-align: center;
 }
 
-/* You named this layer QA  20060 */
-#button {
+/* You named this thebutton*/
+#button1 {
   position: absolute;
   left: 100px;
   top: 526px;
   width: 200px;
   height: 60px;
   z-index: 15;
-    font-family: Microsoft YaHei;
-    font-size:20px;
-    text-align: center;
-
 }
 
 /* You named this layer  */
@@ -293,11 +295,17 @@ body {
 }
 .dock div a{display:block; width:70px;height:70px; outline:none;}
  
-.dock div a img{width:70px; height:70px; position:absolute; left:0; top:0; padding:3px; border:0px; }
-
-/*.dock div a img.on{border:1px solid #828da1;}*/
+.dock div a img{width:70px; height:70px; position:absolute; left:0; top:0; padding:3px; }
 
 .dock div a img.hover{padding:10px; border:none;}
+
+.button1{border: 0px;}
+
+.button1 div a{display:block; width:200px;height:60px; outline:none;}
+ 
+.button1 div a img{width:200px; height:60px; position:absolute; left:0; top:0; padding:3px; }
+
+.button1 div a img.hover{padding:10px; border:none;}
 
 
 a:link { color: #000; }

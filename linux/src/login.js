@@ -22,8 +22,74 @@ $(document).ready(function(){
     function(){ $(this).attr( "alt", tmpalt ); });
 
 
+$(function(){
+	$(".dock> div > a").each(function(){
+		$(this).find("img").hover(function(){
+			$(this).animate({
+				width: 120,
+				height: 120,
+				padding: 10,
+				left: -20,
+				top: -20
+			},200).addClass("hover");				   
+		},function(){
+			$(this).animate({
+				width: 70,
+				height: 70,
+				padding: 3,
+				left: 0,
+				top: 0
+			},200).removeClass("hover");	
+		});	
+		$(this).click(function(){
+			//添加当前选中图片样式
+			$(".dock> div > a > img").removeClass("on");
+			$(this).find("img").addClass("on");
+			//启用超链接?			
+			$(this).attr("href");
+			return true;
+		}).hover(function(){
+			$(this).css("z-index",1);	
+		},function(){
+			$(this).css("z-index",0);
+		});
+	});
+});
 
 
+$(function(){
+	$(".button1> div > a").each(function(){
+		$(this).find("img").hover(function(){
+			$(this).animate({
+				width: 220,
+				height: 80,
+				padding: 10,
+				left: -20,
+				top: -20
+			},200).addClass("hover");				   
+		},function(){
+			$(this).animate({
+				width: 200,
+				height: 60,
+				padding: 3,
+				left: 0,
+				top: 0
+			},200).removeClass("hover");	
+		});	
+		$(this).click(function(){
+			//添加当前选中图片样式
+			$(".button1> div > a > img").removeClass("on");
+			$(this).find("img").addClass("on");
+			//启用超链接?			
+			$(this).attr("href");
+			return true;
+		}).hover(function(){
+			$(this).css("z-index",1);	
+		},function(){
+			$(this).css("z-index",0);
+		});
+	});
+});
 
 
 
