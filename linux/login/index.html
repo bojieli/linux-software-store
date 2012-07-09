@@ -24,54 +24,18 @@
 <script type="text/javascript" src="DD_belatedPNG_0.0.8a-min.js"></script>
 <![endif]-->
 
-<!-- All the javascript generated for this page design is in this file
+<!-- All the javascript generated for this page design is in this file --
 <script type="text/javascript" src="../src/login.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 -->
 <!--此处增加dock效果-->
 <script type="text/javascript" src="../src/jquery-1.2.6.pack.js"></script>
-<script type="text/javascript">
-
-$(function(){
-	$(".dock> div > a").each(function(){
-		$(this).find("img").hover(function(){
-			$(this).animate({
-				width: 120,
-				height: 120,
-				padding: 10,
-				left: -20,
-				top: -20
-			},200).addClass("hover");				   
-		},function(){
-			$(this).animate({
-				width: 70,
-				height: 70,
-				padding: 3,
-				left: 0,
-				top: 0
-			},200).removeClass("hover");	
-		});	
-		$(this).click(function(){
-			//添加当前选中图片样式
-			$(".dock> div > a > img").removeClass("on");
-			$(this).find("img").addClass("on");
-			//启用超链接?			
-			$(this).attr("href");
-			return true;
-		}).hover(function(){
-			$(this).css("z-index",1);	
-		},function(){
-			$(this).css("z-index",0);
-		});
-	});
-});
-
-</script>
+<script type="text/javascript" src="../src/login.js"></script>
 </head>
 <body>
-
+<div id="cocontainer">
   <!-- This is 'login-background' -->
-  <div id="login-bg" class="loginbackground"  >
+  <div id="login-bg" class="login-bg" >
     <img src="./img/login-bg.jpg" width="1024" height="768" alt="login-background" />
 
      <div class="dock">
@@ -134,23 +98,29 @@ $(function(){
         <img src="./img/puppy.png" width="70" height="70" alt="puppy"/>
 		</a></div>
 		
+		
 </div>
-		
-		
-    <div id="messagebox"  >
-      <img src="./img/messagebox.png" width="360" height="411" alt="" />
-     </div>
-     
-	<!-- This is 'help  button' -->
-      <div id="button" class="help"  >
+	<div id="button1" class="help"  >
 		<a href="../help/help.html">
 			<img src="./img/button.png" width="200" height="60" alt="help" class="pngimg" />
 			<div id="Layer-16"  >
-			<img src="./img/Layer-16.png" width="151" height="26" alt="" class="pngimg" /></div>
+			<img src="./img/Layer-16.png" width="151" height="26" alt="help" class="pngimg" /></div>
         </a>
 	</div>
+    <div id="messagebox" class="messagebox" style="background-image:url(./img/messagebox.png);width=346px;height=411px;border:0px;" >
+          <p><strong><a href="http://zh.wikipedia.org/wiki/Linux" target="value_blank" ><strong>linux简介</strong></a></strong></p>
+          <p><strong><a href="http://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E8%BD%AF%E4%BB%B6 " target="value_blank"><strong>自由软件</strong></a></strong></p>
+          <div><strong><h1 >友情链接 </h1></strong>
+					<p ><a href="http://lug.ustc.edu.cn/wiki/" target="value_blank">科大LUG---科大linux人的家</a></p> 
+					<p><a href="http://mirrors.ustc.edu.cn/" target="value_blank">linux镜像服务---丰富的资源供你下载</a></p>   
+					<p><a href="http://lug.ustc.edu.cn/wiki/lug/weeklyparty" target="value_blank" >LUG每周小聚---带你入门进阶</a></p>    
+          </div>
+   </div>
+     
+	<!-- This is 'help  button' -->
+     
     <!-- This is 'tux' -->
-    <div id="tux" class="tux"  >
+    <div id="tux" class="tux">
       <img src="./img/tux.png" width="145" height="185" alt="tux" class="pngimg" /></div>
 
     <!-- This is 'Ubuntu-text' -->
@@ -196,8 +166,8 @@ $(function(){
     <!-- This is 'CentOS-text' -->
     <div id="Layer-2" class="CentOStext"  >
       <img src="./img/Layer-2.png" width="80" height="18" alt="CentOS-text" class="pngimg" /></div>
-
-  </div>
+</div>
+</div> 
 
 <!-- This is the p2cedit Text Stylizer dialog and tools.  It will not exist
 in the code for your final page. --
