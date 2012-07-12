@@ -7,12 +7,16 @@
  */
 
 body {
-  font-family: Geneva, Arial, Helvetica, sans-serif, Microsoft YaHei;
+  font-family: Geneva, Arial, Helvetica, sans-serif, Microsoft YaHei,KaiTi;
   text-align: center;
   font-size: small;
   margin:0 auto; 
 }
-#container{ margin-left:auto; margin-right:auto;width: 1204px;}
+#container{ 
+margin-left:auto;
+ margin-right:auto;
+ width: 1204px;
+ }
 
 /* You named this layer login-background */
 #login-bg{
@@ -153,12 +157,12 @@ body {
   width: 346px;
   height: 411px;
   z-index: 14;
-    font-family: Microsoft YaHei;
+    font-family: KaiTi;
     font-size:20px;
     text-align: center;
 }
 
-/* You named this thebutton*/
+/* You named this the button1*/
 #button1 {
   position: absolute;
   left: 100px;
@@ -168,7 +172,7 @@ body {
   z-index: 15;
 }
 
-/* You named this layer  */
+/* You named this layer help */
 #Layer-16 {
   position: absolute;
   left: 25px;
@@ -287,9 +291,7 @@ body {
   height: 83px;
   z-index: 27;
 }
-.pngimg{
-    border: 0px;
-}
+
 .dock{
     border: 0px;
 }
@@ -299,22 +301,17 @@ body {
 
 .dock div a img.hover{padding:10px; border:none;}
 
-.button1{border: 0px;}
 
-.button1 div a{display:block; width:200px;height:60px; outline:none;}
- 
-.button1 div a img{width:200px; height:60px; position:absolute; left:0; top:0; padding:3px; }
+a:link { color: blue; text-decoration: none;}
 
-.button1 div a img.hover{padding:10px; border:none;}
-
-
-a:link { color: #000; }
-
-a:visited { color: #000; }
+a:visited { 
+				color: purple;
+				text-decoration: none;
+			 }
 
 a:hover {
-  color: #000;
-  /* text-decoration: underline; */
+  color: red;
+  text-decoration: none;
   /* font-weight: bold; */
 }
 

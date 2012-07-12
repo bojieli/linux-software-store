@@ -31,7 +31,7 @@ $(function(){
 				padding: 10,
 				left: -20,
 				top: -20
-			},200).addClass("hover");				   
+			},200).fadeTo(200,1.5).addClass("hover");				   
 		},function(){
 			$(this).animate({
 				width: 70,
@@ -39,7 +39,7 @@ $(function(){
 				padding: 3,
 				left: 0,
 				top: 0
-			},200).removeClass("hover");	
+			},200).fadeTo(200,0.7).removeClass("hover");	
 		});	
 		$(this).click(function(){
 			//添加当前选中图片样式
@@ -61,8 +61,8 @@ $(function(){
 	$(".button1> div > a").each(function(){
 		$(this).find("img").hover(function(){
 			$(this).animate({
-				width: 220,
-				height: 80,
+				width: 160,
+				height: 64,
 				padding: 10,
 				left: -20,
 				top: -20
