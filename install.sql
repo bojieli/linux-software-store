@@ -90,6 +90,7 @@ CREATE TABLE IF NOT EXISTS cz_dist_detail (
 CREATE TABLE IF NOT EXISTS cz_repo (
 	`rid` INT(10) NOT NULL AUTO_INCREMENT,
 	`did` INT(10) NOT NULL,
+	`name` VARCHAR(50) NOT NULL,
 	PRIMARY KEY (`rid`),
 	FOREIGN KEY (`did`) REFERENCES cz_dist(`did`)
 );
@@ -127,6 +128,7 @@ CREATE TABLE IF NOT EXISTS cz_pack (
 CREATE TABLE IF NOT EXISTS cz_pack_detail (
 	`pid` INT(10) NOT NULL,
 	`description` TEXT,
+	`icon` BLOB, -- binary image data
 	FOREIGN KEY (`pid`) REFERENCES cz_pack(`pid`)
 );
 
@@ -154,7 +156,8 @@ CREATE TABLE IF NOT EXISTS cz_pack_comment (
 	PRIMARY_KEY (`cid`),
 	FOREIGN KEY (`pid`) REFERENCES cz_pack(`pid`),
 	INDEX key_time (`time`),
-	INDEX key_status (`status`)
+	INDEX key_status (`status`),
+	INDEX key_author (`author`)
 );
 
 -- for example rpm, deb
