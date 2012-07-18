@@ -46,7 +46,7 @@ if ($dist[0] >= 'a' && $dist[0] <= 'z') {
     <!-- This is 'content-1' -->
     <div id="content-1" class="content-arch">
     
-      <!--<script type="text/javascript" src="../../src/button.js"></script>-->
+      <!--<script type="text/javascript" src="../../src/tab.js"></script>-->
       <style>
       .button-dist { background-image: url(static/img/<?=$dist?>/button-1.png) }
       </style>
@@ -73,7 +73,7 @@ if ($dist[0] >= 'a' && $dist[0] <= 'z') {
       
       <!-- This is 'rb5' -->
       <div id="rb5" class="nav">
-      <a href="../centos/centos.html">CentOS</a></div>
+      <a href="dist.php?dist=CenOS">CentOS</a></div>
 
       <!-- This is 'rb4' -->
       <div id="rb4" class="nav">
