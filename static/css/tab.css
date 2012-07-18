@@ -1,0 +1,80 @@
+page {
+	font-size: 12px;
+	padding: 40px;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+h2 {
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+}
+
+
+.tabs {
+	width: 504px;
+	height: 108px;
+	border: 1px solid #CCC;
+}
+.tabs li {
+	line-height: 26px;
+	height: 28px;
+	float: left;
+	position: relative;
+}
+.tabs h2 {
+	text-align: center;
+	background:url("../img/$dist/button-2.png");
+	width: 100px;
+	border-left: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	cursor: pointer;
+}
+.tabs h2.active {
+	background:url("../img/$dist/button-1.png");
+	border-bottom: 1px solid #FFF;
+}
+.tabs .tab_0 h2 {
+	border-left: none;
+}
+.tabs .tab_0 div {
+	display: block;
+}
+.tabs div {
+	background: #FFF;
+	display: none;
+	width: 363px;
+	height: 40px;
+	border-top: none;
+	padding: 20px;
+	position: absolute;
+	top: 28px;
+	left: 0;
+}
+
+.tab_0 div {
+	left: 0;
+}
+.tab_1 div {
+	left: -100px;
+}
+.tab_2 div {
+	left: -200px;
+}
+.tab_3 div {
+	left: -300px;
+}
+
+.tab_4 div {
+	left: -400px;
+}
+.tab_5 div {
+	left: -400px;
+}
+.tab_6 div {
+	left: -600px;
+}
+
