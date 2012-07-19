@@ -16,8 +16,7 @@ h2 {
 
 .tabs {
 	width: 504px;
-	height: 108px;
-	border: 1px solid #CCC;
+	height: 108px;	
 }
 .tabs li {
 	line-height: 26px;
@@ -44,10 +43,10 @@ h2 {
 	display: block;
 }
 .tabs div {
-	background: #FFF;
+	background: none;
 	display: none;
-	width: 363px;
-	height: 40px;
+	width: 600px;
+	height: 550px;
 	border-top: none;
 	padding: 20px;
 	position: absolute;
