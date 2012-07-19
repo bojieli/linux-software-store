@@ -12,6 +12,9 @@ $dist = $_GET['dist'];
  *  July 10, 2012, 10:34 am
  *  change font 
  */
+a img {border:none}
+a img:hover {border:none}
+
 body {
   font-family: KaiTi, Geneva, Arial, Helvetica, sans-serif;
   font-size: small;

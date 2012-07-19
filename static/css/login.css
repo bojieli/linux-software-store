@@ -5,6 +5,13 @@
  *  July 4, 2012, 21:59 
  *
  */
+a img {border:none}
+a img:hover {border:none}
+
+.dock img {
+  width: 70px;
+  height: 70px;
+}
 
 body {
   font-family: Geneva, Arial, Helvetica, sans-serif, Microsoft YaHei,KaiTi;
