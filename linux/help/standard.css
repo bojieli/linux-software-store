@@ -2,7 +2,8 @@ BODY, TD
 {
     margin: 0px;
     padding: 0px;
-	font: 12px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
+    background-color: darkblue;
+	 font: 12px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
     color: #777;
 }
 
@@ -11,7 +12,7 @@ TEXTAREA
     margin: 0px;
     padding: 0px;
 	font: 12px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
-    color: #777;
+  color: #777;
 	border: 1px solid #BBB;
 	background-color: #FFF;
 	overflow-y: auto;
