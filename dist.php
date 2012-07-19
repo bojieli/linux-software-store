@@ -5,8 +5,8 @@ if (empty($_GET['dist'])) {
 	$dist = $_GET['dist'];
 }
 $distname = $dist;
-if ($dist[0] >= 'a' && $dist[0] <= 'z') {
-	$distname[0] = chr(ord($dist[0]) - ord('a') + ord('A'));
+if ($dist[0]>='a'&& $dist[0] <= 'z') {
+	$distname[0] = chr(ord($dist[0])- ord('a') + ord('A'));
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -26,7 +26,7 @@ if ($dist[0] >= 'a' && $dist[0] <= 'z') {
 
 <!-- The Primary External CSS style sheet. -->
 <link rel="stylesheet" type="text/css" href="static/css/style.css" media="screen" />
-
+<link rel="stylesheet" type="text/css" href="static/css/tab.css" media="screen" />
 <!-- 选项卡切换个效果标签位置 -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
@@ -45,26 +45,64 @@ if ($dist[0] >= 'a' && $dist[0] <= 'z') {
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
     <!-- This is 'content-1' -->
     <div id="content-1" class="content-arch">
-    
-      <!--<script type="text/javascript" src="../../src/tab.js"></script>-->
+      <script type="text/javascript" language="javascript" src="./static/js/jquery-1.7.1.min.js"></script>
+      <script type="text/javascript" src="static/js/tab.js"></script>
       <style>
       .button-dist { background-image: url(static/img/<?=$dist?>/button-1.png) }
       </style>
-      <div id="button-0" class="button button-dist">小站推荐</div>
-      <div id="button-1" class="button button-dist">办公</div>
-      <div id="button-2" class="button button-dist">学习</div>
-      <div id="button-3" class="button button-dist">科学</div>
-      <div id="button-4" class="button button-dist">娱乐</div>
-      <div id="button-5" class="button button-dist">其他</div>
-      <div id="button-6" class="button button-dist">搜索结果</div>
-
+      <div class="tabs">
+      	<ul>
+          	<li id="button-0" class="first tab_0 button button-dist">
+              	<h2 class="active">小站推荐</h2>
+                  <div>
+                  	小站推荐内容
+                  </div>
+              </li>
+          	<li id="button-1" class="tab_1 button button-dist">
+              	<h2>办公</h2>
+                  <div>
+                  	办公类内容
+                  </div>
+              </li>
+          	<li id="button-2" class="tab_2 button button-dist">
+              	<h2>学习</h2>
+                  <div>
+                  	学习类内容
+      			</div>
+              </li>
+          	<li id="button-3" class="tab_3 button button-dist">
+              	<h2>科学</h2>
+                  <div>
+                  	科学类内容
+                  </div>
+              </li>
+          	<li id="button-4" class="tab_4 button button-dist">
+              	<h2>娱乐</h2>
+                  <div>
+                  	娱乐类内容
+                  </div>
+              </li>
+          	<li id="button-5" class="tab_5 button button-dist">
+              	<h2>其他</h2>
+                  <div>
+                  	其他类内容
+                  </div>
+              </li>
+          	<li id="button-6" class="tab_6 button button-dist">
+              	<h2>搜索结果</h2>
+                  <div>
+                  	搜索结果内容
+                  </div>
+              </li>
+          </ul>
+      </div>
     </div>
 
     <!-- This is 'content-2' -->
     <div id="content-2">
       <!-- This is '  calendar' -->
       <div id="calendar" class="calendar"  >
-      <img src="./static/img/<?=$dist?>/calendar.png" width="205" height="173" alt="  calendar" class="pngimg" /></div>
+      <img src="./static/img/<?=$dist?>/calendar.png" width="205" height="173" alt="calendar" class="pngimg" /></div>
 
       <!-- This is 'home-button' -->
       <div id="home-button" class="home-button" style="background-image:url(./static/img/<?=$dist?>/button-1.png);width:230px;height:55px;border:0px;" >
@@ -73,47 +111,46 @@ if ($dist[0] >= 'a' && $dist[0] <= 'z') {
       
       <!-- This is 'rb5' -->
       <div id="rb5" class="nav">
-      <a href="dist.php?dist=CenOS">CentOS</a></div>
+      <a href="dist.php?dist=centos">CentOS</a></div>
 
       <!-- This is 'rb4' -->
       <div id="rb4" class="nav">
-      <a href="../debian/debian.html">Debian</a> </div>
+      <a href="dist.php?dist=debian">Debian</a> </div>
 
       <!-- This is 'rb3' -->
       <div id="rb3" class="nav">
-      <a href="../deepin/deepin.html">Deepin</a></div>
+      <a href="dist.php?dist=deepin">Deepin</a></div>
 
       <!-- This is 'rb2' -->
       <div id="rb2" class="nav">
-      <a href="../fedora/fedora.html">Fedora</a></div>
+      <a href="dist.php?dist=fedora">Fedora</a></div>
 
       <!-- This is 'rb1' -->
       <div id="rb1" class="nav">
-      <a href="../gentoo/gentoo.html">Gentoo</a> </div>
+      <a href="dist.php?dist=gentoo">Gentoo</a> </div>
 
       <!-- This is 'lb5' -->
       <div id="lb5" class="nav">
-      <a href="../mint/mint.html">Mint</a></div>
+      <a href="dist.php?=mint">Mint</a></div>
 
       <!-- This is 'lb4' -->
       <div id="lb4" class="nav">
-      <a href="../opensuse/opensuse.html">Opensuse</a></div>
+      <a href="dist.php?dist=opensuse">Opensuse</a></div>
 
       <!-- This is 'lb3' -->
       <div id="lb3" class="nav">
-      <a href="../puppy/puppy.html">Puppy</a> </div>
+      <a href="dist.php?dist=puppy">Puppy</a> </div>
 
       <!-- This is 'lb2' -->
       <div id="lb2" class="nav">
-      <a href="../slackware/slackware.html">Slackware</a></div>
+      <a href="dist.php?dist=slackware">Slackware</a></div>
 
       <!-- This is 'lb1' -->
       <div id="lb1" class="nav">
-      <a href="../ubuntu/ubuntu.html">Ubuntu</a></div>
+      <a href="dist.php?dist=ubuntu">Ubuntu</a></div>
 
     </div>
 
   </div>
-<!--<script>$('#p2c-edit').load('/app/p2cedit/p2cedit.html');</script>-->
 </body>
 </html>
