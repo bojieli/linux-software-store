@@ -33,7 +33,7 @@ h2 {
 	cursor: pointer;
 }
 .tabs h2.active {
-	background:url("../img/$dist/button-1.png");
+	background:url("../img/$dist/button-3.png");
 	border-bottom: 1px solid #FFF;
 }
 .tabs .tab_0 h2 {
@@ -71,7 +71,7 @@ h2 {
 	left: -400px;
 }
 .tab_5 div {
-	left: -400px;
+	left: -500px;
 }
 .tab_6 div {
 	left: -600px;
