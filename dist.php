@@ -47,9 +47,7 @@ if ($dist[0]>='a'&& $dist[0] <= 'z') {
     <div id="content-1" class="content-arch">
       <script type="text/javascript" language="javascript" src="./static/js/jquery-1.7.1.min.js"></script>
       <script type="text/javascript" src="static/js/tab.js"></script>
-      <style>
-      .button-dist { background-image: url(static/img/<?=$dist?>/button-1.png) }
-      </style>
+      
       <div class="tabs">
       	<ul>
           	<li id="button-0" class="first tab_0 button button-dist">
