@@ -1,3 +1,7 @@
+<?php
+header("Content-Type: text/css");
+$dist = $_GET['dist'];
+?>
 /*
  *  style.css
  *
@@ -50,7 +54,7 @@ p {
 	line-height: 55px;
 	font-size: 22px;
 	text-align: center;
-	background-image: url(../img/$dist/button-4.png);
+	background-image: url(../img/<?=$dist?>/button-4.png);
 }
 
 /* You named this layer home-button */
