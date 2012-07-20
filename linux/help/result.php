@@ -42,9 +42,9 @@
         						<td class="header" style="border-bottom: 1px solid #BBB; height: 60px; width: 55px;" align="center" valign="middle">
         								<img border="0" width=48 height=48 src="images/chooser.png">
         						</td>
-        						<td class="header" style="border-bottom: 1px solid #BBB;"><b>帮助新手旋转发行版</b>
+        						<td class="header" style="border-bottom: 1px solid #BBB;"><b>帮助新手选择发行版</b>
         						<font style="font-size: 8pt;">
-        							<br>&copy;&nbsp;<a href="../index.html">linux software store</a>
+        							<br>&copy;&nbsp;<a href="../../index.html">linux software store</a>
         							<br>( <a href="questionnaire.html">测试页面</a> )</font>
         						</td>
        						 <td class="header" style="width: 100px; border-bottom: 1px solid #BBB; font-size: 8pt;">&nbsp;</td>
@@ -52,6 +52,12 @@
 					   <tr>
 	    					<td class="main" colspan="3" style="height: auto;" valign="top">
 							<h2 style="margin-bottom: 0px; padding-bottom: 0px;">反馈结果</h2>
+                      <div>
+                      <!----此处用来展示linux 选择推荐的linux发行版---->
+                      </div>						
+							
+							
+							
 							<br>
 							<br>
 							<b>感谢你的参与！</b>
