@@ -46,6 +46,7 @@ $distname = firstLetterToUpper($dist);
 <div id="wrapper">
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
+    <div id="header"></div>
     <!-- This is 'content-1' -->
     <div id="content-1" class="content-arch">
       <script type="text/javascript" language="javascript" src="./static/js/jquery-1.7.1.min.js"></script>
@@ -116,7 +117,7 @@ $distname = firstLetterToUpper($dist);
       <div class="nav"><a href="dist.php?dist=<?=$d?>"><?=firstLetterToUpper($d) ?></a></div>
       <?php } ?>
     </div>
-   </div>
   </div>
+</div>
 </body>
 </html>

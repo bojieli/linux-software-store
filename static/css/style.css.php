@@ -13,9 +13,6 @@ $dist = $_GET['dist'];
  *  change font 
  */
 
-#wrapper { text-align:left; margin:0 auto; }
- 
- 
 a img {border:none}
 a img:hover {border:none}
 
@@ -23,48 +20,52 @@ body {
   font-family: KaiTi, Geneva, Arial, Helvetica, sans-serif;
   font-size: small;
   vertical-align: middle;
-  text-align:center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+  text-align: left;
+  margin: 0 auto;
+  width: 1024px;
 }
 p {
     font-family: KaiTi;
-    font-size:22px;
-    padding-top:1px;
+    font-size: 22px;
+    padding-top: 1px;
 }
 /* You named this layer   3 */
 #background {
-  position: absolute;
-  left: 170px;
-  top: 0px;
   width: 1024px;
   height: 768px;
-  z-index: 1;
+}
+#header {
+  width: 100%;
+  height: 188px;
 }
 /* You named this layer  230550 */
 #content-2 {
-  position: absolute;
-  left: 22px;
-  top: 188px;
+  float: left;
+  margin: 0 22px;
   width: 230px;
   height: 550px;
-  z-index: 2;
   background-image: url(../img/content-2.png);
 }
 /* You named this layer   calendar */
 #calendar {
-  padding:10px;
+  padding: 10px;
   width: 205px;
   height: 200px;
 }
 .nav {
-	float: left;
-	width: 115px;
-	height: 55px;
-	line-height: 55px;
-	font-size: 22px;
-	text-align: center;
-	background-image: url(../img/<?=$dist?>/button-4.png);
+  float: left;
+  width: 115px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 22px;
+  text-align: center;
+  background-image: url(../img/<?=$dist?>/button-4.png);
 }
-
 /* You named this layer home-button */
 #home-button {
   width: 230px;
@@ -74,20 +75,17 @@ p {
     font-size:40px;
     text-align: center;  
 }
+
 /* You named this layer content-1 */
 #content-1 {
-  position: absolute;
-  left: 292px;
-  top: 188px;
+  float: right;
+  margin-right: 35px;
   width: 700px;
   height: 550px;
   background-image: url(../img/content-1.png);
 }
 /* You named this layer lightbutton */
 #lightbutton {
-  position: absolute;
-  left: 400px;
-  top: 0px;
   width: 100px;
   height: 30px;
   z-index: 16;
@@ -95,14 +93,13 @@ p {
     font-size:20px;
     text-align: center;  
 }
-
 .button {
-	float: left;
-	width: 100px;
-	height: 30px;
-	line-height: 30px;
-	font-size: 20px;
-	text-align: center;
+  float: left;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
 }
 /* Here are some examples of how you might want to change the
  * look and behavior of the links on your page.  Some examples for
@@ -113,10 +110,12 @@ a {
   border: 0px;
 }
 a:link {
-    color: #000;
-    text-decoration: none;
-     }
-a:visited { color:#000 ; text-decoration: none;
+  color: #000;
+  text-decoration: none;
+}
+a:visited {
+  color:#000;
+  text-decoration: none;
 }
 a:hover {
   color: #000;
