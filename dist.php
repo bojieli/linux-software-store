@@ -40,7 +40,7 @@ if ($dist[0]>='a'&& $dist[0] <= 'z') {
 
 </head>
 <body>
-
+<div id="wrapper">
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
     <!-- This is 'content-1' -->
@@ -106,7 +106,14 @@ if ($dist[0]>='a'&& $dist[0] <= 'z') {
       <div id="home-button" class="home-button" style="background-image:url(./static/img/<?=$dist?>/button-1.png);width:230px;height:55px;border:0px;" >
         <a href="index.html">返回首页</a>
       </div>
+     
+     
+     
+      <!-------------这里可能要修改成PHP了因为此处可能产生一个指向自身的超链接------------
+             
+      //              此处我觉得可以采用字符串数组存放每个dist-name,用for循环控制输出
       
+      //              这样应该不会有产生重复的链接了------------------------------------>
       <!-- This is 'rb5' -->
       <div id="rb5" class="nav">
       <a href="dist.php?dist=centos">CentOS</a></div>
@@ -148,7 +155,7 @@ if ($dist[0]>='a'&& $dist[0] <= 'z') {
       <a href="dist.php?dist=ubuntu">Ubuntu</a></div>
 
     </div>
-
+   </div>
   </div>
 </body>
 </html>

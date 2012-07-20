@@ -12,6 +12,10 @@ $dist = $_GET['dist'];
  *  July 10, 2012, 10:34 am
  *  change font 
  */
+
+#wrapper { text-align:left; margin:0 auto; }
+ 
+ 
 a img {border:none}
 a img:hover {border:none}
 
@@ -19,6 +23,7 @@ body {
   font-family: KaiTi, Geneva, Arial, Helvetica, sans-serif;
   font-size: small;
   vertical-align: middle;
+  text-align:center;
 }
 p {
     font-family: KaiTi;
