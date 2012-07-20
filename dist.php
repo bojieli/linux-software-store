@@ -4,10 +4,13 @@ if (empty($_GET['dist'])) {
 } else {
 	$dist = $_GET['dist'];
 }
-$distname = $dist;
-if ($dist[0]>='a'&& $dist[0] <= 'z') {
-	$distname[0] = chr(ord($dist[0])- ord('a') + ord('A'));
+function firstLetterToUpper($word) {
+	if ($word[0] >= 'a'&& $word[0] <= 'z') {
+		$word[0] = chr(ord($word[0])- ord('a') + ord('A'));
+	}
+	return $word;
 }
+$distname = firstLetterToUpper($dist);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -106,54 +109,12 @@ if ($dist[0]>='a'&& $dist[0] <= 'z') {
       <div id="home-button" class="home-button" style="background-image:url(./static/img/<?=$dist?>/button-1.png);width:230px;height:55px;border:0px;" >
         <a href="index.html">返回首页</a>
       </div>
-     
-     
-     
-      <!-------------这里可能要修改成PHP了因为此处可能产生一个指向自身的超链接------------
-             
-      //              此处我觉得可以采用字符串数组存放每个dist-name,用for循环控制输出
-      
-      //              这样应该不会有产生重复的链接了------------------------------------>
-      <!-- This is 'rb5' -->
-      <div id="rb5" class="nav">
-      <a href="dist.php?dist=centos">CentOS</a></div>
 
-      <!-- This is 'rb4' -->
-      <div id="rb4" class="nav">
-      <a href="dist.php?dist=debian">Debian</a> </div>
-
-      <!-- This is 'rb3' -->
-      <div id="rb3" class="nav">
-      <a href="dist.php?dist=deepin">Deepin</a></div>
-
-      <!-- This is 'rb2' -->
-      <div id="rb2" class="nav">
-      <a href="dist.php?dist=fedora">Fedora</a></div>
-
-      <!-- This is 'rb1' -->
-      <div id="rb1" class="nav">
-      <a href="dist.php?dist=gentoo">Gentoo</a> </div>
-
-      <!-- This is 'lb5' -->
-      <div id="lb5" class="nav">
-      <a href="dist.php?=mint">Mint</a></div>
-
-      <!-- This is 'lb4' -->
-      <div id="lb4" class="nav">
-      <a href="dist.php?dist=opensuse">Opensuse</a></div>
-
-      <!-- This is 'lb3' -->
-      <div id="lb3" class="nav">
-      <a href="dist.php?dist=puppy">Puppy</a> </div>
-
-      <!-- This is 'lb2' -->
-      <div id="lb2" class="nav">
-      <a href="dist.php?dist=slackware">Slackware</a></div>
-
-      <!-- This is 'lb1' -->
-      <div id="lb1" class="nav">
-      <a href="dist.php?dist=ubuntu">Ubuntu</a></div>
-
+      <?php $dists = array('archlinux', 'centos', 'debian', 'deepin', 'fedora', 'gentoo', 'mint', 'opensuse', 'puppy', 'slackware', 'ubuntu');
+      foreach ($dists as $d) 
+      	if ($d != $dist) { ?>
+      <div class="nav"><a href="dist.php?dist=<?=$d?>"><?=firstLetterToUpper($d) ?></a></div>
+      <?php } ?>
     </div>
    </div>
   </div>
