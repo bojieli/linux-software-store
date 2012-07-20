@@ -45,7 +45,7 @@
         						<td class="header" style="border-bottom: 1px solid #BBB;"><b>帮助新手旋转发行版</b>
         						<font style="font-size: 8pt;">
         							<br>&copy;&nbsp;<a href="../index.html">linux software store</a>
-        							<br>( <a href="index.php?firsttime=true">测试页面</a> )</font>
+        							<br>( <a href="questionnaire.html">测试页面</a> )</font>
         						</td>
        						 <td class="header" style="width: 100px; border-bottom: 1px solid #BBB; font-size: 8pt;">&nbsp;</td>
    						 </tr>
