@@ -16,7 +16,7 @@
 		<META NAME="Creation_Date" CONTENT="12/07/2012">
 		<META name="revisit-after" content="15 days">
 		<title>帮助新手选linux发行版</title>
-		<! -- Hack for alphachannel png with IE -->
+		<!-- Hack for alphachannel png with IE -->
 		<style type="text/css">
 		img {
 			behavior:	url("pngbehavior.htc");
