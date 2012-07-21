@@ -1,5 +1,10 @@
 ﻿<?php
-
+if (empty($_POST)) {
+	echo "<script>document.location.href='help.html';</script>";
+	exit();
+}
+require_once "dist_corr.inc.php";
+$corr = dist_corr($_POST);
 ?>
 
 
