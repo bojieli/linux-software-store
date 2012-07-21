@@ -17,24 +17,23 @@ body {
   font-family: Geneva, Arial, Helvetica, sans-serif, Microsoft YaHei,KaiTi;
   text-align: center;
   font-size: small;
-  margin:0 auto; 
+  margin: 0;
+  padding: 0;
 }
 
-#wrapper { text-align:left; margin:0 auto; }
-#container{ 
- margin-left:auto;
- margin-right:auto;
- width: 1204px;
- }
+#wrapper {
+  text-align:left;
+  margin:0 auto;
+  width: 1024px;
+}
 
 /* You named this layer login-background */
 #login-bg{
-  position:absolute;
-  left: 170px;
-  top: 0;
+  position:relative;
    width: 1024px;
    height: 768px;
    z-index: 1;
+   background: url(../img/login/login-bg.jpg) no-repeat;
 }
 
 /* You named this layer CentOS-text */
