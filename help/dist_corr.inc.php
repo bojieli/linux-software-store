@@ -1,5 +1,7 @@
 <?php
-$fields = array(
+class dist_corr {
+
+private $fields = array(
 	'install_type' => array(
 		'2' => '有图形化安装界面',
 		'1' => '有命令行安装方式'
@@ -67,7 +69,7 @@ $fields = array(
 	)
 );
 
-function abs_diff($in, $ref) {
+private function abs_diff($in, $ref) {
 	if ($in == $ref)
 		return 1;
 	if ($in == $ref + 1 || $in + 1 == $ref)
@@ -75,35 +77,35 @@ function abs_diff($in, $ref) {
 	return 0;
 }
 
-function equal_nonzero($in, $ref) {
+private function equal_nonzero($in, $ref) {
 	if ($in == 0)
 		return 0.5;
 	return $in == $ref ? 1 : 0;
 }
 
-function equal($in, $ref) {
+private function equal($in, $ref) {
 	return $in == $ref ? 1 : 0;
 }
 
-function greater_or_equal($in, $ref) {
+private function greater_or_equal($in, $ref) {
 	return $in >= $ref ? 1 : 0;
 }
 
-function less_or_equal($in, $ref) {
+private function less_or_equal($in, $ref) {
 	return $in <= $ref ? 1 : 0;
 }
 
-function in_list($in, $ref) {
+private function in_list($in, $ref) {
 	return in_array($in, $ref) ? 1 : 0;
 }
 
-function in_list_nonzero($in, $ref) {
+private function in_list_nonzero($in, $ref) {
 	if ($in == 0)
 		return 0.5;
 	return in_array($in, $ref) ? 1 : 0;
 }
 
-function return_rank($in, $ref) {
+private function return_rank($in, $ref) {
 	switch ($in) {
 		case 1: return $ref;
 		case 2: return 1 - $ref;
@@ -111,7 +113,7 @@ function return_rank($in, $ref) {
 	}
 }
 
-$score_func = array(
+private $score_func = array(
 	'tech_level' => 'greater_or_equal',
 	'distro_type' => 'in_list',
 	'speed' => 'equal',
@@ -127,7 +129,7 @@ $score_func = array(
 	'popularity' => 'return_rank'
 );
 
-$dists = array(
+private $dists = array(
 	'archlinux' => array(
 		'tech_level' => 2,
 		'distro_type' => array(1),
@@ -295,63 +297,68 @@ $dists = array(
 	)
 );
 
-$score_details = array();
-$corr = array();
+private $score_details = array();
+private $corr = array();
+private $form = array();
 
-function field_corr($field, $input, $dist) {
-	global $dists, $score_func;
-	if (!isset($dists[$dist][$field]))
+private function field_corr($field, $input, $dist) {
+	if (!isset($this->dists[$dist][$field]))
 		return 0;
-	$refscore = $dists[$dist][$field];
-	$func = $score_func[$field];
-	if (!function_exists($func))
+	$refscore = $this->dists[$dist][$field];
+	$func = $this->score_func[$field];
+	if (!method_exists($this, $func))
 		return 0;
-	return $func($input, $refscore);
+	return $this->$func($input, $refscore);
 }
 
-function dist_corr($form) {
-	global $dists;
-	global $score_details, $corr;
-	$corr = array();
-	foreach ($dists as $distname => $refscore) {
-		$corr[$distname] = 0;
-		foreach ($form as $field => $value) {
-			$score_details[$distname][$field] = field_corr($field, $value, $distname);
-			$corr[$distname] += $score_details[$distname][$field];
+public function dist_corr() {
+	if (empty($this->form))
+		return null;
+	foreach ($this->dists as $distname => $refscore) {
+		$this->corr[$distname] = 0;
+		foreach ($this->form as $field => $value) {
+			$this->score_details[$distname][$field] = $this->field_corr($field, $value, $distname);
+			$this->corr[$distname] += $this->score_details[$distname][$field];
 		}
 	}
-	arsort($corr);
-	return $corr;
+	arsort($this->corr);
+	return $this->corr;
 }
 
-function print_feature($form, $dist) {
-	global $fields, $dists, $score_func, $score_details, $corr;
-	echo '<p>Features for <strong>'.$dist."</strong> (Score: <strong>".$corr[$dist]."</strong>):\n";
+public function init_form($form) {
+	$this->form = $form;
+}
+
+public function print_feature($dist) {
+	if (!isset($this->corr[$dist]))
+		return;
+	echo '<p>Features for <strong>'.$dist."</strong> (Score: <strong>".$this->corr[$dist]."</strong>):\n";
 	echo '<ul>';
-	foreach ($form as $field => $value) {
-		if (isset($fields[$field]) && isset($dists[$dist][$field])) {
+	foreach ($this->form as $field => $value) {
+		if (isset($this->fields[$field]) && isset($this->dists[$dist][$field])) {
 			echo '<li>';
-			echo '('.$score_details[$dist][$field].') ';
-			$value = $dists[$dist][$field];
+			echo '('.$this->score_details[$dist][$field].') ';
+			$value = $this->dists[$dist][$field];
 			if (is_array($value)) {
 				$rs = array();
 				foreach ($value as $v)
-					 $rs[] = $fields[$field][$v];
+					 $rs[] = $this->fields[$field][$v];
 				echo implode(', ', $rs);
-			} else if ($score_func[$field] == 'return_rank') {
+			} else if ($this->score_func[$field] == 'return_rank') {
 				$closest = 0;
-				$minwidth = 10000;
-				foreach ($fields[$field] as $key => $desc)
-					if (abs($key - $value) < $minwidth) {
+				$minwidth = 0;
+				foreach ($this->fields[$field] as $key => $desc)
+					if ($closest == 0 || abs($key - $value) < $minwidth) {
 						$closest = $key;
 						$minwidth = abs($key - $value);
 					}
-				echo $fields[$field][$closest]. $value;
-			} else if (isset($fields[$field][$value])) {
-				echo $fields[$field][$value];
+				echo $this->fields[$field][$closest]. $value;
+			} else if (isset($this->fields[$field][$value])) {
+				echo $this->fields[$field][$value];
 			}
 			echo '</li>'."\n";
 		}
 	}
 	echo '</ul>'."\n";
 }
+} // end class dist_corr
