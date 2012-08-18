@@ -2,8 +2,8 @@ BODY, TD
 {
     margin: 0px;
     padding: 0px;
-    
-	 font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
+    text-align: center;
+    font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
     color: #777;
 }
 
@@ -11,11 +11,11 @@ TEXTAREA
 {
     margin: 0px;
     padding: 0px;
-	font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
-  color: #777;
-	border: 1px solid #BBB;
-	background-color: #FFF;
-	overflow-y: auto;
+    font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
+    color: #777;
+    border: 1px solid #BBB;
+    background-color: #FFF;
+    overflow-y: auto;
 }
 
 FORM
@@ -29,7 +29,7 @@ INPUT
     background-color: #EFEFEF;
     border: 1px solid #DDD;
     color: #777;
-	font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
+    font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
 }
 
 input[type="image"] { background-color: transparent; }
@@ -53,85 +53,6 @@ A:Hover
     text-decoration: none;
 }
 
-TABLE.maintable
-{
-    border: 0;
-}
-
-.infoframe
-{
-    border: 1px solid #DDD;
-    background-color: #FEFEFE;
-    font-size: 12px;
-}
-
-TABLE.infoframe TD
-{
-    padding: 10px;
-}
-
-.helpblock
-{
-    position: absolute;
-    border: 0;
-    background-color: transparent;
-    padding: 5px;
-    margin-top: 8px;
-}
-
-#header td
-{
-    background-color: transparent;
-    padding: 4px;
-    font-size: 17px;
-	color: #444;
-}
-
-#header td span a { color: #07820F; border-color: #0FAF47; }
-
-.main
-{
-    padding: 5px;
-	padding-top: 0;
-    font-size: 12px;
-}
-
-.rounded_box { background-color: transparent; margin:0px; }
-.rounded_box h4 { margin: 0px; padding-top: 7px; font-size: 14px; }
-
-.xtop, .xbottom { display: block; background-color: transparent; font-size: 1px; }
-.xb1, .xb2, .xb3, .xb4 { display: block; overflow: hidden; }
-.xb1, .xb2, .xb3 { height: 1px; }
-.xb2, .xb3, .xb4 { background-color: #F9F9F9; border-left: 1px solid #CCC; border-right: 1px solid #CCC; }
-.xb1 { margin: 0 5px; background-color: #CCC; }
-.cutoff_top .xtop .xb1 { margin: 0; background-color: #E5E5E5; }
-.xb2 { margin: 0 3px; border-width: 0 2px; }
-.xb3 { margin: 0 2px; }
-.xb4 { height: 2px; margin: 0 1px; }
-.xboxcontent { display: block; background-color: #F9F9F9; border:0 solid #CCC; border-width:0 1px; padding: 0 5px 0 5px; }
-.xboxcontent table td.description { padding: 3px 3px 3px 0; }
-
-.xboxcontent span.xboxlarge { font-size: 12px; }
-.xboxcontent a.xboxlink { font-size: 13px; }
-
-.green .xb2, .green .xb3, .green .xb4 { background-color: #CFE8CF; border-color: #AAC6AA; }
-.green .xb1 { background-color: #AAC6AA; }
-.green .xboxcontent { background-color: #CFE8CF; border-color: #AAC6AA; }
-
-li.green .xb2, li.green .xb3, li.green .xb4 { background-color: #CFE8CF; border-color: #AAC6AA; }
-li.green .xb1 { background-color: #AAC6AA; }
-li.green .xboxcontent { background-color: #CFE8CF; border-color: #AAC6AA; }
-
-.mediumgrey_borderless .xb2, .mediumgrey_borderless .xb3, .mediumgrey_borderless .xb4 { background-color: #F3F3F3; border-color: #F3F3F3; }
-.mediumgrey_borderless .xb1 { background-color: #F3F3F3; }
-.mediumgrey_borderless .xboxcontent { background-color: #F3F3F3; border-color: #F3F3F3; }
-.mediumgrey_borderless .issue_detail_changed { background-color: #FFF299; }
-.mediumgrey_borderless .issue_detail_unmerged { background-color: #E0AC9C; }
-.mediumgrey_borderless .issue_detail_unmerged .faded_medium { color: #FFD9D6; }
-
-.mediumgrey_borderless.highlighted .xb2, .mediumgrey_borderless.highlighted .xb3, .mediumgrey_borderless.highlighted .xb4 { background-color: #FFF299; border-color: #FFF299; }
-.mediumgrey_borderless.highlighted .xb1, #scrum .mediumgrey_borderless.highlighted .sprint_header { background-color: #FFF299; }
-.mediumgrey_borderless.highlighted .xboxcontent { background-color: #FFF299; border-color: #FFF299; }
 
 .lightgrey_borderless .xb2, .lightgrey_borderless .xb3, .lightgrey_borderless .xb4 { background-color: #F7F7F7; border-color: #F7F7F7; }
 .lightgrey_borderless .xb1 { background-color: #F7F7F7; }
@@ -235,15 +156,3 @@ li.green .xboxcontent { background-color: #CFE8CF; border-color: #AAC6AA; }
 .red_borderless .percent_filled { background-color: #C88; }
 .red_borderless .percent_unfilled { background-color: #FCC; }
 .red_borderless .faded_medium { color: #B77; }
-
-div.round_white_canhover:hover .xb2, div.round_white_canhover:hover .xb3, div.round_white_canhover:hover .xb4 { border-color: #AAA; }
-div.round_white_canhover:hover .xboxcontent { border-color: #AAA; }
-div.round_white_canhover:hover .xb1 { background-color: #AAA; }
-
-div.round_canhover:hover .xb2, div.round_canhover:hover .xb3, div.round_canhover:hover .xb4 { border-color: #AAA; }
-div.round_canhover:hover .xboxcontent { border-color: #AAA; }
-div.round_canhover:hover .xb1 { background-color: #AAA; }
-
-div.round_green_canhover .xb2:hover, div.round_green_canhover .xb3:hover, div.round_green_canhover .xb4:hover { border-color: #99B599; }
-div.round_green_canhover .xboxcontent:hover { border-color: #99B599; }
-div.round_green_canhover:hover .xb1 { background-color: #99B599; }
