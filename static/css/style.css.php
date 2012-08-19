@@ -14,7 +14,8 @@ $dist = $_GET['dist'];
  */
 
 a img {border:none}
-a img:hover {border:none}
+a img:hover {border:none;
+             color:red;}
 
 body {
   font-family: KaiTi, Geneva, Arial, Helvetica, sans-serif;
