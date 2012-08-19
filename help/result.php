@@ -1,12 +1,12 @@
-﻿<?php
-if (empty($_POST)) {
-	echo "<script>document.location.href='help.html';</script>";
-	exit();
-}
-require_once "dist_corr.inc.php";
-$corr = dist_corr($_POST);
-?>
-
+﻿
+                      <?php
+                      if (empty($_POST)) {
+                      	echo "<script>document.location.href='help.html';</script>";
+                      	exit();
+                      }
+                      require_once "dist_corr.inc.php";
+                      $corr = dist_corr($_POST);
+                      ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -58,6 +58,14 @@ $corr = dist_corr($_POST);
 	    					<td class="main" colspan="3" style="height: auto;" valign="top">
 							<h2 style="margin-bottom: 0px; padding-bottom: 0px;">反馈结果</h2>
                       <div>
+
+
+
+
+
+
+
+
                       <!----此处用来展示linux 选择推荐的linux发行版---->
                       </div>						
 							
