@@ -80,3 +80,21 @@ h2 {
 	left: -600px;
 }
 
+*{  margin:0;padding:0;}
+
+
+
+#panel {
+         width: 650px; border: 1px;
+          }
+
+.head {
+        padding: 5px; cursor: pointer
+        }
+
+.content {
+            padding: 10px;
+            text-indent: 2em;
+            border-top: 1px solid #0050D0;
+            display:block;
+            }
