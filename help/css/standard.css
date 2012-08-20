@@ -32,6 +32,8 @@ INPUT
 	font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
 }
 
+ol li {color: #07820F;font-size: 15px;}
+
 input[type="image"] { background-color: transparent; }
 
 A

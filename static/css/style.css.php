@@ -111,16 +111,28 @@ a {
   border: 0px;
 }
 a:link {
-  color: #000;
+  color: black;
   text-decoration: none;
 }
 a:visited {
-  color:#000;
+  color:red;
   text-decoration: none;
 }
 a:hover {
-  color: #000;
-  text-decoration: underline;
+  color: bule;
+  text-decoration: none;
   /* text-decoration: underline; */
   /* font-weight: bold; */
+}
+
+
+TEXTAREA
+{
+    margin: 0px;
+    padding: 0px;
+	font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
+    color: #777;
+	border: 1px solid #BBB;
+	background-color: #FFF;
+	overflow-y: auto;
 }

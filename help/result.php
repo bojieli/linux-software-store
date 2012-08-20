@@ -64,7 +64,7 @@ $rank = $handle->dist_corr();
 <?php
 echo "<ol>";
 foreach ($rank as $dist => $score) {
-	echo "<li>$dist: <strong>$score</strong></li>";
+	echo "<li>$dist: <strong >$score</strong></li>";
 }
 echo "</ol>\n";
 foreach ($rank as $dist => $score) {
@@ -108,10 +108,13 @@ foreach ($rank as $dist => $score) {
 									<br>
 									<div style="width: 100%; text-align: right;"><input type="submit" value="发送"></div>
 									</form>
+
 					</td>
 						</tr>
 							</table>
+							<p style="font-size 20px;"><strong>返回首页</strong></p>
 				</td>
+
 						</tr>
 						</table>
 				</td>
