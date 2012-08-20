@@ -18,7 +18,7 @@ a img:hover {border:none;
              color:red;}
 
 body {
-  font-family: KaiTi, Geneva, Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   font-size: small;
   vertical-align: middle;
   text-align: center;
@@ -72,7 +72,7 @@ p {
   width: 230px;
   height: 55px;
   line-height: 55px;
-    font-family: KaiTi;
+    font-family:  sans-serif;
     font-size:40px;
     text-align: center;  
 }
