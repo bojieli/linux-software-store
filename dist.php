@@ -41,7 +41,8 @@ $distname = firstLetterToUpper($dist);
 
 <!-- All the javascript generated for your design is in this file -->
 <script type="text/javascript" src="static/js/style.js"></script>
-
+<script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
+<script type="text/javascript" src="./static/js/intro.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -52,8 +53,7 @@ $distname = firstLetterToUpper($dist);
     <div id="content-1" class="content-arch">
       <script type="text/javascript" language="javascript" src="./static/js/jquery-1.7.1.min.js"></script>
       <script type="text/javascript" src="static/js/tab.js"></script>
-      <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-      <script type="text/javascript" src="./static/js/intro.js"></script>
+
       <div class="tabs">
       	<ul>
           	<li id="button-0" class="first tab_0 button button-dist">
