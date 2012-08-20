@@ -30,7 +30,7 @@ $distname = firstLetterToUpper($dist);
 <!-- The Primary External CSS style sheet. -->
 <link rel="stylesheet" type="text/css" href="static/css/style.css.php?dist=<?=$dist?>" media="screen" />
 <link rel="stylesheet" type="text/css" href="static/css/tab.css.php?dist=<?=$dist?>" media="screen" />
-<link rel="stylesheet" type="text/css" href="./static/css/intro.css" media="screen" />
+
 <!-- 选项卡切换个效果标签位置 -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
@@ -52,14 +52,15 @@ $distname = firstLetterToUpper($dist);
     <div id="content-1" class="content-arch">
       <script type="text/javascript" language="javascript" src="./static/js/jquery-1.7.1.min.js"></script>
       <script type="text/javascript" src="static/js/tab.js"></script>
-      <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-      <script type="text/javascript" src="./static/js/intro.js"></script>
+
       <div class="tabs">
       	<ul>
           	<li id="button-0" class="first tab_0 button button-dist">
               	<h2 class="active">小站推荐</h2>
                   <div>
                   	<p>小站推荐内容</p>
+                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
+                     <script type="text/javascript" src="./static/js/intro.js"></script>
                   	<div id="panel">
                         <h5 class="head">xx的简介</h5>
                         <div class="content">
@@ -127,7 +128,9 @@ $distname = firstLetterToUpper($dist);
               	<h2>办公</h2>
                   <div>
                   	<p>办公类内容</p>
-                  	<div id="panel">
+                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
+                     <script type="text/javascript" src="./static/js/intro.js"></script>
+                  	 <div id="panel">
                         <h5 class="head">xx的简介</h5>
                         <div class="content">
                            <table >
@@ -194,6 +197,8 @@ $distname = firstLetterToUpper($dist);
               	<h2>学习</h2>
                   <div>
                   	<p>学习类内容</p>
+                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
+                     <script type="text/javascript" src="./static/js/intro.js"></script>
                   	<div id="panel">
                         <h5 class="head">xx的简介</h5>
                         <div class="content">
@@ -261,6 +266,8 @@ $distname = firstLetterToUpper($dist);
               	<h2>科学</h2>
                   <div>
                   	<p>科学类内容</p>
+                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
+                          <script type="text/javascript" src="./static/js/intro.js"></script>
                   	<div id="panel">
                         <h5 class="head">xx的简介</h5>
                         <div class="content">
@@ -329,6 +336,8 @@ $distname = firstLetterToUpper($dist);
                   <div>
                   	<p>娱乐类内容<p>
                   	<div id="panel">
+                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
+                          <script type="text/javascript" src="./static/js/intro.js"></script>
                         <h5 class="head">xx的简介</h5>
                         <div class="content">
                            <table >
@@ -395,6 +404,8 @@ $distname = firstLetterToUpper($dist);
               	<h2>其他</h2>
                   <div>
                   	<p>其他类内容<p>
+                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
+                          <script type="text/javascript" src="./static/js/intro.js"></script>
                   	<div id="panel">
                         <h5 class="head">xx的简介</h5>
                         <div class="content">
@@ -463,6 +474,8 @@ $distname = firstLetterToUpper($dist);
                   <div>
 
                   	<p>搜索结果内容</p>
+                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
+                          <script type="text/javascript" src="./static/js/intro.js"></script>
                   	<div id="panel">
                         <h5 class="head">xx的简介</h5>
                         <div class="content">
