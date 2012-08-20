@@ -5,7 +5,9 @@
                       	exit();
                       }
                       require_once "dist_corr.inc.php";
-                      $corr = dist_corr($_POST);
+$handle = new dist_corr;
+$handle->init_form($_POST);
+$rank = $handle->dist_corr();
                       ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -59,14 +61,18 @@
 							<h2 style="margin-bottom: 0px; padding-bottom: 0px;">反馈结果</h2>
                       <div>
 
+<?php
+echo "<ol>";
+foreach ($rank as $dist => $score) {
+	echo "<li>$dist: <strong>$score</strong></li>";
+}
+echo "</ol>\n";
+foreach ($rank as $dist => $score) {
+	$handle->print_feature($dist);
+}
+?>
 
-
-
-
-
-
-
-                      <!----此处用来展示linux 选择推荐的linux发行版---->
+                      <!-- 此处用来展示linux 选择推荐的linux发行版 -->
                       </div>						
 							
 							
