@@ -31,7 +31,6 @@ body {
   width: 1024px;
 }
 p {
-    font-family: KaiTi;
     font-size: 22px;
     padding-top: 1px;
 }
@@ -121,18 +120,21 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: bule;
-
+  color: blue;
    text-decoration: underline;
   font-weight: bold;
 }
 
-
+#panel { width: 700px; height:55px;border: 1px solid #0050D0 ;}
+.head { padding: 0px; cursor: pointer; }
+.content { padding: 0px; text-indent: 2em; border-top: 1px solid #0050D0;display:block; background: #ccccff;}
+.img{ width:50px;height:50px;padding:0px;}
+.td {align:center;font-size:15px;}
 TEXTAREA
 {
     margin: 0px;
     padding: 0px;
-	font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
+	font: 20px "Droid Sans", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
     color: #777;
 	border: 1px solid #BBB;
 	background-color: #FFF;

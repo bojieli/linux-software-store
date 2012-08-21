@@ -61,6 +61,79 @@ $distname = firstLetterToUpper($dist);
               	<h2 class="active">小站推荐</h2>
                   <div>
                   	<p>小站推荐内容</p>
+                  	<div id="panel" >
+                        <h5 class="head" >
+                            <table>
+                                <tr>
+                            <td class="img" align="left">
+                                <img src="" width="50px" height="50px" alt="此处存放软件图片">
+                            </td>
+                            <td >
+                                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    此处填写软件的简介</div>
+                            </td>
+                        </table>
+                        </h5>
+                        <div class="content">
+                           <table >
+                               <tr>
+                                 <td> 下载链接: <a href="http://mirrors.ustc.edu.cn" target="_new">下载deb包</a>&nbsp;&nbsp;
+                                                <a href="http://mirrors.ustc.edu.cn" target="_new">下载gz包</a>
+                                 </td>
+
+
+                                   <td>
+                                      如何安装: <a href="http://mirrors.ustc.edu.cn" target="_new">安装deb包</a>&nbsp;&nbsp;
+                                                 <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
+                                   </td>
+                               </tr>
+                    <tr>
+
+                               <tr>
+
+                                   <td align="center" class="">
+
+                                       软件得分:
+                                       <br>
+                                        实用性:<img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
+                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
+
+                                        <br>
+                                        美观性:<img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
+                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
+
+                                       <br>
+                                        推荐度:
+                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
+                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
+
+                                       <br>
+                                   </td>
+                                   <td>
+                                       对软件评价:
+                                       <form action="" method="get">
+                                           &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<textarea  rows="2" cols="35" value="输入您的评价"></textarea>
+
+                                       <br>
+                                       &nbsp;&nbsp;&nbsp;
+                                       <input type="button" value="提交" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input type="button" value="取消" >
+                                       </form>
+                                   </td>
+                               </tr>
+                           </table>
+                        </div>
+                    </div>
 
                   </div>
             </li>
