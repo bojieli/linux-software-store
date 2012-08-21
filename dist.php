@@ -97,26 +97,23 @@ $distname = firstLetterToUpper($dist);
                                        软件得分:
                                        <br>
                                         实用性:<img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star2.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star2.png" width="20px" height="20px" alt="">
 
                                         <br>
                                         美观性:<img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-
+                                              <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star2.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star2.png" width="20px" height="20px" alt="">
                                        <br>
-                                        推荐度:
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-
+                                        推荐度:<img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star2.png" width="20px" height="20px" alt="">
+                                              <img src="./static/img/star2.png" width="20px" height="20px" alt="">
                                        <br>
                                    </td>
                                    <td>
@@ -135,7 +132,6 @@ $distname = firstLetterToUpper($dist);
                         </div>
                     </div>
 
-                  </div>
             </li>
           	<li id="button-1" class="tab_1 button button-dist">
               	<h2>办公</h2>
