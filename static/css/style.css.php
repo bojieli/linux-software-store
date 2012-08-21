@@ -115,7 +115,7 @@ a:link {
   text-decoration: none;
 }
 a:visited {
-  color:red;
+  color:black;
   text-decoration: none;
 }
 a:hover {

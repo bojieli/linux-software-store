@@ -52,6 +52,8 @@ $distname = firstLetterToUpper($dist);
     <div id="content-1" class="content-arch">
       <script type="text/javascript" language="javascript" src="./static/js/jquery-1.7.1.min.js"></script>
       <script type="text/javascript" src="static/js/tab.js"></script>
+      <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
+      <script type="text/javascript" src="./static/js/intro.js"></script>
 
       <div class="tabs">
       	<ul>
@@ -59,414 +61,40 @@ $distname = firstLetterToUpper($dist);
               	<h2 class="active">小站推荐</h2>
                   <div>
                   	<p>小站推荐内容</p>
-                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-                     <script type="text/javascript" src="./static/js/intro.js"></script>
-                  	<div id="panel">
-                        <h5 class="head">xx的简介</h5>
-                        <div class="content">
-                           <table >
-                               <tr>
-                               <td><img src="" width="50px" height="50px" alt="此处存放软件图片"></td>
-                               <td><div>此处填写软件的简介</div></td>
-                               </tr>
-
-                               <tr>
-                                 <td> 下载链接： <a href="http://mirrors.ustc.edu.cn" target="_new">下载deb包</a>
-                                                <a href="http://mirrors.ustc.edu.cn" target="_new">下载gz包</a>
-                                 </td>
-                               </tr>
-                               <tr>
-                                   <td>
-                                       如何安装： <a href="http://mirrors.ustc.edu.cn" target="_new">安装deb包</a>
-                                                 <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
-                                   </td>
-                               </tr>
-
-
-                               <tr>
-
-                                   <td align="left">
-
-                                       <p><strong>软件得分:</strong></p>
-                                       <br>
-                                        <p>实用性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                        <br>
-                                        <p>美观性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-
-                                       <br>
-                                        <p>推荐度：</p>
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <br>
-                                   </td>
-                                   <td>
-                                       <form action="" method="get">
-                                       <input type="text" value="请输入您的评价">
-                                       <br>
-                                       <input type="button" value="提交" >
-                                       <input type="button" value="取消" >
-                                       </form>
-                                   </td>
-                               </tr>
-                           </table>
-                        </div>
-                    </div>
                   </div>
-              </li>
+            </li>
           	<li id="button-1" class="tab_1 button button-dist">
               	<h2>办公</h2>
                   <div>
                   	<p>办公类内容</p>
-                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-                     <script type="text/javascript" src="./static/js/intro.js"></script>
-                  	 <div id="panel">
-                        <h5 class="head">xx的简介</h5>
-                        <div class="content">
-                           <table >
-                               <tr>
-                               <td><img src="" width="50px" height="50px" alt="此处存放软件图片"></td>
-                               <td><div>此处填写软件的简介</div></td>
-                               </tr>
-
-                               <tr>
-                                 <td> 下载链接： <a href="http://mirrors.ustc.edu.cn" target="_new">下载deb包</a>
-                                                <a href="http://mirrors.ustc.edu.cn" target="_new">下载gz包</a>
-                                 </td>
-                               </tr>
-                               <tr>
-                                   <td>
-                                       如何安装： <a href="http://mirrors.ustc.edu.cn" target="_new">安装deb包</a>
-                                                 <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
-                                   </td>
-                               </tr>
-
-
-                               <tr>
-
-                                   <td align="left">
-
-                                       <p><strong>软件得分:</strong></p>
-                                       <br>
-                                        <p>实用性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                        <br>
-                                        <p>美观性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-
-                                       <br>
-                                        <p>推荐度：</p>
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <br>
-                                   </td>
-                                   <td>
-                                       <form action="" method="get">
-                                       <input type="text" value="请输入您的评价">
-                                       <br>
-                                       <input type="button" value="提交" >
-                                       <input type="button" value="取消" >
-                                       </form>
-                                   </td>
-                               </tr>
-                           </table>
-                        </div>
-                    </div>
                   </div>
               </li>
           	<li id="button-2" class="tab_2 button button-dist">
               	<h2>学习</h2>
                   <div>
                   	<p>学习类内容</p>
-                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-                     <script type="text/javascript" src="./static/js/intro.js"></script>
-                  	<div id="panel">
-                        <h5 class="head">xx的简介</h5>
-                        <div class="content">
-                           <table >
-                               <tr>
-                               <td><img src="" width="50px" height="50px" alt="此处存放软件图片"></td>
-                               <td><div>此处填写软件的简介</div></td>
-                               </tr>
 
-                               <tr>
-                                 <td> 下载链接： <a href="http://mirrors.ustc.edu.cn" target="_new">下载deb包</a>
-                                                <a href="http://mirrors.ustc.edu.cn" target="_new">下载gz包</a>
-                                 </td>
-                               </tr>
-                               <tr>
-                                   <td>
-                                       如何安装： <a href="http://mirrors.ustc.edu.cn" target="_new">安装deb包</a>
-                                                 <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
-                                   </td>
-                               </tr>
-
-
-                               <tr>
-
-                                   <td align="left">
-
-                                       <p><strong>软件得分:</strong></p>
-                                       <br>
-                                        <p>实用性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                        <br>
-                                        <p>美观性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-
-                                       <br>
-                                        <p>推荐度：</p>
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <br>
-                                   </td>
-                                   <td>
-                                       <form action="" method="get">
-                                       <input type="text" value="请输入您的评价">
-                                       <br>
-                                       <input type="button" value="提交" >
-                                       <input type="button" value="取消" >
-                                       </form>
-                                   </td>
-                               </tr>
-                           </table>
-                        </div>
-                    </div>
-      			</div>
+      			    </div>
               </li>
           	<li id="button-3" class="tab_3 button button-dist">
               	<h2>科学</h2>
                   <div>
                   	<p>科学类内容</p>
-                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-                          <script type="text/javascript" src="./static/js/intro.js"></script>
-                  	<div id="panel">
-                        <h5 class="head">xx的简介</h5>
-                        <div class="content">
-                           <table >
-                               <tr>
-                               <td><img src="" width="50px" height="50px" alt="此处存放软件图片"></td>
-                               <td><div>此处填写软件的简介</div></td>
-                               </tr>
 
-                               <tr>
-                                 <td> 下载链接： <a href="http://mirrors.ustc.edu.cn" target="_new">下载deb包</a>
-                                                <a href="http://mirrors.ustc.edu.cn" target="_new">下载gz包</a>
-                                 </td>
-                               </tr>
-                               <tr>
-                                   <td>
-                                       如何安装： <a href="http://mirrors.ustc.edu.cn" target="_new">安装deb包</a>
-                                                 <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
-                                   </td>
-                               </tr>
-
-
-                               <tr>
-
-                                   <td align="left">
-
-                                       <p><strong>软件得分:</strong></p>
-                                       <br>
-                                        <p>实用性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                        <br>
-                                        <p>美观性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-
-                                       <br>
-                                        <p>推荐度：</p>
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <br>
-                                   </td>
-                                   <td>
-                                       <form action="" method="get">
-                                       <input type="text" value="请输入您的评价">
-                                       <br>
-                                       <input type="button" value="提交" >
-                                       <input type="button" value="取消" >
-                                       </form>
-                                   </td>
-                               </tr>
-                           </table>
-                        </div>
-                    </div>
                   </div>
               </li>
           	<li id="button-4" class="tab_4 button button-dist">
               	<h2>娱乐</h2>
                   <div>
                   	<p>娱乐类内容<p>
-                  	<div id="panel">
-                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-                          <script type="text/javascript" src="./static/js/intro.js"></script>
-                        <h5 class="head">xx的简介</h5>
-                        <div class="content">
-                           <table >
-                               <tr>
-                               <td><img src="" width="50px" height="50px" alt="此处存放软件图片"></td>
-                               <td><div>此处填写软件的简介</div></td>
-                               </tr>
 
-                               <tr>
-                                 <td> 下载链接： <a href="http://mirrors.ustc.edu.cn" target="_new">下载deb包</a>
-                                                <a href="http://mirrors.ustc.edu.cn" target="_new">下载gz包</a>
-                                 </td>
-                               </tr>
-                               <tr>
-                                   <td>
-                                       如何安装： <a href="http://mirrors.ustc.edu.cn" target="_new">安装deb包</a>
-                                                 <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
-                                   </td>
-                               </tr>
-
-
-                               <tr>
-
-                                   <td align="left">
-
-                                       <p><strong>软件得分:</strong></p>
-                                       <br>
-                                        <p>实用性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                        <br>
-                                        <p>美观性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-
-                                       <br>
-                                        <p>推荐度：</p>
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <br>
-                                   </td>
-                                   <td>
-                                       <form action="" method="get">
-                                       <input type="text" value="请输入您的评价">
-                                       <br>
-                                       <input type="button" value="提交" >
-                                       <input type="button" value="取消" >
-                                       </form>
-                                   </td>
-                               </tr>
-                           </table>
-                        </div>
-                    </div>
                   </div>
               </li>
           	<li id="button-5" class="tab_5 button button-dist">
               	<h2>其他</h2>
                   <div>
                   	<p>其他类内容<p>
-                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-                          <script type="text/javascript" src="./static/js/intro.js"></script>
-                  	<div id="panel">
-                        <h5 class="head">xx的简介</h5>
-                        <div class="content">
-                           <table >
-                               <tr>
-                               <td><img src="" width="50px" height="50px" alt="此处存放软件图片"></td>
-                               <td><div>此处填写软件的简介</div></td>
-                               </tr>
 
-                               <tr>
-                                 <td> 下载链接： <a href="http://mirrors.ustc.edu.cn" target="_new">下载deb包</a>
-                                                <a href="http://mirrors.ustc.edu.cn" target="_new">下载gz包</a>
-                                 </td>
-                               </tr>
-                               <tr>
-                                   <td>
-                                       如何安装： <a href="http://mirrors.ustc.edu.cn" target="_new">安装deb包</a>
-                                                 <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
-                                   </td>
-                               </tr>
-
-
-                               <tr>
-
-                                   <td align="left">
-
-                                       <p><strong>软件得分:</strong></p>
-                                       <br>
-                                        <p>实用性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                        <br>
-                                        <p>美观性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-
-                                       <br>
-                                        <p>推荐度：</p>
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <br>
-                                   </td>
-                                   <td>
-                                       <form action="" method="get">
-                                       <input type="text" value="请输入您的评价">
-                                       <br>
-                                       <input type="button" value="提交" >
-                                       <input type="button" value="取消" >
-                                       </form>
-                                   </td>
-                               </tr>
-                           </table>
-                        </div>
-                    </div>
                   </div>
               </li>
           	<li id="button-6" class="tab_6 button button-dist">
@@ -474,69 +102,7 @@ $distname = firstLetterToUpper($dist);
                   <div>
 
                   	<p>搜索结果内容</p>
-                  	 <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-                          <script type="text/javascript" src="./static/js/intro.js"></script>
-                  	<div id="panel">
-                        <h5 class="head">xx的简介</h5>
-                        <div class="content">
-                           <table >
-                               <tr>
-                               <td><img src="" width="50px" height="50px" alt="此处存放软件图片"></td>
-                               <td><div>此处填写软件的简介</div></td>
-                               </tr>
-
-                               <tr>
-                                 <td> 下载链接： <a href="http://mirrors.ustc.edu.cn" target="_new">下载deb包</a>
-                                                <a href="http://mirrors.ustc.edu.cn" target="_new">下载gz包</a>
-                                 </td>
-                               </tr>
-                               <tr>
-                                   <td>
-                                       如何安装： <a href="http://mirrors.ustc.edu.cn" target="_new">安装deb包</a>
-                                                 <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
-                                   </td>
-                               </tr>
-
-
-                               <tr>
-
-                                   <td align="left">
-
-                                       <p><strong>软件得分:</strong></p>
-                                       <br>
-                                        <p>实用性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                                      <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                        <br>
-                                        <p>美观性：</p><img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-
-                                       <br>
-                                        <p>推荐度：</p>
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <img src="./static/img/star2.png" width="20px" height="20px" alt="">
-                                       <br>
-                                   </td>
-                                   <td>
-                                       <form action="" method="get">
-                                       <input type="text" value="请输入您的评价">
-                                       <br>
-                                       <input type="button" value="提交" >
-                                       <input type="button" value="取消" >
-                                       </form>
-                                   </td>
-                               </tr>
-                           </table>
-                        </div>
-                    </div>
+                  	
                   </div>
               </li>
           </ul>
