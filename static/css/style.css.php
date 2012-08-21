@@ -121,9 +121,9 @@ a:visited {
 }
 a:hover {
   color: bule;
-  text-decoration: none;
-  /* text-decoration: underline; */
-  /* font-weight: bold; */
+
+   text-decoration: underline;
+  font-weight: bold;
 }
 
 
