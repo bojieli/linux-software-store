@@ -112,14 +112,14 @@ $distname = firstLetterToUpper($dist);
     <!-- This is 'content-2' -->
     <div id="content-2">
       <!-- This is 'dist info' -->
-      <div id="info" class="info">
-      <img src="./static/img/info.png" width="205" height="173" alt="info" class="pngimg" />
-
+      <div id="info" class="info" style="background-image:url(./static/img/info.png);width:210px;height:180px;border:0px;">
+     <!--此处用来盛放某一个发行办的官网信息、镜像下载等-->
+      <p>官网信息</p>
       </div>
 
       <!-- This is 'home-button' -->
       <div id="home-button" class="home-button" style="background-image:url(./static/img/<?=$dist?>/button-1.png);width:230px;height:55px;border:0px;" >
-        <a href="index.html">返回首页</a>
+        <a href="index.html" style="font-size:20px;">返回首页</a>
       </div>
 
       <?php $dists = array('archlinux', 'centos', 'debian', 'deepin', 'fedora', 'gentoo', 'mint', 'opensuse', 'puppy', 'slackware', 'ubuntu');
