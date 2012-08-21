@@ -65,7 +65,7 @@ p {
   width: 115px;
   height: 55px;
   line-height: 55px;
-  font-size: 22px;
+  font-size: 25px;
   text-align: center;
   background-image: url(../img/<?=$dist?>/button-4.png);
 }
