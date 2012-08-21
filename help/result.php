@@ -113,7 +113,7 @@ foreach ($rank as $dist => $score) {
 
 						</tr>
 							</table>
-                                   <a href="../index.html" class="data">返回首页</a>
+                                   <a href="../index.html" class="data" style="font-size:20px">返回首页</a>
 				</td>
 
 						</tr>
