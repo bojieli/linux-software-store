@@ -119,10 +119,9 @@ $distname = firstLetterToUpper($dist);
                                    <td>
                                        对软件评价:
                                        <form action="" method="get">
-                                           &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<textarea  rows="2" cols="35" value="输入您的评价"></textarea>
+                                            &nbsp;&nbsp;<textarea  rows="2" cols="35" value="输入您的评价"></textarea>
 
                                        <br>
-                                       &nbsp;&nbsp;&nbsp;
                                        <input type="button" value="提交" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <input type="button" value="取消" >
                                        </form>
