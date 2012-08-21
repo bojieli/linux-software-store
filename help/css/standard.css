@@ -3,7 +3,7 @@ BODY, TD
     margin: 0px;
     padding: 0px;
     
-	font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
+	font: 14px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
     color: #777;
 }
 
@@ -11,7 +11,7 @@ TEXTAREA
 {
     margin: 0px;
     padding: 0px;
-	font: 20px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
+	font: 15px "Droid Sans", "Segoe UI", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
     color: #777;
 	border: 1px solid #BBB;
 	background-color: #FFF;
@@ -85,7 +85,7 @@ TABLE.infoframe TD
 {
     background-color: transparent;
     padding: 4px;
-    font-size: 17px;
+    font-size: 15px;
 	color: #444;
 }
 
@@ -95,7 +95,7 @@ TABLE.infoframe TD
 {
     padding: 5px;
 	padding-top: 0;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .rounded_box { background-color: transparent; margin:0px; }
