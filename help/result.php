@@ -110,12 +110,10 @@ foreach ($rank as $dist => $score) {
 									</form>
 
 					</td>
-					                 <form action="../index.html" method="POST">
-                                      <input type="submit" value="返回首页 >>" style="float left; font-size: 17px;color: green;">
-                                      </form>
+
 						</tr>
 							</table>
-
+                                   <a href="../index.html" class="data">返回首页</a>
 				</td>
 
 						</tr>
