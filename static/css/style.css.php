@@ -57,6 +57,7 @@ p {
   padding: 10px;
   width: 205px;
   height: 200px;
+  filter:alpha(opacity=50);
 }
 .nav {
   float: left;
