@@ -61,6 +61,7 @@ $distname = firstLetterToUpper($dist);
               	<h2 class="active">小站推荐</h2>
                   <div>
                   	<p>小站推荐内容</p>
+
                   </div>
             </li>
           	<li id="button-1" class="tab_1 button button-dist">
@@ -113,6 +114,11 @@ $distname = firstLetterToUpper($dist);
     <div id="content-2">
       <!-- This is 'dist info' -->
       <div id="info" class="info" style="background-image:url(./static/img/info.png);border:0px;">
+
+
+      <!--此处盛放%dist的相关信息-->
+
+
       <p>官网信息</p>
       <br>
       <p>下载镜像</p>

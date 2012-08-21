@@ -55,10 +55,10 @@ p {
 /* You named this layer   calendar */
 #info {
   padding: 10px;
-  width: 205px;
+  width: 210px;
   height: 200px;
   filter:alpha(opacity=50);
-   text-align: center;
+  text-align: center;
 }
 .nav {
   float: left;
