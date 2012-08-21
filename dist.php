@@ -112,9 +112,11 @@ $distname = firstLetterToUpper($dist);
     <!-- This is 'content-2' -->
     <div id="content-2">
       <!-- This is 'dist info' -->
-      <div id="info" class="info" style="background-image:url(./static/img/info.png);width:210px;height:180px;border:0px;">
-     <!--此处用来盛放某一个发行办的官网信息、镜像下载等-->
+      <div id="info" class="info" style="background-image:url(./static/img/info.png);border:0px;">
       <p>官网信息</p>
+      <br>
+      <p>下载镜像</p>
+
       </div>
 
       <!-- This is 'home-button' -->

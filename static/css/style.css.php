@@ -58,6 +58,7 @@ p {
   width: 205px;
   height: 200px;
   filter:alpha(opacity=50);
+   text-align: center;
 }
 .nav {
   float: left;
