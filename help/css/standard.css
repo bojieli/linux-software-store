@@ -98,6 +98,12 @@ TABLE.infoframe TD
     font-size: 15px;
 }
 
+.data
+{
+    font-size: 14px;
+    color: #CFE8CF;
+}
+
 .rounded_box { background-color: transparent; margin:0px; }
 .rounded_box h4 { margin: 0px; padding-top: 7px; font-size: 14px; }
 

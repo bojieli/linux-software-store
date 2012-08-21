@@ -59,7 +59,7 @@ $rank = $handle->dist_corr();
 					   <tr>
 	    					<td class="main" colspan="3" style="height: auto;" valign="top">
 							<h2 style="margin-bottom: 0px; padding-bottom: 0px;">反馈结果</h2>
-                      <div>
+                      <div class="data">
 
 <?php
 echo "<ol>";
