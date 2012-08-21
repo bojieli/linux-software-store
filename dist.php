@@ -102,7 +102,7 @@ $distname = firstLetterToUpper($dist);
                   <div>
 
                   	<p>搜索结果内容</p>
-                  	
+
                   </div>
               </li>
           </ul>
@@ -111,9 +111,11 @@ $distname = firstLetterToUpper($dist);
 
     <!-- This is 'content-2' -->
     <div id="content-2">
-      <!-- This is 'calendar' -->
-      <div id="calendar" class="calendar"  >
-      <img src="./static/img/<?=$dist?>/calendar.png" width="205" height="173" alt="calendar" class="pngimg" /></div>
+      <!-- This is 'dist info' -->
+      <div id="info" class="info">
+      <img src="./static/img/info.png" width="205" height="173" alt="info" class="pngimg" />
+
+      </div>
 
       <!-- This is 'home-button' -->
       <div id="home-button" class="home-button" style="background-image:url(./static/img/<?=$dist?>/button-1.png);width:230px;height:55px;border:0px;" >

@@ -53,7 +53,7 @@ p {
   background-image: url(../img/content-2.png);
 }
 /* You named this layer   calendar */
-#calendar {
+#info {
   padding: 10px;
   width: 205px;
   height: 200px;
