@@ -126,7 +126,7 @@ a:hover {
 }
 
 #panel { width: 705px; height:50px;border: 1px solid #0050D0 ;}
-.head { padding: 0px; cursor: pointer;background: #ffffff; }
-.content { padding top: 90px;text-indent: 2em; border-top: 1px solid #0050D0;display:block; background: #ffffff;font-size:15px;}
-.img{ width:50px;height:50px;padding:0px;}
+.head { padding top: 20px; cursor: pointer;background: #ffffff; }
+.content { padding top: 90px;text-indent: 2em;background: #ffffff; border-top: 1px solid #0050D0;display:block; font-size:15px;}
+.img{ width:50px;height:50px;}
 .td {align:center;font-size:15px;}
