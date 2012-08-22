@@ -44,6 +44,10 @@ $distname = firstLetterToUpper($dist);
 
 </head>
 <body>
+<form class="form-search" style="float:right;padding:20px;">
+  <input type="text" class="input-medium search-query">
+  <button type="submit" class="btn">搜索</button>
+</form>
 <div id="wrapper">
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
@@ -168,7 +172,7 @@ $distname = firstLetterToUpper($dist);
               </li>
           	<li id="button-6" class="tab_6 button button-dist">
               	<h2>搜索结果</h2>
-                  <div>
+                  <div id="search" name="search" >
 
                   	<p>搜索结果内容</p>
 
@@ -190,6 +194,8 @@ $distname = firstLetterToUpper($dist);
       <p>官网信息</p>
       <br>
       <p>下载镜像</p>
+      <br>
+      <p>最新软件</p>
 
       </div>
 
