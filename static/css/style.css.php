@@ -125,6 +125,11 @@ a:hover {
   font-weight: bold;
 }
 
+#form-search{
+   padding top:50px;
+   padding right: 120px;
+  }
+
 #panel { width: 705px; height:50px;border: 1px solid #0050D0 ;}
 .head { padding top: 20px; cursor: pointer;background: #ffffff; }
 .content { padding top: 90px;text-indent: 2em;background: #ffffff; border-top: 1px solid #0050D0;display:block; font-size:15px;}
