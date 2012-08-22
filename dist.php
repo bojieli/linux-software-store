@@ -48,7 +48,7 @@ $distname = firstLetterToUpper($dist);
 <div id="wrapper">
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
-    <form class="form-search" style="float:right;padding:20px;">
+    <form class="form-search" style="float:right;padding top:20px;padding right: 100px;">
       <input type="text" class="input-medium search-query">
       <button type="submit" class="btn">搜索</button>
     </form>
