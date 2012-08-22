@@ -127,6 +127,6 @@ a:hover {
 
 #panel { width: 700px; height:55px;border: 1px solid #0050D0 ;}
 .head { padding: 0px; cursor: pointer; }
-.content { padding: 40px; text-indent: 2em; border-top: 1px solid #0050D0;display:block; background: #ccccff;font-size:15px;}
+.content { padding top: 40px; text-indent: 2em; border-top: 1px solid #0050D0;display:block; background: #ccccff;font-size:15px;}
 .img{ width:50px;height:50px;padding:0px;}
 .td {align:center;font-size:15px;}
