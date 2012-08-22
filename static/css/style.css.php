@@ -135,7 +135,7 @@ a:hover {
 .searchinput{
 	border-right-width: 0px;
 	padding-left: 2px;
-	width: 130px;
+	width: 140px;
 	font-family: arial;
 	float: left;
 	border-top-width: 0px;
