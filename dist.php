@@ -50,6 +50,8 @@ $distname = firstLetterToUpper($dist);
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
 <div id="search" style="float:right;padding top:80px;padding right:140px;font-size:30px;">
          <br>
+         <br>
+         <br>
          <form action="dist.php" method="post">
          <p><input type="text" name="dist" class="input"> <input type="submit" class="sear_btn" value="搜索"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -69,7 +71,7 @@ $distname = firstLetterToUpper($dist);
               	<h2 class="active">小站推荐</h2>
                   <div>
                   	<p>小站推荐内容</p>
-                  
+
                     </div>
 
             </li>
