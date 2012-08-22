@@ -63,8 +63,9 @@ $distname = firstLetterToUpper($dist);
          		</td>
          	</tr>
          </table>
-         </form>
          &nbsp;&nbsp;&nbsp;&nbsp;
+         </form>
+
  </div>
     <div id="header"></div>
     <!-- This is 'content-1' -->
