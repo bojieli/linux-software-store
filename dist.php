@@ -51,7 +51,7 @@ $distname = firstLetterToUpper($dist);
 <div id="search" style="float:right;padding top:80px;padding right:140px;font-size:30px;">
          <br>
          <form action="search.html" method="get">
-         <p><input type="text" name="keys" class="input"> <input type="submit" class="sear_btn" value="搜索"></p>
+         <p><input type="text" name="keys" class="input"> <input type="submit" class="sear_btn" value="搜索"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          </form>
  </div>
