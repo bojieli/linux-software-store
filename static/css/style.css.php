@@ -125,8 +125,8 @@ a:hover {
   font-weight: bold;
 }
 
-#panel { width: 705px; height:50px;padding: 30px;border: 1px solid #0050D0 ;background: #ffffff;}
-.head { padding: 0px; cursor: pointer;background: #ffffff; }
+#panel { width: 700px; height:50px;border: 1px solid #0050D0 ;}
+.head { padding: 20px; cursor: pointer;background: #ffffff; }
 .content { padding top: 60px;text-indent: 2em; border-top: 1px solid #0050D0;display:block; background: #ffffff;font-size:15px;}
 .img{ width:50px;height:50px;padding:0px;}
 .td {align:center;font-size:15px;}
