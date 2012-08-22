@@ -53,8 +53,10 @@ $distname = firstLetterToUpper($dist);
          <br>
          <br>
          <form action="dist.php" method="post">
-         <p><input type="text" name="dist" class="input" style="width:70px;">
-         <input type="submit" class="sear_btn" value="搜索"> &nbsp;&nbsp;&nbsp;&nbsp;</p>
+         <p>
+         <input type="submit" class="sear_btn" value="搜索"> 
+         <input type="text" name="dist" class="input" style="width:70px;">
+         &nbsp;&nbsp;&nbsp;&nbsp;</p>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          </form>
  </div>
