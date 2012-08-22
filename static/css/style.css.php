@@ -142,7 +142,7 @@ a:hover {
 	border-bottom-width: 0px;
 	color: #636365;
 	margin-left: 4px;
-	font-size: 8pt;
+	font-size: 15px;
 	vertical-align: middle;
 	border-left-width: 0px;
 	margin-right: 3px;

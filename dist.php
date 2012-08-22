@@ -140,8 +140,8 @@ $distname = firstLetterToUpper($dist);
 
 
       <!--此处盛放%dist的相关信息-->
-
-
+      <br>
+      <br>
       <p>官网信息</p>
       <br>
       <p>下载镜像</p>
