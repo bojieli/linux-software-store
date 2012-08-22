@@ -106,14 +106,17 @@ foreach ($rank as $dist => $score) {
 									<br>
 			
 									<br>
-									<div style="width: 100%; text-align: right;"><input type="submit" value="发送"></div>
+
+									<div style="width: 100%; text-align: right;">
+									<a href="../index.html" class="data" style="font-size:25px;float:left;">返回首页</a>
+									<input type="submit" value="发送"></div>
 									</form>
 
 					</td>
 
 						</tr>
 							</table>
-                                   <a href="../index.html" class="data" style="font-size:20px">返回首页</a>
+
 				</td>
 
 						</tr>
