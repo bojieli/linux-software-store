@@ -88,7 +88,7 @@ $distname = firstLetterToUpper($dist);
                                                <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
                                    </td>
                                </tr>
-                    <tr>
+                             <tr>
 
                                <tr>
 
