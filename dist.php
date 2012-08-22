@@ -48,7 +48,7 @@ $distname = firstLetterToUpper($dist);
 <div id="wrapper">
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
-  <div id="search" style="float:right;font-size:30px;">
+   <div id="search">
          <br>
          <br>
          <br>
