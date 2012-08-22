@@ -144,7 +144,7 @@ a:hover {
 	margin-left: 4px;
 	font-size: 8pt;
 	vertical-align: middle;
-	border-left-width: 20px;
+	border-left-width: 0px;
 	margin-right: 3px;
 }
 .tab_search{
