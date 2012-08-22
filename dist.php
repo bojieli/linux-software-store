@@ -83,7 +83,8 @@ $distname = firstLetterToUpper($dist);
               	<h2 class="active">小站推荐</h2>
                   <div>
                   	<p>小站推荐内容</p>
-
+                    <br>
+                    <p><a href="intro.html"> xx 软件<p>
                     </div>
 
             </li>

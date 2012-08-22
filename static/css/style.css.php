@@ -26,7 +26,7 @@ body {
   padding: 0;
 }
 #wrapper {
-  text-align: left;
+
   margin: 0 auto;
   width: 1024px;
 }
@@ -95,6 +95,7 @@ p {
     font-size:20px;
     text-align: center;  
 }
+
 .button {
   float: left;
   width: 100px;
@@ -159,4 +160,114 @@ a:hover {
 	width: 21px;
 	float: left;
 	height: 17px;
+}
+
+
+#content-3{
+  float: left;
+  margin-left: 35px;
+  width: 567px;
+  height: 550px;
+  background-image: url(../img/content-1.png);
+}
+
+#brf
+{
+  float: top;
+  width: 567px;
+  height: 100px;
+
+}
+
+#detail
+{
+ width: 567px;
+ height: 195px;
+ text-align:left;
+}
+
+.sw_img
+{
+
+     width: 100px;
+     height: 100px;
+     align:center;
+}
+.sw_name{
+
+  width:467px;
+  height:100px;
+  font-size:40px;
+  text-align:center;
+}
+.sw_info_1
+{
+    width: 567px;
+    height:35px;
+    text-align：center;
+    background:yellow;
+}
+
+.sw_info_2
+{
+    width: 567px;
+    height:35px;
+    text-align：center;
+    background:purple;
+}
+
+.sw_intro
+{
+  width: 567px;
+  height:35px;
+  padding:3px;
+  text-align：left;
+
+}
+#content-4 {
+  float: right;
+  margin-right: 35px;
+  width: 375px;
+  height: 550px;
+  background-image: url(../img/content-1.png);
+}
+
+.comment
+{
+  width: 375px;
+  height: 550px;
+}
+
+.sum
+{
+   width: 375px;
+   height: 35px;
+   background:lightblue;
+   font-size:25px;
+}
+.message
+{
+     width: 375px;
+     height:135px;
+     align:center;
+}
+
+.face
+{
+     width: 375px;
+     height:35px;
+     background:lightgreen;
+}
+
+.comment_1
+{
+     width: 375px;
+     height:50px;
+     background:yellow;
+}
+.comment_2
+{
+     width: 375px;
+     height:50px;
+     background:green;
 }
