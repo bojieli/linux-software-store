@@ -48,12 +48,12 @@ $distname = firstLetterToUpper($dist);
 <div id="wrapper">
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
-
-    <form class="form-search" style="float:left;">
-      <input type="text" class="input-medium search-query">
-      <button type="submit" class="btn">搜索</button>
-    </form>
-
+<div id="search" style="float:right ;padding top:20px;padding right:140px;">
+         <h2>站内搜索</h2>
+         <form action="search.html" method="get">
+           <p><input type="text" name="keys" class="input"> <input type="submit" class="sear_btn" value="搜索"></p>
+         </form>
+ </div>
     <div id="header"></div>
     <!-- This is 'content-1' -->
     <div id="content-1" class="content-arch">
