@@ -134,8 +134,8 @@ a:hover {
 
 .searchinput{
 	border-right-width: 0px;
-	padding-left: 3px;
-	width: 168px;
+	padding-left: 2px;
+	width: 130px;
 	font-family: arial;
 	float: left;
 	border-top-width: 0px;
@@ -144,7 +144,7 @@ a:hover {
 	margin-left: 4px;
 	font-size: 8pt;
 	vertical-align: middle;
-	border-left-width: 0px;
+	border-left-width: 20px;
 	margin-right: 3px;
 }
 .tab_search{
