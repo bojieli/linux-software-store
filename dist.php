@@ -48,16 +48,21 @@ $distname = firstLetterToUpper($dist);
 <div id="wrapper">
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
-<div id="search" style="float:right;padding top:80px;padding right:140px;font-size:30px;">
+  <div id="search" style="float:right;font-size:30px;">
          <br>
          <br>
          <br>
-         <form action="dist.php" method="post">
-         <p>
-         <input type="submit" class="sear_btn" value="搜索"> 
-         <input type="text" name="dist" class="input" style="width:70px;">
-         &nbsp;&nbsp;&nbsp;&nbsp;</p>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <form action="#" name="search">
+         <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
+         	<tr>
+         		<td>
+         			<input type="text" name="q" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- Search Softwares -';" onfocus="if(this.value=='- Search Softwares -')value='';" value="- Search Softwares -" size="10"/>
+         		</td>
+         		<td>
+         			<input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Sotfwares -')document.forms['search'].searchinput.value='';" alt="Search" src="static/img/magglass.gif" border="0" hspace="2"/>
+         		</td>
+         	</tr>
+         </table>
          </form>
  </div>
     <div id="header"></div>

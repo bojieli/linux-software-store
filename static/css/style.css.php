@@ -131,3 +131,32 @@ a:hover {
 .content { padding top: 90px;text-indent: 2em;background: #ffffff; border-top: 1px solid #0050D0;display:block; font-size:15px;}
 .img{ width:50px;height:50px;}
 .td {align:center;font-size:15px;}
+
+.searchinput{
+	border-right-width: 0px;
+	padding-left: 3px;
+	width: 168px;
+	font-family: arial;
+	float: left;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	color: #636365;
+	margin-left: 4px;
+	font-size: 8pt;
+	vertical-align: middle;
+	border-left-width: 0px;
+	margin-right: 3px;
+}
+.tab_search{
+	border-bottom: #cccccc 1px solid;
+	border-left: #cccccc 1px solid;
+	height: 25px;
+	border-top: #cccccc 1px solid;
+	border-right: #cccccc 1px solid;
+
+}
+.searchaction{
+	width: 21px;
+	float: left;
+	height: 17px;
+}
