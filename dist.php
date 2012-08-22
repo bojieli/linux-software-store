@@ -48,9 +48,13 @@ $distname = firstLetterToUpper($dist);
 <div id="wrapper">
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
-<div id="search" style="padding top:80px;padding right:140px;">
+<div id="search" style="padding top:80px;padding right:140px;font-size:30px;">
+         <br><br><br><br>
+
          <form action="search.html" method="get">
-           <p><input type="text" name="keys" class="input"> <input type="submit" class="sear_btn" value="搜索"></p>
+
+           <p><input type="text" name="keys" class="input"> <input type="submit" class="sear_btn" value="搜索"></p>&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          </form>
  </div>
     <div id="header"></div>
