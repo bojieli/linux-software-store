@@ -91,7 +91,7 @@ p {
   width: 100px;
   height: 30px;
   z-index: 16;
-    font-family: KaiTi;
+    font-family: sans-serif;
     font-size:20px;
     text-align: center;  
 }
