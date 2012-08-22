@@ -44,13 +44,14 @@ $distname = firstLetterToUpper($dist);
 
 </head>
 <body>
-<form class="form-search" style="float:right;padding:20px;">
-  <input type="text" class="input-medium search-query">
-  <button type="submit" class="btn">搜索</button>
-</form>
+
 <div id="wrapper">
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
+    <form class="form-search" style="float:right;padding:20px;">
+      <input type="text" class="input-medium search-query">
+      <button type="submit" class="btn">搜索</button>
+    </form>
     <div id="header"></div>
     <!-- This is 'content-1' -->
     <div id="content-1" class="content-arch">
