@@ -78,14 +78,14 @@ $distname = firstLetterToUpper($dist);
                         <div class="content">
                            <table >
                                <tr>
-                                 <td> 下载链接: <a href="http://mirrors.ustc.edu.cn" target="_new">下载deb包</a>&nbsp;&nbsp;
+                                 <td> 下载链接: <a href="http://mirrors.ustc.edu.cn" target="_new">下载deb包</a>&nbsp;
                                                 <a href="http://mirrors.ustc.edu.cn" target="_new">下载gz包</a>
                                  </td>
 
 
                                    <td>
-                                      如何安装: <a href="http://mirrors.ustc.edu.cn" target="_new">安装deb包</a>&nbsp;&nbsp;
-                                                 <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
+                                      如何安装: <a href="http://mirrors.ustc.edu.cn" target="_new">安装deb包</a>&nbsp;
+                                               <a href="http://mirrors.ustc.edu.cn" target="_new">安装gz包</a>
                                    </td>
                                </tr>
                     <tr>

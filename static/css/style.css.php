@@ -130,13 +130,3 @@ a:hover {
 .content { padding: 20px; text-indent: 2em; border-top: 1px solid #0050D0;display:block; background: #ccccff;}
 .img{ width:50px;height:50px;padding:0px;}
 .td {align:center;font-size:15px;}
-TEXTAREA
-{
-    margin: 0px;
-    padding: 0px;
-	font: 20px "Droid Sans", "Trebuchet MS", "Bitstream Vera Sans", "Luxi Sans", Verdana, arial;
-    color: #777;
-	border: 1px solid #BBB;
-	background-color: #FFF;
-	overflow-y: auto;
-}
