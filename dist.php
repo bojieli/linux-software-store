@@ -152,8 +152,8 @@ $distname = firstLetterToUpper($dist);
       </div>
 
       <!-- This is 'home-button' -->
-      <div id="home-button" class="home-button" style="background-image:url(./static/img/<?=$dist?>/button-1.png);width:230px;height:55px;border:0px;" >
-        <a href="index.html" style="font-size:30px;">返回首页</a>
+      <div id="home-button" class="home-button">
+        <a href="index.html">返回首页</a>
       </div>
 
       <?php $dists = array('archlinux', 'centos', 'debian', 'deepin', 'fedora', 'gentoo', 'mint', 'opensuse', 'puppy', 'slackware', 'ubuntu');

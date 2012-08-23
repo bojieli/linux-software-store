@@ -61,21 +61,39 @@ p {
 }
 .nav {
   float: left;
-  width: 115px;
+}
+.nav a {
+  background-image: url(../img/<?=$dist?>/button-4.png);
+  color: black;
+  display: inline-block;
+  font-size: 22px;
   height: 55px;
   line-height: 55px;
-  font-size: 22px;
   text-align: center;
-  background-image: url(../img/<?=$dist?>/button-4.png);
+  width: 115px;
+}
+.nav a:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-#home-button {
-  width: 230px;
+#home-button a {
+  background-image: url(../img/<?=$dist?>/button-1.png);
+  color: black;
+  display: inline-block;
+  font-size: 30px;
   height: 55px;
   line-height: 55px;
-    font-family:  sans-serif;
-    font-size:40px;
-    text-align: center;  
+  text-align: center;  
+  width: 230px;
+}
+#home-button a:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 #content-1 {
