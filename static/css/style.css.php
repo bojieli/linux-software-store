@@ -206,8 +206,7 @@ a:hover {
     height:35px;
     text-align：center;
     background:yellow;
-    filter:alpha(opacity=50);
-}
+ }
 
 .sw_info_2
 {
@@ -215,7 +214,7 @@ a:hover {
     height:35px;
     text-align：center;
     background:purple;
-    filter:alpha(opacity=50);
+
 }
 
 .sw_intro
@@ -247,14 +246,14 @@ a:hover {
    height: 35px;
    background:lightblue;
    font-size:25px;
-   filter:alpha(opacity=50);
+
 }
 .message
 {
      width: 375px;
      height:135px;
      align:left;
-     filter:alpha(opacity=50);
+
 }
 
 .face
@@ -262,7 +261,7 @@ a:hover {
      width: 375px;
      height:35px;
      background:lightgreen;
-     filter:alpha(opacity=50);
+
 }
 
 .comment_1
@@ -270,12 +269,17 @@ a:hover {
      width: 375px;
      height:50px;
      background:yellow;
-     filter:alpha(opacity=50);
+
 }
 .comment_2
 {
      width: 375px;
      height:50px;
      background:green;
-     filter:alpha(opacity=50);
+
+}
+
+.intro
+{
+ font-size:20px;
 }
