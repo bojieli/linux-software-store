@@ -56,7 +56,6 @@ $(function(){
 	});
 });
 
-
 $(function(){
 	$(".button1> div > a").each(function(){
 		$(this).find("img").hover(function(){
@@ -89,29 +88,12 @@ $(function(){
 			$(this).css("z-index",0);
 		});
 	});
+
+});
+
 });
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
