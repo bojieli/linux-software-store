@@ -1,3 +1,34 @@
+<?php
+if (empty($_GET['dist'])) {
+	$dist = 'ubuntu';
+} else {
+	$dist = addslashes($_GET['dist']);
+}
+function firstLetterToUpper($word) {
+	if ($word[0] >= 'a'&& $word[0] <= 'z') {
+		$word[0] = chr(ord($word[0])- ord('a') + ord('A'));
+	}
+	return $word;
+}
+$distname = firstLetterToUpper($dist);
+
+if (empty($_GET['package'])) {
+	$package = 'bash';
+} else {
+	$package = addslashes($_GET['package']);
+}
+
+include_once "db_init.php";
+$distid = mysql_result(mysql_query("SELECT did FROM cz_dist WHERE `name` = '$dist'"), 0);
+if (empty($distid)) {
+	die('Distribution not found');
+}
+$rs = mysql_query("SELECT * FROM cz_pack LEFT JOIN cz_pack_detail ON cz_pack.pid=cz_pack_detail.pid WHERE `name` = '$package' AND `did` = '$distid'");
+$info = mysql_fetch_array($rs);
+if (empty($info)) {
+	die('Package not found');
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -6,7 +37,7 @@
     <title><?=$distname ?> Software Store !</title>
 
     <!--方便网站被搜索引擎发现-->
-    <meta name="description" content="This page is made for Archlinux users to get software !" />
+    <meta name="description" content="This page is made for <?=$distname?> users to get software!" />
     <meta name="keywords" content="<?=$distname?>,software,free,unofficial" />
 
 
@@ -33,7 +64,7 @@
 
 <div id="wrapper">
     <!-- This is 'background' -->
-    <div id="background" class="bg" style="background-image: url(./static/img/archlinux/archlinux.jpg); background-repeat: no-repeat">
+    <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
         <div id="search" style="float:right;padding-right:35px;">
             <br>
             <br>
@@ -63,10 +94,10 @@
                 <table id="brf">
                     <tr class="sw_img">
                         <td>
-                            <img src="" alt="此处显示软件的图片" width="50px" height="50px" padding="25px">
+                            <img src="<?=$info['icon']?>" alt="此处显示软件的图片" width="50px" height="50px" padding="25px">
                         </td>
                         <td class="sw_name">
-                             此处显示软件的名称
+                            <?=$info['name']?>
                        </td>
                    </tr>
                 </table>
@@ -74,12 +105,12 @@
                    <tr class="sw_info_1">
                        <td >
                            <p>
-                            软件大小：xxMB
+                            软件大小：<?=print_filesize($info['filesize'])?>
                             </p>
                        </td>
                        <td >
                            <p>
-                              应用平台：xx
+                              应用平台：<?=$dist?>
                            </p>
                        </td>
                    </tr>
@@ -158,14 +189,18 @@
             </table>
             <div class="sw_intro">
                  <h1>软件简介</h1>
-                &nbsp;&nbsp;<p style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;那就方式的额外；。阿斯顿你哦ipf地方你是地方地方就是地方近年来就发热哈觉得是否还是就地方还是的方式的开发不会</p>
+                &nbsp;&nbsp;<p style="text-align: left"><?=$info['description']?></p>
             </div>
         </div>
+<?php
+$packid = $info['pid'];
+$comment_count = mysql_result(mysql_query("SELECT COUNT(*) FROM cz_pack_comment WHERE `pid` = '$packid' AND `status` = 'show'"), 0);
+?>
         <div id="content-4" >
              <table id="comment">
              <tr class="sum">
-                 <td >
-                  <pre>用户评论      一共有??条评论</pre>
+                 <td>
+                  <pre>用户评论      一共有<?=$comment_count?>条评论</pre>
                  </td>
              </tr>
              <tr class="message">
@@ -179,36 +214,21 @@
                      <pre>      <img src="static/img/face.jpg" padding="6px">                          <input type="button" value="提交"></pre>
                  </td>
              </tr>
-                 <tr class="comment_1">
+<?php
+// show 6 comments at most
+$comments = mysql_query("SELECT author, time, content FROM cz_pack_comment WHERE `pid` = '$packid' AND `status` = 'show' ORDER BY time DESC LIMIT 6");
+$odd = 1;
+while ($comment = mysql_fetch_array($comments)) {
+?>
+                 <tr class="comment_<?=$odd?>">
                      <td>
-                          此处显示最新的评论
+                         <?=$comment['author']?> 于 <?=date($comment['time'])?>: <?=$comment['content']?>
                      </td>
                  </tr>
-                 <tr class="comment_2">
-                     <td>
-
-                     </td>
-                 </tr>
-                 <tr class="comment_1">
-                     <td>
-
-                     </td>
-                 </tr>
-                 <tr class="comment_2">
-                     <td>
-
-                     </td>
-                 </tr>
-                 <tr class="comment_1">
-                     <td>
-
-                     </td>
-                 </tr>
-                 <tr class="comment_2">
-                     <td>
-
-                     </td>
-                 </tr>
+<?php
+	$odd = 3 - $odd;
+}
+?>
 
              </table>
         </div>
@@ -217,3 +237,8 @@
 </div>
 </body>
 </html>
+<?php
+function print_filesize($size) {
+	return sprintf("%.2F MB", $size/1024/1024);
+}
+?>
