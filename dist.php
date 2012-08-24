@@ -93,6 +93,7 @@ $distname = firstLetterToUpper($dist);
               	<h2>办公</h2>
                   <div>
                   	<p>办公类内容</p>
+                  	<br>
                   	<p><a href="intro.php?dist=<?=$dist?>&package=office" target="_new"> office软件</a><p>
                   </div>
               </li>
@@ -100,6 +101,7 @@ $distname = firstLetterToUpper($dist);
               	<h2>学习</h2>
                   <div>
                   	<p>学习类内容</p>
+                  	<br>
                     <p><a href="intro.php?dist=<?=$dist?>&package=gimp" target="_new"> gimp软件</a><p>
       			    </div>
               </li>
@@ -107,6 +109,7 @@ $distname = firstLetterToUpper($dist);
               	<h2>科学</h2>
                   <div>
                   	<p>科学类内容</p>
+                  	<br>
                     <p><a href="intro.php?dist=<?=$dist?>&package=qtiplot" target="_new">qtiplot软件</a><p>
                   </div>
               </li>
@@ -114,6 +117,7 @@ $distname = firstLetterToUpper($dist);
               	<h2>娱乐</h2>
                   <div>
                   	<p>娱乐类内容<p>
+                  	<br>
                    <p><a href="intro.php?dist=<?=$dist?>&package=kmplayer" target="_new">kmplayer软件</a><p>
                   </div>
               </li>
@@ -121,6 +125,7 @@ $distname = firstLetterToUpper($dist);
               	<h2>系统</h2>
                   <div>
                   	<p>系统类内容<p>
+                  	<br>
                   	<p><a href="intro.php?dist=<?=$dist?>&package=git" target="_new"> git软件</a><p>
 
                   </div>
@@ -130,7 +135,7 @@ $distname = firstLetterToUpper($dist);
                   <div id="search" name="search" >
 
                   	<p>其它类内容</p>
-                    <p><a href="intro.php?dist=<?=$dist?>&package=git" target="_new"> git软件</a><p>
+                    <p><a href="intro.php?dist=<?=$dist?>&package=skype" target="_new"> skype软件</a><p>
                   </div>
               </li>
           </ul>
@@ -141,7 +146,6 @@ $distname = firstLetterToUpper($dist);
     <div id="content-2">
       <!-- This is 'dist info' -->
       <div id="info" class="info" style="background-image:url(./static/img/info.png);border:0px;">
-
                 <script type="text/javascript" src="./static/js/text_float.js"></script>
                 <div class="breakNewsblock">
                     <div id="breakNews">
@@ -169,12 +173,12 @@ $distname = firstLetterToUpper($dist);
                     var scroll2 = new ScrollText("breakNewsList","pre2","next2",true,70,true);
                     scroll2.LineHeight = 12;
                 </script>
-           </div>
+      </div>
       <!-- This is 'home-button' -->
-      <table class="dist">
       <div id="home-button" class="home-button">
         <a href="index.html">返回首页</a>
         </div>
+        
       <?php $dists = array('archlinux', 'centos', 'debian', 'deepin', 'fedora', 'gentoo', 'mint', 'opensuse', 'puppy', 'slackware', 'ubuntu');
       foreach ($dists as $d) 
       	if ($d != $dist) { ?>
