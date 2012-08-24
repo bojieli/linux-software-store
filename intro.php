@@ -28,63 +28,15 @@ $info = mysql_fetch_array($rs);
 if (empty($info)) {
 	die('Package not found');
 }
+include "static/public/head.html"
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title><?=$distname ?> Software Store !</title>
-
-    <!--方便网站被搜索引擎发现-->
-    <meta name="description" content="This page is made for <?=$distname?> users to get software!" />
-    <meta name="keywords" content="<?=$distname?>,software,free,unofficial" />
-
-
-    <!-- The CSS Reset-->
-    <!-- <link rel="stylesheet" type="text/css" href="reset.css" media="screen" /> -->
-
-    <!-- The Primary External CSS style sheet. -->
-    <link rel="stylesheet" type="text/css" href="static/css/style.css.php?dist=<?=$dist?>" media="screen" />
-    <link rel="stylesheet" type="text/css" href="static/css/tab.css.php?dist=<?=$dist?>" media="screen" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-
-    <!-- 浏览器兼容性 -->
-    <!--[if lt IE 7 ]>
-    <script type="text/javascript" src="DD_belatedPNG_0.0.8a-min.js"></script>
-    <![endif]-->
-
-    <!-- All the javascript generated for your design is in this file -->
-    <script type="text/javascript" src="static/js/style.js"></script>
-
-</head>
 <body>
 
 <div id="wrapper">
     <!-- This is 'background' -->
     <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
-        <div id="search" style="float:right;padding-right:35px;">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <form action="search_result.php" name="search" method="get">
-                <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
-                    <input type="hidden" name="dist" value="<?=$dist?>" />
-		    <tr>
-                        <td>
-                            <input type="text" name="package" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- Search Softwares -';" onfocus="if(this.value=='- Search Softwares -')value='';" value="- Search Softwares -" size="10"/>
-                        </td>
-                        <td>
-                            <input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Sotfwares -')document.forms['search'].searchinput.value='';" alt="Search" src="static/img/magglass.gif" border="0" hspace="2"/>
-                        </td>
-                    </tr>
-                </table>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-            </form>
-
-        </div>
+        <?php include"static/public/search.html"?>
         <div id="header">
 
         </div>
