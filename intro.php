@@ -47,8 +47,6 @@ if (empty($info)) {
     <!-- The Primary External CSS style sheet. -->
     <link rel="stylesheet" type="text/css" href="static/css/style.css.php?dist=<?=$dist?>" media="screen" />
     <link rel="stylesheet" type="text/css" href="static/css/tab.css.php?dist=<?=$dist?>" media="screen" />
-
-    <!-- 选项卡切换个效果标签位置 -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
     <!-- 浏览器兼容性 -->
