@@ -139,15 +139,35 @@ $distname = firstLetterToUpper($dist);
       <!-- This is 'dist info' -->
       <div id="info" class="info" style="background-image:url(./static/img/info.png);border:0px;">
 
+                <script type="text/javascript" src="./static/js/text_float.js"></script>
+                <div class="breakNewsblock">
+                    <div id="breakNews">
+                        <ul id="breakNewsList" class="list6">
+                            <li><a href="http://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                            <li><a href="https://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                            <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                            <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                            <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                            <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                            <li><a href="http://linuxmint.com/" target="_blank">Mint官方网站</a></li>
+                            <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                            <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                            <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                            <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                            <li><a href="http://mirrors.ustc.edu.cn/" target="_blank">科大mirrors源</a></li>
+                        </ul>
+                        <div class="hit">
+                            <span><a style="cursor: pointer;"><img width="11" height="10" id="pre2" alt="上一条" src="static/img/login/none.gif"></a></span>
+                            <span><a style="cursor: pointer;"><img width="11" height="10" id="next2" alt="下一条" src="static/img/login/none.gif"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <script language="javascript" type="text/javascript">
+                    var scroll2 = new ScrollText("breakNewsList","pre2","next2",true,70,true);
+                    scroll2.LineHeight = 24;
+                </script>
+            </div>
 
-      <!--此处盛放%dist的相关信息-->
-      <br>
-      <br>
-      <p>官网信息</p>
-      <br>
-      <p>下载镜像</p>
-      <br>
-      <p>最新软件</p>
 
       </div>
 
