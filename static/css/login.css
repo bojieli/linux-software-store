@@ -231,15 +231,27 @@ body {
 }
 
 /* You named this the button1*/
-#button1 {
-  position: absolute;
-  left: 100px;
-  top: 526px;
-  width: 200px;
-  height: 60px;
-  z-index: 15;
-}
 
+#button1 a {
+    background-image: url(../img/login/button.png) ;
+    position: absolute;
+    left: 70px;
+    top: 340px;
+    width: 200px;
+    height: 60px;
+    z-index: 15;
+    color: white;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 55px;
+    text-align: center;
+}
+#button1 a:hover
+{
+    cursor: pointer;
+    text-decoration: none;
+    color: yellow;
+}
 /* You named this layer help */
 #Layer-16 {
   position: absolute;
