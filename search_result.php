@@ -4,6 +4,12 @@ if (empty($_GET['dist'])) {
 } else {
 	$dist = $_GET['dist'];
 }
+if (empty($_GET['package'])) {
+	$package = 'bash';
+} else {
+	$package = addslashes($_GET['package']);
+}
+
 function firstLetterToUpper($word) {
 	if ($word[0] >= 'a'&& $word[0] <= 'z') {
 $word[0] = chr(ord($word[0])- ord('a') + ord('A'));
@@ -78,7 +84,7 @@ $distname = firstLetterToUpper($dist);
                 <p>此处显示软件搜索的结果</p>
             <br>
             <br>
-            <pre class="intro"><a href="intro.php?dist=<?=$dist?>&package=xx" target="_new">xx软件简介</a></pre>
+            <pre class="intro"><a href="intro.php?dist=<?=$dist?>&package=<?=$package?>" target="_new"><?=$package?>软件简介</a></pre>
          </div>
 
         <!-- This is 'content-2' -->
