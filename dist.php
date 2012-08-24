@@ -135,6 +135,7 @@ $distname = firstLetterToUpper($dist);
                   <div id="search" name="search" >
 
                   	<p>其它类内容</p>
+                  	<br>
                     <p><a href="intro.php?dist=<?=$dist?>&package=skype" target="_new"> skype软件</a><p>
                   </div>
               </li>
@@ -178,7 +179,7 @@ $distname = firstLetterToUpper($dist);
       <div id="home-button" class="home-button">
         <a href="index.html">返回首页</a>
         </div>
-        
+
       <?php $dists = array('archlinux', 'centos', 'debian', 'deepin', 'fedora', 'gentoo', 'mint', 'opensuse', 'puppy', 'slackware', 'ubuntu');
       foreach ($dists as $d) 
       	if ($d != $dist) { ?>
