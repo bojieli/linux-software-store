@@ -57,10 +57,10 @@ $distname = firstLetterToUpper($dist);
             <br>
             <form action="search_result.php" name="search" method="get">
                 <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
-	 	        <input type="hidden" name="dist" value="<?=$dist?>" />
+	 	    <input type="hidden" name="dist" value="<?=$dist?>" />
         	    <tr>
          		<td>
-         			<input type="text" name="dist=<?=$dist?>&&package=" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- Search Softwares -';" onfocus="if(this.value=='- Search Softwares -')value='';" value="- Search Softwares -" size="10"/>
+         			<input type="text" name="package" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- Search Softwares -';" onfocus="if(this.value=='- Search Softwares -')value='';" value="- Search Softwares -" size="10"/>
          		</td>
          		<td>
          			<input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Sotfwares -')document.forms['search'].searchinput.value='';" alt="Search" src="static/img/magglass.gif" border="0" hspace="2"/>
@@ -75,10 +75,10 @@ $distname = firstLetterToUpper($dist);
         <!-- This is 'content-1' -->
         <div id="content-1" class="content-arch">
 
-           <p>此处显示软件搜索的结果</p>
+                <p>此处显示软件搜索的结果</p>
             <br>
             <br>
-            <pre class="intro"><a href="intro.php?dist=<?=$dist?>&&package=bash" target="_new">bash软件简介</a></pre>
+            <pre class="intro"><a href="intro.php?dist=<?=$dist?>&package=xx" target="_new">xx软件简介</a></pre>
          </div>
 
         <!-- This is 'content-2' -->

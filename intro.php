@@ -69,7 +69,7 @@ if (empty($info)) {
             <br>
             <br>
             <br>
-            <form action="search_result.php" name="search">
+            <form action="search_result.html" name="search">
                 <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
                     <tr>
                         <td>
