@@ -68,7 +68,7 @@ p {
   height: 55px;
   line-height: 55px;
   text-align: center;
-  width: 115px;
+  width: 114px;
 }
 .nav a:hover {
   background-color: black;
@@ -141,7 +141,7 @@ a:visited {
 }
 a:hover {
   color: blue;
-   text-decoration: underline;
+  text-decoration: underline;
   font-weight: bold;
 }
 
