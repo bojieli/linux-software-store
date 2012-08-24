@@ -56,8 +56,6 @@ p {
   padding: 10px;
   width: 210px;
   height: 200px;
-  filter:alpha(opacity=50);
-  text-align: center;
 }
 .nav {
   float: left;
@@ -78,7 +76,13 @@ p {
   cursor: pointer;
   text-decoration: none;
 }
+#dist
+{
+width:230px;
+height:330 px;
 
+
+}
 #home-button a {
   background-image: url(../img/<?=$dist?>/button-1.png);
   color: black;
@@ -305,3 +309,4 @@ a img:hover {border:none;color:red;}
 {
  font-size:20px;
 }
+
