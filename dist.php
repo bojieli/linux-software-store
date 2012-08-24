@@ -54,7 +54,7 @@ $distname = firstLetterToUpper($dist);
          <br>
          <br>
          <br>
-         <form action="search_result.php" name="search" method="post">
+         <form action="search_result.php" name="search" method="get">
          <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
 	 	<input type="hidden" name="dist" value="<?=$dist?>" />
          	<tr>
