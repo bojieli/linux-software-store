@@ -93,42 +93,44 @@ $distname = firstLetterToUpper($dist);
               	<h2>办公</h2>
                   <div>
                   	<p>办公类内容</p>
+                  	<p><a href="intro.php?dist=<?=$dist?>&package=office" target="_new"> office软件</a><p>
                   </div>
               </li>
           	<li id="button-2" class="tab_2 button button-dist">
               	<h2>学习</h2>
                   <div>
                   	<p>学习类内容</p>
-
+                    <p><a href="intro.php?dist=<?=$dist?>&package=gimp" target="_new"> gimp软件</a><p>
       			    </div>
               </li>
           	<li id="button-3" class="tab_3 button button-dist">
               	<h2>科学</h2>
                   <div>
                   	<p>科学类内容</p>
-
+                    <p><a href="intro.php?dist=<?=$dist?>&package=qtiplot" target="_new">qtiplot软件</a><p>
                   </div>
               </li>
           	<li id="button-4" class="tab_4 button button-dist">
               	<h2>娱乐</h2>
                   <div>
                   	<p>娱乐类内容<p>
-
+                   <p><a href="intro.php?dist=<?=$dist?>&package=kmplayer" target="_new">kmplayer软件</a><p>
                   </div>
               </li>
           	<li id="button-5" class="tab_5 button button-dist">
-              	<h2>其他</h2>
+              	<h2>系统</h2>
                   <div>
-                  	<p>其他类内容<p>
+                  	<p>系统类内容<p>
+                  	<p><a href="intro.php?dist=<?=$dist?>&package=git" target="_new"> git软件</a><p>
 
                   </div>
               </li>
           	<li id="button-6" class="tab_6 button button-dist">
-              	<h2>搜索结果</h2>
+              	<h2>其它</h2>
                   <div id="search" name="search" >
 
-                  	<p>搜索结果内容</p>
-
+                  	<p>其它类内容</p>
+                    <p><a href="intro.php?dist=<?=$dist?>&package=git" target="_new"> git软件</a><p>
                   </div>
               </li>
           </ul>
