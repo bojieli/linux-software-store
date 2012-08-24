@@ -73,7 +73,7 @@ if (empty($info)) {
                 <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
                     <tr>
                         <td>
-                            <input type="text" name="software" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- Search Softwares -';" onfocus="if(this.value=='- Search Softwares -')value='';" value="- Search Softwares -" size="10"/>
+                            <input type="text" name="dist=<?=$dist?>&&package=" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- Search Softwares -';" onfocus="if(this.value=='- Search Softwares -')value='';" value="- Search Softwares -" size="10"/>
                         </td>
                         <td>
                             <input type="image" width="21" height="17" class="searchaction" onclick="if(document.forms['search'].searchinput.value=='- Search Sotfwares -')document.forms['search'].searchinput.value='';" alt="Search" src="static/img/magglass.gif" border="0" hspace="2"/>
