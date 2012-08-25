@@ -29,7 +29,7 @@
 											            <b class="xb4"></b>
 
 											               <div class="xboxcontent" style="padding: 0; text-align: center;">
-												            <a href="./new_question.html" style="padding: 5px; font-size: 20px; font-weight: normal; border: 0; display: block;">
+												            <a href="./question.php" style="padding: 5px; font-size: 20px; font-weight: normal; border: 0; display: block;">
 												                <b>开始测试 &gt;&gt;</b>
 												            </a>
 											               </div>

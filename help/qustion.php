@@ -703,7 +703,7 @@
 </td>
 </tr>
 <!--此处一下为调查问卷提交部分
-                           //value=“”部分根据用户的选择来填写								
+                           //value=“”部分根据用户的选择来填写
                                 -->
 <tr>
     <td class="main" colspan="3" style="height: auto;" valign="middle">
