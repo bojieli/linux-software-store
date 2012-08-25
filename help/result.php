@@ -88,7 +88,25 @@ include "public/head.html"?>
         <br>
 
         <div style="width: 100%; text-align: right;">
-        <a href="../index.html" class="data" style="font-size:25px;float:left;">返回首页</a>
+             <div class="rounded_box white" style="margin-bottom: 10px; width: 200px;">
+        											            <b class="xtop">
+        											            <b class="xb1"></b>
+        											            <b class="xb2"></b>
+        											            <b class="xb3"></b>
+        											            <b class="xb4"></b>
+
+        											               <div class="xboxcontent" style="padding: 0; text-align: center;">
+        												            <a href="../index.html" style="padding: 5px; font-size: 20px; font-weight: normal; border: 0; display: block;">
+        												                <b>返回首页 &gt;&gt;</b>
+        												            </a>
+        											               </div>
+        											                 <b class="xbottom">
+        											                 <b class="xb4"></b>
+        											                 <b class="xb3"></b>
+        											                 <b class="xb2"></b>
+        											                 <b class="xb1"></b>
+
+        	 </div>
         <input type="submit" value="发送"></div>
         </form>
 
