@@ -15,7 +15,7 @@
 										    <?php include"public/update_time.html"?>
 							                <table>
 								                <tr>
-								                <td style="width: auto; padding: 5px 10px 0 5px;">
+								                 <td style="width: 600px; padding: 5px 10px 0 5px;">
 									                    <p>感谢你的参与！ </p>
 									                    <p>我们将在2～3个工作日对您的反馈进行回复 </p>
 									                    <p>我们仅仅发送中文的回复,希望您能谅解。</p>
