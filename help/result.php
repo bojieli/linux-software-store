@@ -87,8 +87,10 @@ include "public/head.html"?>
 
         <br>
 
-        <div style="width: 100%; text-align: right;">
-             <div class="rounded_box white" style="margin-bottom: 10px; width: 200px;">
+        <div style="width: 100%; text-align: left;">
+        <input type="submit" value="发送"></div>
+        </form>
+        <div class="rounded_box white" style="float:center;margin-bottom: 10px; width: 200px;">
         											            <b class="xtop">
         											            <b class="xb1"></b>
         											            <b class="xb2"></b>
@@ -106,9 +108,8 @@ include "public/head.html"?>
         											                 <b class="xb2"></b>
         											                 <b class="xb1"></b>
 
-        	 </div>
-        <input type="submit" value="发送"></div>
-        </form>
+        </div>
+
 
         </td>
                                                 </tr>
