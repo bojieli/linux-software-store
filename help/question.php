@@ -7,10 +7,7 @@
 <tr>
 <td valign="middle" style="height: 100%">
 <div class="rounded_box iceblue_borderless" style="margin-bottom: 0;">
-    <b class="xtop"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b></b>
-    <div class="xboxcontent" style="vertical-align: middle; padding: 5px;">
-        <?php include"public.html"?>
-    </div>
+    <?php include"public.html"?>
 </div>
 <div class="rounded_box lightgrey_borderless" style="margin-bottom: 5px;">
 <div class="xboxcontent" style="vertical-align: middle; padding: 5px;">
