@@ -1,4 +1,4 @@
-<?php include"/public/head.html"?>
+<?php include"public/head.html"?>
 <body>
 <table border=0 style="height: 100%;width: 100%">
 <tr>

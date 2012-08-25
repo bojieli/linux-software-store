@@ -1,10 +1,11 @@
-<?php include"public/head.html"?>
+<?php include "public/head.html"?>
 	<body>
 		<table border=0 style="height: 100%;width: 100%">
 			<tr>
 				<td align="center" style="height: 100%; width: 100%">
 					<table border=0 style="height: 100%">
 						<tr>
+<<<<<<< HEAD
 							<td valign="middle" style="height: 100%">
 			                 <?php include"public/header.html"?>
 				               <div class="rounded_box lightgrey_borderless" style="margin-bottom: 5px;">
@@ -40,6 +41,24 @@
 											                 <b class="xb3"></b>
 											                 <b class="xb2"></b>
 											                 <b class="xb1"></b>
+=======
+						     <?php include "public/header.html"?>
+   						</tr>
+					   <tr>
+	    					<td class="main" colspan="3" style="height: auto;font-size:15px;"valign="top">
+
+							<br>
+							<br>
+							<b>感谢你的参与！</b>
+							<br>
+								<b>我们将在2～3个工作日对您的反馈进行回复</b>
+							<br>
+								<b>我们仅仅发送中文的回复</b><br>
+							<br>
+                                <form action="../index.html" method="POST">
+                                    <input type="submit" value="返回首页 >>" style="float left; font-size: 17px;color: green;">
+                                </form>
+>>>>>>> 5c6705bc58edc206a486c6ebc734fed14d86c139
 
 										                </div>
 										                <br>
