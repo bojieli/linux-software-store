@@ -19,6 +19,8 @@ include "public/head.html"?>
 						<tr>
 							<td valign="middle" style="height: 100%">
 							 <?php include"/public/header.html"?>
+							 </td>
+
 					   <tr>
 	    					<td class="main" colspan="3" style="height: auto;" valign="top">
 							<h2 style="margin-bottom: 0px; padding-bottom: 0px;">反馈结果</h2>
@@ -59,7 +61,7 @@ foreach ($rank as $dist => $score) {
 							<br>
 								<b>我们仅仅发送中文的回复</b><br>
 							<br>
-								<form action="feedback.html" method="POST">
+								<form action="feedback.php" method="POST">
 									<input type="hidden" name="sendfeedback" value="true">
 									<b>您可以在这儿写评论：</b><br>
 									<textarea name="comment_field" style="width: 100%; height: 150px;"></textarea><br>
@@ -75,17 +77,17 @@ foreach ($rank as $dist => $score) {
 									<input type="submit" value="发送"></div>
 									</form>
 
-					</td>
+					      </td>
 
-						</tr>
-							</table>
+					 </tr>
+				</table>
 
 				</td>
 
-						</tr>
-						</table>
-				</td>
-				</tr>
-		</table>
+		       </tr>
+			</table>
+	      </td>
+	</tr>
+	</table>
 </body>
 </html>
