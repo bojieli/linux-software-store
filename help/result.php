@@ -83,14 +83,14 @@ include "public/head.html"?>
         <br>
         <b>E-mail地址</b> (如果您愿意接受我们的回信)<br>
         <input type="text" style="background-color: #FFF; border: 1px solid #BBB; width: 250px;" name="email_add">
-        <br>
 
         <br>
 
         <div style="width: 100%; text-align: left;">
-        <input type="submit" value="发送"></div>
-        </form>
-        <div class="rounded_box white" style="float:center;margin-bottom: 10px; width: 200px;">
+           <input type="submit" value="发送">
+        </div>
+
+        <div class="rounded_box white" style="float:right;margin-bottom: 10px; width: 200px;">
         											            <b class="xtop">
         											            <b class="xb1"></b>
         											            <b class="xb2"></b>
@@ -109,7 +109,7 @@ include "public/head.html"?>
         											                 <b class="xb1"></b>
 
         </div>
-
+        </form>
 
         </td>
                                                 </tr>
