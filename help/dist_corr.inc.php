@@ -332,7 +332,7 @@ public function init_form($form) {
 public function print_feature($dist) {
 	if (!isset($this->corr[$dist]))
 		return;
-	echo '<p>Features for <strong>'.$dist."</strong> (Score: <strong>".$this->corr[$dist]."</strong>):\n";
+	echo '<p>适合程度 <strong>'.$dist."</strong> (得分: <strong>".$this->corr[$dist]."</strong>):\n";
 	echo '<ul>';
 	foreach ($this->form as $field => $value) {
 		if (isset($this->fields[$field]) && isset($this->dists[$dist][$field])) {

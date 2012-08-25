@@ -39,7 +39,7 @@ include "public/head.html"?>
                                                     </tr>
                                                 <tr>
                                                     <td>
-                                                       <h2 style="margin-bottom: 0px; padding-bottom: 0px;">反馈结果</h2>
+                                                       <h2 style="margin-bottom: 0px; padding-bottom: 0px;">测试结果</h2>
                                                        <div class="data">
 
                                                         <?php
@@ -51,9 +51,10 @@ include "public/head.html"?>
                                                             foreach ($rank as $dist => $score) {
                                                             $handle->print_feature($dist);
                                                             }
-                                                        ?></div>
+                                                        ?>
+                                                        </div>
                                                     </td>
-                                                    <?php include"public/distro_name.html"?>
+
                                                 </tr>
                                                 <tr>
                                                     <td>>
