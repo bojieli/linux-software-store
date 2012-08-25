@@ -57,7 +57,7 @@ include "public/head.html"?>
 
                                                 </tr>
                                                 <tr>
-                                                    <td>>
+                                                    <td>
         <br>
         <br>
         <b>感谢你的参与！</b>
