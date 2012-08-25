@@ -36,6 +36,7 @@ include "static/public/head.html"
             <br>
             <pre class="intro"><a href="intro.php?dist=<?=$dist?>&package=<?=$package?>" target="_new"><?=$package?>软件简介</a></pre>
                  <div id="more">
+                 <script type="text/javascript" src="static/js/jquery.more.js"></script>
                  <div class="single_item">
                       <div class="name">
                            <div class="pic"></div>
@@ -43,6 +44,7 @@ include "static/public/head.html"
                            <div class="rank"></div>
                        </div>
                  </div>
+
                  <a href="javascript:;" class="get_more">::点击加载更多内容::</a>
            </div>
          </div>
