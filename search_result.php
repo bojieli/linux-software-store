@@ -35,6 +35,16 @@ include "static/public/head.html"
             <br>
             <br>
             <pre class="intro"><a href="intro.php?dist=<?=$dist?>&package=<?=$package?>" target="_new"><?=$package?>软件简介</a></pre>
+                 <div id="more">
+                 <div class="single_item">
+                      <div class="name">
+                           <div class="pic"></div>
+                           <div class="brief"></div>
+                           <div class="rank"></div>
+                       </div>
+                 </div>
+                 <a href="javascript:;" class="get_more">::点击加载更多内容::</a>
+           </div>
          </div>
 
         <!-- This is 'content-2' -->

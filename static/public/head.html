@@ -17,6 +17,14 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css.php?dist=<?=$dist?>" media="screen" />
     <link rel="stylesheet" type="text/css" href="static/css/tab.css.php?dist=<?=$dist?>" media="screen" />
     <link rel="stylesheet" type="text/css" href="static/css/text.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="static/css/more.css" />
+    <script type="text/javascript" src="static/js/jquery1.3.2.js"></script>
+    <script type="text/javascript" src="static/js/jquery.more.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#more').more({'address': 'data.php'})
+        });
+    </script>
     <!-- 选项卡切换个效果标签位置 -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
