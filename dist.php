@@ -95,7 +95,7 @@ $distname = firstLetterToUpper($dist);
     </div>
 
     <!-- This is 'content-2' -->
-    <?php include"static/public/content.html"?>
+    <?php include"static/public/content-2.html"?>
 </div>
 </body>
 </html>
