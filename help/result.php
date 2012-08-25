@@ -18,8 +18,12 @@ include "public/head.html"?>
 					<table border=0 style="height: 100%">
 						<tr>
 							<td valign="middle" style="height: 100%">
-							 <?php include"/public/header.html"?>
-							 </td>
+                            <div class="rounded_box iceblue_borderless" style="margin-bottom: 0;">
+                                <b class="xtop"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b></b>
+                                <div class="xboxcontent" style="vertical-align: middle; padding: 5px;"></div>
+                                 <?php include "public/header.html"?>
+                                <b class="xbottom"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b></b>
+                            </div>
 
 					   <tr>
 	    					<td class="main" colspan="3" style="height: auto;" valign="top">
