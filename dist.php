@@ -11,6 +11,7 @@ function firstLetterToUpper($word) {
 	return $word;
 }
 $distname = firstLetterToUpper($dist);
+include "static/public/head.html"
 ?>
 
 <body>
