@@ -36,7 +36,37 @@ include "static/public/head.html"
             <br>
             <pre class="intro"><a href="intro.php?dist=<?=$dist?>&package=<?=$package?>" target="_new"><?=$package?>软件简介</a></pre>
                  <div id="more">
-                 <script type="text/javascript" src="static/js/jquery.more.js"></script>
+                 <script type="text/javascript">
+
+$(function(){
+	var winH = $(window).height(); //页面可视区域高度
+	var i = 1;
+	$(window).scroll(function () {
+	    var pageH = $(document.body).height();
+		var scrollT = $(window).scrollTop(); //滚动条top
+		var aa = (pageH-winH-scrollT)/winH;
+		if(aa<0.02){
+			$.getJSON("result.php",{page:i},function(json){
+				if(json){
+					var str = "";
+					$.each(json,function(index,array){
+						var str = "<div class=\"single_item\"><div class=\"element_head\">";
+						var str = str + "<div class=\"date\">"+array['date']+"</div>";
+						var str = str + "<div class=\"author\">"+array['author']+"</div>";
+                        var str = str + "</div><div class=\"content\">"+array['content']+"</div></div>";
+						$("#container").append(str);
+					});
+					i++;
+				}else{
+					$(".nodata").show().html("别滚动了，已经到底了。。。");
+					return false;
+				}
+			});
+		}
+	});
+});
+
+                 </script>
                  <div class="single_item">
                       <div class="name">
                            <div class="pic"></div>
