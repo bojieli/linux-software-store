@@ -31,7 +31,7 @@ include "static/public/head.html"
     <div id="header"></div>
         <!-- This is 'content-1' -->
         <div id="content-1" class="content-arch">
-                <p>此处显示软件搜索的结果</p>
+                <p>此处显示<?=$package?>相关的软件搜索的结果</p>
             <br>
             <br>
             <pre class="intro"><a href="intro.php?dist=<?=$dist?>&package=<?=$package?>" target="_new"><?=$package?>软件简介</a></pre>
