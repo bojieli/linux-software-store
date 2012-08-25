@@ -8,35 +8,9 @@
 $handle = new dist_corr;
 $handle->init_form($_POST);
 $rank = $handle->dist_corr();
-                      ?>
+include "public/head.html"?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8" >
-		<META http-equiv="content-language" content="cn">
-		<meta name="author" content="czluck" >
-		<META HTTP-EQUIV="Reply-to" CONTENT="czluck123">
-		<meta name="generator" content="Bluefish 2.2.2" >
-		<META name="keywords" content="linux 发行版 kde gnome rpm apt get">
-		<META NAME="description" CONTENT="帮助新手选择发行版">
-		<META NAME="Creation_Date" CONTENT="12/07/2012">
-		<META name="revisit-after" content="15 days">
-		<title>帮助新手选linux发行版</title>
-		<!-- Hack for alphachannel png with IE -->
-		<style type="text/css">
-		img {
-			behavior:	url("pngbehavior.htc");
-		}
-		</style>
-		<link rel="stylesheet" type="text/css" href="../help/css/standard.css">
-		<script type="text/javascript" src="js/prototype.js"></script>
-		<script type="text/javascript" src="js/scriptaculous.js"></script>
 
-		<script type="text/javascript" src="js/help.js"></script>
-
-		
-	</head>
 	<body>
 		<table border=0 style="height: 100%;width: 100%">
 			<tr>
@@ -44,18 +18,7 @@ $rank = $handle->dist_corr();
 					<table border=0 style="height: 100%">
 						<tr>
 							<td valign="middle" style="height: 100%">
-							<table border="0" cellpadding="0" cellspacing="0" style="width: 600px; height: 620px; table-layout: fixed;" id="maintable">
-  						  		<tr>
-        						<td class="header" style="border-bottom: 1px solid #BBB; height: 60px; width: 55px;" align="center" valign="middle">
-        								<img border="0" width=48 height=48 src="images/chooser.png">
-        						</td>
-        						<td class="header" style="border-bottom: 1px solid #BBB;"><b>帮助新手选择发行版</b>
-        						<font style="font-size: 8pt;">
-        							<br>&copy;&nbsp;<a href="../../index.html">linux software store</a>
-        							<br>( <a href="new_question.html">测试页面</a> )</font>
-        						</td>
-       						 <td class="header" style="width: 100px; border-bottom: 1px solid #BBB; font-size: 8pt;">&nbsp;</td>
-   						 </tr>
+							 <?php include"/public/header.html"?>
 					   <tr>
 	    					<td class="main" colspan="3" style="height: auto;" valign="top">
 							<h2 style="margin-bottom: 0px; padding-bottom: 0px;">反馈结果</h2>

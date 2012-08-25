@@ -53,7 +53,7 @@
 					                   </tr>
 							        </table>
 					              </div>
-				
+
 					           </div>
 				            </td>
 				        </tr>
@@ -62,6 +62,6 @@
 		    </tr>
 		</table>
 	 <script type="text/javascript" src="./js/google.js"></script>
-			
+
 	</body>
 </html>
