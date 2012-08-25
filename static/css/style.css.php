@@ -15,7 +15,7 @@ $dist = $_GET['dist'];
 
 
 body {
-  font-family: sans-serif;
+  font-family: "Microsoft YaHei","TrueType ","Apple LiGothic",sans-serif;
   font-size: small;
   vertical-align: middle;
   text-align: center;
