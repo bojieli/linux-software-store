@@ -19,8 +19,18 @@ include "static/public/head.html"
 <div id="wrapper">
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
+
+
+  <!--This search area-->
   <?php include"static/public/search.html"?>
-    <!-- This is 'content-1' -->
+
+
+  <!-- This is 'content-2' -->
+      <?php include"static/public/content-2.html"?>
+
+  
+  <div id="header"></div>
+  <!-- This is 'content-1' -->
     <div id="content-1" class="content-arch">
       <script type="text/javascript" language="javascript" src="./static/js/jquery-1.7.1.min.js"></script>
       <script type="text/javascript" src="static/js/tab.js"></script>
@@ -91,9 +101,6 @@ include "static/public/head.html"
           </ul>
       </div>
     </div>
-
-    <!-- This is 'content-2' -->
-    <?php include"static/public/content-2.html"?>
 </div>
 </div>
 </body>
