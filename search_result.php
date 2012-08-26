@@ -31,6 +31,8 @@ include "static/public/head.html"
     <div id="header"></div>
         <!-- This is 'content-1' -->
         <div id="content-1" class="content-arch">
+        <br>
+        <hr>
                 <p>此处显示<?=$package?>相关的软件搜索的结果</p>
             <br>
             <br>

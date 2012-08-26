@@ -89,7 +89,7 @@ include "public/head.html"?>
         <div style="width: 100%; text-align: left;">
            <input type="submit" value="发送">
         </div>
-        <?php include"back_to_home.html"?>
+        <?php include"public/back_to_home.html"?>
 
         </form>
 

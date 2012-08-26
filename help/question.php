@@ -731,7 +731,7 @@
 
                 <input type="hidden" id="popularity" name="popularity" value="">
 
-                <input type="submit" value="提交 >>" style="float: right; font-size: 15px;">
+                <input type="submit" value="提交 >>" style="float: right; font-size: 20px;background:blue;">
 
                 <div style="text-align: left;">
                     <b>谢谢你的参与。</b>
