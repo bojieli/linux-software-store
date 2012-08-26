@@ -21,7 +21,7 @@
 									                    <p>我们仅仅发送中文的回复,希望您能谅解。</p>
 										                 <br style="clear: both;">
 										                 <br>
-										                <?php include"back_to_home.html"?>
+										                <?php include"public/back_to_home.html"?>
 
 									                </td>
 									                <?php include"public/distro_name.html"?>
