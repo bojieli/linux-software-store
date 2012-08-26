@@ -40,17 +40,36 @@ include "public/head.html"?>
                                                     <td>
                                                        <h2 style="margin-bottom: 0px; padding-bottom: 0px;">测试结果</h2>
                                                        <div class="data">
+<?php
+foreach ($rank as $dist => $score) {
+	break;
+}
+?>
+<p class="result">最适合您的发行版是：<?=$dist?></p>
+<p class="result">匹配程度：<?=$score*10?>%</p>
+<ol class="feature">
+<?php
+$handle->print_feature($dist);
+?>
+</ol>
+<div class="otherdist">
+<p>您还可以选择：</p>
+<dl>
+<?php
+$first = true;
+foreach ($rank as $dist => $score) {
+	if (!$first) {
+?>
+<dt><?=$dist?></dt>
+<dd>匹配程度：<?=$score*10?>%</dd>
+<?php
+	}
+	$first = false;
+}
+?>
+</dl>
+</div>
 
-                                                        <?php
-                                                            echo "<ol>";
-                                                            foreach ($rank as $dist => $score) {
-                                                            echo "<li>$dist: <strong >$score</strong></li>";
-                                                            }
-                                                            echo "</ol>\n";
-                                                            foreach ($rank as $dist => $score) {
-                                                            $handle->print_feature($dist);
-                                                            }
-                                                        ?>
                                                         </div>
                                                     </td>
 

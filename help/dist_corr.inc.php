@@ -329,7 +329,36 @@ public function init_form($form) {
 	$this->form = $form;
 }
 
+private function feature_desc($dist, $field) {
+	$value = $this->dists[$dist][$field];
+	if (is_array($value)) {
+		$rs = array();
+		foreach ($value as $v)
+			 $rs[] = $this->fields[$field][$v];
+		return implode(', ', $rs);
+	} else if ($this->score_func[$field] == 'return_rank') {
+		$closest = 0;
+		$minwidth = 0;
+		foreach ($this->fields[$field] as $key => $desc)
+			if ($closest == 0 || abs($key - $value) < $minwidth) {
+				$closest = $key;
+				$minwidth = abs($key - $value);
+			}
+		return $this->fields[$field][$closest]. $value;
+	} else if (isset($this->fields[$field][$value])) {
+		return $this->fields[$field][$value];
+	}
+}
+
 public function print_feature($dist) {
+	if (!isset($this->corr[$dist]))
+		return;
+	foreach ($this->form as $field => $value) {
+		echo "<li>".$this->feature_desc($dist, $field)."</li>\n";
+	}
+}
+
+public function print_feature_scored($dist) {
 	if (!isset($this->corr[$dist]))
 		return;
 	echo '<p>适合程度 <strong>'.$dist."</strong> (得分: <strong>".$this->corr[$dist]."</strong>):\n";
@@ -338,24 +367,7 @@ public function print_feature($dist) {
 		if (isset($this->fields[$field]) && isset($this->dists[$dist][$field])) {
 			echo '<li>';
 			echo '('.$this->score_details[$dist][$field].') ';
-			$value = $this->dists[$dist][$field];
-			if (is_array($value)) {
-				$rs = array();
-				foreach ($value as $v)
-					 $rs[] = $this->fields[$field][$v];
-				echo implode(', ', $rs);
-			} else if ($this->score_func[$field] == 'return_rank') {
-				$closest = 0;
-				$minwidth = 0;
-				foreach ($this->fields[$field] as $key => $desc)
-					if ($closest == 0 || abs($key - $value) < $minwidth) {
-						$closest = $key;
-						$minwidth = abs($key - $value);
-					}
-				echo $this->fields[$field][$closest]. $value;
-			} else if (isset($this->fields[$field][$value])) {
-				echo $this->fields[$field][$value];
-			}
+			echo $this->feature_desc($dist, $field);
 			echo '</li>'."\n";
 		}
 	}
