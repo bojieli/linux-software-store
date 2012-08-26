@@ -76,12 +76,15 @@ include "public/head.html"?>
         <br>
         <b>我们仅仅发送中文的回复</b><br>
         <br>
+
         <form action="feedback.php" method="POST">
+        <table>
+                <tr>
         <input type="hidden" name="sendfeedback" value="true">
         <b>您可以在这儿写评论：</b><br>
         <textarea name="comment_field" style="width: 100%; height: 150px;"></textarea><br>
         <br>
-        <table>
+        </tr>
         <tr>
             <td>
                 <b>E-mail地址</b> (如果您愿意接受我们的回信)
@@ -91,7 +94,7 @@ include "public/head.html"?>
             <td>
                 <div style="width: 100%; float:right;text-align: center;">
                 <input type="submit" value="发送"></div></td>
-            </tr>
+        </tr>
              <tr><td><?php include"public/back_to_home.html"?></td></tr></table>
 
 
