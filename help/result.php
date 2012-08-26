@@ -81,17 +81,18 @@ include "public/head.html"?>
         <b>您可以在这儿写评论：</b><br>
         <textarea name="comment_field" style="width: 100%; height: 150px;"></textarea><br>
         <br>
-        <table> <tr>
-        <td><b>E-mail地址</b> (如果您愿意接受我们的回信)<br>
-        <input type="text" style="background-color: #FFF; border: 1px solid #BBB; width: 250px;" name="email_add">
-
-        <br>
-        </td>
-        <td>
-        <div style="width: 100%; text-align: left;">
-           <input type="submit" value="发送"></div></td>
-        </tr>
-        <tr><td><?php include"public/back_to_home.html"?></td></tr></table>
+        <table>
+        <tr>
+            <td>
+                <b>E-mail地址</b> (如果您愿意接受我们的回信)
+                <br>
+                <input type="text" style="background-color: #FFF; border: 1px solid #BBB; width: 250px;" name="email_add">
+            </td>
+            <td>
+                <div style="width: 100%; float:right;text-align: center;">
+                <input type="submit" value="发送"></div></td>
+            </tr>
+             <tr><td><?php include"public/back_to_home.html"?></td></tr></table>
 
 
 
