@@ -87,9 +87,9 @@ include "public/head.html"?>
         <br>
 
         <div style="width: 100%; text-align: left;">
-           <input type="submit" value="发送">
+           <input type="submit" value="发送"> <?php include"public/back_to_home.html"?>
         </div>
-        <?php include"public/back_to_home.html"?>
+
 
         </form>
 
