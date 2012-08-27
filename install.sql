@@ -24,6 +24,7 @@ USE software;
 	aid		architecture
 	pid		package
 	ptid		package type (rpm, deb)
+	sid		section (Games, Net...)
 	fid		file
  */
 /**
@@ -53,6 +54,10 @@ USE software;
  *   A package may have multiple comments.
  *   Since packages are under high query load, it is separated into two tables,
  *     one hold basic info, the other hold long strings...
+ * section:
+ *   Classification of package.
+ *   Sections are manually created and the packages are classified into
+ *     sections automatically by Section, Tag, or group in repodata.
  * file:
  *   Locally stored packages, mainly non-open-source or non-free softwares.
  *   A (package, arch) may be related to an uploaded file. A file may be used by
@@ -109,27 +114,63 @@ CREATE TABLE IF NOT EXISTS cz_arch_dist (
 	FOREIGN KEY (`did`) REFERENCES cz_dist(`did`)
 );
 
+CREATE TABLE IF NOT EXISTS cz_section (
+	`sid` INT(10) NOT NULL,
+	`name` VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS cz_pack (
 	`pid` INT(10) NOT NULL AUTO_INCREMENT,
-	`did` INT(10) NOT NULL,
-	`rid` INT(10) NOT NULL,
-	`filesize` INT(10) NOT NULL,
-	`rate` INT(10) NOT NULL,
-	`create_time` INT(10) NOT NULL, -- unix timestamp
-	`update_time` INT(10) NOT NULL, -- unix timestamp
-	`name` CHAR(127) NOT NULL, -- hope package name will not be too long...
-	`version` CHAR(31) NOT NULL,
+	`did` INT(10) NOT NULL, -- distribution id
+	`rid` INT(10) NOT NULL, -- repo id
+	`sid` INT(10) NOT NULL, -- section id
+	`filesize` INT(10) NOT NULL, -- package size
+	`install_size` INT(10) NOT NULL,
+	`rate_total` INT(10) NOT NULL, -- SUM(rates)
+	`rate_count` INT(10) NOT NULL, -- COUNT(rates)
+	`create_time` INT(10) NOT NULL, -- timestamp of creation of this row
+	`update_time` INT(10) NOT NULL, -- last update timestamp of this row
+	`name` VARCHAR(127) NOT NULL, -- hope package name will not be too long...
+	`version` VARCHAR(127) NOT NULL, -- package version
+	`url` VARCHAR(255) NOT NULL, -- download url
+	`summary` VARCHAR(255) NOT NULL, -- short description
 	PRIMARY KEY (`pid`),
 	FOREIGN KEY (`did`) REFERENCES cz_dist(`did`),
 	FOREIGN KEY (`rid`) REFERENCES cz_repo(`rid`),
+	FOREIGN KEY (`sid`) REFERENCES cz_section(`sid`),
 	INDEX key_name(`name`)
 );
 
 CREATE TABLE IF NOT EXISTS cz_pack_detail (
 	`pid` INT(10) NOT NULL,
+	`checksum_md5` CHAR(32),
+	`checksum_sha1` CHAR(40),
+	`checksum_sha256` CHAR(64),
+	`bugurl` VARCHAR(255), -- issue tracker (optional)
+	`homepage` VARCHAR(255),
+	`license` VARCHAR(127), -- RPM only
+	`maintainer` VARCHAR(255), -- maintainer or packager
+	`priority` VARCHAR(20), -- DEB only
 	`description` TEXT,
 	`icon` BLOB, -- binary image data
 	FOREIGN KEY (`pid`) REFERENCES cz_pack(`pid`)
+);
+
+-- Tag of DEB, rpm:group of RPM, section of DEB
+-- For quick search: separated by :: for DEB or / for RPM
+CREATE TABLE IF NOT EXISTS cz_pack_tag (
+	`pid` INT(10) NOT NULL,
+	`toptag` VARCHAR(127) NOT NULL, -- top level tab
+	`subtag` VARCHAR(127), -- second level tab. If no separator in original tag then NULL
+	FOREIGN KEY (`pid`) REFERENCES cz_pack(`pid`),
+	INDEX key_toptag(`toptag`),
+	INDEX key_subtag(`subtag`)
+);
+
+CREATE TABLE IF NOT EXISTS cz_pack_depend (
+	`pid` INT(10) NOT NULL,
+	`dep` INT(10) NOT NULL, -- pack pid depends on pack dep
+	`version` VARCHAR(31) NOT NULL, -- minimum dep version. NULL for no limit
 );
 
 CREATE TABLE IF NOT EXISTS cz_pack_arch (
