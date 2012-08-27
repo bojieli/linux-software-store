@@ -49,7 +49,7 @@ include "public/head.html"?>
                                                          ?>
                                                             <p class="result">最适合您的发行版是：<a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a></p>
                                                             <p class="result">匹配程度：<?=$score*10?>%</p>
-                                                            <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a><div>
+                                                            <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div>
                                                             <ol class="feature">
                                                             <?php
                                                              $handle->print_feature($dist);
@@ -69,7 +69,7 @@ include "public/head.html"?>
                                                                 ?>
                                                                 <dt><a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a></dt>
                                                                 <dd>匹配程度：<?=$score*10?>%</dd>
-                                                                <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a><div>
+                                                                <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div>
                                                                 <?php
 	                                                               }
 	                                                         $first = false;
