@@ -26,6 +26,7 @@ include "public/head.html"?>
     <p>当您喜爱的发行版不在此页中时，请即使反馈该问题，发送邮件给<a href="mailto:czluck123@gmail.com"><b>czluck123@gmail.com</b></a>，以便我我们及时更正。
     <p><b>同样, 我们要感谢给我们免费使用权的GNU/Linux的发行版和他们所在的社区开发人员!</b>
     <hr>
+    <div class="result" id="result">
     <h2>测试结果</h2>
 <?php
 foreach ($rank as $dist => $score) {
@@ -33,11 +34,13 @@ foreach ($rank as $dist => $score) {
 	break;
 }
 ?>
-   <p class="result">最适合您的发行版是：
+<div class="fit-1" id="fit-1">
+   <p >最适合您的发行版是：
      <a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a>
    </p>
-   <p class="result">匹配程度：<?=$score*10?>%</p>
-   <div>
+   <p >匹配程度：<?=$score*10?>%</p>
+   </div>
+   <div class="fit-2" id="fit-2">
      <a href="../dist.php?dist=<?=$dist?>"><img class="dist_png" id="dist_png" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a>
    </div>
    <ol class="feature">
@@ -45,6 +48,7 @@ foreach ($rank as $dist => $score) {
 $handle->print_feature($dist);
 ?>
    </ol>
+   </div>
    <hr>
    <p>您还可以选择：</p>
 <?php
