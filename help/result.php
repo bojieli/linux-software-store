@@ -14,6 +14,8 @@ include "public/head.html"?>
 .xboxcontent { font-size: 14px; padding: 5px;}
 .otherdist { float: left; width: 160px; margin: 10px;}
 .clear { clear: both;}
+#fit-1 { font-size: 18px; }
+.emph { color: green;}
 </style>
 
 <body>
@@ -35,10 +37,10 @@ foreach ($rank as $dist => $score) {
 }
 ?>
 <div class="fit-1" id="fit-1">
-   <p >最适合您的发行版是：
+   <p>最适合您的发行版是：
      <a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a>
    </p>
-   <p >匹配程度：<?=$score*10?>%</p>
+   <p>匹配程度：<span class="emph"><?=$score*10?>%</span></p>
 
    </div>
    <div class="fit-2" id="fit-2">
