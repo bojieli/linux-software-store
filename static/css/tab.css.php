@@ -98,3 +98,21 @@ h2 {
             border-top: 1px solid #0050D0;
             display:block;
             }
+.software{
+     width:700px;
+     height:55px;
+     text-align:center;
+}
+
+.icon{
+     align:center;
+     width:55px;
+     height:55px;
+     float:left;
+}
+
+.bref{
+    width:635px;
+    height:55px;
+    float:right;
+}
