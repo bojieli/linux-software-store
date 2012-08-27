@@ -115,3 +115,7 @@ h2 {
     height:55px;
     float:right;
 }
+
+hr{
+width:600px;
+}
