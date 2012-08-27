@@ -50,7 +50,7 @@ foreach ($rank as $dist => $score) {
    <br>
    <br>
    <ol class="feature">
-   <p>此发行版的新特性</p>
+   <h2>此发行版的新特性</h2>
 <?php
 $handle->print_feature($dist);
 ?>
