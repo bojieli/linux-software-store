@@ -107,7 +107,7 @@ TABLE.infoframe TD
 .rounded_box { background-color: transparent; margin:0px; }
 .rounded_box h4 { margin: 0px; padding-top: 7px; font-size: 14px; }
 
-.xtop, .xbottom { display: block; background-color: transparent; font-size: 1px; }
+.xtop, .xbottom { display: block; background-color: transparent; font-size: 14px; }
 .xb1, .xb2, .xb3, .xb4 { display: block; overflow: hidden; }
 .xb1, .xb2, .xb3 { height: 1px; }
 .xb2, .xb3, .xb4 { background-color: #F9F9F9; border-left: 1px solid #CCC; border-right: 1px solid #CCC; }
@@ -171,8 +171,8 @@ li.green .xboxcontent { background-color: #CFE8CF; border-color: #AAC6AA; }
 .blue .xb2, .blue .xb3, .blue .xb4 { background-color: #585DB2; border-color: #585DB2; }
 .blue .xb1 { background-color: #585DB2; }
 .blue .xboxcontent { background-color: #585DB2; border-color: #585DB2; color: #FFF; }
-.blue .xboxcontent a { color: #B5B5FF; font-weight: bold; }
-.blue .xboxcontent a:hover { color: #C9C9FF; font-weight: bold; }
+.blue .xboxcontent a { color: #B5B5FF; }
+.blue .xboxcontent a:hover { color: #C9C9FF; }
 
 .invisible .xb2, .invisible .xb3, .invisible .xb4 { background-color: transparent; border-color: transparent; }
 .invisible .xb1 { background-color: transparent; }
