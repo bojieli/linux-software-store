@@ -98,7 +98,7 @@ $(function(){
          </div>
 
         <!-- This is 'content-2' -->
-         <?php include"static/public/content-2.html"?>
+         <?php include"static/public/content-2.php"?>
     </div>
 </div>
 </body>
