@@ -32,13 +32,28 @@ include "static/public/head.html"
         <!-- This is 'content-1' -->
         <div id="content-1" class="content-arch">
         <br>
-        <hr>
+        <br>
                 <p>此处显示<?=$package?>相关的软件搜索的结果</p>
             <br>
             <br>
-            <pre class="intro"><a href="intro.php?dist=<?=$dist?>&package=<?=$package?>" target="_new"><?=$package?>软件简介</a></pre>
-                 <div id="more">
-                 <script type="text/javascript">
+            <hr>
+            <div  class="software">
+                                    <div class="icon" >
+                                        <a href="intro.php?dist=<?dist?> & packge=<?=$package?>" target="_blank">
+                                         <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                                        </a>
+                                    </div>
+                                      <div class="brf" >
+                                          <a href="intro.php?dist=<?=$dist?> & packge=<?=$package?>"  target="_blank">
+                                                <p><?=$package?><p>
+                                          </a>
+                                          <comment>zxfgdfg</comment>
+                                    </div>
+                                </div>
+
+
+            <div id="more">
+            <script type="text/javascript">
 
 $(function(){
 	var winH = $(window).height(); //页面可视区域高度
