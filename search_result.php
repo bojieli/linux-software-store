@@ -49,6 +49,7 @@ include "static/public/head.html"
                                           </a>
                                           <comment>zxfgdfg</comment>
                                     </div>
+                                    <hr>
                                 </div>
 
 
