@@ -89,7 +89,7 @@ h2 {
           }
 
 .head {
-        padding: 5px; cursor: pointer
+        padding-top: 5px; cursor: pointer
         }
 
 .content {
