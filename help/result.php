@@ -68,8 +68,8 @@ include "public/head.html"?>
 	                                                                if (!$first) {
                                                                 ?>
                                                                 <dt><a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a></dt>
-                                                                <dd>匹配程度：<?=$score*10?>%</dd>
-                                                                <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div>
+                                                                <dd>匹配程度：<?=$score*10?>%
+                                                                <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div></dd>
                                                                 <?php
 	                                                               }
 	                                                         $first = false;
