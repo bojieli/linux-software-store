@@ -66,22 +66,22 @@ include "public/head.html"?>
                                                             </ol>
                                                         <td>
                                                         </tr>
-                                                        <tr>
-                                                            <td class="otherdist">
-                                                            <p>您还可以选择：</p>
-
-                                                                <?php
+                                                       <p>您还可以选择：</p>
+                                                            <br>
+                                                       <?php
+                                                                    $line=1;
                                                                     $first = true;
                                                                     foreach ($rank as $dist => $score) {
+                                                                    if(line){
 	                                                                if (!$first) {
                                                                 ?>
-                                                                <td class="otherdist">
+                                                                <tr class="otherdist">
+                                                                <td>
                                                                 <div class="dist_get" id="dist_get">
                                                                    <a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件">
                                                                    <?=$dist?>
                                                                    </a>
-
-                                                                匹配程度：<?=$score*10?>%
+                                                                      匹配程度：<?=$score*10?>%
                                                                  <div >
                                                                    <a href="../dist.php?dist=<?=$dist?>">
                                                                      <img class="dist_png_1" id="dist_png_1" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件">
@@ -91,11 +91,33 @@ include "public/head.html"?>
                                                                 <?php
 	                                                               }
 	                                                         $first = false;
-                                                            }
+	                                                         $line=0;
+                                                              }?>
+                                                              elseif{
+                                                                  <td>
+                                                                  <div class="dist_get" id="dist_get">
+                                                                   <a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件">
+                                                                    <?=$dist?>
+                                                                       </a>
+                                                                        匹配程度：<?=$score*10?>%
+                                                                   <div >
+                                                                   <a href="../dist.php?dist=<?=$dist?>">
+                                                                   <img class="dist_png_1" id="dist_png_1" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件">
+                                                                    </a>
+                                                                   </div>
+                                                                   </td>
+                                                               </tr>
+                                                                 <?php
+                                                                  	 }
+                                                                  $first = false;
+                                                                  $line=1;
+                                                                 }
+
+                                                          }
                                                          ?>
 
 
-                                                        </tr>
+
 
                                                         </table>
                                                     </td>
