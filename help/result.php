@@ -25,7 +25,7 @@ include "public/head.html"?>
     <p>我们做过这个小测试，相信您会对您的发行版有了一定的了解！
     <p>当您喜爱的发行版不在此页中时，请即使反馈该问题，发送邮件给<a href="mailto:czluck123@gmail.com"><b>czluck123@gmail.com</b></a>，以便我我们及时更正。
     <p><b>同样, 我们要感谢给我们免费使用权的GNU/Linux的发行版和他们所在的社区开发人员!</b>
-
+    <hr>
     <h2>测试结果</h2>
 <?php
 foreach ($rank as $dist => $score) {
