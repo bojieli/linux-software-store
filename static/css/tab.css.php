@@ -117,5 +117,5 @@ h2 {
 }
 
 hr{
-width:600px;
+width:650px;
 }
