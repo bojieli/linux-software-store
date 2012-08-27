@@ -67,8 +67,8 @@ include "public/head.html"?>
                                                                     foreach ($rank as $dist => $score) {
 	                                                                if (!$first) {
                                                                 ?>
-                                                                <dt class="dist_get"><a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a>
-                                                                <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div></dt>
+                                                                <dt class="dist_get" id="dist_get"><a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a>
+                                                                <div class="dist_png" id="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div></dt>
                                                                 <dd >匹配程度：<?=$score*10?>%
                                                                </dd>
                                                                 <?php
