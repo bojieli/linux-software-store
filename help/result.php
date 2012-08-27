@@ -59,7 +59,7 @@ include "public/head.html"?>
                                                             </div>
                                                        </td>
                                                            <td>
-                                                            <ol class="feature">
+                                                            <ol class="feature" id=""feature">
                                                             <?php
                                                              $handle->print_feature($dist);
                                                               ?>
@@ -75,24 +75,26 @@ include "public/head.html"?>
                                                                     foreach ($rank as $dist => $score) {
 	                                                                if (!$first) {
                                                                 ?>
+                                                                <td class="otherdist">
                                                                 <div class="dist_get" id="dist_get">
                                                                    <a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件">
                                                                    <?=$dist?>
                                                                    </a>
-                                                                   <div >
-                                                                    <a href="../dist.php?dist=<?=$dist?>">
-                                                                        <img class="dist_png" id="dist_png" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件">
-                                                                     </a>
-                                                                   </div>
-                                                                匹配程度：<?=$score*10?>%
 
+                                                                匹配程度：<?=$score*10?>%
+                                                                 <div >
+                                                                   <a href="../dist.php?dist=<?=$dist?>">
+                                                                     <img class="dist_png_1" id="dist_png_1" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件">
+                                                                     </a>
+                                                                 </div>
+                                                                 </td>
                                                                 <?php
 	                                                               }
 	                                                         $first = false;
                                                             }
                                                          ?>
 
-                                                            </td>
+
                                                         </tr>
 
                                                         </table>
