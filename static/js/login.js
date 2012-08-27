@@ -3,8 +3,8 @@
 //
 //   This is where all the javascript required by your design is written.
 //
-//   Originally generated at http://psd2cssonline.com 
-//   July 4, 2012, 1:59 pm with psd2css Online version 1.95
+//   Or
+//   July 4, 2012, 1:59 pm with
 
 $(document).ready(function(){
 
