@@ -47,10 +47,17 @@ include "public/head.html"?>
 	                                                       break;
                                                           }
                                                          ?>
-                                                            <p class="result">最适合您的发行版是：<a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a></p>
+                                                            <p class="result">最适合您的发行版是：
+                                                                <a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件">
+                                                                  <?=$dist?></a>
+                                                            </p>
                                                             <p class="result">匹配程度：<?=$score*10?>%</p>
-                                                            <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div>
-                                                           </td>
+                                                            <div >
+                                                                <a href="../dist.php?dist=<?=$dist?>">
+                                                                    <img class="dist_png" id="dist_png" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件">
+                                                               </a>
+                                                            </div>
+                                                       </td>
                                                            <td>
                                                             <ol class="feature">
                                                             <?php
@@ -58,7 +65,6 @@ include "public/head.html"?>
                                                               ?>
                                                             </ol>
                                                         <td>
-                                                        <?php include"public/distro_name.html"?>
                                                         </tr>
                                                         <tr>
                                                             <td class="otherdist">
@@ -69,10 +75,17 @@ include "public/head.html"?>
                                                                     foreach ($rank as $dist => $score) {
 	                                                                if (!$first) {
                                                                 ?>
-                                                                <div class="dist_get" id="dist_get"><a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a>
-                                                                   <div class="dist_png" id="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div></dt>
+                                                                <div class="dist_get" id="dist_get">
+                                                                   <a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件">
+                                                                   <?=$dist?>
+                                                                   </a>
+                                                                   <div >
+                                                                    <a href="../dist.php?dist=<?=$dist?>">
+                                                                        <img class="dist_png" id="dist_png" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件">
+                                                                     </a>
+                                                                   </div>
                                                                 匹配程度：<?=$score*10?>%
-                                                               
+
                                                                 <?php
 	                                                               }
 	                                                         $first = false;
