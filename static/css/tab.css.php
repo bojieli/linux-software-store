@@ -110,7 +110,7 @@ h2 {
      float:left;
 }
 
-.bref{
+.brf{
     width:635px;
     height:55px;
     float:right;
