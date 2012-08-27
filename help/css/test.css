@@ -2,7 +2,7 @@
 {
     width: 50px;
     height: 50px;
-    margin-left: 200px;
+
 }
 #dist_get
 {
@@ -11,11 +11,7 @@
     text-align: center
 }
 
-#dist_png_1
-{
-    width: 50px;
-    height: 50px;
-}
+
 
 #feature{
     text-align: center;
@@ -29,7 +25,7 @@
     height: 50px;
     width: 50%;
     float: left;
-  
+
  }
 
 #fit-2{

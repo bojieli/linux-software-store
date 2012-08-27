@@ -42,8 +42,11 @@ foreach ($rank as $dist => $score) {
 
    </div>
    <div class="fit-2" id="fit-2">
-     <a href="../dist.php?dist=<?=$dist?>"><img class="dist_png" id="dist_png" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a>
+     <a href="../dist.php?dist=<?=$dist?>">
+      <img class="dist_png" id="dist_png" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件">
+    </a>
    </div>
+   <br>
    <br>
    <br>
    <ol class="feature">
@@ -61,7 +64,7 @@ foreach ($rank as $dist => $score) {
        <a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a>
        <br>匹配程度：<?=$score*10?>%
        <div>
-         <a href="../dist.php?dist=<?=$dist?>"><img class="dist_png_1" id="dist_png_1" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a>
+         <a href="../dist.php?dist=<?=$dist?>"><img class="dist_png" id="dist_png" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a>
        </div>
      </div>
 <?php
