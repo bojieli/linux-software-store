@@ -39,38 +39,46 @@ include "public/head.html"?>
                                                 <tr>
                                                     <td>
                                                        <h2 style="margin-bottom: 0px; padding-bottom: 0px;">测试结果</h2>
-                                                       <div class="data">
-<?php
-foreach ($rank as $dist => $score) {
-	break;
-}
-?>
-<p class="result">最适合您的发行版是：<?=$dist?></p>
-<p class="result">匹配程度：<?=$score*10?>%</p>
-<ol class="feature">
-<?php
-$handle->print_feature($dist);
-?>
-</ol>
-<div class="otherdist">
-<p>您还可以选择：</p>
-<dl>
-<?php
-$first = true;
-foreach ($rank as $dist => $score) {
-	if (!$first) {
-?>
-<dt><?=$dist?></dt>
-<dd>匹配程度：<?=$score*10?>%</dd>
-<?php
-	}
-	$first = false;
-}
-?>
-</dl>
-</div>
+                                                      <table>
+                                                      <tr>
+                                                       <td class="data">
+                                                          <?php
+                                                           foreach ($rank as $dist => $score) {
+	                                                       break;
+                                                          }
+                                                         ?>
+                                                            <p class="result">最适合您的发行版是：<a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a></p>
+                                                            <p class="result">匹配程度：<?=$score*10?>%</p>
+                                                            <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a><div>
+                                                            <ol class="feature">
+                                                            <?php
+                                                             $handle->print_feature($dist);
+                                                              ?>
+                                                            </ol>
+                                                        </td>
+                                                        <?php include"public/distro_name.html"?>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="otherdist">
+                                                            <p>您还可以选择：</p>
+                                                            <dl>
+                                                                <?php
+                                                                    $first = true;
+                                                                    foreach ($rank as $dist => $score) {
+	                                                                if (!$first) {
+                                                                ?>
+                                                                <dt><a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a></dt>
+                                                                <dd>匹配程度：<?=$score*10?>%</dd>
+                                                                <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a><div>
+                                                                <?php
+	                                                               }
+	                                                         $first = false;
+                                                            }
+                                                         ?>
+                                                              </dl>
+                                                        </tr>
 
-                                                        </div>
+
                                                     </td>
 
                                                 </tr>
