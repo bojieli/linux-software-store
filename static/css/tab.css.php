@@ -101,7 +101,6 @@ h2 {
 .software{
      width:700px;
      height:55px;
-     text-align:center;
 }
 
 .icon{
