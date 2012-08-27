@@ -29,10 +29,10 @@ include "static/public/head.html"
 
   <div id="header"></div>
    <!-- This is 'content-2' -->
-        <?php include"static/public/content-2.html"?>
+        <?php include"static/public/content-2.php"?>
 
   <!-- This is 'content-1' -->
-        <?php include"static/public/content-1.html"?>
+        <?php include"static/public/content-1.php"?>
    </div>
 </div>
 </body>
