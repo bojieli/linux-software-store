@@ -39,10 +39,13 @@ foreach ($rank as $dist => $score) {
      <a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a>
    </p>
    <p >匹配程度：<?=$score*10?>%</p>
+
    </div>
    <div class="fit-2" id="fit-2">
      <a href="../dist.php?dist=<?=$dist?>"><img class="dist_png" id="dist_png" src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a>
    </div>
+   <br>
+   <br>
    <ol class="feature">
 <?php
 $handle->print_feature($dist);

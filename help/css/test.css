@@ -18,7 +18,7 @@
 }
 
 #feature{
-    float: right;
+    text-align: center;
 }
 
 #result{
@@ -29,10 +29,12 @@
     height: 50px;
     width: 50%;
     float: left;
+  
  }
 
 #fit-2{
     height: 50px;
     width: 50%;
     float: right;
+
 }
