@@ -50,36 +50,39 @@ include "public/head.html"?>
                                                             <p class="result">最适合您的发行版是：<a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a></p>
                                                             <p class="result">匹配程度：<?=$score*10?>%</p>
                                                             <div class="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div>
+                                                           </td>
+                                                           <td>
                                                             <ol class="feature">
                                                             <?php
                                                              $handle->print_feature($dist);
                                                               ?>
                                                             </ol>
-                                                        </td>
+                                                        <td>
                                                         <?php include"public/distro_name.html"?>
                                                         </tr>
                                                         <tr>
                                                             <td class="otherdist">
                                                             <p>您还可以选择：</p>
-                                                            <dl>
+
                                                                 <?php
                                                                     $first = true;
                                                                     foreach ($rank as $dist => $score) {
 	                                                                if (!$first) {
                                                                 ?>
-                                                                <dt class="dist_get" id="dist_get"><a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a>
-                                                                <div class="dist_png" id="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div></dt>
-                                                                <dd >匹配程度：<?=$score*10?>%
-                                                               </dd>
+                                                                <div class="dist_get" id="dist_get"><a href="../dist.php?dist=<?=$dist?>" title="点此去找<?=$dist?>的软件"><?=$dist?></a>
+                                                                   <div class="dist_png" id="dist_png"><a href="../dist.php?dist=<?=$dist?>"><img src="../static/img/login/<?=$dist?>.png" title="点此去找<?=$dist?>的软件"></a></div></dt>
+                                                                匹配程度：<?=$score*10?>%
+                                                               
                                                                 <?php
 	                                                               }
 	                                                         $first = false;
                                                             }
                                                          ?>
-                                                              </dl>
+
+                                                            </td>
                                                         </tr>
 
-
+                                                        </table>
                                                     </td>
 
                                                 </tr>
