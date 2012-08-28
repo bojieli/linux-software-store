@@ -21,14 +21,93 @@
                         </td>
                           <td class="bre" >
                               <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>永中office<p>
+                              <p>libreoffice<p>
                               </a>
                               <comment>zxfgdfg</comment>
                         </td>
                         </tr>
                     </table>
-                </div>
 
+                <table class="software">
+                    <tr>
+                        <td class="icon" >
+                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                            </a>
+                        </td>
+                          <td class="bre" >
+                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                              <p>Openoffice<p>
+                              </a>
+                              <comment>zxfgdfg</comment>
+                        </td>
+                        </tr>
+                    </table>
+
+                <table class="software">
+                    <tr>
+                        <td class="icon" >
+                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                            </a>
+                        </td>
+                          <td class="bre" >
+                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                              <p>MSoffice<p>
+                              </a>
+                              <comment>zxfgdfg</comment>
+                        </td>
+                        </tr>
+                    </table>
+
+                    <table class="software">
+                    <tr>
+                        <td class="icon" >
+                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                            </a>
+                        </td>
+                          <td class="bre" >
+                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                              <p>Yozooffice<p>
+                              </a>
+                              <comment>zxfgdfg</comment>
+                        </td>
+                        </tr>
+                    </table>
+                  </div>
+
+                <table class="software">
+                    <tr>
+                        <td class="icon" >
+                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                            </a>
+                        </td>
+                          <td class="bre" >
+                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                              <p>AdobePDF reader<p>
+                              </a>
+                              <comment>zxfgdfg</comment>
+                        </td>
+                        </tr>
+                </table>
+
+                <table class="software">
+                    <tr>
+                        <td class="icon" >
+                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                            </a>
+                        </td>
+                          <td class="bre" >
+                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                              <p>MSoffice<p>
+                              </a>
+                              <comment>Xchm</comment>
+                        </td>
+                        </tr>
+                    </table>
             </li>
             <li id="button-1" class="tab_1 button button-dist">
                 <h2>办公</h2>
