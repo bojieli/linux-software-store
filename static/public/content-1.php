@@ -26,9 +26,7 @@
                               <comment>zxfgdfg</comment>
                         </td>
                         </tr>
-                    </table>
 
-                <table class="software">
                     <tr>
                         <td class="icon" >
                             <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
@@ -44,7 +42,7 @@
                         </tr>
                     </table>
 
-                <table class="software">
+
                     <tr>
                         <td class="icon" >
                             <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
@@ -58,10 +56,8 @@
                               <comment>zxfgdfg</comment>
                         </td>
                         </tr>
-                    </table>
 
-                    <table class="software">
-                    <tr>
+                 <tr>
                         <td class="icon" >
                             <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
                              <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
@@ -74,10 +70,6 @@
                               <comment>zxfgdfg</comment>
                         </td>
                         </tr>
-                    </table>
-                  </div>
-
-                <table class="software">
                     <tr>
                         <td class="icon" >
                             <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
@@ -90,10 +82,10 @@
                               </a>
                               <comment>zxfgdfg</comment>
                         </td>
-                        </tr>
-                </table>
+                    </tr>
 
-                <table class="software">
+
+
                     <tr>
                         <td class="icon" >
                             <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
@@ -108,6 +100,7 @@
                         </td>
                         </tr>
                     </table>
+                </div>
             </li>
             <li id="button-1" class="tab_1 button button-dist">
                 <h2>办公</h2>
