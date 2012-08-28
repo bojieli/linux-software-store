@@ -78,25 +78,32 @@ h2 {
 .tab_6 div {
 	left: -600px;
 }
+
+.tabs tr {
+	background: none;
+	width: 650px;
+	height: 55px;
+	border-top: none;
+}
+
 .software{
-     width:650px;
-     height:55px;
-     align:center;
+     width:700px;
+     height:550px;
+
 }
 
 .icon{
      width:55px;
-     height:55px;
      float:left;
 }
 
 .bre{
     width:635px;
-    height:55px;
     float:right;
+    text-align:left;
 }
 
-hr{
+.tabs hr{
 width:650px;
 }
 
