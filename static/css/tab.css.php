@@ -48,7 +48,6 @@ h2 {
 }
 .tabs div {
 	background: none;
-	
 	width: 700px;
 	height: 550px;
 	border-top: none;
@@ -80,12 +79,13 @@ h2 {
 	left: -600px;
 }
 .software{
-     width:700px;
+     width:650px;
      height:55px;
+     align:center;
+     left: transparent;
 }
 
 .icon{
-     align:center;
      width:55px;
      height:55px;
      float:left;
