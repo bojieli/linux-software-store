@@ -39,13 +39,15 @@ p {
   width: 1024px;
   height: 768px;
   position:fixed;
+  background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg);
+  background-repeat: no-repeat;
 }
 
 #header {
 
   width: 100%;
   height: 188px;
-  background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat;
+
 }
 /* You named this layer  230550 */
 #content-2 {
