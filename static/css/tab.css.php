@@ -98,7 +98,7 @@ h2 {
 }
 
 .bre{
-    width:635px;
+    width:240px;
     float:right;
     text-align:left;
 }
