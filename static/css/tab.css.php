@@ -88,7 +88,7 @@ h2 {
 
 .software{
      width:700px;
-     height:550px;
+     height:495px;
 
 }
 
