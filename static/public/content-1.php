@@ -13,73 +13,31 @@
                     <p>小站推荐内容</p>
                      
                 <table class="software">
+		    <?php
+//		    	$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
+//			while ($pack = mysql_fetch_array($rs)) {
+			$pack = ['name' => '永中Office',
+				'pid' => 1,
+				'icon_url' => '',
+				'url' => 'http://mirrors.ustc.edu.cn/',
+				'summary' => '永中Office是个好东西'
+				];
+		    for ($i=0; $i<10; $i++) {
+		    ?>
                     <tr>
                         <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                             <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
                           <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>libreoffice<p>
-                              </a>
-                              <comment>zxfgdfg</comment>
-                        </td>
-                        </tr>
-
-                    <tr>
-                        <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                            </a>
-                        </td>
-                          <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>Openoffice<p>
-                              </a>
-                              <comment>zxfgdfg</comment>
-                        </td>
-                        </tr>
-                    <tr>
-                        <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                            </a>
-                        </td>
-                          <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>MSoffice<p>
-                              </a>
-                              <comment>zxfgdfg</comment>
-                        </td>
-                        </tr>
-
-                 <tr>
-                        <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                            </a>
-                        </td>
-                          <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>Yozooffice<p>
-                              </a>
-                              <comment>zxfgdfg</comment>
-                        </td>
-                        </tr>
-                    <tr>
-                        <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                            </a>
-                        </td>
-                          <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>AdobePDF reader<p>
-                              </a>
-                              <comment>zxfgdfg</comment>
+                              <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank">libreoffice</a></p>
+                              <comment><?=$pack['summary']?></comment>
                         </td>
                     </tr>
+		<?php
+		}
+		?>
                     </table>
                 </div>
             </li>
