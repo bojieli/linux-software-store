@@ -25,7 +25,7 @@ include "static/public/head.html"
 
 <div id="wrapper">
     <!-- This is 'background' -->
-    <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
+    <div id="background" class="bg">
 
     <?php include"static/public/search.html"?>
     <div id="header"></div>
