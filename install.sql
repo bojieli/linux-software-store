@@ -130,6 +130,7 @@ CREATE TABLE IF NOT EXISTS cz_pack (
 	`rate_count` INT(10) NOT NULL, -- COUNT(rates)
 	`create_time` INT(10) NOT NULL, -- timestamp of creation of this row
 	`update_time` INT(10) NOT NULL, -- last update timestamp of this row
+	`recommend` TINYINT(1) NOT NULL, -- 0 for normal, 1 for section recommend, 2 for distribution recommend
 	`name` VARCHAR(127) NOT NULL, -- hope package name will not be too long...
 	`version` VARCHAR(127) NOT NULL, -- package version
 	`url` VARCHAR(255) NOT NULL, -- download url
