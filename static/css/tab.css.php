@@ -48,7 +48,7 @@ h2 {
 }
 .tabs div {
 	background: none;
-	display: none;
+	
 	width: 700px;
 	height: 550px;
 	border-top: none;
