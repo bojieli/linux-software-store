@@ -38,7 +38,7 @@ p {
 #background {
   width: 1024px;
   height: 768px;
-  
+
   background-image: url(../img/<?=$dist?>/<?=$dist?>.jpg);
   background-repeat: no-repeat;
 }

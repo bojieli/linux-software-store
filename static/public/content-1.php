@@ -80,22 +80,6 @@
                               <comment>zxfgdfg</comment>
                         </td>
                     </tr>
-
-
-
-                    <tr>
-                        <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                            </a>
-                        </td>
-                          <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>MSoffice<p>
-                              </a>
-                              <comment>Xchm</comment>
-                        </td>
-                        </tr>
                     </table>
                 </div>
             </li>
