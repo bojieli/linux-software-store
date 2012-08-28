@@ -39,7 +39,7 @@ p {
   width: 1024px;
   height: 768px;
   position:fixed;
-  background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg);
+  background-image: url(../img/<?=$dist?>/<?=$dist?>.jpg);
   background-repeat: no-repeat;
 }
 
