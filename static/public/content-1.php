@@ -11,7 +11,7 @@
                 <h2 class="active">小站推荐</h2>
                 <div>
                     <p>小站推荐内容</p>
-                    <br>
+                     
                 <table class="software">
                     <tr>
                         <td class="icon" >
@@ -87,7 +87,7 @@
                 <h2>办公</h2>
                 <div>
                     <p>办公类内容</p>
-                    <br>
+                     
                     <table class="software">
                        <tr>
                                             <td class="icon" >
@@ -109,7 +109,7 @@
                 <h2>学习</h2>
                 <div>
                     <p>学习类内容</p>
-                    <br>
+                     
                     <table class="software">
                     <tr>
                         <td class="icon" >
@@ -131,7 +131,7 @@
                 <h2>游戏</h2>
                 <div>
                     <p>游戏类内容</p>
-                    <br>
+                     
                     <table class="software">
                     <tr>
                         <td class="icon" >
@@ -153,7 +153,7 @@
                 <h2>娱乐</h2>
                 <div>
                     <p>娱乐类内容<p>
-                    <br>
+                     
                     <table class="software">
                     <tr>
                         <td class="icon" >
@@ -175,7 +175,7 @@
                 <h2>系统</h2>
                 <div>
                     <p>系统类内容<p>
-                    <br>
+                     
                     <table class="software">
                     <tr>
                         <td class="icon" >
@@ -199,7 +199,7 @@
                 <div >
 
                     <p>其它类内容</p>
-                    <br>
+                     
                     <table class="software">
                     <tr>
                         <td class="icon" >
