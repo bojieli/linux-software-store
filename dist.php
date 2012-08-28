@@ -20,12 +20,8 @@ include "static/public/head.html"
   <!-- This is 'background' -->
   <div id="background" class="bg" style="background-image: url(./static/img/<?=$dist?>/<?=$dist?>.jpg); background-repeat: no-repeat">
 
-
   <!--This search area-->
   <?php include"static/public/search.html"?>
-
-
-
 
   <div id="header"></div>
    <!-- This is 'content-2' -->

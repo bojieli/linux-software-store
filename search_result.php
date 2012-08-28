@@ -37,10 +37,12 @@ include "static/public/head.html"
             <br>
             <br>
             <hr>
+            <ul>
+            <li>
             <div  class="software">
                                     <div class="icon" >
                                         <a href="intro.php?dist=<?dist?> & packge=<?=$package?>" target="_blank">
-                                         <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                                         <img src=" " alt="软件图片" style="width: 50px;height: 50px;padding-top:3px;" >
                                         </a>
                                     </div>
                                       <div class="brf" >
@@ -52,39 +54,44 @@ include "static/public/head.html"
                                     <hr>
                                 </div>
 
+             </li>
+             <li>
+                         <div  class="software">
+                                                 <div class="icon" >
+                                                     <a href="intro.php?dist=<?dist?> & packge=<?=$package?>" target="_blank">
+                                                      <img src=" " alt="软件图片" style="width: 50px;height: 50px;padding-top:3px;" >
+                                                     </a>
+                                                 </div>
+                                                   <div class="brf" >
+                                                       <a href="intro.php?dist=<?=$dist?> & packge=<?=$package?>"  target="_blank">
+                                                             <p><?=$package?>a<p>
+                                                       </a>
+                                                       <comment>zxfgdfg</comment>
+                                                 </div>
+                                                 <hr>
+                                             </div>
 
+                          </li>
+            <li>
+                        <div  class="software">
+                                                <div class="icon" >
+                                                    <a href="intro.php?dist=<?dist?> & packge=<?=$package?>" target="_blank">
+                                                     <img src=" " alt="软件图片" style="width: 50px;height: 50px;padding-top:3px;" >
+                                                    </a>
+                                                </div>
+                                                  <div class="brf" >
+                                                      <a href="intro.php?dist=<?=$dist?> & packge=<?=$package?>"  target="_blank">
+                                                            <p><?=$package?>ab<p>
+                                                      </a>
+                                                      <comment>zxfgdfg</comment>
+                                                </div>
+                                                <hr>
+                                            </div>
+
+                         </li>
+            <li>
             <div id="more">
-            <script type="text/javascript">
-
-$(function(){
-	var winH = $(window).height(); //页面可视区域高度
-	var i = 1;
-	$(window).scroll(function () {
-	    var pageH = $(document.body).height();
-		var scrollT = $(window).scrollTop(); //滚动条top
-		var aa = (pageH-winH-scrollT)/winH;
-		if(aa<0.02){
-			$.getJSON("result.php",{page:i},function(json){
-				if(json){
-					var str = "";
-					$.each(json,function(index,array){
-						var str = "<div class=\"single_item\"><div class=\"element_head\">";
-						var str = str + "<div class=\"date\">"+array['date']+"</div>";
-						var str = str + "<div class=\"author\">"+array['author']+"</div>";
-                        var str = str + "</div><div class=\"content\">"+array['content']+"</div></div>";
-						$("#container").append(str);
-					});
-					i++;
-				}else{
-					$(".nodata").show().html("别滚动了，已经到底了。。。");
-					return false;
-				}
-			});
-		}
-	});
-});
-
-                 </script>
+            <script type="text/javascript" src="static/js/more.js"> </script>
                  <div class="single_item">
                       <div class="name">
                            <div class="pic"></div>
@@ -96,7 +103,13 @@ $(function(){
                  <a href="javascript:;" class="get_more">::点击加载更多内容::</a>
            </div>
          </div>
-
+        </li>
+        <script type="text/javascript">
+                $(function(){
+                    $('#more').more({'address': 'data.php'})
+                });
+            </script>
+      </ul>
         <!-- This is 'content-2' -->
          <?php include"static/public/content-2.php"?>
     </div>

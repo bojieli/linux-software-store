@@ -24,6 +24,7 @@ body {
 }
 
 #wrapper {
+ position:fixed;
   margin: 0 auto;
   width: 1024px;
 }
@@ -40,11 +41,13 @@ p {
 }
 
 #header {
+  position:fixed;
   width: 100%;
   height: 188px;
 }
 /* You named this layer  230550 */
 #content-2 {
+  position:fixed;
   float: left;
   margin: 0 22px;
   width: 230px;
