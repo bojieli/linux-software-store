@@ -12,7 +12,7 @@
                 <div>
                     <p>小站推荐内容</p>
                     <br>
-                    <table class="software">
+                <table class="software">
                     <tr>
                         <td class="icon" >
                             <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
@@ -40,9 +40,6 @@
                               <comment>zxfgdfg</comment>
                         </td>
                         </tr>
-                    </table>
-
-
                     <tr>
                         <td class="icon" >
                             <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
