@@ -1,3 +1,13 @@
+<?php
+                 //$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
+                 //while ($pack = mysql_fetch_array($rs)) {
+			$pack = ['name' => '永中Office',
+				'pid' => 1,
+				'icon_url' => '',
+				'url' => 'http://mirrors.ustc.edu.cn/',
+				'summary' => '永中Office是个好东西'
+				];?>
+
 <div id="content-1">
     <script type="text/javascript" language="javascript" src="static/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="static/js/tab.js"></script>
@@ -9,15 +19,8 @@
                     <p>小站推荐内容</p>
                      
                 <table class="software">
-		    <?php
-                 //$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
-                 //while ($pack = mysql_fetch_array($rs)) {
-			$pack = ['name' => '永中Office',
-				'pid' => 1,
-				'icon_url' => '',
-				'url' => 'http://mirrors.ustc.edu.cn/',
-				'summary' => '永中Office是个好东西'
-				];
+
+	        <?php
 		    for ($i=0; $i<5; $i++) {
 		    ?>
                     <tr>
