@@ -1,9 +1,8 @@
-<div id="content-1" class="content-arch" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
-     xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<div id="content-1" class="content-arch" >
     <script type="text/javascript" language="javascript" src="./static/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="static/js/tab.js"></script>
     <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-    <script type="text/javascript" src="./static/js/intro.js"></script>
+
 
     <div class="tabs">
         <ul>
@@ -22,7 +21,7 @@
 				'url' => 'http://mirrors.ustc.edu.cn/',
 				'summary' => '永中Office是个好东西'
 				];
-		    for ($i=0; $i<10; $i++) {
+		    for ($i=0; $i<5; $i++) {
 		    ?>
                     <tr>
                         <td class="icon" >
@@ -34,7 +33,19 @@
                               <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank">libreoffice</a></p>
                               <comment><?=$pack['summary']?></comment>
                         </td>
+
+                        <td class="icon" >
+                        <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                        <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+                        </a>
+                        </td>
+                        <td class="bre" >
+                        <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">libreoffice</a></p>
+                         <comment><?=$pack['summary']?></comment>
+                        </td>
+
                     </tr>
+
 		<?php
 		}
 		?>
