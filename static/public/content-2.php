@@ -20,8 +20,8 @@
                     <li><a href="http://mirrors.ustc.edu.cn/" target="_blank">科大mirrors源</a></li>
                 </ul>
                 <div class="hit">
-                    <span><a style="cursor: pointer;"><img width="11" height="10" id="pre2" alt="上一条" src="static/img/login/arrow_up.png"></a></span>
-                    <span><a style="cursor: pointer;"><img width="11" height="10" id="next2" alt="下一条" src="static/img/login/arrow_down.png"></a></span>
+                    <span><a style="cursor: pointer;"><img width="15" height="15" id="pre2" alt="上一条" src="static/img/login/arrow_up.png"></a></span>
+                    <span><a style="cursor: pointer;"><img width="15" height="15" id="next2" alt="下一条" src="static/img/login/arrow_down.png"></a></span>
                 </div>
             </div>
         </div>
