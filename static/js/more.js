@@ -13,7 +13,7 @@ $(function(){
         var scrollT = $(window).scrollTop(); //滚动条top
         var aa = (pageH-winH-scrollT)/winH;
         if(aa<0.02){
-            $.getJSON("result.php",{page:i},function(json){
+            $.getJSON("data.php",{page:i},function(json){
                 if(json){
                     var str = "";
                     $.each(json,function(index,array){

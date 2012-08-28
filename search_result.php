@@ -31,7 +31,7 @@ include "static/public/head.html"
     <?php include"static/public/search.html"?>
     <div id="header"></div>
         <!-- This is 'content-1' -->
-        <div id="content-1" class="content-arch">
+        <div id="content-1" class="content-arch scroll">
         <br>
         <br>
                 <p>此处显示<?=$package?>相关的软件搜索的结果</p>
@@ -40,41 +40,10 @@ include "static/public/head.html"
             <hr>
             <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 
-            <link type="text/css" rel="stylesheet" href="css/waterfall.css" />
-            <script type="text/javascript" language="javascript" src="js/waterfall.js"></script>
-            <ul id="intr" >
-            <li>
-
-
-             </li>
-             <li>
-
-
-              </li>
-            <li>
-
-            </li>
-            <li>
-            <div id="more">
-            <script type="text/javascript" src="static/js/more.js"> </script>
-                 <div class="single_item">
-                      <div class="name">
-                           <div class="pic"></div>
-                           <div class="brief"></div>
-                           <div class="rank"></div>
-                       </div>
-                 </div>
-
-                 <a href="javascript:;" class="get_more">::点击加载更多内容::</a>
-           </div>
-         </div>
-        </li>
-        <script type="text/javascript">
-                $(function(){
-                    $('#more').more({'address': 'data.php'})
-                });
-            </script>
-      </ul>
+            <link type="text/css" rel="stylesheet" href="static/css/waterfall.css" />
+            <script type="text/javascript" language="javascript" src="static/js/waterfall.js"></script>
+            <ul id="intr"></ul>
+	</div>
         <!-- This is 'content-2' -->
          <?php include"static/public/content-2.php"?>
     </div>
