@@ -27,7 +27,7 @@
                             </a>
                         </td>
                           <td class="bre" >
-                              <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank">libreoffice</a></p>
+                              <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
                               <comment><?=$pack['summary']?></comment>
                         </td>
 
