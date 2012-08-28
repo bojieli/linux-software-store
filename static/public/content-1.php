@@ -12,20 +12,21 @@
                 <div>
                     <p>小站推荐内容</p>
                     <br>
-                    <div  class="software">
-                        <div class="icon" >
+                    <table class="software">
+                    <tr>
+                        <td class="icon" >
                             <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
                              <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
-                        </div>
-                          <div class="bre" >
+                        </td>
+                          <td class="bre" >
                               <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
                               <p>永中office<p>
                               </a>
                               <comment>zxfgdfg</comment>
-                        </div>
-                        <hr>
-                    </div>
+                        </td>
+                        </tr>
+                    </table>
                 </div>
 
             </li>
@@ -34,20 +35,21 @@
                 <div>
                     <p>办公类内容</p>
                     <br>
-                    <div  class="software">
-                        <div class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=libreoffice"  target="_blank">
-                               <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                            </a>
-                        </div>
-                        <div class="bre" >
-                            <a href="intro.php?dist=<?dist?> & packge=libreoffice"  target="_blank">
-                                <p>libreoffice<p>
-                            </a>
-                            <comment>sadgfxdfg</comment>
-                        </div>
-                        <hr>
-                    </div>
+                    <table class="software">
+                       <tr>
+                                            <td class="icon" >
+                                                <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                                                 <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                                                </a>
+                                            </td>
+                                              <td class="bre" >
+                                                  <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                                                  <p>永中office<p>
+                                                  </a>
+                                                  <comment>zxfgdfg</comment>
+                                            </td>
+                                            </tr>
+                                        </table>
                 </div>
             </li>
             <li id="button-2" class="tab_2 button button-dist">
@@ -55,20 +57,21 @@
                 <div>
                     <p>学习类内容</p>
                     <br>
-                    <div  class="software">
-                        <div class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=Geogebra"  target="_blank">
-                            <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                    <table class="software">
+                    <tr>
+                        <td class="icon" >
+                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
-                        </div>
-                        <div class="bre" >
-                            <a href="intro.php?dist=<?dist?> & packge=Geogebra" target="_blank">
-                                <p>Geogebra<p>
-                            </a>
-                            <comment>sgfrhtghydfg</comment>
-                        </div>
-                        <hr>
-                    </div>
+                        </td>
+                          <td class="bre" >
+                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                              <p>永中office<p>
+                              </a>
+                              <comment>zxfgdfg</comment>
+                        </td>
+                        </tr>
+                    </table>
                 </div>
             </li>
             <li id="button-3" class="tab_3 button button-dist" >
@@ -76,20 +79,21 @@
                 <div>
                     <p>游戏类内容</p>
                     <br>
-                    <div  class="software">
-                        <div class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=SuperTux" target="_blank">
-                                <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                    <table class="software">
+                    <tr>
+                        <td class="icon" >
+                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
-                        </div>
-                        <div class="bre" >
-                            <a href="intro.php?dist=<?dist?> & packge=SuperTux" target="_blank">
-                                <p>SuperTux<p>
-                             </a>
-                                <comment>szdfgsdfgojwernt</comment>
-                        </div>
-                        <hr>
-                    </div>
+                        </td>
+                          <td class="bre" >
+                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                              <p>永中office<p>
+                              </a>
+                              <comment>zxfgdfg</comment>
+                        </td>
+                        </tr>
+                    </table>
                 </div>
             </li>
             <li id="button-4" class="tab_4 button button-dist">
@@ -97,20 +101,21 @@
                 <div>
                     <p>娱乐类内容<p>
                     <br>
-                    <div  class="software">
-
-                        <div class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=Kmplayer" target="_blank">
-                                 <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                    <table class="software">
+                    <tr>
+                        <td class="icon" >
+                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
-                        </div>
-                        <div class="bre" >
-                            <a href="intro.php?dist=<?dist?> & packge=Kmplayer" target="_blank">
-                                <p>Kmplayer<p><comment>ziuoncuy0wyrg</comment>
-                            </a>
-                        </div>
-                        <hr>
-                    </div>
+                        </td>
+                          <td class="bre" >
+                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                              <p>永中office<p>
+                              </a>
+                              <comment>zxfgdfg</comment>
+                        </td>
+                        </tr>
+                    </table>
                 </div>
             </li>
             <li id="button-5" class="tab_5 button button-dist">
@@ -118,44 +123,45 @@
                 <div>
                     <p>系统类内容<p>
                     <br>
-                    <div  class="software">
-                        <div class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=CompizeConfig" target="_blank">
-                              <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                    <table class="software">
+                    <tr>
+                        <td class="icon" >
+                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
-                        </div>
-                        <div class="bre" >
-                            <a href="intro.php?dist=<?dist?> & packge=CompizeConfig" target="_blank">
-                              <p>CompizeConfig<p>
-                            </a>
-                            <comment>ncyrweroemrtgvwehgwm</comment>
-
-                        </div>
-                        <hr>
-                    </div>
+                        </td>
+                          <td class="bre" >
+                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                              <p>永中office<p>
+                              </a>
+                              <comment>zxfgdfg</comment>
+                        </td>
+                        </tr>
+                    </table>
 
                 </div>
             </li>
             <li id="button-6" class="tab_6 button button-dist">
                 <h2>其它</h2>
-                <div id="search" name="search" >
+                <div >
 
                     <p>其它类内容</p>
                     <br>
-                    <div class="software">
-                        <div class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=微软雅黑字体" target="_blank">
-                                <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                    <table class="software">
+                    <tr>
+                        <td class="icon" >
+                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
-                        </div>
-                        <div class="bre" >
-                            <a href="intro.php?dist=<?dist?> & packge=微软雅黑字体" target="_blank">
-                                <p>微软雅黑字体<p>
-                             </a>
-                            <comment>ncomsfgsofpgisfig</comment>
-                        </div>
-                        <hr>
-                    </div>
+                        </td>
+                          <td class="bre" >
+                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
+                              <p>永中office<p>
+                              </a>
+                              <comment>zxfgdfg</comment>
+                        </td>
+                        </tr>
+                    </table>
                 </div>
             </li>
         </ul>

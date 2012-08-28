@@ -82,7 +82,7 @@ h2 {
      width:650px;
      height:55px;
      align:center;
-     left: transparent;
+
 }
 
 .icon{
