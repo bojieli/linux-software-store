@@ -79,6 +79,27 @@ h2 {
 .tab_6 div {
 	left: -600px;
 }
+.software{
+     width:700px;
+     height:55px;
+}
+
+.icon{
+     align:center;
+     width:55px;
+     height:55px;
+     float:left;
+}
+
+.bre{
+    width:635px;
+    height:55px;
+    float:right;
+}
+
+hr{
+width:650px;
+}
 
 *{  margin:0;padding:0;}
 
@@ -98,24 +119,3 @@ h2 {
             border-top: 1px solid #0050D0;
             display:block;
             }
-.software{
-     width:700px;
-     height:55px;
-}
-
-.icon{
-     align:center;
-     width:55px;
-     height:55px;
-     float:left;
-}
-
-.brf{
-    width:635px;
-    height:55px;
-    float:right;
-}
-
-hr{
-width:650px;
-}

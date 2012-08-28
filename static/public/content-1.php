@@ -18,7 +18,7 @@
                              <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </div>
-                          <div class="brf" >
+                          <div class="bre" >
                               <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
                               <p>永中office<p>
                               </a>
@@ -40,7 +40,7 @@
                                <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </div>
-                        <div class="brf" >
+                        <div class="bre" >
                             <a href="intro.php?dist=<?dist?> & packge=libreoffice"  target="_blank">
                                 <p>libreoffice<p>
                             </a>
@@ -61,7 +61,7 @@
                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </div>
-                        <div class="brf" >
+                        <div class="bre" >
                             <a href="intro.php?dist=<?dist?> & packge=Geogebra" target="_blank">
                                 <p>Geogebra<p>
                             </a>
@@ -82,7 +82,7 @@
                                 <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </div>
-                        <div class="brf" >
+                        <div class="bre" >
                             <a href="intro.php?dist=<?dist?> & packge=SuperTux" target="_blank">
                                 <p>SuperTux<p>
                              </a>
@@ -104,7 +104,7 @@
                                  <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </div>
-                        <div class="brf" >
+                        <div class="bre" >
                             <a href="intro.php?dist=<?dist?> & packge=Kmplayer" target="_blank">
                                 <p>Kmplayer<p><comment>ziuoncuy0wyrg</comment>
                             </a>
@@ -124,7 +124,7 @@
                               <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </div>
-                        <div class="brf" >
+                        <div class="bre" >
                             <a href="intro.php?dist=<?dist?> & packge=CompizeConfig" target="_blank">
                               <p>CompizeConfig<p>
                             </a>
@@ -148,7 +148,7 @@
                                 <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </div>
-                        <div class="brf" >
+                        <div class="bre" >
                             <a href="intro.php?dist=<?dist?> & packge=微软雅黑字体" target="_blank">
                                 <p>微软雅黑字体<p>
                              </a>
