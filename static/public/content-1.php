@@ -1,5 +1,5 @@
-<div id="content-1" class="content-arch" >
-    <script type="text/javascript" language="javascript" src="./static/js/jquery-1.7.1.min.js"></script>
+<div id="content-1">
+    <script type="text/javascript" language="javascript" src="static/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="static/js/tab.js"></script>
     <div class="tabs">
         <ul>
