@@ -17,6 +17,7 @@ $word[0] = chr(ord($word[0])- ord('a') + ord('A'));
 return $word;
 }
 $distname = firstLetterToUpper($dist);
+
 include "static/public/head.html"
 ?>
 
@@ -37,58 +38,22 @@ include "static/public/head.html"
             <br>
             <br>
             <hr>
-            <ul>
+            <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+            <link type="text/css" rel="stylesheet" href="css/waterfall.css" />
+            <script type="text/javascript" language="javascript" src="js/waterfall.js"></script>
+            <ul id="intr" >
             <li>
-            <div  class="software">
-                                    <div class="icon" >
-                                        <a href="intro.php?dist=<?dist?> & packge=<?=$package?>" target="_blank">
-                                         <img src=" " alt="软件图片" style="width: 50px;height: 50px;padding-top:3px;" >
-                                        </a>
-                                    </div>
-                                      <div class="brf" >
-                                          <a href="intro.php?dist=<?=$dist?> & packge=<?=$package?>"  target="_blank">
-                                                <p><?=$package?><p>
-                                          </a>
-                                          <comment>zxfgdfg</comment>
-                                    </div>
-                                    <hr>
-                                </div>
+
 
              </li>
              <li>
-                         <div  class="software">
-                                                 <div class="icon" >
-                                                     <a href="intro.php?dist=<?dist?> & packge=<?=$package?>" target="_blank">
-                                                      <img src=" " alt="软件图片" style="width: 50px;height: 50px;padding-top:3px;" >
-                                                     </a>
-                                                 </div>
-                                                   <div class="brf" >
-                                                       <a href="intro.php?dist=<?=$dist?> & packge=<?=$package?>"  target="_blank">
-                                                             <p><?=$package?>a<p>
-                                                       </a>
-                                                       <comment>zxfgdfg</comment>
-                                                 </div>
-                                                 <hr>
-                                             </div>
 
-                          </li>
+
+              </li>
             <li>
-                        <div  class="software">
-                                                <div class="icon" >
-                                                    <a href="intro.php?dist=<?dist?> & packge=<?=$package?>" target="_blank">
-                                                     <img src=" " alt="软件图片" style="width: 50px;height: 50px;padding-top:3px;" >
-                                                    </a>
-                                                </div>
-                                                  <div class="brf" >
-                                                      <a href="intro.php?dist=<?=$dist?> & packge=<?=$package?>"  target="_blank">
-                                                            <p><?=$package?>ab<p>
-                                                      </a>
-                                                      <comment>zxfgdfg</comment>
-                                                </div>
-                                                <hr>
-                                            </div>
 
-                         </li>
+            </li>
             <li>
             <div id="more">
             <script type="text/javascript" src="static/js/more.js"> </script>

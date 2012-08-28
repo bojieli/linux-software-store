@@ -1,32 +1,40 @@
-<?/*php
-require_once('connect.php');
+<?php
 
-$last = $_POST['last'];
-$amount = $_POST['amount'];
+// 实际应用中 data 一般从数据库读取
 
-$list = array('pack0','pack1','pack2','pack3','pack4','pack5');
-$query=mysql_query("select * from say order by id desc limit $last,$amount");
-while ($row=mysql_fetch_array($query)) {
-	$sayList[] = array(
-		'name'=>$row['name'],
-		'pic'=>$row['pic'],
-		'brief'=>$row['brief'],
-        'rank'=>$row['rank']
-      );
-}*/
+$data = array();
 
-$last = $_POST['last'];
-$amount = $_POST['amount'];
-$list = array('pack0','pack1','pack2','pack3','pack4','pack5');
- var pack=0;
- for ($pack<=5;;$pack++){
-       $sayList[] = array(
-       		'name'=>qq,
-       		'pic'=>"http://www.qq.com",
-       		'brief'=>"qq is a copy cat!",
-            'rank'=>1
-             );
- }
+$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'sadnf');
+$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'cfvsxckjvnjzx');
+$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'nvc nx cvnxn,vcbxjcnvb');
+$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'xvckjxncjvnx;jnf;sfg sdfgn;s');
+$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'zxcvx cvksdfg');
+$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'xcvjhasodufafabsv azxc');
+$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'cvbnmkjhgfvbnm,');
+$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'cvxcvsdfgsdfgsdfgsdfg');
+$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'vbncnvndfv dnfvd   kxvnkncv');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'ieijnnvfnvlzxijpvnvcv');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'ncjsdncivncvcv');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'cvkskdmvmshirnrfgnfo');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'mvnxcvldkvnxvl;fijospjvvpo');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>';lkoxmocomzxczxcmsd,mcmpvmc,vz');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'cjvjcjvjjcjvjcjxklc;zikxvfj');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'zxcvdkkfjikcxlvxijv');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'nzl;kxnvknfivnsfd[vna');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'sdijnvnxvllksdnjdjjvncxjdlfvnlkjni');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'llllalcmmmkdmvxc');
+$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'vnzxcjvfjnczxcjijdfcdiczcidocn');
 
-echo json_encode($sayList);
+
+// 随机抽取9条记录以模拟实际情况
+$keys = array_rand($data, 10);
+
+$json = array();
+foreach($keys as $key)
+{
+	$json[] = $data[$key];
+}
+
+echo json_encode( $json );
+
 ?>

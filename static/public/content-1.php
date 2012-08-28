@@ -6,7 +6,7 @@
 				'icon_url' => '',
 				'url' => 'http://mirrors.ustc.edu.cn/',
 				'summary' => '永中Office是个好东西'
-				];?>
+];?>
 
 <div id="content-1">
     <script type="text/javascript" language="javascript" src="static/js/jquery-1.7.1.min.js"></script>
@@ -37,6 +37,7 @@
                         <td class="icon" >
                         <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
                         <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+
                         </a>
                         </td>
                         <td class="bre" >
