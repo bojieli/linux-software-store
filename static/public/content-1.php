@@ -1,9 +1,6 @@
 <div id="content-1" class="content-arch" >
     <script type="text/javascript" language="javascript" src="./static/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="static/js/tab.js"></script>
-    <script src="./static/js/jquery1.3.2.js" type="text/javascript"></script>
-
-
     <div class="tabs">
         <ul>
             <li id="button-0" class="first tab_0 button button-dist">
@@ -13,8 +10,8 @@
                      
                 <table class="software">
 		    <?php
-//		    	$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
-//			while ($pack = mysql_fetch_array($rs)) {
+                 //$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
+                 //while ($pack = mysql_fetch_array($rs)) {
 			$pack = ['name' => '永中Office',
 				'pid' => 1,
 				'icon_url' => '',
