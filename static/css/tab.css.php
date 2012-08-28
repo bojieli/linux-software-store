@@ -82,7 +82,7 @@ h2 {
 .tabs tr {
 	background: none;
 	width: 650px;
-	height: 55px;
+	height: 49.5px;
 	border-top: none;
 }
 
