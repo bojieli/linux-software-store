@@ -100,6 +100,7 @@ h2 {
 .bre{
     width:240px;
     text-align:left;
+    font-size:15px;
 }
 
 .tabs hr{
