@@ -31,13 +31,16 @@ include "static/public/head.html"
     <?php include"static/public/search.html"?>
     <div id="header"></div>
         <!-- This is 'content-1' -->
-        <div id="content-1" class="content-arch scroll">
+        <div id="content-1" class="content-arch ">
+        <div style="position:fixed;">
         <br>
         <br>
                 <p><?=$package?>相关的软件搜索的结果</p>
-            <br>
-            <br>
-            <hr>
+        <br>
+        <br>
+        <hr>
+        </div>
+        <div class="scroll">
             <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
             <link type="text/css" rel="stylesheet" href="static/css/waterfall.css" />
             <script type="text/javascript" language="javascript" src="static/js/waterfall.js"></script>
@@ -54,6 +57,7 @@ include "static/public/head.html"
                 </div>
             </li>
             </ul>
+       	</div>
        	</div>
         <!-- This is 'content-2' -->
          <?php include"static/public/content-2.php"?>

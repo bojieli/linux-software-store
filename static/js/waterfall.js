@@ -31,7 +31,7 @@ function loadMore()
                         }
                     });
                     $item = $('<li><img class="icon" src="'+oProduct.image+'" border="0" >'+
-                        '<div style="float: right;height: 50px;width: 550px;"><p>'+'oProduct.name'+'</p><comment>'+'oProduct.comments'+'</comment><div></li>').hide();
+                        '<div style="float: right;height: 50px;width: 550px;"><p>'+oProduct.name+'</p><comment>'+oProduct.comments+'</comment><div></li>').hide();
                     $row.append($item);
                     $item.fadeIn();
                 }
