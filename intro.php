@@ -93,26 +93,23 @@ include "static/public/head.html"
                     </tr>
                     <tr class="sw_info_2">
                         <td >
-                            <p>
-                                <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">下载软件</a>
-                            </p>
+                            <pre>下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                            </pre>
                         </td>
                         <td >
-                            <p>
-                                <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">下载源码</a>
-                            </p>
+                           <pre>下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                           </pre>
                         </td>
                     </tr>
                     <tr class="sw_info_1">
                         <td >
-                            <p>
-                                <a href="http://lug.ustc.edu.cn/wiki/mirrors/help/<?=$dist?>/">软件安装</a>
-                            </p>
+                            <pre>软件安装: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                            </pre>
                         </td>
                         <td >
-                            <p>
-                               <a href="http://lug.ustc.edu.cn/wiki/mirrors/help/<?=$dist?>/">软件安装</a>
-                            </p>
+                             <pre>源码编译: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                             </pre>
+
                         </td>
                     </tr>
                     <tr class="sw_info_2">
