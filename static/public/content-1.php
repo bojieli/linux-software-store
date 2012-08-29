@@ -30,7 +30,7 @@
                              <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
-                          <td class="bre" >
+                        <td class="bre" >
                               <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
                               <comment><?=$pack['summary']?></comment>
                         </td>

@@ -39,11 +39,10 @@ include "static/public/head.html"
             <br>
             <hr>
             <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-
             <link type="text/css" rel="stylesheet" href="static/css/waterfall.css" />
             <script type="text/javascript" language="javascript" src="static/js/waterfall.js"></script>
             <ul id="intr"></ul>
-	</div>
+       	</div>
         <!-- This is 'content-2' -->
          <?php include"static/public/content-2.php"?>
     </div>

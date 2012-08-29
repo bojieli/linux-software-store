@@ -94,12 +94,10 @@ h2 {
 
 .icon{
      width:55px;
-     float:left;
 }
 
 .bre{
     width:240px;
-    float:right;
     text-align:left;
 }
 
