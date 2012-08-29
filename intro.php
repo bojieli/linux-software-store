@@ -177,7 +177,7 @@ while ($odd//$comment = mysql_fetch_array($comments)) {
                      </td>
                  </tr>
 <?php
-	$odd--;
+	$odd=$odd-1;
 }
 ?>
 
