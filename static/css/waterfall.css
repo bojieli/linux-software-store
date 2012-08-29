@@ -2,10 +2,9 @@
 #intr li { font-size:14px; padding:10px; color:#000; text-align:left; }
     .scroll {  
         color: #333;                                    /*颜色*/  
-        font-family: SimSun, sans-serif;                /*字体*/  
+        font-family: "Microsoft YaHei","TrueType ","Apple LiGothic",sans-serif;                /*字体*/
         overflow-x: hidden;                             /*横向滚动条(scroll:始终出现;auto:必要时出现;具体参考CSS文档)*/  
-        overflow-y: auto;                             /*竖向滚动条*/  
-         
+        overflow-y: auto;                             /*竖向滚动条*/
         scrollbar-face-color: #D4D4D4;                  /*滚动条滑块颜色*/  
         scrollbar-hightlight-color: #ffffff;                /*滚动条3D界面的亮边颜色*/  
         scrollbar-shadow-color: #919192;                    /*滚动条3D界面的暗边颜色*/  
