@@ -271,7 +271,6 @@ a img:hover {border:none;color:red;}
 {
   width: 375px;
   height: 550px;
-  padding:5px;
 }
 
 .sum

@@ -48,7 +48,7 @@ include "static/public/head.html"
                             <img src="<?=$info['icon']?>" alt="此处显示软件的图片" width="50px" height="50px" padding="25px">
                         </td>
                         <td class="sw_name">
-                            //<?=$info['name']?>
+
                             <?=$package?>
 
                        </td>
@@ -167,8 +167,8 @@ $comment_count = mysql_result(mysql_query("SELECT COUNT(*) FROM cz_pack_comment 
 <?php
 // show 6 comments at most
 //$comments = mysql_query("SELECT author, time, content FROM cz_pack_comment WHERE `pid` = '$packid' AND `status` = 'show' ORDER BY time DESC LIMIT 6");
-$odd = 1;
-while ($comment = mysql_fetch_array($comments)) {
+$odd = 6;
+while ($odd//$comment = mysql_fetch_array($comments)) {
 ?>
                  <tr class="comment_<?=$odd?>">
                      <td>
@@ -177,7 +177,7 @@ while ($comment = mysql_fetch_array($comments)) {
                      </td>
                  </tr>
 <?php
-	$odd = 3 - $odd;
+	$odd--;
 }
 ?>
 
