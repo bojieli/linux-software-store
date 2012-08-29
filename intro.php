@@ -48,7 +48,9 @@ include "static/public/head.html"
                             <img src="<?=$info['icon']?>" alt="此处显示软件的图片" width="50px" height="50px" padding="25px">
                         </td>
                         <td class="sw_name">
-                            <?=$info['name']?>
+                            //<?=$info['name']?>
+                            <?=$package?>
+
                        </td>
                    </tr>
                 </table>
@@ -61,7 +63,7 @@ include "static/public/head.html"
                        </td>
                        <td >
                            <p>
-                              应用平台：<?=$dist?>
+                              应用平台：<?=$dist?> x86_64 , i386
                            </p>
                        </td>
                    </tr>
@@ -73,43 +75,43 @@ include "static/public/head.html"
                         </td>
                         <td >
                             <p>
-                                软件授权：xxx
+                                软件授权：GPL
                             </p>
                         </td>
                     </tr>
                     <tr class="sw_info_1">
                         <td >
                             <p>
-                                软件语言：英文
+                                软件语言：UTF8,中文
                             </p>
                         </td>
                         <td >
                             <p>
-                                软件分类：xx
+                                软件分类：生活 网络 浏览器
                             </p>
                         </td>
                     </tr>
                     <tr class="sw_info_2">
                         <td >
                             <p>
-                                下载软件
+                                <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">下载软件</a>
                             </p>
                         </td>
                         <td >
                             <p>
-                                下载源码
+                                <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">下载源码</a>
                             </p>
                         </td>
                     </tr>
                     <tr class="sw_info_1">
                         <td >
                             <p>
-                                软件安装
+                                <a href="http://lug.ustc.edu.cn/wiki/mirrors/help/<?=$dist?>/">软件安装</a>
                             </p>
                         </td>
                         <td >
                             <p>
-                                源码编译
+                               <a href="http://lug.ustc.edu.cn/wiki/mirrors/help/<?=$dist?>/">软件安装</a>
                             </p>
                         </td>
                     </tr>
@@ -140,18 +142,18 @@ include "static/public/head.html"
             </table>
             <div class="sw_intro">
                  <h1>软件简介</h1>
-                &nbsp;&nbsp;<p style="text-align: left"><?=$info['description']?></p>
+                &nbsp;&nbsp;<p style="text-align: left">/*<?=$info['description']?>*/<?=$package?>是一个好软件啊</p>
             </div>
         </div>
-<?php
+/*<?php
 $packid = $info['pid'];
 $comment_count = mysql_result(mysql_query("SELECT COUNT(*) FROM cz_pack_comment WHERE `pid` = '$packid' AND `status` = 'show'"), 0);
-?>
+?>*/
         <div id="content-4" >
              <table id="comment">
              <tr class="sum">
                  <td>
-                  <pre>用户评论      一共有<?=$comment_count?>条评论</pre>
+                  <pre>用户评论      一共有/*<?=$comment_count?>*/6条评论</pre>
                  </td>
              </tr>
              <tr class="message">
@@ -167,13 +169,14 @@ $comment_count = mysql_result(mysql_query("SELECT COUNT(*) FROM cz_pack_comment 
              </tr>
 <?php
 // show 6 comments at most
-$comments = mysql_query("SELECT author, time, content FROM cz_pack_comment WHERE `pid` = '$packid' AND `status` = 'show' ORDER BY time DESC LIMIT 6");
+//$comments = mysql_query("SELECT author, time, content FROM cz_pack_comment WHERE `pid` = '$packid' AND `status` = 'show' ORDER BY time DESC LIMIT 6");
 $odd = 1;
 while ($comment = mysql_fetch_array($comments)) {
 ?>
                  <tr class="comment_<?=$odd?>">
                      <td>
-                         <?=$comment['author']?> 于 <?=date($comment['time'])?>: <?=$comment['content']?>
+                         //<?=$comment['author']?> 于 <?=date($comment['time'])?>: <?=$comment['content']?>
+                         bnlsjkdfsdsdfkjdfa;dslfjasd msada dsasdav vasdnv;aj;ndsva;sjdvnas;vansdvjbadbjadfbdbf asldfa
                      </td>
                  </tr>
 <?php

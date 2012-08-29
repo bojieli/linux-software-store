@@ -57,9 +57,9 @@ USE software;
  * section:
  *   Classification of package.
  *   Sections are manually created and the packages are classified into
- *     sections automatically by Section, Tag, or group in repodata.
+ *     sections automatically by Section, Tag, or group in repo_data.
  * file:
- *   Locally stored packages, mainly non-open-source or non-free softwares.
+ *   Locally stored packages, mainly non-open-source or non-free software.
  *   A (package, arch) may be related to an uploaded file. A file may be used by
  *     multiple dists.
  *   A file is of a package type (rpm, deb...)
@@ -72,9 +72,9 @@ USE software;
 CREATE TABLE IF NOT EXISTS cz_user (
 	`uid` INT(10) NOT NULL AUTO_INCREMENT,
 	`username` CHAR(20) NOT NULL, -- username should not exceed 20 chars
-	`password` CHAR(40) NOT NULL, -- md5(md5(realpass), salt)
+	`password` CHAR(40) NOT NULL, -- md5(md5(real_pass), salt)
 	`salt` CHAR(10) NOT NULL,
-	`isadmin` BOOL NOT NULL DEFAULT false,
+	`is_admin` BOOL NOT NULL DEFAULT false,
 	PRIMARY KEY (`uid`),
 	INDEX key_username(`username`)
 );
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS cz_pack_detail (
 	`checksum_md5` CHAR(32),
 	`checksum_sha1` CHAR(40),
 	`checksum_sha256` CHAR(64),
-	`bugurl` VARCHAR(255), -- issue tracker (optional)
+	`bug_url` VARCHAR(255), -- issue tracker (optional)
 	`homepage` VARCHAR(255),
 	`license` VARCHAR(127), -- RPM only
 	`maintainer` VARCHAR(255), -- maintainer or packager
@@ -161,11 +161,11 @@ CREATE TABLE IF NOT EXISTS cz_pack_detail (
 -- For quick search: separated by :: for DEB or / for RPM
 CREATE TABLE IF NOT EXISTS cz_pack_tag (
 	`pid` INT(10) NOT NULL,
-	`toptag` VARCHAR(127) NOT NULL, -- top level tab
-	`subtag` VARCHAR(127), -- second level tab. If no separator in original tag then NULL
+	`top_tag` VARCHAR(127) NOT NULL, -- top level tab
+	`sub_tag` VARCHAR(127), -- second level tab. If no separator in original tag then NULL
 	FOREIGN KEY (`pid`) REFERENCES cz_pack(`pid`),
-	INDEX key_toptag(`toptag`),
-	INDEX key_subtag(`subtag`)
+	INDEX key_top_tag(`top_tag`),
+	INDEX key_sub_tag(`sub_tag`)
 );
 
 CREATE TABLE IF NOT EXISTS cz_pack_depend (
@@ -203,20 +203,20 @@ CREATE TABLE IF NOT EXISTS cz_pack_comment (
 );
 
 -- for example rpm, deb
-CREATE TABLE IF NOT EXISTS cz_packtype (
-	`ptid` TINYINT(3) NOT NULL AUTO_INCREMENT,
-	`packtype` VARCHAR(20) NOT NULL,
-	PRIMARY KEY (`ptid`)
+CREATE TABLE IF NOT EXISTS cz_pack_type (
+	`tid` TINYINT(3) NOT NULL AUTO_INCREMENT,
+	`pack_type` VARCHAR(20) NOT NULL,
+	PRIMARY KEY (`tid`)
 );
 
 CREATE TABLE IF NOT EXISTS cz_file (
 	`fid` INT(10) NOT NULL AUTO_INCREMENT,
 	`upload_time` INT(10) NOT NULL, -- unix timestamp
-	`packtype` TINYINT(3) NOT NULL,
+	`pack_type` TINYINT(3) NOT NULL,
 	`download_count` INT(10) NOT NULL DEFAULT '0',
-	`filesize` INT(10) NOT NULL,
+	`file_size` INT(10) NOT NULL,
 	`filename` VARCHAR(255) NOT NULL,
 	PRIMARY KEY (`fid`),
-	FOREIGN KEY (`packtype`) REFERENCES cz_packtype(`ptid`),
+	FOREIGN KEY (`pack_type`) REFERENCES cz_pack_type(`tid`),
 	INDEX key_filename (`filename`)
 );
