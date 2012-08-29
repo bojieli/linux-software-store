@@ -4,26 +4,26 @@
 
 $data = array();
 
-$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'sadnf');
-$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'cfvsxckjvnjzx');
-$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'nvc nx cvnxn,vcbxjcnvb');
-$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'xvckjxncjvnx;jnf;sfg sdfgn;s');
-$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'zxcvx cvksdfg');
-$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'xcvjhasodufafabsv azxc');
-$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'cvbnmkjhgfvbnm,');
-$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'cvxcvsdfgsdfgsdfgsdfg');
-$data[] = (object)array('image'=>'static/img/star1.png',  'title'=>'vbncnvndfv dnfvd   kxvnkncv');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'ieijnnvfnvlzxijpvnvcv');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'ncjsdncivncvcv');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'cvkskdmvmshirnrfgnfo');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'mvnxcvldkvnxvl;fijospjvvpo');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>';lkoxmocomzxczxcmsd,mcmpvmc,vz');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'cjvjcjvjjcjvjcjxklc;zikxvfj');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'zxcvdkkfjikcxlvxijv');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'nzl;kxnvknfivnsfd[vna');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'sdijnvnxvllksdnjdjjvncxjdlfvnlkjni');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'llllalcmmmkdmvxc');
-$data[] = (object)array('image'=>'static/img/star1.png', 'title'=>'vnzxcjvfjnczxcjijdfcdiczcidocn');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'sadnf', 'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'cfv','comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'nvc n' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'xvckjx','comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'zxcv','comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'xcvj' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'cvbn' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'cvxcg' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'vbncn','comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'ieijnn' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'ncjs' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'cvksfo' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'mvnxcvpjvvpo','comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'cmpvmc,vz' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'cjvjcc;zikxvfj' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'zxxijv' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'nz[vna' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'sdlkjni' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'llvxc' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'vnzxcz' ,'comments'=>$name+'这个软件是个好东西');
 
 
 // 随机抽取9条记录以模拟实际情况
