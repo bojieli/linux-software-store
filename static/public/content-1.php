@@ -27,23 +27,23 @@
 		    ?>
                     <tr>
                         <td class="icon" >
-                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                              <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
                         <td class="bre" >
-                              <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                              <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank"><?=$pack['name']?></a></p>
                               <comment><?=$pack['summary']?></comment>
                         </td>
 
                         <td class="icon" >
-                        <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                        <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                         <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
 
                         </a>
                         </td>
                         <td class="bre" >
-                        <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">firefox</a></p>
+                        <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank">firefox</a></p>
                          <comment>firefox<?=$pack['summary']?></comment>
                         </td>
 
@@ -66,23 +66,23 @@
                        		    ?>
                                            <tr>
                                                <td class="icon" >
-                                                   <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                                                   <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                                                     <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                                                    </a>
                                                </td>
                                                <td class="bre" >
-                                                     <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                                                     <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank"><?=$pack['name']?></a></p>
                                                      <comment><?=$pack['summary']?></comment>
                                                </td>
 
                                                <td class="icon" >
-                                               <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                                               <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                                                <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
 
                                                </a>
                                                </td>
                                                <td class="bre" >
-                                               <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">永中office</a></p>
+                                               <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank">永中office</a></p>
                                                 <comment>永中office<?=$pack['summary']?></comment>
                                                </td>
 
@@ -105,23 +105,23 @@
                     		    ?>
                                         <tr>
                                             <td class="icon" >
-                                                <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                                                <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                                                  <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                                                 </a>
                                             </td>
                                             <td class="bre" >
-                                                  <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                                                  <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank"><?=$pack['name']?></a></p>
                                                   <comment><?=$pack['summary']?></comment>
                                             </td>
 
                                             <td class="icon" >
-                                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                                             <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
 
                                             </a>
                                             </td>
                                             <td class="bre" >
-                                            <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">Qtiplot</a></p>
+                                            <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank">Qtiplot</a></p>
                                              <comment>Qtiplot是做大物实验的利器，这个<?=$pack['summary']?></comment>
                                             </td>
 
@@ -144,23 +144,23 @@
                     		    ?>
                                         <tr>
                                             <td class="icon" >
-                                                <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                                                <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                                                  <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                                                 </a>
                                             </td>
                                             <td class="bre" >
-                                                  <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                                                  <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank"><?=$pack['name']?></a></p>
                                                   <comment><?=$pack['summary']?></comment>
                                             </td>
 
                                             <td class="icon" >
-                                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                                             <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
 
                                             </a>
                                             </td>
                                             <td class="bre" >
-                                            <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">SuperTUX</a></p>
+                                            <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank">SuperTUX</a></p>
                                              <comment>SuperTUX是个好玩的赛车类游戏，它<?=$pack['summary']?></comment>
                                             </td>
 
@@ -183,23 +183,23 @@
                    		    ?>
                                        <tr>
                                            <td class="icon" >
-                                               <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                                               <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                                                 <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                                                </a>
                                            </td>
                                            <td class="bre" >
-                                                 <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                                                 <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank"><?=$pack['name']?></a></p>
                                                  <comment><?=$pack['summary']?></comment>
                                            </td>
 
                                            <td class="icon" >
-                                           <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                                           <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                                            <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
 
                                            </a>
                                            </td>
                                            <td class="bre" >
-                                           <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">Kmplayer</a></p>
+                                           <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank">Kmplayer</a></p>
                                             <comment>Kmplayer是个优秀的开源软件，支持很多格式，它<?=$pack['summary']?></comment>
                                            </td>
 
@@ -222,23 +222,23 @@
 		    ?>
                     <tr>
                         <td class="icon" >
-                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                              <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
                         <td class="bre" >
-                              <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                              <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank"><?=$pack['name']?></a></p>
                               <comment><?=$pack['summary']?></comment>
                         </td>
 
                         <td class="icon" >
-                        <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                        <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                         <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
 
                         </a>
                         </td>
                         <td class="bre" >
-                        <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">Ubuntu-tweak</a></p>
+                        <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank">Ubuntu-tweak</a></p>
                          <comment>Ubuntu-tweak<?=$pack['summary']?>，帮助我们更方便地配置ubuntu</comment>
                         </td>
 
@@ -263,23 +263,23 @@
                     		    ?>
                                         <tr>
                                             <td class="icon" >
-                                                <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                                                <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                                                  <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                                                 </a>
                                             </td>
                                             <td class="bre" >
-                                                  <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                                                  <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank"><?=$pack['name']?></a></p>
                                                   <comment><?=$pack['summary']?></comment>
                                             </td>
 
                                             <td class="icon" >
-                                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>" target="_blank">
                                             <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
 
                                             </a>
                                             </td>
                                             <td class="bre" >
-                                            <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">PHP5</a></p>
+                                            <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pack['name']?>"  target="_blank">PHP5</a></p>
                                              <comment>PHP5<?=$pack['summary']?>,它能很轻松地完成建立工程的任务</comment>
                                             </td>
 
