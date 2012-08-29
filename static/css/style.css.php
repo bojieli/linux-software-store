@@ -260,7 +260,8 @@ a img:hover {border:none;color:red;}
 
 }
 #content-4 {
-  padding-left:20px;
+  float: right;
+  
   width: 375px;
   height: 550px;
   background-image: url(../img/content-1.png);
