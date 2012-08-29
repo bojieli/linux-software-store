@@ -168,8 +168,7 @@ $comment_count = mysql_result(mysql_query("SELECT COUNT(*) FROM cz_pack_comment 
 // show 6 comments at most
 //$comments = mysql_query("SELECT author, time, content FROM cz_pack_comment WHERE `pid` = '$packid' AND `status` = 'show' ORDER BY time DESC LIMIT 6");
 $odd = 1;
-//while ($comment = mysql_fetch_array($comments)) {
-for (var i=6;$i>0;$i--){
+while ($comment = mysql_fetch_array($comments)) {
 ?>
                  <tr class="comment_<?=$odd?>">
                      <td>
