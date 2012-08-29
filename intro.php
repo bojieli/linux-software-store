@@ -147,7 +147,11 @@ $packid = $info['pid'];
 $comment_count = mysql_result(mysql_query("SELECT COUNT(*) FROM cz_pack_comment WHERE `pid` = '$packid' AND `status` = 'show'"), 0);
 ?>*/
         <div id="content-4" >
-             <table id="comment">
+        <!-- UY BEGIN -->
+        <div id="uyan_frame"></div>
+        <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=0" async=""></script>
+        <!-- UY END -->
+             /*<table id="comment">
              <tr class="sum">
                  <td>
                   <pre>用户评论      一共有/*<?=$comment_count?>*/6条评论</pre>
@@ -181,7 +185,7 @@ while ($comment = mysql_fetch_array($comments)) {
 }
 ?>
 
-             </table>
+             </table>*/
         </div>
     </div>
     </div>
