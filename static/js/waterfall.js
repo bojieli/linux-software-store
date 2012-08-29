@@ -8,7 +8,6 @@ $(window).scroll(function(){
     if ($(document).height() - $(this).scrollTop() - $(this).height()<100) loadMore();
 });
 
-
 function loadMore()
 {
     $.ajax({
@@ -22,8 +21,6 @@ function loadMore()
                 for(var i=0, l=json.length; i<l; i++)
                 {
                     oProduct = json[i];
-
-
                     iHeight = -1;
                     $('#intr li').each(function(){
                         iTempHeight = Number( $(this).height() );
