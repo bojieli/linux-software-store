@@ -60,20 +60,37 @@
                     <p>办公类内容</p>
                      
                     <table class="software">
-                       <tr>
-                                            <td class="icon" >
-                                                <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
-                                                 <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                                                </a>
-                                            </td>
-                                              <td class="bre" >
-                                                  <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                                                  <p>永中office<p>
-                                                  </a>
-                                                  <comment>zxfgdfg</comment>
-                                            </td>
-                                            </tr>
-                                        </table>
+                       <?php
+                       		    for ($i=0; $i<5; $i++) {
+                       		    ?>
+                                           <tr>
+                                               <td class="icon" >
+                                                   <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                                                    <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+                                                   </a>
+                                               </td>
+                                               <td class="bre" >
+                                                     <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                                                     <comment><?=$pack['summary']?></comment>
+                                               </td>
+
+                                               <td class="icon" >
+                                               <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                                               <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+
+                                               </a>
+                                               </td>
+                                               <td class="bre" >
+                                               <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">libreoffice</a></p>
+                                                <comment><?=$pack['summary']?></comment>
+                                               </td>
+
+                                           </tr>
+
+                       		<?php
+                       		}
+                       		?>
+                     </table>
                 </div>
             </li>
             <li id="button-2" class="tab_2 button button-dist">
@@ -82,19 +99,36 @@
                     <p>学习类内容</p>
                      
                     <table class="software">
-                    <tr>
-                        <td class="icon" >
-                            <a href="intro.php?dist=<?=$dist?> & packge=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                            </a>
-                        </td>
-                          <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>永中office<p>
-                              </a>
-                              <comment>zxfgdfg</comment>
-                        </td>
-                        </tr>
+                    <?php
+                    		    for ($i=0; $i<5; $i++) {
+                    		    ?>
+                                        <tr>
+                                            <td class="icon" >
+                                                <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                                                 <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+                                                </a>
+                                            </td>
+                                            <td class="bre" >
+                                                  <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                                                  <comment><?=$pack['summary']?></comment>
+                                            </td>
+
+                                            <td class="icon" >
+                                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                                            <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+
+                                            </a>
+                                            </td>
+                                            <td class="bre" >
+                                            <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">libreoffice</a></p>
+                                             <comment><?=$pack['summary']?></comment>
+                                            </td>
+
+                                        </tr>
+
+                    		<?php
+                    		}
+                    		?>
                     </table>
                 </div>
             </li>
@@ -104,19 +138,36 @@
                     <p>游戏类内容</p>
                      
                     <table class="software">
-                    <tr>
-                        <td class="icon" >
-                            <a href="intro.php?dist=<?=$dist?> & packge=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                            </a>
-                        </td>
-                          <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>永中office<p>
-                              </a>
-                              <comment>zxfgdfg</comment>
-                        </td>
-                        </tr>
+                    <?php
+                    		    for ($i=0; $i<5; $i++) {
+                    		    ?>
+                                        <tr>
+                                            <td class="icon" >
+                                                <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                                                 <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+                                                </a>
+                                            </td>
+                                            <td class="bre" >
+                                                  <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                                                  <comment><?=$pack['summary']?></comment>
+                                            </td>
+
+                                            <td class="icon" >
+                                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                                            <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+
+                                            </a>
+                                            </td>
+                                            <td class="bre" >
+                                            <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">libreoffice</a></p>
+                                             <comment><?=$pack['summary']?></comment>
+                                            </td>
+
+                                        </tr>
+
+                    		<?php
+                    		}
+                    		?>
                     </table>
                 </div>
             </li>
@@ -126,19 +177,36 @@
                     <p>娱乐类内容<p>
                      
                     <table class="software">
-                    <tr>
-                        <td class="icon" >
-                            <a href="intro.php?dist=<?=$dist?> & packge=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                            </a>
-                        </td>
-                          <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>永中office<p>
-                              </a>
-                              <comment>zxfgdfg</comment>
-                        </td>
-                        </tr>
+                   <?php
+                   		    for ($i=0; $i<5; $i++) {
+                   		    ?>
+                                       <tr>
+                                           <td class="icon" >
+                                               <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                                                <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+                                               </a>
+                                           </td>
+                                           <td class="bre" >
+                                                 <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                                                 <comment><?=$pack['summary']?></comment>
+                                           </td>
+
+                                           <td class="icon" >
+                                           <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                                           <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+
+                                           </a>
+                                           </td>
+                                           <td class="bre" >
+                                           <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">libreoffice</a></p>
+                                            <comment><?=$pack['summary']?></comment>
+                                           </td>
+
+                                       </tr>
+
+                   		<?php
+                   		}
+                   		?>
                     </table>
                 </div>
             </li>
@@ -148,19 +216,36 @@
                     <p>系统类内容<p>
                      
                     <table class="software">
+            <?php
+		    for ($i=0; $i<5; $i++) {
+		    ?>
                     <tr>
                         <td class="icon" >
-                            <a href="intro.php?dist=<?=$dist?> & packge=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
+                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                             <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
-                          <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>永中office<p>
-                              </a>
-                              <comment>zxfgdfg</comment>
+                        <td class="bre" >
+                              <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                              <comment><?=$pack['summary']?></comment>
                         </td>
-                        </tr>
+
+                        <td class="icon" >
+                        <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                        <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+
+                        </a>
+                        </td>
+                        <td class="bre" >
+                        <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">libreoffice</a></p>
+                         <comment><?=$pack['summary']?></comment>
+                        </td>
+
+                    </tr>
+
+		        <?php
+		        }
+		        ?>
                     </table>
 
                 </div>
@@ -172,19 +257,36 @@
                     <p>其它类内容</p>
                      
                     <table class="software">
-                    <tr>
-                        <td class="icon" >
-                            <a href="intro.php?dist=<?=$dist?>&package=永中office" target="_blank">
-                             <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
-                            </a>
-                        </td>
-                          <td class="bre" >
-                              <a href="intro.php?dist=<?=$dist?> & packge=永中office"  target="_blank">
-                              <p>永中office<p>
-                              </a>
-                              <comment>zxfgdfg</comment>
-                        </td>
-                        </tr>
+                    <?php
+                    		    for ($i=0; $i<5; $i++) {
+                    		    ?>
+                                        <tr>
+                                            <td class="icon" >
+                                                <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>" target="_blank">
+                                                 <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+                                                </a>
+                                            </td>
+                                            <td class="bre" >
+                                                  <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid?>"  target="_blank"><?=$pack['name']?></a></p>
+                                                  <comment><?=$pack['summary']?></comment>
+                                            </td>
+
+                                            <td class="icon" >
+                                            <a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>" target="_blank">
+                                            <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+
+                                            </a>
+                                            </td>
+                                            <td class="bre" >
+                                            <p><a href="intro.php?dist=<?=$dist?>&pid=<?=$pid+1?>"  target="_blank">libreoffice</a></p>
+                                             <comment><?=$pack['summary']?></comment>
+                                            </td>
+
+                                        </tr>
+
+                    		<?php
+                    		}
+                    		?>
                     </table>
                 </div>
             </li>
