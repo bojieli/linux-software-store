@@ -261,7 +261,7 @@ a img:hover {border:none;color:red;}
 }
 #content-4 {
   float: right;
-  
+  margin-right:5px;
   width: 375px;
   height: 550px;
   background-image: url(../img/content-1.png);
@@ -271,6 +271,7 @@ a img:hover {border:none;color:red;}
 {
   width: 375px;
   height: 550px;
+  padding:5px;
 }
 
 .sum
