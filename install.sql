@@ -23,7 +23,7 @@ USE software;
 	rid		repository
 	aid		architecture
 	pid		package
-	ptid		package type (rpm, deb)
+	tid		package type (rpm, deb)
 	sid		section (Games, Net...)
 	fid		file
  */

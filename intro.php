@@ -18,7 +18,7 @@ if (empty($_GET['package'])) {
 	$package = addslashes($_GET['package']);
 }
 
-include_once "db_init.php";
+/*include_once "db_init.php";
 $distid = mysql_result(mysql_query("SELECT did FROM cz_dist WHERE `name` = '$dist'"), 0);
 if (empty($distid)) {
 	die('Distribution not found');
@@ -27,7 +27,7 @@ $rs = mysql_query("SELECT * FROM cz_pack LEFT JOIN cz_pack_detail ON cz_pack.pid
 $info = mysql_fetch_array($rs);
 if (empty($info)) {
 	die('Package not found');
-}
+}*/
 include "static/public/head.html"
 ?>
 
