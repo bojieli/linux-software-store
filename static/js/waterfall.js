@@ -1,11 +1,11 @@
-
 $(document).ready(function(){
     loadMore();
 });
 
-$(window).scroll(function(){
-
-    if ($(document).height() - $(this).scrollTop() - $(this).height()<100) loadMore();
+$("#content-1").scroll(function(){
+//console.log($(this).scrollTop() + " " + $(this)[0].scrollHeight + " " + $(this).height());
+if ($(this).scrollTop() + $(this).height() >= $(this)[0].scrollHeight)
+    	loadMore();
 });
 
 function loadMore()
@@ -22,7 +22,7 @@ function loadMore()
                 {
                     oProduct = json[i];
                     iHeight = -1;
-                    $('#intr li').each(function(){
+                    $('#intr').each(function(){
                         iTempHeight = Number( $(this).height() );
                         if(iHeight==-1 || iHeight>iTempHeight)
                         {
@@ -30,9 +30,7 @@ function loadMore()
                             $row = $(this);
                         }
                     });
-
-                    $item = $('<div><img src="'+oProduct.image+'" border="0" ><br />'+oProduct.title+'</div>').hide();
-
+                    $item = $('<li><img src="'+oProduct.image+'" border="0" ><br />'+oProduct.title+'</li>').hide();
                     $row.append($item);
                     $item.fadeIn();
                 }

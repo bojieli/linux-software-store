@@ -1,3 +1,16 @@
-#intr{ margin:0 auto; padding:0; width:700px; }
-#intr li{ margin:0; padding:0; list-style:none;float:left; width:700px;}
-#intr li div{ font-size:12px; padding:10px; color:#999999; text-align:left; }
+#intr { margin:0; padding:0; list-style:none;float:left; width:700px;}
+#intr li { font-size:14px; padding:10px; color:#000; text-align:left; }
+    .scroll {  
+        color: #333;                                    /*颜色*/  
+        font-family: SimSun, sans-serif;                /*字体*/  
+        overflow-x: hidden;                             /*横向滚动条(scroll:始终出现;auto:必要时出现;具体参考CSS文档)*/  
+        overflow-y: auto;                             /*竖向滚动条*/  
+         
+        scrollbar-face-color: #D4D4D4;                  /*滚动条滑块颜色*/  
+        scrollbar-hightlight-color: #ffffff;                /*滚动条3D界面的亮边颜色*/  
+        scrollbar-shadow-color: #919192;                    /*滚动条3D界面的暗边颜色*/  
+        scrollbar-3dlight-color: #ffffff;               /*滚动条亮边框颜色*/  
+        scrollbar-arrow-color: #919192;                 /*箭头颜色*/  
+        scrollbar-track-color: #ffffff;                 /*滚动条底色*/  
+        scrollbar-darkshadow-color: #ffffff;                /*滚动条暗边框颜色*/  
+    }

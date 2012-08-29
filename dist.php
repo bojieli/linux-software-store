@@ -27,7 +27,7 @@ include "static/public/head.html"
    <!-- This is 'content-2' -->
         <?php include"static/public/content-2.php"?>
   <!-- This is 'content-1' -->
-        <?php require("static/public/content-1.php")?>
+        <?php include"static/public/content-1.php"?>
    </div>
 </div>
 </body>

@@ -1,12 +1,13 @@
 <?php
                  //$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
                  //while ($pack = mysql_fetch_array($rs)) {
-			$pack = ['name' => '永中Office',
+			$pack = array('name' => '永中Office',
 				'pid' => 1,
 				'icon_url' => '',
 				'url' => 'http://mirrors.ustc.edu.cn/',
 				'summary' => '永中Office是个好东西'
-];?>
+);
+?>
 
 <div id="content-1">
     <script type="text/javascript" language="javascript" src="static/js/jquery-1.7.1.min.js"></script>
@@ -83,7 +84,7 @@
                     <table class="software">
                     <tr>
                         <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                            <a href="intro.php?dist=<?=$dist?> & packge=永中office" target="_blank">
                              <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
@@ -105,7 +106,7 @@
                     <table class="software">
                     <tr>
                         <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                            <a href="intro.php?dist=<?=$dist?> & packge=永中office" target="_blank">
                              <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
@@ -127,7 +128,7 @@
                     <table class="software">
                     <tr>
                         <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                            <a href="intro.php?dist=<?=$dist?> & packge=永中office" target="_blank">
                              <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
@@ -149,7 +150,7 @@
                     <table class="software">
                     <tr>
                         <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                            <a href="intro.php?dist=<?=$dist?> & packge=永中office" target="_blank">
                              <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
@@ -173,7 +174,7 @@
                     <table class="software">
                     <tr>
                         <td class="icon" >
-                            <a href="intro.php?dist=<?dist?> & packge=永中office" target="_blank">
+                            <a href="intro.php?dist=<?=$dist?>&package=永中office" target="_blank">
                              <img src=" " alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
