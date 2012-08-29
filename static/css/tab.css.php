@@ -45,12 +45,13 @@ h2 {
 }
 .tabs .tab_0 div {
 	display: block;
+
 }
 .tabs div {
 	background: none;
 	display:none;
-	width: 700px;
-	height: 550px;
+	width: 650px;
+	height: 495px;
 	border-top: none;
 	padding: 20px;
 	position: absolute;
@@ -88,8 +89,8 @@ h2 {
 }
 
 .software{
-     width:700px;
-     height:495px;
+     width:650px;
+     height:490px;
 
 }
 
@@ -98,7 +99,7 @@ h2 {
 }
 
 .bre{
-    width:240px;
+    width:220px;
     text-align:left;
     font-size:15px;
 }
