@@ -41,7 +41,19 @@ include "static/public/head.html"
             <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
             <link type="text/css" rel="stylesheet" href="static/css/waterfall.css" />
             <script type="text/javascript" language="javascript" src="static/js/waterfall.js"></script>
-            <ul id="intr"></ul>
+            <ul id="intr">
+            <li>
+                <img class="icon" src="'+oProduct.image+'" border="0" >
+                <div style="float: right;height: 50px;width: 550px;">
+                <p>
+                     <?=$package?>
+                </p>
+                    <comment>
+                     <?=$package?>是个好软件
+                    </comment>
+                </div>
+            </li>
+            </ul>
        	</div>
         <!-- This is 'content-2' -->
          <?php include"static/public/content-2.php"?>
