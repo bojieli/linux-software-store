@@ -225,6 +225,7 @@ a img:hover {border:none;color:red;}
      width: 100px;
      height: 100px;
      align:center;
+     padding:20px;
 }
 .sw_name{
 

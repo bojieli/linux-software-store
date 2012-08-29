@@ -45,7 +45,7 @@ include "static/public/head.html"
                 <table id="brf">
                     <tr class="sw_img">
                         <td>
-                            <img src="<?=$info['icon']?>" alt="此处显示软件的图片" width="50px" height="50px" padding="25px">
+                            <img src="<?=$info['icon']?>" alt="此处显示软件的图片">
                         </td>
                         <td class="sw_name">
 
