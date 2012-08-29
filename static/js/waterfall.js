@@ -30,7 +30,7 @@ function loadMore()
                             $row = $(this);
                         }
                     });
-                    $item = $('<li><img class="icon" src="'+oProduct.image+'" border="0" ><p>'+oProduct.name+'</p><comment>'+oProduct.comments+'</comment></li>').hide();
+                    $item = $('<li><img class="icon" src="'+oProduct.image+'" border="0" ><div style="float:left;height: 50px;"><p>'+oProduct.name+'</p><comment>'+oProduct.comments+'</comment><div></li>').hide();
                     $row.append($item);
                     $item.fadeIn();
                 }
