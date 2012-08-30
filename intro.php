@@ -148,13 +148,13 @@ $comment_count = mysql_result(mysql_query("SELECT COUNT(*) FROM cz_pack_comment 
 ?>*/
         <div id="content-4" >
         <!-- UY BEGIN -->
-        <div id="uyan_frame"></div>
+        <div id="uyan_frame" class="comment"></div>
         <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=0" async=""></script>
         <!-- UY END -->
              /*<table id="comment">
              <tr class="sum">
                  <td>
-                  <pre>用户评论      一共有/*<?=$comment_count?>*/6条评论</pre>
+                  <pre>用户评论      一共有/*<?=$comment_count?>6条评论</pre>
                  </td>
              </tr>
              <tr class="message">
