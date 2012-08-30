@@ -28,6 +28,7 @@ include "static/public/head.html"
         <?php include"static/public/search.html"?>
         <div id="header"></div>
         <!--this area is designed for show software information-->
+        <div id="comm">
         <div id="content-3"></div>
         <div id="content-4">
             <!-- UY BEGIN -->
@@ -35,6 +36,7 @@ include "static/public/head.html"
             <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
             <!-- UY END -->
             </div>
+        </div>
         </div>
     </div>
  </body>
