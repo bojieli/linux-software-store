@@ -266,7 +266,7 @@ a img:hover {border:none;color:red;}
   width: 375px;
   height: 550px;
   background-image: url(../img/content-1.png);
-  position:fixed;
+ 
 }
 
 .comment
