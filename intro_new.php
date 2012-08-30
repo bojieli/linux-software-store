@@ -34,7 +34,6 @@ include "static/public/head.html"
             <div id="uyan_frame"></div>
             <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
             <!-- UY END -->
-
             </div>
         </div>
     </div>
