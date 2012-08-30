@@ -148,44 +148,10 @@ $comment_count = mysql_result(mysql_query("SELECT COUNT(*) FROM cz_pack_comment 
 ?>*/
         <div id="content-4" >
         <!-- UY BEGIN -->
-        <div id="uyan_frame" class="comment"></div>
-        <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=0" async=""></script>
+        <div id="uyan_frame"></div>
+        <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
         <!-- UY END -->
-             /*<table id="comment">
-             <tr class="sum">
-                 <td>
-                  <pre>用户评论      一共有/*<?=$comment_count?>6条评论</pre>
-                 </td>
-             </tr>
-             <tr class="message">
-                 <td>
-                       <textarea style=" width: 361px;height:145px;font-size: 15px;"></textarea>
-                 </td>
-             </tr>
-             <tr class="face" style="text-align: left;">
-                 <td>
 
-                     <pre>      <img src="static/img/face.jpg" padding="6px">                          <input type="button" value="提交"></pre>
-                 </td>
-             </tr>
-<?php
-// show 6 comments at most
-//$comments = mysql_query("SELECT author, time, content FROM cz_pack_comment WHERE `pid` = '$packid' AND `status` = 'show' ORDER BY time DESC LIMIT 6");
-$odd = 1;
-while ($comment = mysql_fetch_array($comments)) {
-?>
-                 <tr class="comment_<?=$odd?>">
-                     <td>
-                         //<?=$comment['author']?> 于 <?=date($comment['time'])?>: <?=$comment['content']?>
-                         bnlsjkdfsdsdfkjdfa;dslfjasd msada dsasdav vasdnv;aj;ndsva;sjdvnas;vansdvjbadbjadfbdbf asldfa
-                     </td>
-                 </tr>
-<?php
-	$odd = 3 - $odd;
-}
-?>
-
-             </table>*/
         </div>
     </div>
     </div>
