@@ -29,13 +29,13 @@ include "static/public/head.html"
         <div id="header"></div>
         <!--this area is designed for show software information-->
         <div id="content-3"></div>
-        <iframe id="content-4">
+        <div id="content-4">
             <!-- UY BEGIN -->
             <div id="uyan_frame"></div>
             <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
             <!-- UY END -->
 
-            </iframe>
+            </div>
         </div>
     </div>
  </body>
