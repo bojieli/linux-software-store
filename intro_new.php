@@ -81,19 +81,19 @@ include "static/public/head.html"
                         <tr class="sw_info">
                            <td>
 
-                             下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> &nbps;<a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                             下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
                            </td>
                            <td >
-                               下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> &nbps;<a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                               下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
                            </td>
                         </tr>
                         <tr class="sw_info">
                            <td>
-                              软件安装: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> &nbps;<a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                              软件安装: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
 
                            </td>
                            <td>
-                              源码编译: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>&nbps; <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                              源码编译: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
 
                            </td>
                         </tr>
@@ -107,11 +107,12 @@ include "static/public/head.html"
                         </tr>
                     </table>
                 </div>
+                <div class="sw_intro">
+                    <h1>软件简介</h1>
+                    &nbsp;&nbsp;<p style="text-align: left"><?=$package?>是一个好软件啊
+                    </div>
             </div>
-             <div class="sw_intro">
-             <h1>软件简介</h1>
-             &nbsp;&nbsp;<p style="text-align: left"><?=$package?>是一个好软件啊
-             </div>
+
        
             <div id="content-4">
              <!-- UY BEGIN -->

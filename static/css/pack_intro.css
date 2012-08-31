@@ -10,7 +10,7 @@
 
 #content-3{
     width: 984px;
-    height: 310px;
+    height: 340px;
     margin-right: 20px;
     text-align: center;
 }
@@ -30,7 +30,7 @@
 #intro
 {
     width: 300px;
-    height: 210px;
+    height: 340px;
 }
 
 .sw_img
@@ -58,7 +58,7 @@
 .sw_intro
 {
     width: 350px;
-    height:210px;
+    height:340px;
     text-align:left;
     float:right;
 }
