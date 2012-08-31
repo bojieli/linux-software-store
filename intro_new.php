@@ -127,16 +127,16 @@ include "static/public/head.html"
                 <div class="sw_intro">
                    <h1>软件简介</h1>
                       &nbsp;&nbsp;<p style="text-align: left">/*<?=$info['description']?>*/<?=$package?>是一个好软件啊</p>
-                   </div>
+                </div>
              </div>
        
             <div id="content-4">
-                 <!-- UY BEGIN -->
-                 <div id="uyan_frame"></div>
-                 <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
-                 <!-- UY END -->
-            </div>
-        </div>
+             <!-- UY BEGIN -->
+             <div id="uyan_frame"></div>
+             <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
+             <!-- UY END -->
+             </div>
+
         </div>
     </div>
  </body>
