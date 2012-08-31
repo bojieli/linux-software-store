@@ -32,7 +32,7 @@ include "static/public/head.html"
                 <div id="intro">
                     <table id="brf">
                         <tr class="sw_img">
-                            <td>
+                            <td class="sw_dtl">
                                 <img src="<?=$info['icon']?>" alt="此处显示软件的图片">
                             </td>
                             <td class="sw_name">
@@ -41,66 +41,66 @@ include "static/public/head.html"
                         </tr>
                     </table>
                     <table class="detail">
-                        <tr class="sw_info">
-                           <td>
+                        <tr class="sw_info  ">
+                           <td class="sw_dtl">
                                
                                  软件大小：MB
                                 
                            </td>
-                           <td >
+                           <td class="sw_dtl">
                                
                                  应用平台：<?=$dist?> x86_64 , i386
                                 
                            </td>
                         </tr>
-                        <tr class="sw_info">
-                           <td>
+                        <tr class="sw_info ">
+                           <td class="sw_dtl">
                                
                                  发行版本：
                                 
                            </td>
-                           <td >
+                           <td class="sw_dtl">
                                
                                  软件授权：GPL
                                 
                            </td>
                         </tr>
-                        <tr class="sw_info">
-                           <td>
+                        <tr class="sw_info  ">
+                           <td class="sw_dtl">
                               
                                  软件类型：deb rmp
                               
                            </td>
-                           <td>
+                           <td class="sw_dtl">
                                
                                  软件分类：生活 网络 浏览器
                                 
                            </td>
                         </tr>
-                        <tr class="sw_info">
-                           <td>
+                        <tr class="sw_info ">
+                           <td class="sw_dtl">
 
                              下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
                            </td>
-                           <td >
+                           <td class="sw_dtl">
                                下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
                            </td>
                         </tr>
-                        <tr class="sw_info">
-                           <td>
+                        <tr class="sw_info  ">
+                           <td class="sw_dtl">
                               软件安装: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
 
                            </td>
-                           <td>
+                           <td class="sw_dtl">
                               源码编译: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
 
                            </td>
                         </tr>
-                        <tr class="sw_info">
-                           <td >
+                        <tr class="sw_info  ">
+                           <td class="sw_dtl">
 
                            </td>
-                           <td >
+                           <td class="sw_dtl">
 
                            </td>
                         </tr>

@@ -34,8 +34,6 @@ table ,tr,th,td
 #detail
 {
     width: 100%;
-    height: 210px;
-    text-align:left;
 }
 #intro
 {
@@ -48,8 +46,6 @@ table ,tr,th,td
 {
     width: 30%;
     height: 100%;
-    text-align:center;
-    padding-left: 100px;
 }
 .sw_name{
 
@@ -61,16 +57,20 @@ table ,tr,th,td
 .sw_info
 {
     width: 100%;
-    height:35px;
+    height:16.667%;
     background:yellow;
 }
+#sw_dtl
+{
+    width: 50%;
+    height:100%;
+    background:yellow;
 
-
+}
 #sw_intro
 {
     width: 370px;
     height:340px;
-
     float:right;
 }
 #content-4 {
