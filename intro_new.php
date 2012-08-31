@@ -19,8 +19,7 @@ $package = addslashes($_GET['package']);
 }
 include "static/public/head.html"
 ?>
-
-<body>
+<body background="static/img/<?=$dist?>/<?=$dist?>"   style= "background-position:   center;background-repeat:   no-repeat;background-attachment:   fixed ">
 
   <div id="wrapper">
     <!-- This is 'background' -->

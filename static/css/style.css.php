@@ -16,11 +16,11 @@ $dist = $_GET['dist'];
 
 body {
   font-family: "Microsoft YaHei","TrueType ","Apple LiGothic",sans-serif;
-  font-size: small;
   vertical-align: middle;
   text-align: center;
   margin: 0;
   padding: 0;
+
 }
 
 #wrapper {
@@ -38,9 +38,6 @@ p {
 #background {
   width: 1024px;
   height: 768px;
-
-  background-image: url(../img/<?=$dist?>/<?=$dist?>.jpg);
-  background-repeat: no-repeat;
 }
 
 #header {
