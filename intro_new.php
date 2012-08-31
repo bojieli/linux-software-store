@@ -39,8 +39,6 @@ include "static/public/head.html"
                                 <?=$package?>
                             </td>
                         </tr>
-                    </table>
-                    <table class="detail">
                         <tr class="sw_info  ">
                            <td class="sw_dtl">
                                
