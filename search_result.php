@@ -53,6 +53,9 @@ include "static/public/head.html"
                     </comment>
                 </div>
             </li>
+            <!-- UJian Button BEGIN -->
+            <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&btn=4&icon=3&uid=1674756"></script>
+            <!-- UJian Button END -->
             </ul>
        	</div>
         <!-- This is 'content-2' -->
