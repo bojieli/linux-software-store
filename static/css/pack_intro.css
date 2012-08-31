@@ -27,13 +27,13 @@ table ,tr,th,td
 
 #brf
 {
-    width: 300px;
+    width: 100%;
     height: 100px;
 }
 
 #detail
 {
-    width: 300px;
+    width: 100%;
     height: 210px;
     text-align:left;
 }
