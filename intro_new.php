@@ -106,11 +106,12 @@ include "static/public/head.html"
                         </tr>
                     </table>
                 </div>
+                <div class="sw_intro">
+                               <h1>软件简介</h1>
+                               &nbsp;&nbsp;<p style="text-align: left"><?=$package?>是一个好软件啊
+                            </div>
             </div>
-            <div class="sw_intro">
-               <h1>软件简介</h1>
-               &nbsp;&nbsp;<p style="text-align: left"><?=$package?>是一个好软件啊  
-            </div>
+
        
             <div id="content-4">
              <!-- UY BEGIN -->
