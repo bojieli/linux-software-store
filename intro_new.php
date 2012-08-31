@@ -22,7 +22,7 @@ include "static/public/head.html"
 
 <body>
 
-<div id="wrapper">
+  <div id="wrapper">
     <!-- This is 'background' -->
     <div id="background" class="bg">
         <?php include"static/public/search.html"?>
@@ -32,15 +32,15 @@ include "static/public/head.html"
             <div id="content-3">
                 <div id="intro">
                     <table id="brf">
-                        <tr >
-                           <td class="sw_img">
-                              <img src="<?=$info['icon']?>" alt="此处显示<?=$package?>软件的图片">
-                           </td>
-                           <td class="sw_name">
-                              <?=$package?>
-                           </td>
+                        <tr class="sw_img">
+                            <td>
+                                <img src="<?=$info['icon']?>" alt="此处显示软件的图片">
+                            </td>
+                            <td class="sw_name">
+                                <?=$package?>
+                            </td>
                         </tr>
-                    </table>
+                </table>
                     <table class="detail">
                         <tr class="sw_info">
                            <td >
@@ -78,15 +78,15 @@ include "static/public/head.html"
                               </p>
                            </td>
                         </tr>
-                           <tr class="sw_info">
-                              <td>
-                                 <pre>下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>       <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
-                                 </pre>
-                              </td>
-                              <td >
-                                 <pre>下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
-                                 </pre>
-                              </td>
+                        <tr class="sw_info">
+                           <td>
+                              <pre>下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>       <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                              </pre>
+                           </td>
+                           <td >
+                               <pre>下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                               </pre>
+                           </td>
                         </tr>
                         <tr class="sw_info">
                            <td>
@@ -124,11 +124,11 @@ include "static/public/head.html"
                         </tr>
                     </table>
                 </div>
-                <div class="sw_intro">
-                   <h1>软件简介</h1>
-                      &nbsp;&nbsp;<p style="text-align: left">/*<?=$info['description']?>*/<?=$package?>是一个好软件啊</p>
-                </div>
-             </div>
+            </div>
+            <div class="sw_intro">
+               <h1>软件简介</h1>
+               &nbsp;&nbsp;<p style="text-align: left">/*<?=$info['description']?>*/<?=$package?>是一个好软件啊</p>
+            </div>
        
             <div id="content-4">
              <!-- UY BEGIN -->
@@ -136,7 +136,7 @@ include "static/public/head.html"
              <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
              <!-- UY END -->
              </div>
-
         </div>
     </div>
- </body>
+  </div>
+</body>
