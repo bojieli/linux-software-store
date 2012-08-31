@@ -40,12 +40,12 @@ include "static/public/head.html"
                                 <?=$package?>
                             </td>
                         </tr>
-                </table>
+                    </table>
                     <table class="detail">
                         <tr class="sw_info">
                            <td >
                               <p>
-                                 软件大小：<?=print_filesize($info['filesize'])?>
+                                 软件大小：MB<!--<?=print_filesize($info['filesize'])?>-->
                               </p>
                            </td>
                            <td >
@@ -57,7 +57,7 @@ include "static/public/head.html"
                         <tr class="sw_info">
                            <td>
                               <p>
-                                 更新时间：xx年xx月
+                                 发行版本：
                               </p>
                            </td>
                            <td >
@@ -69,7 +69,7 @@ include "static/public/head.html"
                         <tr class="sw_info">
                            <td>
                               <p>
-                                 软件语言：UTF8,中文
+                                 软件类型：deb rmp
                               </p>
                            </td>
                            <td>
