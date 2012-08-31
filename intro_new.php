@@ -80,46 +80,30 @@ include "static/public/head.html"
                         </tr>
                         <tr class="sw_info">
                            <td>
-                              <pre>下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>       <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                              <pre>下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
                               </pre>
                            </td>
                            <td >
-                               <pre>下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                               <pre>下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
                                </pre>
                            </td>
                         </tr>
                         <tr class="sw_info">
                            <td>
-                              <pre>软件安装:   <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                              <pre>软件安装: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
                               </pre>
                            </td>
                            <td>
-                              <pre>源码编译:   <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                              <pre>源码编译: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
                               </pre>
                            </td>
                         </tr>
                         <tr class="sw_info">
                            <td >
-                              <p>
-                                 推荐指数：
-                                 <img src="static/img/star.png" alt="star" width="20px" height="20px">
-                                 <img src="static/img/star.png" alt="star" width="20px" height="20px">
-                                 <img src="static/img/star.png" alt="star" width="20px" height="20px">
-                                 <img src="static/img/star2.png" alt="star2" width="20px" height="20px">
-                                 <img src="static/img/star2.png" alt="star2" width="20px" height="20px">
-                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                              </p>
+
                            </td>
                            <td >
-                              <p>
-                                 软件评级：
-                                  <img src="static/img/star.png" alt="star" width="20px" height="20px">
-                                  <img src="static/img/star.png" alt="star" width="20px" height="20px">
-                                  <img src="static/img/star.png" alt="star" width="20px" height="20px">
-                                  <img src="static/img/star2.png" alt="star2" width="20px" height="20px">
-                                  <img src="static/img/star2.png" alt="star2" width="20px" height="20px">
-                                  &nbsp;&nbsp;&nbsp;&nbsp;
-                              </p>
+
                            </td>
                         </tr>
                     </table>
@@ -127,7 +111,7 @@ include "static/public/head.html"
             </div>
             <div class="sw_intro">
                <h1>软件简介</h1>
-               &nbsp;&nbsp;<p style="text-align: left">/*<?=$info['description']?>*/<?=$package?>是一个好软件啊</p>
+               &nbsp;&nbsp;<p style="text-align: left"><?=$package?>是一个好软件啊</p>
             </div>
        
             <div id="content-4">
