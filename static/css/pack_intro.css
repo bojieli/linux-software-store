@@ -29,8 +29,9 @@
 }
 #intro
 {
-    width: 300px;
+    width: 500px;
     height: 340px;
+    float: left;
 }
 
 .sw_img
@@ -59,7 +60,7 @@
 {
     width: 350px;
     height:340px;
-    text-align:left;
+
     float:right;
 }
 #content-4 {
