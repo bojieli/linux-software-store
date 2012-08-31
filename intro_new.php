@@ -43,9 +43,9 @@ include "static/public/head.html"
                     </table>
                     <table class="detail">
                         <tr class="sw_info">
-                           <td >
+                           <td>
                               <p>
-                                 软件大小：MB<!--<?=print_filesize($info['filesize'])?>-->
+                                 软件大小：MB
                               </p>
                            </td>
                            <td >
