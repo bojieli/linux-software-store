@@ -80,12 +80,10 @@ include "static/public/head.html"
                         </tr>
                         <tr class="sw_info">
                            <td>
-                              <pre>下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
-                              </pre>
+                              <pre>下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a></pre>
                            </td>
                            <td >
-                               <pre>下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
-                               </pre>
+                               <pre>下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a><pre>
                            </td>
                         </tr>
                         <tr class="sw_info">
