@@ -44,38 +44,38 @@ include "static/public/head.html"
                     <table class="detail">
                         <tr class="sw_info">
                            <td>
-                              <p>
+                               
                                  软件大小：MB
-                              </p>
+                                
                            </td>
                            <td >
-                              <p>
+                               
                                  应用平台：<?=$dist?> x86_64 , i386
-                              </p>
+                                
                            </td>
                         </tr>
                         <tr class="sw_info">
                            <td>
-                              <p>
+                               
                                  发行版本：
-                              </p>
+                                
                            </td>
                            <td >
-                              <p>
+                               
                                  软件授权：GPL
-                              </p>
+                                
                            </td>
                         </tr>
                         <tr class="sw_info">
                            <td>
-                              <p>
+                              
                                  软件类型：deb rmp
-                              </p>
+                              
                            </td>
                            <td>
-                              <p>
+                               
                                  软件分类：生活 网络 浏览器
-                              </p>
+                                
                            </td>
                         </tr>
                         <tr class="sw_info">
@@ -109,7 +109,7 @@ include "static/public/head.html"
             </div>
             <div class="sw_intro">
                <h1>软件简介</h1>
-               &nbsp;&nbsp;<p style="text-align: left"><?=$package?>是一个好软件啊</p>
+               &nbsp;&nbsp;<p style="text-align: left"><?=$package?>是一个好软件啊  
             </div>
        
             <div id="content-4">
