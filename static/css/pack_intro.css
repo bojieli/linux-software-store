@@ -5,8 +5,9 @@
     margin-left: 20px;
     margin-right: 20px;
     background-image: url(../img/content-4.png);
+    background-size: 100% 100%;
     background-position: center;
-    background-repeat:   no-repeat;
+    background-repeat: no-repeat;
     background-attachment:   fixed ;
     font-size: 15px;
 }
