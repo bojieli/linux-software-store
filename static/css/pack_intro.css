@@ -57,16 +57,10 @@ table ,tr,th,td
 .sw_info
 {
     width: 100%;
-    height:20%;
+    height:16.667%;
     background:yellow;
 }
-#sw_dtl
-{
-    width: 50%;
-   
-    background:yellow;
 
-}
 #sw_intro
 {
     width: 370px;
