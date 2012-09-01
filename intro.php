@@ -28,8 +28,9 @@ include "static/public/head.html"
   <div id="wrapper">
     <!-- This is 'background' -->
     <div id="background" class="bg">
-        <?php include"static/public/search.html"?>
         <div id="header"></div>
+        <?php include"static/public/search.html"?>
+
         <!--this area is designed for show software information-->
         <div id="comm">
             <div id="content-3">

@@ -44,6 +44,7 @@ p {
 
   width: 100%;
   height: 188px;
+  background-image: url(../img/<?=$dist?>/<?=$dist?>.png);
 
 }
 /* You named this layer  230550 */
