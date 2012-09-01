@@ -34,7 +34,7 @@ include "static/public/head.html"
         <div id="content-1" class="content-arch scroll">
         <br>
         <br>
-                <p><?=$package?>相关的软件搜索的结果</p>
+                <p ><?=$package?>相关的软件搜索的结果</p>
             <br>
             <br>
             <hr>
@@ -62,6 +62,10 @@ include "static/public/head.html"
     <!-- UJian Button BEGIN -->
     <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=3&pos=left&btn=4&uid=1674756"></script>
     <!-- UJian Button END -->
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
+    <!-- UY END -->
 </div>
 </body>
 </html>
