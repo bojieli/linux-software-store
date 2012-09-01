@@ -86,14 +86,15 @@ foreach ($rank as $dist => $score) {
      <li>我们怎样才能让您更加满意
      <li>其他的您愿与我们分享的
    </ul>
-   <p>如果您希望接受我们的回复<br><i>这是可选的,仅当您需要我们的回复时.</i><br><b>我们仅仅发送中文的回复</b><br>
+   <p>如果您希望接受我们的回复<br><i>这是可选的,仅当您需要我们的回复时.</i><br><b>我们仅仅发送中文的回复</b></p>
+   <br>
      <p>您可以在这儿写评论：</p>
      <!-- UY BEGIN -->
      <div id="uyan_frame"></div>
      <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
      <!-- UY END -->
 
-<?php include"public/back_to_home.html"?>
+    <?php include"public/back_to_home.html"?>
   </div>
 </div>
 
