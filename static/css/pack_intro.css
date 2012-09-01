@@ -74,6 +74,13 @@ table ,tr,th,td
     background-repeat:repeat;
 }
 
+a{
+    color: #000000;
+    text-decoration: green;
+}
 
-
+a.hover{
+    color: blue;
+    text-decoration: navy;
+}
 
