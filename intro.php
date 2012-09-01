@@ -19,7 +19,7 @@ $package = addslashes($_GET['package']);
 }
 include "static/public/head.html"
 ?>
-<body background="static/img/<?=$dist?>/<?=$dist?>" style= "background-position:   center;background-repeat:   no-repeat;background-attachment:   fixed ">
+<body background="static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:   center;background-repeat:   no-repeat;background-attachment:   fixed ">
 
 <!-- UJian Button BEGIN -->
 <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=3&pos=left&btn=4&uid=1674756"></script>
