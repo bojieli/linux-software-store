@@ -4,11 +4,6 @@
     height:550px;
     margin-left: 20px;
     margin-right: 20px;
-    background-image: url(../img/content-4.png);
-    background-size: 984,550;
-    background-position: center;
-    background-repeat:repeat;
-    background-attachment:   fixed ;
     font-size: 15px;
 }
 
@@ -17,6 +12,9 @@
     height: 340px;
     margin-right: 20px;
     text-align: center;
+    background-image: url(../img/content-4.png);
+    background-size: auto;
+    background-position: center;
 }
 
 table ,tr,th,td
@@ -58,7 +56,6 @@ table ,tr,th,td
 {
     width: 100%;
     height:16.667%;
-    background:yellow;
 }
 
 #sw_intro
@@ -72,6 +69,10 @@ table ,tr,th,td
     width: 984px;
     height: 250px;
     margin-right: 20px;
+    background-image: url(../img/content-4.png);
+    background-size: auto;
+    background-position: center;
+    background-repeat:repeat;
 }
 
 
