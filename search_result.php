@@ -38,16 +38,16 @@ include "static/public/head.html"
             <br>
             <br>
             <hr>
-            <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+            <!--<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>-->
             <link type="text/css" rel="stylesheet" href="static/css/waterfall.css" />
             <script type="text/javascript" language="javascript" src="static/js/waterfall.js"></script>
             <ul id="intr">
             <li>
 
-                <a href="intro.php?dist=<?=$dist?>&package=<?=$package?>"><img class="icon" src="'+oProduct.image+'" border="0" ><a>
+                <a href="intro.php?dist=<?=$dist?>&package=<?=$package?>" target="_new"><img class="icon" src="'+oProduct.image+'" border="0" ><a>
                 <div style="float: right;height: 50px;width: 550px;">
                 <p>
-                     <a href="intro.php?dist=<?=$dist?>&package=<?=$package?>"><?=$package?></a>
+                     <a href="intro.php?dist=<?=$dist?>&package=<?=$package?>" target="_new"><?=$package?></a>
                 </p>
                     <comment>
                      <?=$package?>是个好软件
