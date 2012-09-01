@@ -87,15 +87,12 @@ foreach ($rank as $dist => $score) {
      <li>其他的您愿与我们分享的
    </ul>
    <p>如果您希望接受我们的回复<br><i>这是可选的,仅当您需要我们的回复时.</i><br><b>我们仅仅发送中文的回复</b><br>
-   <form action="feedback.php" method="POST">
-     <input type="hidden" name="sendfeedback" value="true">
      <p>您可以在这儿写评论：</p>
-     <textarea name="comment_field" style="width: 100%; height: 150px;"></textarea>
-           <b>E-mail地址</b> (如果您愿意接受我们的回信)
-           <input type="text" style="background-color: #FFF; border: 1px solid #BBB; width: 250px;" name="email_add">
-           <div style="width: 100%; float:right;text-align: center;">
-           <input type="submit" value="发送"></div></td>
-   </form>
+     <!-- UY BEGIN -->
+     <div id="uyan_frame"></div>
+     <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
+     <!-- UY END -->
+
 <?php include"public/back_to_home.html"?>
   </div>
 </div>
