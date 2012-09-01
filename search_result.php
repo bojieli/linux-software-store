@@ -43,10 +43,11 @@ include "static/public/head.html"
             <script type="text/javascript" language="javascript" src="static/js/waterfall.js"></script>
             <ul id="intr">
             <li>
-                <img class="icon" src="'+oProduct.image+'" border="0" >
+
+                <a href="intro.php?dist=<?=$dist?>&package=<?=$package?>"><img class="icon" src="'+oProduct.image+'" border="0" ><a>
                 <div style="float: right;height: 50px;width: 550px;">
                 <p>
-                     <?=$package?>
+                     <a href="intro.php?dist=<?=$dist?>&package=<?=$package?>"><?=$package?></a>
                 </p>
                     <comment>
                      <?=$package?>是个好软件
