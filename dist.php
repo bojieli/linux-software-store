@@ -21,9 +21,9 @@ include "static/public/head.html"
   <div id="background" class="bg">
 
   <!--This search area-->
-  <div id="header"></div>
-  <?php include"static/public/search.html"?>
 
+  <?php include"static/public/search.html"?>
+  <div id="header"></div>
 
    <!-- This is 'content-2' -->
         <?php include"static/public/content-2.php"?>

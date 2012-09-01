@@ -28,7 +28,7 @@ include "static/public/head.html"
     <!-- This is 'background' -->
     <div id="background" class="bg">
     <div id="header"></div>
-    <?php include"static/public/search.html"?>
+    <!--<?php include"static/public/search.html"?>-->
 
         <!-- This is 'content-1' -->
         <div id="content-1" class="content-arch scroll">
