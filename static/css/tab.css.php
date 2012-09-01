@@ -84,18 +84,18 @@ h2 {
 .tabs tr {
 	background: none;
 	width: 650px;
-	height: 49.5px;
+	height: 45px;
 	border-top: none;
 }
 
 .software{
      width:650px;
-     height:490px;
+     height:470px;
 
 }
 
 .icon{
-     width:55px;
+     width:45px;
 }
 
 .bre{
