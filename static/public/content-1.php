@@ -3,7 +3,7 @@
                  //while ($pack = mysql_fetch_array($rs)) {
 			$pack = array(
 			   'pid' => 1,
-			    'name' =>  $pid+'xx软件',	
+			    'name' =>  'xx软件',	
 				'icon_url' => '',
 				'url' => 'http://mirrors.ustc.edu.cn/',
 				'summary' =>'软件是个好东西'
