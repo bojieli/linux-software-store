@@ -4,26 +4,26 @@
 
 $data = array();
 
-$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'sadnf', 'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'cfv','comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'nvc n' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'xvckjx','comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'zxcv','comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'xcvj' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'cvbn' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'cvxcg' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'vbncn','comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'ieijnn' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'ncjs' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'cvksfo' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'mvnxcvpjvvpo','comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'cmpvmc,vz' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'cjvjcc;zikxvfj' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'zxxijv' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'nz[vna' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'sdlkjni' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'llvxc' ,'comments'=>$name+'这个软件是个好东西');
-$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'vnzxcz' ,'comments'=>$name+'这个软件是个好东西');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'sadnf', 'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'cfv','comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'nvc n' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'xvckjx','comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'zxcv','comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'xcvj' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'cvbn' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'cvxcg' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'vbncn','comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'ieijnn' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'ncjs' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'cvksfo' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'mvnxcvpjvvpo','comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'cmpvmc,vz' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'cjvjcc;zikxvfj' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'zxxijv' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'nz[vna' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'sdlkjni' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'llvxc' ,'comments'=>'这个软件是个好软件');
+$data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'vnzxcz' ,'comments'=>'这个软件是个好软件');
 
 
 // 随机抽取9条记录以模拟实际情况
