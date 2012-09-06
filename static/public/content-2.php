@@ -6,23 +6,212 @@
         <div class="breakNewsblock">
             <div id="breakNews">
                 <ul id="breakNewsList" class="list6">
-                    <li><a href="http://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
-                    <li><a href="https://www.centos.org/" target="_blank">Centos官方网站</a></li>
-                    <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
-                    <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
-                    <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
-                    <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
-                    <li><a href="http://linuxmint.com/" target="_blank">Mint官方网站</a></li>
-                    <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
-                    <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
-                    <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
-                    <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
-                    <li><a href="http://mirrors.ustc.edu.cn/" target="_blank">科大mirrors源</a></li>
+                <?php
+                 switch($dist)
+                 {
+                 case "archlinux":
+                                    echo"
+                                        <li><a href="http://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/archlinux/" target="_blank">科大archlinux资源</a></li>
+                                        <li><a href="http://mirrors.usct.edu.cn/archlinux/iso" target="_black">Archlinux镜像下载</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/archlinux" target="_blank">Archlinux镜像使用帮助</a></li>
+                                        <li><a href="https://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        ";
+                                        break;
+                 case "centos":
+                                    echo"
+                                        <li><a href="http://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/centos/" target="_blank">科大centos资源</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/centos" target="_blank">Centos镜像使用帮助</a></li>
+                                        <li><a href="https://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        ";
+                                        break;
+                 case "debian":
+                                    echo"
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/" target="_blank">科大debian资源</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/debian" target="_blank">Debian镜像使用帮助</a></li>
+                                        <li><a href="http://mirrors.usct.edu.cn/debian-cd/" target="_black">Debian镜像下载</a></li>
+                                        <li><a href="https://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        ";
+                                        break;
+                 case "deepin":
+                                    echo"
+                                       <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/deepin" target="_blank">科大deepin资源</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/deepin" target="_blank">Deepin镜像使用帮助</a></li>
+                                        <li><a href="http://mirrors.usct.edu.cn/deepin-cd/" target="_black">Deepin镜像下载</a></li>
+                                        <li><a href="https://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        ";
+                                        break;
+                 case "fedora":
+                                    echo"
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/fedora" target="_blank">科大Fedora资源</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/feodra" target="_blank">Fedora镜像使用帮助</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/fedora/linux/releases/" target="_black">Fedora镜像下载</a></li>
+                                        <li><a href="https://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        ";
+                                        break;
+                 case "gentoo":
+                                    echo"
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/gentoo-portage/" target="_blank">科大Gentoo资源</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/gentoo-portage" target="_blank">Gentoo镜像使用帮助</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/gentoo/releases/" target="_black">Gentoo镜像下载</a></li>
+                                        <li><a href="https://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        ";
+                                        break;
+
+                 case "mint":
+                                    echo"
+                                       <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/linuxmint/" target="_blank">科大Linuxmint资源</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/linuxmint" target="_blank">Linuxmint镜像使用帮助</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/linxumint-cd/" target="_black">Linuxmint镜像下载</a></li>
+                                        <li><a href="https://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        ";
+                                        break;
+                 case "opensuse":
+                                    echo"
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/opensuse/" target="_blank">科大Opensuse资源</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/opensuse" target="_blank">Opensuse镜像使用帮助</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/opensuse/" target="_black">Linuxmint镜像下载</a></li>
+                                        <li><a href="https://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        ";
+                                        break;
+                 case "puppy":
+                                    echo"
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/puppy/" target="_blank">科大Puppy资源</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/puppy" target="_blank">Puppy镜像使用帮助</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/puppy/" target="_black">Puppy镜像下载</a></li>
+                                        <li><a href="https://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        ";
+                                        break;
+                 case "slackware":
+                                    echo"
+
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/slackware/" target="_blank">科大Slackware资源</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/slackware" target="_blank">Slackware镜像使用帮助</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/slackware/" target="_black">Slackware镜像下载</a></li>
+                                        <li><a href="https://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        ";
+                                        break;
+                 case "ubuntu":
+                                    echo"
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/ubuntu/" target="_blank">科大Ubuntu资源</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/ubuntu" target="_blank">Ubuntu镜像使用帮助</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/Ubuntu/" target="_black">Ubuntu镜像下载</a></li>
+                                        <li><a href="https://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+
+                                        ";
+                                        break;
+                 }
+                 ?>
                 </ul>
-                <div class="hit">
-                    <span><a style="cursor: pointer;"><img width="15" height="15" id="pre2" alt="上一条" src="static/img/login/arrow_up.png"></a></span>
-                    <span><a style="cursor: pointer;"><img width="15" height="15" id="next2" alt="下一条" src="static/img/login/arrow_down.png"></a></span>
-                </div>
             </div>
         </div>
         <script language="javascript" type="text/javascript">
