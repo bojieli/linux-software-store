@@ -6,7 +6,21 @@
         <div class="breakNewsblock">
             <div id="breakNews">
                 <ul id="breakNewsList" class="list6">
-                <?php
+                                        <li><a href="http://www.archlinux.org/" target="_blank">Archlinux官方网站</a></li>
+                                        <li><a href="http://mirrors.ustc.edu.cn/archlinux/" target="_blank">科大archlinux资源</a></li>
+                                        <li><a href="http://mirrors.usct.edu.cn/archlinux/iso" target="_black">Archlinux镜像下载</a></li>
+                                        <li><a href="http://lug.ustc.edu.cn/wiki/mirrors/help/archlinux" target="_blank">Archlinux镜像使用帮助</a></li>
+                                        <li><a href="https://www.centos.org/" target="_blank">Centos官方网站</a></li>
+                                        <li><a href="http://www.debian.org/" target="_blank">Debian官方网站</a></li>
+                                        <li><a href="http://www.linuxdeepin.com/" target="_blank">Deepin官方网站</a></li>
+                                        <li><a href="http://fedoraproject.org/zh_CN/" target="_blank">Fedora官方网站</a></li>
+                                        <li><a href="http://www.gentoo.org/" target="_blank">Gentoo官方网站</a></li>
+                                        <li><a href="http://linuxmint.com/" target="_blank">Linuxmint官方网站</a></li>
+                                        <li><a href="http://www.opensuse.org/zh-cn/" target="_blank">Opensuse官方网站</a></li>
+                                        <li><a href="http://www.puppylinux.com/" target="_blank">Puppy官方网站</a></li>
+                                        <li><a href="http://www.slackware.com/" target="_blank">Slackware官方网站</a></li>
+                                        <li><a href="http://www.ubuntu.org.cn/" target="_blank">Ubuntu官方网站</a></li>
+               <!-- <?php
                  switch($dist)
                  {
                  case "archlinux":
@@ -210,7 +224,7 @@
                                         ";
                                         break;
                  }
-                 ?>
+                 ?>-->
                 </ul>
             </div>
         </div>
