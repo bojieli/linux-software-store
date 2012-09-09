@@ -5,7 +5,7 @@ if (empty($_GET['dist'])) {
 	$dist = $_GET['dist'];
 }
 if (empty($_GET['package'])) {
-	$package = 'bash';
+	$package = '';
 } else {
 	$package = addslashes($_GET['package']);
 }

@@ -31,7 +31,7 @@ h2 {
 .tabs h2 {
 	text-align: center;
 	background:url("../img/<?=$dist?>/button-3.png");
-	width: 100px;
+	width: 99px;
 	cursor: pointer;
 }
 .tabs h2.active {
