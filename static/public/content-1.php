@@ -60,7 +60,7 @@
             <li id="button-1" class="tab_1 button button-dist">
                 <h2>办公</h2>
                 <div>
-                    <p><a href="sreach_result.php?dist=<?=$dist?>&tid=office">办公类内容</a></p>
+                    <p><a href="search_result.php?dist=<?=$dist?>&tid=office">办公类内容</a></p>
                      
                     <table class="software">
                        <?php
@@ -99,7 +99,7 @@
             <li id="button-2" class="tab_2 button button-dist">
                 <h2>学习</h2>
                 <div>
-                    <p><a href="result_result.php?dist=<?=$dist?>&tid=study">学习类内容</a></p>
+                    <p><a href="search_result.php?dist=<?=$dist?>&tid=study">学习类内容</a></p>
                      
                     <table class="software">
                     <?php
@@ -138,7 +138,7 @@
             <li id="button-3" class="tab_3 button button-dist" >
                 <h2>游戏</h2>
                 <div>
-                    <p><a href="result_result.php?dist=<?=$dist?>&tid=game">游戏类内容</a></p>
+                    <p><a href="search_result.php?dist=<?=$dist?>&tid=game">游戏类内容</a></p>
                      
                     <table class="software">
                     <?php
