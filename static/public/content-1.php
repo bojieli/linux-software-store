@@ -1,3 +1,4 @@
+
 <?php
                  //$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
                  //while ($pack = mysql_fetch_array($rs)) {
@@ -59,7 +60,7 @@
             <li id="button-1" class="tab_1 button button-dist">
                 <h2>办公</h2>
                 <div>
-                    <p>办公类内容</p>
+                    <p><a href="sreach_result.php?dist=<?=$dist?>&tid=office">办公类内容</a></p>
                      
                     <table class="software">
                        <?php
@@ -98,7 +99,7 @@
             <li id="button-2" class="tab_2 button button-dist">
                 <h2>学习</h2>
                 <div>
-                    <p>学习类内容</p>
+                    <p><a href="result_result.php?dist=<?=$dist?>&tid=study">学习类内容</a></p>
                      
                     <table class="software">
                     <?php
@@ -137,7 +138,7 @@
             <li id="button-3" class="tab_3 button button-dist" >
                 <h2>游戏</h2>
                 <div>
-                    <p>游戏类内容</p>
+                    <p><a href="result_result.php?dist=<?=$dist?>&tid=game">游戏类内容</a></p>
                      
                     <table class="software">
                     <?php
@@ -176,7 +177,7 @@
             <li id="button-4" class="tab_4 button button-dist">
                 <h2>娱乐</h2>
                 <div>
-                    <p>娱乐类内容<p>
+                    <p><a href="search_result.php?dist=<?=$dist?>&tid=passtime">娱乐类内容<p>
                      
                     <table class="software">
                    <?php
@@ -215,7 +216,7 @@
             <li id="button-5" class="tab_5 button button-dist">
                 <h2>系统</h2>
                 <div>
-                    <p>系统类内容<p>
+                    <p><a href="search_result.php?dist=<?=$dist?>&tid=system">系统类内容</a><p>
                      
                     <table class="software">
             <?php
@@ -256,7 +257,7 @@
                 <h2>其它</h2>
                 <div >
 
-                    <p>其它类内容</p>
+                    <p><a href="search_result.php?dist=<?=$dist?>&tid=others">其它类内容</p>
                      
                     <table class="software">
                     <?php
