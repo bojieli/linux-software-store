@@ -19,7 +19,7 @@ return $word;
 }
 $distname = firstLetterToUpper($dist);
 $package = new CPackage($pkgName, $distname);
-var_dump($package);
+//var_dump($package);
 include "static/public/head.html"
 ?>
 
