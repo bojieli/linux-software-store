@@ -1,4 +1,6 @@
 <?php
+require_once('db_init.php');
+require_once('CPackage.php');
 if (empty($_GET['dist'])) {
 	$dist = 'ubuntu';
 } else {
@@ -6,23 +8,25 @@ if (empty($_GET['dist'])) {
 }
 function firstLetterToUpper($word) {
 	if ($word[0] >= 'a'&& $word[0] <= 'z') {
-$word[0] = chr(ord($word[0])- ord('a') + ord('A'));
-}
-return $word;
+		$word[0] = chr(ord($word[0])- ord('a') + ord('A'));
+	}
+	return $word;
 }
 $distname = firstLetterToUpper($dist);
-
 if (empty($_GET['package'])) {
-$package = 'bash';
+	$pkgName = 'bash';
 } else {
-$package = addslashes($_GET['package']);
+	$pkgName = addslashes($_GET['package']);
 }
+
+$package = new CPackage($pkgName, $distname);
+//var_dump($package); //for debug
 include "static/public/head.html"
 ?>
 <body background="static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:   center;background-repeat:   no-repeat;background-attachment:   fixed ">
 
 <!-- UJian Button BEGIN -->
-<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=1&icon=3&uid=1674756"></script>
+<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=3&pos=left&btn=4&uid=1674756"></script>
 <!-- UJian Button END -->
 
   <div id="wrapper">
@@ -40,62 +44,62 @@ include "static/public/head.html"
                             <td class="sw_dtl">
                                 <img src="<?=$info['icon']?>" alt="此处显示软件的图片">
                             </td>
-                            <td class="sw_name">
-                                <?=$package?>
+							<td class="sw_name">
+								<?php echo $package->getszName();?>
                             </td>
                         </tr>
                         <tr class="sw_info  ">
                            <td class="sw_dtl">
                                
-                                 软件大小：MB
+						   软件大小：<?php echo $package->getuFileSize();?>MB
                                 
                            </td>
                            <td class="sw_dtl">
                                
-                                 应用平台：<?=$dist?> x86_64 , i386
+                                 应用平台：<?php echo $package->getszDistName();?> x86_64 , i386
                                 
                            </td>
                         </tr>
                         <tr class="sw_info ">
                            <td class="sw_dtl">
                                
-                                 发行版本：
+						   发行版本：<?php echo $package->getszVersion();?>
                                 
                            </td>
                            <td class="sw_dtl">
                                
-                                 软件授权：GPL
+						   软件授权：<?php echo $package->getszLisence();?>
                                 
                            </td>
                         </tr>
                         <tr class="sw_info  ">
                            <td class="sw_dtl">
                               
-                                 软件类型：deb rmp
+						   软件类型：<?php echo $package->getszExtension();?>
                               
                            </td>
                            <td class="sw_dtl">
                                
-                                 软件分类：生活 网络 浏览器
+						   软件分类：<?php echo $package->getszCategory();?>
                                 
                            </td>
                         </tr>
                         <tr class="sw_info ">
                            <td class="sw_dtl">
 
-                             下载软件: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+							 下载软件: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
                            </td>
                            <td class="sw_dtl">
-                               下载源码: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                               下载源码: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
                            </td>
                         </tr>
                         <tr class="sw_info  ">
                            <td class="sw_dtl">
-                              软件安装: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                              软件安装: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
 
                            </td>
                            <td class="sw_dtl">
-                              源码编译: <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?=$dist?>/">i386</a>
+                              源码编译: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
 
                            </td>
                         </tr>
@@ -111,7 +115,7 @@ include "static/public/head.html"
                 </div>
                 <div id="sw_intro">
                     <h1>软件简介</h1>
-                    &nbsp;&nbsp;<p style="text-align: left"><?=$package?>是一个好软件啊
+                    &nbsp;&nbsp;<p style="text-align: left"><?php echo $package->getszSummary();?>
                 </div>
             </div>
 

@@ -1,13 +1,14 @@
 <?php
+require_once('CPackage.php');
 if (empty($_GET['dist'])) {
 	$dist = 'ubuntu';
 } else {
 	$dist = $_GET['dist'];
 }
 if (empty($_GET['package'])) {
-	$package = '';
+	$pkgName = '';
 } else {
-	$package = addslashes($_GET['package']);
+	$pkgName = addslashes($_GET['package']);
 }
 
 function firstLetterToUpper($word) {
@@ -17,7 +18,8 @@ $word[0] = chr(ord($word[0])- ord('a') + ord('A'));
 return $word;
 }
 $distname = firstLetterToUpper($dist);
-
+$package = new CPackage($pkgName, $distname);
+var_dump($package);
 include "static/public/head.html"
 ?>
 
@@ -34,7 +36,7 @@ include "static/public/head.html"
         <div id="content-1" class="content-arch scroll">
         <br>
         <br>
-                <p ><?=$package?>相关的软件搜索的结果</p>
+                <p ><?=$pkgName?>相关的软件搜索的结果</p>
             <br>
             <br>
             <hr>
@@ -44,13 +46,13 @@ include "static/public/head.html"
             <ul id="intr">
             <li>
 
-                <a href="intro.php?dist=<?=$dist?>&package=<?=$package?>" target="_new"><img class="icon" src="'+oProduct.image+'" border="0" ><a>
+                <a href="intro.php?dist=<?=$dist?>&package=<?=$pkgName?>" target="_new"><img class="icon" src="'+oProduct.image+'" border="0" ><a>
                 <div style="float: right;height: 50px;width: 550px;">
                 <p>
-                     <a href="intro.php?dist=<?=$dist?>&package=<?=$package?>" target="_new"><?=$package?></a>
+                     <a href="intro.php?dist=<?=$dist?>&package=<?=$pkgName?>" target="_new"><?=$pkgName?></a>
                 </p>
                     <comment>
-                     <?=$package?>是个好软件
+                     <?=$pkgName?>是个好软件
                     </comment>
                 </div>
             </li>
@@ -59,11 +61,10 @@ include "static/public/head.html"
         <!-- This is 'content-2' -->
          <?php include"static/public/content-2.php"?>
     </div>
-
-
     <!-- UJian Button BEGIN -->
-    <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=1&icon=3&uid=1674756"></script>
+    <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=3&pos=left&btn=4&uid=1674756"></script>
     <!-- UJian Button END -->
+    <!-- UY BEGIN -->
 
 </div>
 </body>
