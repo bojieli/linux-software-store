@@ -177,7 +177,7 @@
             <li id="button-4" class="tab_4 button button-dist">
                 <h2>娱乐</h2>
                 <div>
-                    <p><a href="search_result.php?dist=<?=$dist?>&tid=passtime">娱乐类内容<p>
+                    <p><a href="search_result.php?dist=<?=$dist?>&tid=passtime">娱乐类内容</a><p>
                      
                     <table class="software">
                    <?php
