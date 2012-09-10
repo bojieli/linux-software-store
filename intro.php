@@ -22,7 +22,7 @@ include "static/public/head.html"
 <body background="static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:   center;background-repeat:   no-repeat;background-attachment:   fixed ">
 
 <!-- UJian Button BEGIN -->
-<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=3&pos=left&btn=4&uid=1674756"></script>
+<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=1&icon=3&uid=1674756"></script>
 <!-- UJian Button END -->
 
   <div id="wrapper">
