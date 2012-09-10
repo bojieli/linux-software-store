@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2012 年 09 月 09 日 19:41
+-- 生成日期: 2012 年 09 月 10 日 18:38
 -- 服务器版本: 5.5.24
 -- PHP 版本: 5.3.10-1ubuntu3.2
 
@@ -57,14 +57,16 @@ CREATE TABLE IF NOT EXISTS `cz_dist` (
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`did`),
   KEY `key_name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- 转存表中的数据 `cz_dist`
 --
 
 INSERT INTO `cz_dist` (`did`, `name`) VALUES
-(1, 'gentoo');
+(3, 'debian'),
+(1, 'gentoo'),
+(2, 'Ubuntu');
 
 -- --------------------------------------------------------
 
@@ -107,13 +109,13 @@ CREATE TABLE IF NOT EXISTS `cz_pack` (
   `did` int(10) NOT NULL,
   `rid` int(10) NOT NULL,
   `sid` int(10) NOT NULL,
-  `filesize` int(10) NOT NULL,
-  `install_size` int(10) NOT NULL,
-  `rate_total` int(10) NOT NULL,
-  `rate_count` int(10) NOT NULL,
-  `create_time` int(10) NOT NULL,
-  `update_time` int(10) NOT NULL,
-  `recommend` tinyint(1) NOT NULL,
+  `filesize` int(10) DEFAULT NULL,
+  `install_size` int(10) DEFAULT NULL,
+  `rate_total` int(10) DEFAULT NULL,
+  `rate_count` int(10) DEFAULT NULL,
+  `create_time` int(10) DEFAULT NULL,
+  `update_time` int(10) DEFAULT NULL,
+  `recommend` tinyint(1) DEFAULT NULL,
   `name` varchar(127) COLLATE utf8_unicode_ci NOT NULL,
   `version` varchar(127) COLLATE utf8_unicode_ci NOT NULL,
   `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -126,14 +128,16 @@ CREATE TABLE IF NOT EXISTS `cz_pack` (
   KEY `rid` (`rid`),
   KEY `sid` (`sid`),
   KEY `key_name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
 
 --
 -- 转存表中的数据 `cz_pack`
 --
 
 INSERT INTO `cz_pack` (`pid`, `did`, `rid`, `sid`, `filesize`, `install_size`, `rate_total`, `rate_count`, `create_time`, `update_time`, `recommend`, `name`, `version`, `url`, `summary`, `extension`, `lisence`, `category`) VALUES
-(2, 1, 1, 1, 10, 0, 0, 0, 0, 0, 0, 'firefox', '1.0', 'www.firefox.org', '赵聪很帅', 'deb rpm', 'GPL v3.0', '生活 学习');
+(2, 1, 1, 1, 10, 0, 0, 0, 0, 0, 0, 'firefox', '1.0', 'www.firefox.org', '赵聪很帅', 'deb rpm', 'GPL v3.0', '生活 学习'),
+(3, 2, 1, 1, 50, 0, 0, 0, 0, 0, 0, 'android', '2.2', '', '', '', '', ''),
+(4, 2, 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ubuntutweak', '1.0', 'abcd', 'abcd', 'deb', '', '');
 
 -- --------------------------------------------------------
 
@@ -262,7 +266,7 @@ INSERT INTO `cz_repo` (`rid`, `did`, `name`) VALUES
 
 CREATE TABLE IF NOT EXISTS `cz_section` (
   `sid` int(10) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`sid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -271,8 +275,30 @@ CREATE TABLE IF NOT EXISTS `cz_section` (
 --
 
 INSERT INTO `cz_section` (`sid`, `name`) VALUES
-(0, 'afd'),
-(1, 'dfad');
+(0, 'abc'),
+(1, '??');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `cz_sec_pack`
+--
+
+CREATE TABLE IF NOT EXISTS `cz_sec_pack` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sid` int(11) NOT NULL COMMENT 'section id',
+  `pid` int(11) NOT NULL COMMENT 'package id',
+  PRIMARY KEY (`id`),
+  KEY `pid` (`pid`),
+  KEY `sid` (`sid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='associate table' AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `cz_sec_pack`
+--
+
+INSERT INTO `cz_sec_pack` (`id`, `sid`, `pid`) VALUES
+(1, 0, 4);
 
 -- --------------------------------------------------------
 
@@ -351,6 +377,14 @@ ALTER TABLE `cz_pack_tag`
 --
 ALTER TABLE `cz_repo`
   ADD CONSTRAINT `cz_repo_ibfk_1` FOREIGN KEY (`did`) REFERENCES `cz_dist` (`did`);
+
+--
+-- 限制表 `cz_sec_pack`
+--
+ALTER TABLE `cz_sec_pack`
+  ADD CONSTRAINT `cz_sec_pack_ibfk_3` FOREIGN KEY (`sid`) REFERENCES `cz_section` (`sid`),
+  ADD CONSTRAINT `cz_sec_pack_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `cz_pack` (`pid`),
+  ADD CONSTRAINT `cz_sec_pack_ibfk_2` FOREIGN KEY (`sid`) REFERENCES `cz_section` (`sid`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

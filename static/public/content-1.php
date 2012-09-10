@@ -1,4 +1,3 @@
-
 <?php
                  //$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
                  //while ($pack = mysql_fetch_array($rs)) {
@@ -9,7 +8,20 @@
 				'url' => 'http://mirrors.ustc.edu.cn/',
 				'summary' =>'软件是个好东西'
 );
-//}
+
+/*
+ * in: $dist, $section, $num
+ * out: an array contains the package info which meet the query
+ */
+function getSimplePackageInfo($dist, $section, $num = 10){
+	// get dataset from Mysql
+	$sql = "SELECT * FROM cz_pack WHERE did = (SELECT did FROM cz_dist WHERE name = '".$dist."') AND pid IN (SELECT pid FROM cz_sec_pack WHERE sid = (SELECT sid FROM cz_section WHERE name = '".$section."')) LIMIT 0,".$num;	//TODO:add order by subquery
+//	echo $sql;
+	$result = mysql_query($sql, MYSQL_ASSOC);
+	$rows = mysql_fetch_array($result);
+	
+	//TODO: make an array of CPackage to hold infomation
+}
 ?>
 
 <div id="content-1">
