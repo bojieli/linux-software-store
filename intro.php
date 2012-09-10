@@ -56,66 +56,72 @@ include "static/public/head.html"
                            </td>
                            <td class="sw_dtl">
                                
-                                 应用平台：<?php echo $package->getszDistName();?> x86_64 , i386
+                           安装之后：所需硬盘空间<>  MB
                                 
                            </td>
                         </tr>
-                        <tr class="sw_info ">
+                        <tr class="sw_info  ">
                            <td class="sw_dtl">
-                               
-						   发行版本：<?php echo $package->getszVersion();?>
-                                
+                                应用平台：<?php echo $package->getszDistName();?> x86_64 , i386
                            </td>
+                           <td class="sw_dtl">
+
+                               发行版本：<?php echo $package->getszVersion();?>
+
+                           </td>
+                        </tr>
+                        <tr class="sw_info ">
                            <td class="sw_dtl">
                                
 						   软件授权：<?php echo $package->getszLisence();?>
                                 
                            </td>
+                           <td class="sw_dtl">
+                           软件主页：<a href="http://www.xx.org">xx</a>  &nbps;&nbps;&nbps;&nbps;
+                           </td>
                         </tr>
                         <tr class="sw_info  ">
                            <td class="sw_dtl">
-                              
-						   软件类型：<?php echo $package->getszExtension();?>
-                              
+                               下载软件: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
                            </td>
                            <td class="sw_dtl">
-                               
+                               软件安装: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
+
+                           </td>
+                        </tr>
+                        <tr class="sw_info">
+                           <td class="sw_dtl">
+                              
 						   软件分类：<?php echo $package->getszCategory();?>
-                                
+                              
+                           </td>
+                           <td class="sw_dtl">
+                                软件类型：<?php echo $package->getszExtension();?>
                            </td>
                         </tr>
-                        <tr class="sw_info ">
-                           <td class="sw_dtl">
 
-							 下载软件: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
+                        <tr class="sw_info  ">
+                           <td class="sw_dtl">
+                               软件评分：0～5分
                            </td>
                            <td class="sw_dtl">
-                               下载源码: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
+                               推荐指数：
                            </td>
                         </tr>
                         <tr class="sw_info  ">
                            <td class="sw_dtl">
-                              软件安装: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a>  <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
-
+                              软件维护：<a href="http://www.xx.org/wiki">xx 、mm 、qq </a>
                            </td>
                            <td class="sw_dtl">
-                              源码编译: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
-
+                              报告bug：<a href="http://www.xx.org/bugreport.html">xx软件bug报告</a>
                            </td>
                         </tr>
-                        <tr class="sw_info  ">
-                           <td class="sw_dtl">
 
-                           </td>
-                           <td class="sw_dtl">
-
-                           </td>
-                        </tr>
                     </table>
                 </div>
                 <div id="sw_intro">
                     <h1>软件简介</h1>
-                    &nbsp;&nbsp;<p style="text-align: left"><?php echo $package->getszSummary();?>
+                    &nbsp;&nbsp;<p style="text-align: left"><?php echo $package->getszSummary();?></p>
                 </div>
             </div>
 
