@@ -217,8 +217,7 @@
                 <h2>系统</h2>
                 <div>
                     <p><a href="search_result.php?dist=<?=$dist?>&tid=system">系统类内容</a><p>
-                     
-                    <table class="software">
+                      <table class="software">
             <?php
 		    for ($i=0; $i<5; $i++) {
 		    ?>
