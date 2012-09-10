@@ -82,14 +82,9 @@ CREATE TABLE IF NOT EXISTS cz_user (
 CREATE TABLE IF NOT EXISTS cz_dist (
 	`did` INT(10) NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(50) NOT NULL,
+	`description` TEXT,
 	PRIMARY KEY (`did`),
 	INDEX key_name(`name`)
-);
-
-CREATE TABLE IF NOT EXISTS cz_dist_detail (
-	`did` INT(10) NOT NULL,
-	`description` TEXT,
-	FOREIGN KEY (`did`) REFERENCES cz_dist(`did`)
 );
 
 CREATE TABLE IF NOT EXISTS cz_repo (
@@ -115,46 +110,48 @@ CREATE TABLE IF NOT EXISTS cz_arch_dist (
 );
 
 CREATE TABLE IF NOT EXISTS cz_section (
-	`sid` INT(10) NOT NULL,
-	`name` VARCHAR(255) NOT NULL
+	`sid` INT(10) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(255) NOT NULL,
+	PRIMARY KEY (`sid`)
 );
 
 CREATE TABLE IF NOT EXISTS cz_pack (
 	`pid` INT(10) NOT NULL AUTO_INCREMENT,
-	`did` INT(10) NOT NULL, -- distribution id
+	`did` INT(10) NOT NULL, -- distribution id, redundant if considering rid
 	`rid` INT(10) NOT NULL, -- repo id
-	`sid` INT(10) NOT NULL, -- section id
+	`sid` INT(10), -- section id (can be null)
 	`filesize` INT(10) NOT NULL, -- package size
 	`install_size` INT(10) NOT NULL,
-	`rate_total` INT(10) NOT NULL, -- SUM(rates)
-	`rate_count` INT(10) NOT NULL, -- COUNT(rates)
+	`rate_total` INT(10) NOT NULL DEFAULT 0, -- SUM(rates)
+	`rate_count` INT(10) NOT NULL DEFAULT 0, -- COUNT(rates)
 	`create_time` INT(10) NOT NULL, -- timestamp of creation of this row
 	`update_time` INT(10) NOT NULL, -- last update timestamp of this row
 	`recommend` TINYINT(1) NOT NULL, -- 0 for normal, 1 for section recommend, 2 for distribution recommend
-	`name` VARCHAR(127) NOT NULL, -- hope package name will not be too long...
-	`version` VARCHAR(127) NOT NULL, -- package version
+	`name` VARCHAR(255) NOT NULL, -- package name
+	`version` VARCHAR(255) NOT NULL, -- package version
 	`url` VARCHAR(255) NOT NULL, -- download url
+	`checksum_md5` CHAR(32),
+	`checksum_sha1` CHAR(40),
+	`checksum_sha256` CHAR(64),
+	`architecture` VARCHAR(255) NOT NULL,
+	`section` VARCHAR(255), -- DEB only
+	`bug_url` VARCHAR(255), -- issue tracker (optional)
+	`homepage` VARCHAR(255),
+	`license` VARCHAR(255), -- RPM only
+	`maintainer` VARCHAR(255), -- maintainer or packager
+	`priority` VARCHAR(255), -- DEB only
 	`summary` VARCHAR(255) NOT NULL, -- short description
+	`provides` VARCHAR(255),
+	`suggests` VARCHAR(255),
+	`conflicts` VARCHAR(255),
+	`depends` TEXT,
+	`description` TEXT,
+	`icon` BLOB, -- binary image data
 	PRIMARY KEY (`pid`),
 	FOREIGN KEY (`did`) REFERENCES cz_dist(`did`),
 	FOREIGN KEY (`rid`) REFERENCES cz_repo(`rid`),
 	FOREIGN KEY (`sid`) REFERENCES cz_section(`sid`),
 	INDEX key_name(`name`)
-);
-
-CREATE TABLE IF NOT EXISTS cz_pack_detail (
-	`pid` INT(10) NOT NULL,
-	`checksum_md5` CHAR(32),
-	`checksum_sha1` CHAR(40),
-	`checksum_sha256` CHAR(64),
-	`bug_url` VARCHAR(255), -- issue tracker (optional)
-	`homepage` VARCHAR(255),
-	`license` VARCHAR(127), -- RPM only
-	`maintainer` VARCHAR(255), -- maintainer or packager
-	`priority` VARCHAR(20), -- DEB only
-	`description` TEXT,
-	`icon` BLOB, -- binary image data
-	FOREIGN KEY (`pid`) REFERENCES cz_pack(`pid`)
 );
 
 -- Tag of DEB, rpm:group of RPM, section of DEB
@@ -172,6 +169,8 @@ CREATE TABLE IF NOT EXISTS cz_pack_depend (
 	`pid` INT(10) NOT NULL,
 	`dep` INT(10) NOT NULL, -- pack pid depends on pack dep
 	`version` VARCHAR(31) NOT NULL, -- minimum dep version. NULL for no limit
+	FOREIGN KEY (`pid`) REFERENCES cz_pack(`pid`),
+	FOREIGN KEY (`dep`) REFERENCES cz_pack(`pid`)
 );
 
 CREATE TABLE IF NOT EXISTS cz_pack_arch (
@@ -195,7 +194,7 @@ CREATE TABLE IF NOT EXISTS cz_pack_comment (
 	`homepage` VARCHAR(255), -- optional
 	`email` VARCHAR(255) NOT NULL,
 	`content` TEXT NOT NULL,
-	PRIMARY_KEY (`cid`),
+	PRIMARY KEY (`cid`),
 	FOREIGN KEY (`pid`) REFERENCES cz_pack(`pid`),
 	INDEX key_time (`time`),
 	INDEX key_status (`status`),
