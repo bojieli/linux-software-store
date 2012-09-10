@@ -32,13 +32,11 @@ h2 {
 	text-align: center;
 	background:url("../img/<?=$dist?>/button-3.png");
 	width: 100px;
-	border-left: 1px solid #CCC;
-	border-bottom: 1px solid #CCC;
 	cursor: pointer;
 }
 .tabs h2.active {
 	background:url("../img/<?=$dist?>/button-2.png");
-	border-bottom: 1px solid #FFF;
+
 }
 .tabs .tab_0 h2 {
 	border-left: none;
