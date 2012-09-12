@@ -141,9 +141,13 @@ CREATE TABLE IF NOT EXISTS cz_pack (
 	`maintainer` VARCHAR(255), -- maintainer or packager
 	`priority` VARCHAR(255), -- DEB only
 	`summary` VARCHAR(255) NOT NULL, -- short description
-	`provides` VARCHAR(255),
-	`suggests` VARCHAR(255),
-	`conflicts` VARCHAR(255),
+	`provides` VARCHAR(255), -- DEB
+	`suggests` VARCHAR(255), -- DEB
+	`conflicts` VARCHAR(255), -- DEB
+	`replaces` VARCHAR(255), -- DEB
+	`source` VARCHAR(255), -- DEB
+	`tags` VARCHAR(255), -- DEB
+	`task` VARCHAR(255), -- DEB
 	`depends` TEXT,
 	`description` TEXT,
 	`icon` BLOB, -- binary image data
