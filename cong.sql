@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2012 年 09 月 10 日 18:38
+-- 生成日期: 2012 年 09 月 12 日 23:24
 -- 服务器版本: 5.5.24
 -- PHP 版本: 5.3.10-1ubuntu3.2
 
@@ -64,8 +64,8 @@ CREATE TABLE IF NOT EXISTS `cz_dist` (
 --
 
 INSERT INTO `cz_dist` (`did`, `name`) VALUES
-(3, 'debian'),
-(1, 'gentoo'),
+(3, 'Debian'),
+(1, 'Gentoo'),
 (2, 'Ubuntu');
 
 -- --------------------------------------------------------
@@ -121,8 +121,6 @@ CREATE TABLE IF NOT EXISTS `cz_pack` (
   `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `summary` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `extension` varchar(127) COLLATE utf8_unicode_ci NOT NULL COMMENT 'package extension(软件类型)',
-  `lisence` varchar(127) COLLATE utf8_unicode_ci NOT NULL COMMENT 'lisence of package(软件授权)',
-  `category` varchar(127) COLLATE utf8_unicode_ci NOT NULL COMMENT '软件分类',
   PRIMARY KEY (`pid`),
   KEY `did` (`did`),
   KEY `rid` (`rid`),
@@ -134,10 +132,10 @@ CREATE TABLE IF NOT EXISTS `cz_pack` (
 -- 转存表中的数据 `cz_pack`
 --
 
-INSERT INTO `cz_pack` (`pid`, `did`, `rid`, `sid`, `filesize`, `install_size`, `rate_total`, `rate_count`, `create_time`, `update_time`, `recommend`, `name`, `version`, `url`, `summary`, `extension`, `lisence`, `category`) VALUES
-(2, 1, 1, 1, 10, 0, 0, 0, 0, 0, 0, 'firefox', '1.0', 'www.firefox.org', '赵聪很帅', 'deb rpm', 'GPL v3.0', '生活 学习'),
-(3, 2, 1, 1, 50, 0, 0, 0, 0, 0, 0, 'android', '2.2', '', '', '', '', ''),
-(4, 2, 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ubuntutweak', '1.0', 'abcd', 'abcd', 'deb', '', '');
+INSERT INTO `cz_pack` (`pid`, `did`, `rid`, `sid`, `filesize`, `install_size`, `rate_total`, `rate_count`, `create_time`, `update_time`, `recommend`, `name`, `version`, `url`, `summary`, `extension`) VALUES
+(2, 1, 1, 1, 10, 20, 0, 0, 0, 0, 0, 'firefox', '1.0', 'www.firefox.org', '赵聪很帅', 'deb rpm'),
+(3, 2, 1, 1, 50, 0, 0, 0, 0, 0, 0, 'android', '2.2', '', '', ''),
+(4, 2, 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ubuntutweak', '1.0', 'abcd', 'abcd', 'deb');
 
 -- --------------------------------------------------------
 
@@ -197,18 +195,26 @@ CREATE TABLE IF NOT EXISTS `cz_pack_depend` (
 
 CREATE TABLE IF NOT EXISTS `cz_pack_detail` (
   `pid` int(10) NOT NULL,
-  `checksum_md5` char(32) DEFAULT NULL,
-  `checksum_sha1` char(40) DEFAULT NULL,
-  `checksum_sha256` char(64) DEFAULT NULL,
-  `bug_url` varchar(255) DEFAULT NULL,
-  `homepage` varchar(255) DEFAULT NULL,
-  `license` varchar(127) DEFAULT NULL,
-  `maintainer` varchar(255) DEFAULT NULL,
-  `priority` varchar(20) DEFAULT NULL,
-  `description` text,
+  `checksum_md5` char(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `checksum_sha1` char(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `checksum_sha256` char(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bug_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `homepage` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `license` varchar(127) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `maintainer` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `maintainerUrl` varchar(512) COLLATE utf8_unicode_ci NOT NULL COMMENT 'the url of maintainer',
+  `priority` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8_unicode_ci,
   `icon` blob,
   KEY `pid` (`pid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- 转存表中的数据 `cz_pack_detail`
+--
+
+INSERT INTO `cz_pack_detail` (`pid`, `checksum_md5`, `checksum_sha1`, `checksum_sha256`, `bug_url`, `homepage`, `license`, `maintainer`, `maintainerUrl`, `priority`, `description`, `icon`) VALUES
+(2, NULL, NULL, NULL, 'http://www.ackratos.com/', 'www.firefox.org', 'GPL', '赵聪', 'http://www.ackratos.com', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -275,8 +281,8 @@ CREATE TABLE IF NOT EXISTS `cz_section` (
 --
 
 INSERT INTO `cz_section` (`sid`, `name`) VALUES
-(0, 'abc'),
-(1, '??');
+(0, 'study'),
+(1, 'life');
 
 -- --------------------------------------------------------
 
@@ -291,14 +297,16 @@ CREATE TABLE IF NOT EXISTS `cz_sec_pack` (
   PRIMARY KEY (`id`),
   KEY `pid` (`pid`),
   KEY `sid` (`sid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='associate table' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='associate table' AUTO_INCREMENT=4 ;
 
 --
 -- 转存表中的数据 `cz_sec_pack`
 --
 
 INSERT INTO `cz_sec_pack` (`id`, `sid`, `pid`) VALUES
-(1, 0, 4);
+(1, 0, 4),
+(2, 0, 2),
+(3, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -382,9 +390,9 @@ ALTER TABLE `cz_repo`
 -- 限制表 `cz_sec_pack`
 --
 ALTER TABLE `cz_sec_pack`
-  ADD CONSTRAINT `cz_sec_pack_ibfk_3` FOREIGN KEY (`sid`) REFERENCES `cz_section` (`sid`),
   ADD CONSTRAINT `cz_sec_pack_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `cz_pack` (`pid`),
-  ADD CONSTRAINT `cz_sec_pack_ibfk_2` FOREIGN KEY (`sid`) REFERENCES `cz_section` (`sid`);
+  ADD CONSTRAINT `cz_sec_pack_ibfk_2` FOREIGN KEY (`sid`) REFERENCES `cz_section` (`sid`),
+  ADD CONSTRAINT `cz_sec_pack_ibfk_3` FOREIGN KEY (`sid`) REFERENCES `cz_section` (`sid`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
