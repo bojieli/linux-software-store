@@ -7,4 +7,5 @@ if (!mysql_select_db($db['name']))
 unset($db);
 
 date_default_timezone_set('Asia/Chongqing');
+mysql_query("SET CHATSET UTF8");
 ?>

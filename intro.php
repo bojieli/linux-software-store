@@ -1,6 +1,7 @@
 <?php
 require_once('db_init.php');
 require_once('CPackage.php');
+mysql_query("SET CHARSET utf8");
 if (empty($_GET['dist'])) {
 	$dist = 'ubuntu';
 } else {
@@ -56,7 +57,7 @@ include "static/public/head.html"
                            </td>
                            <td class="sw_dtl">
                                
-                           安装之后：所需硬盘空间<>  MB
+						   安装之后：所需硬盘空间<?php echo $package->getuInstallSize();?>  MB
                                 
                            </td>
                         </tr>
@@ -73,11 +74,11 @@ include "static/public/head.html"
                         <tr class="sw_info ">
                            <td class="sw_dtl">
                                
-						   软件授权：<?php echo $package->getszLisence();?>
+						   软件授权：<?php echo $package->getszLicense();?>
                                 
                            </td>
                            <td class="sw_dtl">
-                           软件主页：<a href="http://www.xx.org">xx</a>  &nbps;&nbps;&nbps;&nbps;
+						   软件主页：<a href="<?php echo "http://".$package->getszHomepage();?>"><?echo $package->getszName();?></a>
                            </td>
                         </tr>
                         <tr class="sw_info  ">
@@ -91,9 +92,7 @@ include "static/public/head.html"
                         </tr>
                         <tr class="sw_info">
                            <td class="sw_dtl">
-                              
 						   软件分类：<?php echo $package->getszCategory();?>
-                              
                            </td>
                            <td class="sw_dtl">
                                 软件类型：<?php echo $package->getszExtension();?>
@@ -110,10 +109,10 @@ include "static/public/head.html"
                         </tr>
                         <tr class="sw_info  ">
                            <td class="sw_dtl">
-                              软件维护：<a href="http://www.xx.org/wiki">xx 、mm 、qq </a>
+						   软件维护：<a href="<?php echo $package->getszMaintainerUrl();?>" target="_blank"><?php echo $package->getszMaintainer()?></a>
                            </td>
                            <td class="sw_dtl">
-                              报告bug：<a href="http://www.xx.org/bugreport.html">xx软件bug报告</a>
+						   报告bug：<a href="<?php echo $package->getszBugUrl();?>" target="_blank"><?php echo $package->getszName();?> bug报告</a>
                            </td>
                         </tr>
 

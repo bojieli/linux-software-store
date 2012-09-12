@@ -12,9 +12,18 @@ class CPackage{
 	private $szSummary;	//summary
 	private $uFileSize;	//filesize
 	private $uInstallSize;	//install_size
+	private $szCategory;//category
+	private $szDistName;	//dist name
+	private $szLicense;		//license
+	private $szHomepage;	//homepage
+	private $szExtension;	//extension
+	private $szMaintainer;	//maintainer
+	private $szMaintainerUrl;	//maintainerUrl
+	private $szBugUrl;		//bug_url
+	
+	private $uPid;		//pack pid
 	private $uDid;		//dist did
 	private $uRid;		//repo rid
-	public $sid;		//section sid
 
 	/*
 	 *	in: $name,$dist
@@ -22,18 +31,23 @@ class CPackage{
 	 *	fill all the field of CPackage from database
 	 */
 	public function CPackage($name, $dist = 'ubuntu'){
-		//get the package infomation
+		// get the package infomation
 		$sql = "SELECT * FROM cz_pack WHERE name = '".$name."' and did = (SELECT did FROM cz_dist WHERE name = '".$dist."')";
 		$result = mysql_query($sql) or die("Database query error");
 		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
 
-		//fill the package infomation field
+		// fill the package infomation field
 		$this->szName = $rows["name"];
 		$this->szVersion = $rows["version"];
 		$this->szUrl = $rows["url"];
 		$this->szSummary = $rows["summary"];
 		$this->uFileSize = $rows["filesize"];
 		$this->uInstallSize = $rows["install_size"];
+		$this->szExtension = $rows["extension"];
+
+		$this->uPid = $rows["pid"];
+		$this->uDid = $rows["did"];
+		$this->uRid = $rows["rid"];
 	}
 
 	/*
@@ -56,6 +70,61 @@ class CPackage{
 	}
 	public function getuInstallSize(){
 		return $this->uInstallSize;
+	}
+	public function getszExtension(){
+		return $this->szExtension;
+	}
+	public function getszCategory(){
+		$sql = "SELECT name FROM cz_section WHERE sid IN (SELECT sid FROM cz_sec_pack WHERE pid = ".$this->uPid.")";
+		$result = mysql_query($sql);
+		$nums = mysql_num_rows($result);
+		for($i = 0; $i < $nums; $i++){
+			$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+			$this->szCategory .= $rows["name"]." ";
+		}
+		return $this->szCategory;
+	}
+	public function getszDistName(){
+		$sql = "SELECT name FROM cz_dist WHERE did = ".$this->uDid;
+		$result = mysql_query($sql);
+		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+		$this->szDistName = $rows["name"];
+		return $rows["name"];
+	}
+	public function getszLicense(){
+		$sql = "SELECT license FROM cz_pack_detail WHERE pid = ".$this->uPid;
+		$result = mysql_query($sql);
+		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+		$this->szLicense = $rows["license"];
+		return $this->szLicense;
+	}
+	public function getszHomepage(){
+		$sql = "SELECT homepage FROM cz_pack_detail WHERE pid = ".$this->uPid;
+		$result = mysql_query($sql);
+		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+		$this->szHomepage = $rows["homepage"];
+		return $this->szHomepage;
+	}
+	public function getszMaintainer(){
+		$sql = "SELECT maintainer FROM cz_pack_detail WHERE pid = ".$this->uPid;
+		$result = mysql_query($sql);
+		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+		$this->szMaintainer = $rows["maintainer"];
+		return $this->szMaintainer;
+	}
+	public function getszMaintainerUrl(){
+		$sql = "SELET maintainerUrl FROM cz_pack_detail WHERE pid = ".$this->uPid;
+		$result = mysql_query($sql);
+		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+		$this->szMaintainerUrl = $rows["maintainerUrl"];
+		return $this->szMaintainerUrl;
+	}
+	public function getszBugUrl(){
+		$sql = "SELECT bug_url FROM cz_pack_detail WHERE pid = ".$this->uPid;
+		$result = mysql_query($sql);
+		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+		$this->szBugUrl = $rows["bug_url"];
+		return $this->szBugUrl;
 	}
 }
 
