@@ -1,21 +1,16 @@
 <?php
-require_once("../../CPackage.php");
-require_once("../../db_init.php");
+require_once("CPackage.php");
+require_once("db_init.php");
 if (empty($_GET['dist'])) {
 	$dist = 'ubuntu';
 } else {
 	$dist = addslashes($_GET['dist']);
 }
-function firstLetterToUpper($word) {
-	if ($word[0] >= 'a'&& $word[0] <= 'z') {
-		$word[0] = chr(ord($word[0])- ord('a') + ord('A'));
-	}
-	return $word;
-}
 $distname = firstLetterToUpper($dist);
 mysql_query("SET CHARSET UTF8");
-                 //$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
-                 //while ($pack = mysql_fetch_array($rs)) {
+//$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
+//while ($pack = mysql_fetch_array($rs)) {
+/*
 			$pack = array(
 			   'pid' => 1,
 			    'name' =>  'xx软件',	
@@ -23,6 +18,7 @@ mysql_query("SET CHARSET UTF8");
 				'url' => 'http://mirrors.ustc.edu.cn/',
 				'summary' =>'软件是个好东西'
 );
+ */
 
 /*
  * in: $dist, $section, $num
@@ -31,7 +27,7 @@ mysql_query("SET CHARSET UTF8");
 function getSimplePackageInfo($dist, $section, $num = 10){
 	// get dataset from Mysql
 	$sql = "SELECT name FROM cz_pack WHERE did = (SELECT did FROM cz_dist WHERE name = '".$dist."') AND pid IN (SELECT pid FROM cz_sec_pack WHERE sid = (SELECT sid FROM cz_section WHERE name = '".$section."')) LIMIT 0,".$num;	//TODO:add order by subquery
-	echo $sql;
+//	echo $sql;
 	$result = mysql_query($sql);
 	$realNum = mysql_num_rows($result);
 	$simplePackages = array();
@@ -51,7 +47,6 @@ function printVoid(){
 	echo '<p><a href=""></a></p>';
 	echo '<comment>暂无数据</comment>';
 	echo '</td>';
-
 }
 ?>
 
@@ -60,13 +55,18 @@ function printVoid(){
     <script type="text/javascript" src="static/js/tab.js"></script>
     <div class="tabs">
 		<ul>
-			<?php
+		<?php
 			$TabTitles = array("小站推荐", "办公", "学习","游戏","娱乐","系统","其他");
 			$sectionFields = array("recommand", "office", "study", "game","passtime","system","others");	//the name field in cz_section table
 			for($tabNo = 0; $tabNo < 7; $tabNo++){
 			?>
-			<li id="button-<?php echo $tabNo;?>" class="first tab_<?php echo $tabNo;?> button button-dist">
-				<h2 class="active"><?php echo $TabTitles[$tabNo];?></h2>
+			<li id="button-<?php echo $tabNo;?>" class="<?php if($tabNo==0) echo "first";?> tab_<?php echo $tabNo;?> button button-dist">
+				<?php if($tabNo == 0){?>
+				<h2 class="active">
+				<?php }else{?>
+				<h2>
+				<?php }?>
+				<?php echo $TabTitles[$tabNo];?></h2>
 				<div>
 				<p><a href="search_result.php?dist=<?php echo $dist;?>&tid=<?php echo $sectionFields[$tabNo];?>" target="_blank"><?php echo $TabTitles[$tabNo];?>内容</a></p>
                 <table class="software">

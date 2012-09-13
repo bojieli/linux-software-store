@@ -1,4 +1,6 @@
 ﻿<?php
+require_once('CPackage.php');
+require_once('db_init.php');
 if (empty($_GET['dist'])) {
 	$dist = 'ubuntu';
 } else {
@@ -28,7 +30,7 @@ include "static/public/head.html"
    <!-- This is 'content-2' -->
         <?php include"static/public/content-2.php"?>
   <!-- This is 'content-1' -->
-        <?php include"static/public/content-1.php"?>
+	<?php include "static/public/content-1.php"?>
    </div>
 </div>
 </body>
