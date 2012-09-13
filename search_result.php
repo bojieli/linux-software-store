@@ -19,7 +19,7 @@ return $word;
 }
 $distname = firstLetterToUpper($dist);
 $sql = "SELECT * FROM cz_pack WHERE name LIKE '%".$pkgName."%' AND did = (SELECT did FROM cz_dist WHERE name = '".$distname."')";
-echo $sql;
+//echo $sql;
 $result = mysql_query($sql);
 $nums = mysql_num_rows($result);
 $packages = array();
