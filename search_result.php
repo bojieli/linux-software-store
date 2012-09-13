@@ -18,8 +18,11 @@ $word[0] = chr(ord($word[0])- ord('a') + ord('A'));
 return $word;
 }
 $distname = firstLetterToUpper($dist);
-$package = new CPackage($pkgName, $distname);
-//var_dump($package);
+$sql = "SELECT * FROM cz_pack WHERE name LIKE '%".$pkgName."%' AND did = (SELECT did FROM cz_dist WHERE name = '".$distname."')";
+echo $sql;
+$result = mysql_query($sql);
+$nums = mysql_num_rows($result);
+$packages = array();
 include "static/public/head.html"
 ?>
 
@@ -43,19 +46,26 @@ include "static/public/head.html"
             <!--<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>-->
             <link type="text/css" rel="stylesheet" href="static/css/waterfall.css" />
             <script type="text/javascript" language="javascript" src="static/js/waterfall.js"></script>
-            <ul id="intr">
+			<ul id="intr">
+			<?php for($i = 0; $i < $nums; $i++){
+			$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+			$packages[$i] = new CPackage($rows["name"], $distname);
+			?>
             <li>
 
-                <a href="intro.php?dist=<?=$dist?>&package=<?=$pkgName?>" target="_new"><img class="icon" src="'+oProduct.image+'" border="0" ><a>
+                <a href="intro.php?dist=<?=$dist?>&package=<?echo $packages[$i]->getszName();?>" target="_new"><img class="icon" src="'+oProduct.image+'" border="0" /><a>
                 <div style="float: right;height: 50px;width: 550px;">
                 <p>
-                     <a href="intro.php?dist=<?=$dist?>&package=<?=$pkgName?>" target="_new"><?=$pkgName?></a>
+					 <a href="intro.php?dist=<?=$dist?>&package=<?php echo $packages[$i]->getszName();?>" target="_new"><?php echo $packages[$i]->getszName();?></a>
                 </p>
                     <comment>
-                     <?=$pkgName?>是个好软件
+                     <?php echo $packages[$i]->getszSummary();?>
                     </comment>
                 </div>
-            </li>
+			</li>
+			<?php 
+			}	//end of for
+			?>
             </ul>
        	</div>
         <!-- This is 'content-2' -->
