@@ -1,24 +1,13 @@
 <?php
 require_once("CPackage.php");
 require_once("db_init.php");
+mysql_query("SET CHARSET UTF8");
 if (empty($_GET['dist'])) {
 	$dist = 'ubuntu';
 } else {
 	$dist = addslashes($_GET['dist']);
 }
 $distname = firstLetterToUpper($dist);
-mysql_query("SET CHARSET UTF8");
-//$rs = mysql_query("SELECT * FROM cz_pack WHERE did = '$did' AND recommend = 2");
-//while ($pack = mysql_fetch_array($rs)) {
-/*
-			$pack = array(
-			   'pid' => 1,
-			    'name' =>  'xx软件',	
-				'icon_url' => '',
-				'url' => 'http://mirrors.ustc.edu.cn/',
-				'summary' =>'软件是个好东西'
-);
- */
 
 /*
  * in: $dist, $section, $num
@@ -72,43 +61,30 @@ function printVoid(){
                 <table class="software">
 <?php
 				$packages = getSimplePackageInfo($distname, $sectionFields[$tabNo]);
-		    	for ($i=0; $i<5; $i++) {
+				for ($i=0; $i<5; $i++) {
 		    	?>
 					<tr>
-						<?php	
-						if(count($packages) > $i * 2){
+					<?php
+					for ($j = 0; $j < 2; $j++){
+						$currIdx = $i * 2 + $j;
+						if(count($packages) > $currIdx){
 						?>
                         <td class="icon">
-						<a href="intro.php?dist=<?=$dist?>&package=<?php echo $packages[$i * 2]->getszName();?>" target="_blank">
+						<a href="intro.php?dist=<?=$dist?>&package=<?php echo $packages[$currIdx]->getszName();?>" target="_blank">
                              <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
                         <td class="bre" >
-							  <p><a href="intro.php?dist=<?=$dist?>&package=<?php echo $packages[$i * 2]->getszName();?>"  target="_blank"><?php echo $packages[$i * 2]->getszName();?></a></p>
-                              <comment><?php echo $packages[$i * 2]->getszSummary();?></comment>
+							  <p><a href="intro.php?dist=<?=$dist?>&package=<?php echo $packages[$currIdx]->getszName();?>"  target="_blank"><?php echo $packages[$currIdx]->getszName();?></a></p>
+                              <comment><?php echo $packages[$currIdx]->getszSummary();?></comment>
                         </td>
 						<?php
 						}
 						else{
 							printVoid();
 						}
-						if(count($packages) > $i * 2 + 1){
-						?>
-                        <td class="icon" >
-						<a href="intro.php?dist=<?=$dist?>&package=<?php echo $packages[$i * 2 + 1]->getszName();?>" target="_blank">
-                        <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
-                        </a>
-                        </td>
-                        <td class="bre" >
-						<p><a href="intro.php?dist=<?=$dist?>&package=<?php echo $packages[$i * 2 + 1]->getszName();?>"  target="_blank"><?php echo $packages[$i * 2 + 1]->getszName();?></a></p>
-						 <comment><?php echo $packages[$i * 2 + 1]->getszName();?><?echo $packages[$i * 2 + 1]->getszSummary();?></comment>
-						</td>
-						<?php
-						}
-						else{
-							printVoid();
-						}
-						?>
+					}//end of for
+				?>
                     </tr>
 				<?php
 				}

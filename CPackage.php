@@ -20,6 +20,7 @@ class CPackage{
 	private $szMaintainer;	//maintainer
 	private $szMaintainerUrl;	//maintainerUrl
 	private $szBugUrl;		//bug_url
+	private $binIcon;		//icon
 	
 	private $uPid;		//pack pid
 	private $uDid;		//dist did
@@ -125,6 +126,13 @@ class CPackage{
 		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
 		$this->szBugUrl = $rows["bug_url"];
 		return $this->szBugUrl;
+	}
+	public function getbinIcon(){
+		$sql = "SELECT icon FROM cz_pack_detail WHERE pid = ".$this->uPid;
+		$result = mysql_query($sql);
+		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+		$this->binIcon = $rows["icon"];
+		return $this->binIcon;
 	}
 }
 
