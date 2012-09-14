@@ -1,7 +1,6 @@
 <?php
-require_once("db/db_init.php");
 require_once("CPackage.php");
-mysql_query("SET CHARSET UTF8");
+require_once("common_funcs.php");
 if (empty($_GET['dist'])) {
 	$dist = 'ubuntu';
 } else {

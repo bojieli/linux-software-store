@@ -1,3 +1,4 @@
+<?php require_once 'common_funcs.php'; ?>
 <div id="content-2">
     <!-- This is 'dist info' -->
     <div id="info" class="info" style="background-image:url(static/img/info.png);border:0px;text-align: left;">

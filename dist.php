@@ -1,16 +1,10 @@
 ﻿<?php
 require_once('CPackage.php');
-require_once('db/db_init.php');
+require_once('common_funcs.php');
 if (empty($_GET['dist'])) {
 	$dist = 'ubuntu';
 } else {
 	$dist = $_GET['dist'];
-}
-function firstLetterToUpper($word) {
-	if ($word[0] >= 'a'&& $word[0] <= 'z') {
-		$word[0] = chr(ord($word[0])- ord('a') + ord('A'));
-	}
-	return $word;
 }
 $distname = firstLetterToUpper($dist);
 include "static/public/head.html"
