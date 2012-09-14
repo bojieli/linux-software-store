@@ -46,7 +46,7 @@ function printVoid(){
 		<ul>
 		<?php
 			$TabTitles = array("小站推荐", "办公", "学习","游戏","娱乐","系统","其他");
-			$sectionFields = array("recommand", "office", "study", "game","passtime","system","others");	//the name field in cz_section table
+			$sectionFields = array("recommend", "office", "study", "game","passtime","system","others");	//the name field in cz_section table
 			for($tabNo = 0; $tabNo < 7; $tabNo++){
 			?>
 			<li id="button-<?php echo $tabNo;?>" class="<?php if($tabNo==0) echo "first";?> tab_<?php echo $tabNo;?> button button-dist">
@@ -71,7 +71,7 @@ function printVoid(){
 						?>
                         <td class="icon">
 						<a href="intro.php?dist=<?=$dist?>&package=<?php echo $packages[$currIdx]->getszName();?>" target="_blank">
-                             <img src="<?=$pack['icon_url']?>" alt="软件图片" style="width: 50px;height: 50px;" >
+                             <img src="<?php echo $packages[$currIdx]->getszIcon();?>" alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
                         <td class="bre" >

@@ -53,7 +53,7 @@ include "static/public/head.html"
 			?>
             <li>
 
-                <a href="intro.php?dist=<?=$dist?>&package=<?echo $packages[$i]->getszName();?>" target="_new"><img class="icon" src="'+oProduct.image+'" border="0" /><a>
+			<a href="intro.php?dist=<?=$dist?>&package=<?echo $packages[$i]->getszName();?>" target="_new"><img class="icon" src="<?php echo $packages[$i]->getszIcon();?>" border="0" /><a>
                 <div style="float: right;height: 50px;width: 550px;">
                 <p>
 					 <a href="intro.php?dist=<?=$dist?>&package=<?php echo $packages[$i]->getszName();?>" target="_new"><?php echo $packages[$i]->getszName();?></a>
