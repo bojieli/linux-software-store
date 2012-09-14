@@ -1,5 +1,5 @@
 <?php
-require_once('db_init.php');
+require_once('db/db_init.php');
 require_once('CPackage.php');
 mysql_query("SET CHARSET utf8");
 if (empty($_GET['dist'])) {

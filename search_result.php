@@ -1,4 +1,5 @@
 <?php
+require_once('db/db_init.php');
 require_once('CPackage.php');
 if (empty($_GET['dist'])) {
 	$dist = 'ubuntu';
