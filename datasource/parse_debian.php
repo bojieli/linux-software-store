@@ -4,6 +4,19 @@ if (!($fp = fopen($argv[1], "r")))
 
 $stderr = fopen("php://stderr", "r");
 
+if (!($fpmain = fopen($argv[2], "w")))
+	die('Error opening output file for cz_pack');
+if (!($fpdetail = fopen($argv[3], "w")))
+	die('Error opening output file for cz_pack_detail');
+
+$pack_common = array(
+	'did' => isset($argv[4]) ? $argv[4] : 1,
+	'rid' => isset($argv[5]) ? $argv[5] : 1,
+	'create_time' => time(),
+	'update_time' => time(),
+	'extension' => 'deb'
+);
+
 $package = array();
 $fieldmap = array(
 	'Package' => 'name',
@@ -30,11 +43,36 @@ $fieldmap = array(
 	'Homepage' => 'homepage',
 	'Bugs' => 'bug_url'
 );
-$pack_common = array(
-	'did' => isset($argv[2]) ? $argv[2] : 1,
-	'rid' => isset($argv[3]) ? $argv[3] : 1
+
+$mainFields = array(
+	'did',
+	'rid',
+	'filesize',
+	'install_size',
+	'rate_total',
+	'rate_count',
+	'create_time',
+	'update_time',
+	'recommend',
+	'name',
+	'version',
+	'url',
+	'summary',
+	'extension'
 );
-$savefields = array_unique(array_merge($fieldmap, array('did', 'rid', 'description')));
+$detailFields = array(
+	'checksum_md5',
+	'checksum_sha1',
+	'checksum_sha256',
+	'bug_url',
+	'homepage',
+	'license',
+	'maintainer',
+	'maintainerUrl',
+	'priority',
+	'description',
+	'icon'
+);
 
 $field = '';
 $value = '';
@@ -82,28 +120,43 @@ save_package_finish();
 
 
 function save_package_init() {
-	global $savefields;
+	global $mainFields;
+	global $fpmain;
+	__save_package_init($fpmain, 'cz_pack', $mainFields);
+	global $detailFields;
+	global $fpdetail;
+	__save_package_init($fpdetail, 'cz_pack_detail', $detailFields);
+}
+
+function __save_package_init($fp, $table, $fields) {
 	$strs = array();
-	foreach ($savefields as $orig => $field) {
+	foreach ($fields as $field) {
 		$strs[] = "`$field`";
 	}
-	echo "INSERT INTO cz_pack (".implode(",", $strs).") VALUES \n";
+	fprintf($fp, "INSERT INTO `$table` (".implode(",", $strs).") VALUES \n");
 }
 
 function save_package_finish() {
-	echo ";";
+	echo ";\n";
 }
 
 function save_package($package) {
-	global $savefields;
-	static $first = true;
+	global $mainFields;
+	global $fpmain;
+	__save_package($fpmain, $package, $mainFields);
+	global $detailFields;
+	global $fpdetail;
+	__save_package($fpdetail, $package, $detailFields);
+}
+
+function __save_package($fp, $package, $fields) {
+	static $nonfirst = array();
 	$strs = array();
-	foreach ($savefields as $orig => $field) {
+	foreach ($fields as $field) {
 		$strs[] = "'".addslashes(isset($package[$field]) ? $package[$field] : '')."'";
 	}
-	if (!$first)
-		echo ",\n";
+	if (empty($nonfirst[$fp]))
+		$nonfirst[$fp] = true;
 	else
-		$first = false;
-	echo "(".implode(",", $strs).")";
+		fprintf($fp, ",\n");
 }
