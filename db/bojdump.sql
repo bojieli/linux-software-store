@@ -94,7 +94,7 @@ CREATE TABLE `cz_dist` (
 
 LOCK TABLES `cz_dist` WRITE;
 /*!40000 ALTER TABLE `cz_dist` DISABLE KEYS */;
-INSERT INTO `cz_dist` VALUES (4,'Archlinux'),(5,'Centos'),(3,'Debian'),(6,'Debian'),(7,'Deepin'),(8,'Fedora'),(1,'Gentoo'),(9,'Mint'),(10,'Opensuse'),(11,'Puppy'),(12,'Slackware'),(2,'Ubuntu');
+INSERT INTO `cz_dist` VALUES (4,'Archlinux'),(5,'Centos'),(3,'Debian'),(7,'Deepin'),(8,'Fedora'),(1,'Gentoo'),(9,'Mint'),(10,'Opensuse'),(11,'Puppy'),(12,'Slackware'),(2,'Ubuntu');
 /*!40000 ALTER TABLE `cz_dist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -482,4 +482,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-09-15  0:39:29
+-- Dump completed on 2012-09-15  0:56:08
