@@ -70,7 +70,7 @@ include "static/public/head.html"
             </ul>
        	</div>
         <!-- This is 'content-2' -->
-         <?php include"static/public/content-2.php"?>
+         <?php include "content-2.php"?>
     </div>
     <!-- UJian Button BEGIN -->
     <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=3&pos=left&btn=4&uid=1674756"></script>
