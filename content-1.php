@@ -18,6 +18,8 @@ function getSimplePackageInfo($dist, $section, $num = 10){
 	$sql = "SELECT name FROM cz_pack WHERE did = (SELECT did FROM cz_dist WHERE name = '".$dist."') AND pid IN (SELECT pid FROM cz_sec_pack WHERE sid = (SELECT sid FROM cz_section WHERE name = '".$section."')) LIMIT 0,".$num;	//TODO:add order by subquery
 //	echo $sql;
 	$result = mysql_query($sql);
+	if (empty($result))
+		return array();
 	$realNum = mysql_num_rows($result);
 	$simplePackages = array();
 	for($i = 0; $i < $realNum; $i++){
