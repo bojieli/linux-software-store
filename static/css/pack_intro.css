@@ -64,7 +64,9 @@ table ,tr,th,td
     height:340px;
     float:right;
     border: 1px solid #808080;
+
 }
+#sw_dtl{text-align:left}
 #content-4 {
     width: 984px;
     margin-right: 20px;
