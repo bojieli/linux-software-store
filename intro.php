@@ -37,6 +37,11 @@ include "static/public/head.html"
        <?php include"static/public/search.html"?>
        <div id="header"></div>
         <!--this area is designed for show software information-->
+        <style>
+	table ,tr,th,td 
+	{ border: 1px solid #808080; border-collapse:collapse; }
+
+	</style>
         <div id="comm">
             <div id="content-3">
                 <div id="intro">
