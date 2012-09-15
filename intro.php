@@ -48,7 +48,7 @@ include "static/public/head.html"
                     <table id="brf">
                         <tr class="sw_img">
                             <td>
-                                <img src="<?php echo $package->getszIcon();?>" alt="此处显示软件的图片">
+                                <img src="<?php echo $package->getszIcon();?>" alt="此处显示软件的图片"style="width:60px;height:60px">
                             </td>
 							<td class="sw_name">
 								<?php echo $package->getszName();?>
