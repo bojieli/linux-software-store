@@ -47,14 +47,14 @@ include "static/public/head.html"
                 <div id="intro">
                     <table id="brf">
                         <tr class="sw_img">
-                            <td class="sw_dtl">
+                            <td>
                                 <img src="<?php echo $package->getszIcon();?>" alt="此处显示软件的图片">
                             </td>
 							<td class="sw_name">
 								<?php echo $package->getszName();?>
                             </td>
                         </tr>
-                        <tr class="sw_info  ">
+                        <tr class="sw_info">
                            <td class="sw_dtl">
 						   软件大小：<?php echo $package->getuFileSize();?>MB
                            </td>
