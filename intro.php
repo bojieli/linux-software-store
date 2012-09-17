@@ -6,12 +6,6 @@ if (empty($_GET['dist'])) {
 } else {
 	$dist = addslashes($_GET['dist']);
 }
-function firstLetterToUpper($word) {
-	if ($word[0] >= 'a'&& $word[0] <= 'z') {
-		$word[0] = chr(ord($word[0])- ord('a') + ord('A'));
-	}
-	return $word;
-}
 $distname = firstLetterToUpper($dist);
 if (empty($_GET['package'])) {
 	$pkgName = 'bash';
@@ -19,9 +13,13 @@ if (empty($_GET['package'])) {
 	$pkgName = addslashes($_GET['package']);
 }
 
-$package = new CPackage($pkgName, $distname);
+try {
+	$package = new CPackage($pkgName, $distname);
+} catch(Exception $e) {
+	die($e->getMessage());
+}
 //var_dump($package); //for debug
-include "static/public/head.html"
+include "static/public/head.html";
 ?>
 <body background="static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:   center;background-repeat:   no-repeat;background-attachment:   fixed ">
 
@@ -80,10 +78,10 @@ include "static/public/head.html"
                                 
                            </td>
                            <td class="sw_dtl">
-						   软件主页：<a href="<?php echo "http://".$package->getszHomepage();?>"><?echo $package->getszName();?></a>
+						   软件主页：<a href="<?php echo "http://".$package->getszHomepage();?>"><?=$package->getszName();?></a>
                            </td>
                         </tr>
-                        <tr class="sw_info  ">
+                        <tr class="sw_info">
                            <td class="sw_dtl">
                                下载软件: <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">x86_64</a> <a href="http://mirrors.ustc.edu.cn/<?php echo $package->getszDistName();?>/">i386</a>
                            </td>
@@ -94,7 +92,7 @@ include "static/public/head.html"
                         </tr>
                         <tr class="sw_info">
                            <td class="sw_dtl">
-						   软件分类：<?php echo $package->getszCategory();?>
+			        软件分类：<?php echo $package->getszCategory();?>
                            </td>
                            <td class="sw_dtl">
                                 软件类型：<?php echo $package->getszExtension();?>
@@ -123,6 +121,7 @@ include "static/public/head.html"
                 <div id="sw_intro">
                     <h1>软件简介</h1>
                     &nbsp;&nbsp;<p style="text-align: left"><?php echo $package->getszSummary();?></p>
+		    <p><?=$package->getszDescription();?></p>
                 </div>
             </div>
 

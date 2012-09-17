@@ -19,7 +19,7 @@
 -- Current Database: `software`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `software` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `software` /*!40100 DEFAULT CHARACTER SET utf8  */;
 
 USE `software`;
 
@@ -34,7 +34,7 @@ CREATE TABLE `cz_arch` (
   `aid` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`aid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,6 +44,30 @@ CREATE TABLE `cz_arch` (
 LOCK TABLES `cz_arch` WRITE;
 /*!40000 ALTER TABLE `cz_arch` DISABLE KEYS */;
 /*!40000 ALTER TABLE `cz_arch` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cz_dist`
+--
+
+DROP TABLE IF EXISTS `cz_dist`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cz_dist` (
+  `did` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`did`),
+  KEY `key_name` (`name`)
+) ENGINE=InnoDB;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cz_dist`
+--
+
+LOCK TABLES `cz_dist` WRITE;
+/*!40000 ALTER TABLE `cz_dist` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cz_dist` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -61,7 +85,7 @@ CREATE TABLE `cz_arch_dist` (
   KEY `did` (`did`),
   CONSTRAINT `cz_arch_dist_ibfk_1` FOREIGN KEY (`aid`) REFERENCES `cz_arch` (`aid`),
   CONSTRAINT `cz_arch_dist_ibfk_2` FOREIGN KEY (`did`) REFERENCES `cz_dist` (`did`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,30 +95,6 @@ CREATE TABLE `cz_arch_dist` (
 LOCK TABLES `cz_arch_dist` WRITE;
 /*!40000 ALTER TABLE `cz_arch_dist` DISABLE KEYS */;
 /*!40000 ALTER TABLE `cz_arch_dist` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `cz_dist`
---
-
-DROP TABLE IF EXISTS `cz_dist`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cz_dist` (
-  `did` int(10) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  PRIMARY KEY (`did`),
-  KEY `key_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cz_dist`
---
-
-LOCK TABLES `cz_dist` WRITE;
-/*!40000 ALTER TABLE `cz_dist` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cz_dist` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -109,7 +109,7 @@ CREATE TABLE `cz_dist_detail` (
   `description` text,
   KEY `did` (`did`),
   CONSTRAINT `cz_dist_detail_ibfk_1` FOREIGN KEY (`did`) REFERENCES `cz_dist` (`did`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -139,7 +139,7 @@ CREATE TABLE `cz_file` (
   KEY `pack_type` (`pack_type`),
   KEY `key_filename` (`filename`),
   CONSTRAINT `cz_file_ibfk_1` FOREIGN KEY (`pack_type`) REFERENCES `cz_pack_type` (`tid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -149,6 +149,31 @@ CREATE TABLE `cz_file` (
 LOCK TABLES `cz_file` WRITE;
 /*!40000 ALTER TABLE `cz_file` DISABLE KEYS */;
 /*!40000 ALTER TABLE `cz_file` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cz_repo`
+--
+
+DROP TABLE IF EXISTS `cz_repo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cz_repo` (
+  `rid` int(10) NOT NULL AUTO_INCREMENT,
+  `did` int(10) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`rid`),
+  CONSTRAINT `cz_repo_ibfk_1` FOREIGN KEY (`did`) REFERENCES `cz_dist` (`did`)
+) ENGINE=InnoDB;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cz_repo`
+--
+
+LOCK TABLES `cz_repo` WRITE;
+/*!40000 ALTER TABLE `cz_repo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cz_repo` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -169,18 +194,18 @@ CREATE TABLE `cz_pack` (
   `create_time` int(10) DEFAULT NULL,
   `update_time` int(10) DEFAULT NULL,
   `recommend` tinyint(1) DEFAULT NULL,
-  `name` varchar(127) COLLATE utf8_unicode_ci NOT NULL,
-  `version` varchar(127) COLLATE utf8_unicode_ci NOT NULL,
-  `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `summary` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `extension` varchar(127) COLLATE utf8_unicode_ci NOT NULL COMMENT 'package extension(软件类型)',
+  `name` varchar(127)  NOT NULL,
+  `version` varchar(127)  NOT NULL,
+  `url` varchar(255)  NOT NULL,
+  `summary` varchar(255)  NOT NULL,
+  `extension` varchar(127)  NOT NULL COMMENT 'package extension(软件类型)',
   PRIMARY KEY (`pid`),
   KEY `did` (`did`),
   KEY `rid` (`rid`),
   KEY `key_name` (`name`),
   CONSTRAINT `cz_pack_ibfk_1` FOREIGN KEY (`did`) REFERENCES `cz_dist` (`did`),
   CONSTRAINT `cz_pack_ibfk_2` FOREIGN KEY (`rid`) REFERENCES `cz_repo` (`rid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1312 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -208,7 +233,7 @@ CREATE TABLE `cz_pack_arch` (
   KEY `aid` (`aid`),
   CONSTRAINT `cz_pack_arch_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `cz_pack` (`pid`),
   CONSTRAINT `cz_pack_arch_ibfk_2` FOREIGN KEY (`aid`) REFERENCES `cz_arch` (`aid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -243,7 +268,7 @@ CREATE TABLE `cz_pack_comment` (
   KEY `key_status` (`status`),
   KEY `key_author` (`author`),
   CONSTRAINT `cz_pack_comment_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `cz_pack` (`pid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -266,7 +291,7 @@ CREATE TABLE `cz_pack_depend` (
   `pid` int(10) NOT NULL,
   `dep` int(10) NOT NULL,
   `version` varchar(31) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -286,28 +311,27 @@ DROP TABLE IF EXISTS `cz_pack_detail`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cz_pack_detail` (
-  `pid` int(10) NOT NULL,
-  `checksum_md5` char(32) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `checksum_sha1` char(40) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `checksum_sha256` char(64) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `bug_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `homepage` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `license` varchar(127) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `maintainer` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `maintainerUrl` varchar(512) COLLATE utf8_unicode_ci NOT NULL COMMENT 'the url of maintainer',
-  `priority` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8_unicode_ci,
-  `icon` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `section` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB Original section',
-  `tags` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB tags',
-  `depends` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB depends',
-  `suggests` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB suggests',
-  `conflicts` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB conflicts',
-  `provides` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB provides',
-  `replaces` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB replaces',
-  KEY `pid` (`pid`),
-  CONSTRAINT `cz_pack_detail_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `cz_pack` (`pid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `pid` int(10) NOT NULL AUTO_INCREMENT,
+  `checksum_md5` char(32)  DEFAULT NULL,
+  `checksum_sha1` char(40)  DEFAULT NULL,
+  `checksum_sha256` char(64)  DEFAULT NULL,
+  `bug_url` varchar(255)  DEFAULT NULL,
+  `homepage` varchar(255)  DEFAULT NULL,
+  `license` varchar(127)  DEFAULT NULL,
+  `maintainer` varchar(255)  DEFAULT NULL,
+  `maintainerUrl` varchar(512)  NOT NULL COMMENT 'the url of maintainer',
+  `priority` varchar(20)  DEFAULT NULL,
+  `description` text ,
+  `icon` varchar(256)  DEFAULT NULL,
+  `section` varchar(255)  NOT NULL COMMENT 'DEB Original section',
+  `tags` varchar(255)  NOT NULL COMMENT 'DEB tags',
+  `depends` varchar(255)  NOT NULL COMMENT 'DEB depends',
+  `suggests` varchar(255)  NOT NULL COMMENT 'DEB suggests',
+  `conflicts` varchar(255)  NOT NULL COMMENT 'DEB conflicts',
+  `provides` varchar(255)  NOT NULL COMMENT 'DEB provides',
+  `replaces` varchar(255)  NOT NULL COMMENT 'DEB replaces',
+  PRIMARY KEY (`pid`)
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -330,11 +354,10 @@ CREATE TABLE `cz_pack_tag` (
   `pid` int(10) NOT NULL,
   `top_tag` varchar(127) NOT NULL,
   `sub_tag` varchar(127) DEFAULT NULL,
-  KEY `pid` (`pid`),
   KEY `key_top_tag` (`top_tag`),
   KEY `key_sub_tag` (`sub_tag`),
   CONSTRAINT `cz_pack_tag_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `cz_pack` (`pid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -357,7 +380,7 @@ CREATE TABLE `cz_pack_type` (
   `tid` tinyint(3) NOT NULL AUTO_INCREMENT,
   `pack_type` varchar(20) NOT NULL,
   PRIMARY KEY (`tid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -367,32 +390,6 @@ CREATE TABLE `cz_pack_type` (
 LOCK TABLES `cz_pack_type` WRITE;
 /*!40000 ALTER TABLE `cz_pack_type` DISABLE KEYS */;
 /*!40000 ALTER TABLE `cz_pack_type` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `cz_repo`
---
-
-DROP TABLE IF EXISTS `cz_repo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cz_repo` (
-  `rid` int(10) NOT NULL AUTO_INCREMENT,
-  `did` int(10) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  PRIMARY KEY (`rid`),
-  KEY `did` (`did`),
-  CONSTRAINT `cz_repo_ibfk_1` FOREIGN KEY (`did`) REFERENCES `cz_dist` (`did`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cz_repo`
---
-
-LOCK TABLES `cz_repo` WRITE;
-/*!40000 ALTER TABLE `cz_repo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cz_repo` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -407,12 +404,10 @@ CREATE TABLE `cz_sec_pack` (
   `sid` int(11) NOT NULL COMMENT 'section id',
   `pid` int(11) NOT NULL COMMENT 'package id',
   PRIMARY KEY (`id`),
-  KEY `pid` (`pid`),
-  KEY `sid` (`sid`),
   CONSTRAINT `cz_sec_pack_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `cz_pack` (`pid`),
   CONSTRAINT `cz_sec_pack_ibfk_2` FOREIGN KEY (`sid`) REFERENCES `cz_section` (`sid`),
   CONSTRAINT `cz_sec_pack_ibfk_3` FOREIGN KEY (`sid`) REFERENCES `cz_section` (`sid`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1 COMMENT='associate table';
+) ENGINE=InnoDB COMMENT='associate table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -433,9 +428,9 @@ DROP TABLE IF EXISTS `cz_section`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cz_section` (
   `sid` int(10) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
   PRIMARY KEY (`sid`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -463,7 +458,7 @@ CREATE TABLE `cz_user` (
   `is_admin` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`uid`),
   KEY `key_username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

@@ -116,14 +116,15 @@ foreach ($lines as $line) {
 	$field = trim($matches[1]);
 	$value = trim($matches[2]);
 	if (!isset($fieldmap[$field])) {
-		fprintf($stderr, "$field: $value\n");
+		fputs($stderr, "$field: $value\n");
 	} else {
 		$package[$fieldmap[$field]] = $value;
 	}
 	$value = '';
 }
 
-save_package_finish();
+save_package_finish($fpmain);
+save_package_finish($fpdetail);
 
 
 function save_package_init() {
@@ -140,31 +141,44 @@ function __save_package_init($fp, $table, $fields) {
 	foreach ($fields as $field) {
 		$strs[] = "`$field`";
 	}
-	fprintf($fp, "INSERT INTO `$table` (".implode(",", $strs).") VALUES \n");
+	fputs($fp, "INSERT INTO `$table` (".implode(",", $strs).") VALUES \n");
 }
 
-function save_package_finish() {
-	echo ";\n";
+function save_package_finish($fp) {
+	fputs($fp, ";\n");
 }
 
 function save_package($package) {
 	global $mainFields;
 	global $fpmain;
-	__save_package($fpmain, $package, $mainFields);
+	__save_package($fpmain, $package, $mainFields, 'cz_pack');
 	global $detailFields;
 	global $fpdetail;
-	__save_package($fpdetail, $package, $detailFields);
+	__save_package($fpdetail, $package, $detailFields, 'cz_pack_detail');
 }
 
-function __save_package($fp, $package, $fields) {
+function __save_package($fp, $package, $fields, $table) {
 	static $nonfirst = array();
+	static $count = array();
 	$strs = array();
 	foreach ($fields as $field) {
 		$strs[] = "'".addslashes(isset($package[$field]) ? $package[$field] : '')."'";
 	}
+	if (empty($strs))
+		return;
+	if (!isset($count[(int)$fp]))
+		$count[(int)$fp] = 0;
+	$count[(int)$fp]++;
 	if (isset($nonfirst[(int)$fp]))
-		fprintf($fp, ",\n");
+		fputs($fp, ",\n");
 	else
 		$nonfirst[(int)$fp] = true;
-	fprintf($fp, '('.implode(',', $strs).')');
+	fputs($fp, '('.implode(',', $strs).')');
+
+	// make a new sql every 1000 items
+	if ($count[(int)$fp] % 1000 == 0) {
+		save_package_finish($fp);
+		unset($nonfirst[(int)$fp]);
+		__save_package_init($fp, $table, $fields);
+	}
 }

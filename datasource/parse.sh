@@ -26,9 +26,13 @@ function load_gz {
 	gunzip $zipname
 	clean $zipname # redundant
 	echo -n "Parse & Load... "
+	mkfifo $FIFO1
+	mkfifo $FIFO2
 	php parse_$parser.php $newname $FIFO1 $FIFO2 $did $rid 2>/dev/null &
 	$MYSQL "USE $DATABASE; source $FIFO1;" &
 	$MYSQL "USE $DATABASE; source $FIFO2;"
+	rm $FIFO1
+	rm $FIFO2
 	echo "Done."
 	rm $newname
 }
@@ -44,13 +48,12 @@ function newrepo {
 
 echo "Cleaning..."
 clean $FIFO1
-mkfifo $FIFO1
-mkfifo $FIFO2
-
+clean $FIFO2
 $MYSQL "DROP DATABASE $DATABASE;"
+
 echo "Creating Database structure..."
 $MYSQL "source ../db/grant.sql;"
-$MYSQL "use $DATABASE; source ../db/cong.sql;"
+$MYSQL "source ../db/bojdump.sql;"
 
 distnum=1
 
@@ -74,6 +77,3 @@ function load_deb() {
 load_deb deepin "maverick natty oneiric precise quantal unstable" main binary-i386
 load_deb debian "squeeze stable testing unstable wheezy sid rc-buggy Debian6.0.5" "main contrib non-free" binary-amd64
 load_deb ubuntu "hardy lucid maverick natty oneiric precise quantal" "main multiverse restricted universe" binary-amd64
-
-rm $FIFO1
-rm $FIFO2

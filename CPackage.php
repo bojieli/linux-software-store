@@ -14,13 +14,14 @@ class CPackage{
 	private $uInstallSize;	//install_size
 	private $szCategory;//category
 	private $szDistName;	//dist name
-	private $szLicense;		//license
+	private $szLicense;	//license
 	private $szHomepage;	//homepage
 	private $szExtension;	//extension
 	private $szMaintainer;	//maintainer
 	private $szMaintainerUrl;	//maintainerUrl
-	private $szBugUrl;		//bug_url
-	private $szIcon;		//icon
+	private $szBugUrl;	//bug_url
+	private $szIcon;	//icon
+	private $szDescription;	// description
 	
 	private $uPid;		//pack pid
 	private $uDid;		//dist did
@@ -36,6 +37,9 @@ class CPackage{
 		$sql = "SELECT * FROM cz_pack WHERE name = '".$name."' and did = (SELECT did FROM cz_dist WHERE name = '".$dist."')";
 		$result = mysql_query($sql) or die("Database query error");
 		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+
+		if (empty($rows))
+			throw new Exception("Package Not Found");
 
 		// fill the package infomation field
 		$this->szName = $rows["name"];
@@ -133,6 +137,13 @@ class CPackage{
 		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
 		$this->szIcon = $rows["icon"];
 		return $this->szIcon;
+	}
+	public function getszDescription() {
+		$sql = "SELECT description FROM cz_pack_detail WHERE pid = ".$this->uPid;
+		$result = mysql_query($sql);
+		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+		$this->szDescription = $rows["description"];
+		return $this->szDescription;
 	}
 }
 
