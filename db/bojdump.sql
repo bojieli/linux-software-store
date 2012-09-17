@@ -85,7 +85,7 @@ CREATE TABLE `cz_dist` (
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`did`),
   KEY `key_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +94,6 @@ CREATE TABLE `cz_dist` (
 
 LOCK TABLES `cz_dist` WRITE;
 /*!40000 ALTER TABLE `cz_dist` DISABLE KEYS */;
-INSERT INTO `cz_dist` VALUES (4,'Archlinux'),(5,'Centos'),(3,'Debian'),(7,'Deepin'),(8,'Fedora'),(1,'Gentoo'),(9,'Mint'),(10,'Opensuse'),(11,'Puppy'),(12,'Slackware'),(2,'Ubuntu');
 /*!40000 ALTER TABLE `cz_dist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,7 +180,7 @@ CREATE TABLE `cz_pack` (
   KEY `key_name` (`name`),
   CONSTRAINT `cz_pack_ibfk_1` FOREIGN KEY (`did`) REFERENCES `cz_dist` (`did`),
   CONSTRAINT `cz_pack_ibfk_2` FOREIGN KEY (`rid`) REFERENCES `cz_repo` (`rid`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1312 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -190,7 +189,6 @@ CREATE TABLE `cz_pack` (
 
 LOCK TABLES `cz_pack` WRITE;
 /*!40000 ALTER TABLE `cz_pack` DISABLE KEYS */;
-INSERT INTO `cz_pack` VALUES (11,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'firefox','1.0','www.firefox.org','gentoo的firefox','deb'),(12,2,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'firefox','1.0','www.firefox.org','ubuntu的firefox',''),(13,3,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'firefox','1.0','www.firefox.org','debian的firefox','');
 /*!40000 ALTER TABLE `cz_pack` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -288,7 +286,7 @@ DROP TABLE IF EXISTS `cz_pack_detail`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cz_pack_detail` (
-  `pid` int(10) NOT NULL AUTO_INCREMENT,
+  `pid` int(10) NOT NULL,
   `checksum_md5` char(32) COLLATE utf8_unicode_ci DEFAULT NULL,
   `checksum_sha1` char(40) COLLATE utf8_unicode_ci DEFAULT NULL,
   `checksum_sha256` char(64) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -300,9 +298,16 @@ CREATE TABLE `cz_pack_detail` (
   `priority` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `description` text COLLATE utf8_unicode_ci,
   `icon` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `section` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB Original section',
+  `tags` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB tags',
+  `depends` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB depends',
+  `suggests` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB suggests',
+  `conflicts` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB conflicts',
+  `provides` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB provides',
+  `replaces` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'DEB replaces',
   KEY `pid` (`pid`),
   CONSTRAINT `cz_pack_detail_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `cz_pack` (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -311,7 +316,6 @@ CREATE TABLE `cz_pack_detail` (
 
 LOCK TABLES `cz_pack_detail` WRITE;
 /*!40000 ALTER TABLE `cz_pack_detail` DISABLE KEYS */;
-INSERT INTO `cz_pack_detail` VALUES (11,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'',NULL,'congzhao很帅',NULL),(12,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'',NULL,'congzhao很帅很帅',NULL),(13,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'',NULL,'congzhao最帅',NULL);
 /*!40000 ALTER TABLE `cz_pack_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -379,7 +383,7 @@ CREATE TABLE `cz_repo` (
   PRIMARY KEY (`rid`),
   KEY `did` (`did`),
   CONSTRAINT `cz_repo_ibfk_1` FOREIGN KEY (`did`) REFERENCES `cz_dist` (`did`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -388,7 +392,6 @@ CREATE TABLE `cz_repo` (
 
 LOCK TABLES `cz_repo` WRITE;
 /*!40000 ALTER TABLE `cz_repo` DISABLE KEYS */;
-INSERT INTO `cz_repo` VALUES (1,1,'repo');
 /*!40000 ALTER TABLE `cz_repo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -418,7 +421,6 @@ CREATE TABLE `cz_sec_pack` (
 
 LOCK TABLES `cz_sec_pack` WRITE;
 /*!40000 ALTER TABLE `cz_sec_pack` DISABLE KEYS */;
-INSERT INTO `cz_sec_pack` VALUES (4,1,11),(5,2,11),(6,3,11),(7,4,11),(8,6,12),(9,2,12),(10,7,12),(11,1,13);
 /*!40000 ALTER TABLE `cz_sec_pack` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -482,4 +484,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-09-15  0:56:08
+-- Dump completed on 2012-09-17 18:44:02

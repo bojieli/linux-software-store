@@ -49,7 +49,8 @@ mkfifo $FIFO2
 
 $MYSQL "DROP DATABASE $DATABASE;"
 echo "Creating Database structure..."
-$MYSQL "source ../install.sql;"
+$MYSQL "source ../db/grant.sql;"
+$MYSQL "use $DATABASE; source ../db/cong.sql;"
 
 distnum=1
 

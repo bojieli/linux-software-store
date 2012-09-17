@@ -71,7 +71,14 @@ $detailFields = array(
 	'maintainerUrl',
 	'priority',
 	'description',
-	'icon'
+	'icon',
+	'section',
+	'tags',
+	'depends',
+	'suggests',
+	'conflicts',
+	'provides',
+	'replaces'
 );
 
 $field = '';
@@ -155,8 +162,9 @@ function __save_package($fp, $package, $fields) {
 	foreach ($fields as $field) {
 		$strs[] = "'".addslashes(isset($package[$field]) ? $package[$field] : '')."'";
 	}
-	if (empty($nonfirst[$fp]))
-		$nonfirst[$fp] = true;
-	else
+	if (isset($nonfirst[(int)$fp]))
 		fprintf($fp, ",\n");
+	else
+		$nonfirst[(int)$fp] = true;
+	fprintf($fp, '('.implode(',', $strs).')');
 }
