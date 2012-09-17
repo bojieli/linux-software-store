@@ -16,13 +16,13 @@
     background-size: 340,984;
     background-position: center;
 }
-
+/*
 table ,tr,th,td
 {
     border: 1px solid #808080;
     border-collapse:collapse;
 }
-
+*/
 #brf
 {
     width: 100%;
@@ -42,20 +42,21 @@ table ,tr,th,td
 
 .sw_img
 {
-    width: 30%;
+    width: 40%;
     height: 50%;
 }
 .sw_name{
 
-    width:70%;
+    width:60%;
     height:50%;
-    font-size:40px;
-    text-align:center;
+    font-size:30px;
+    text-align:left;
 }
 .sw_info
 {
     width: auto;
     height:auto;
+    text-align:left;
 }
 
 #sw_intro
@@ -64,7 +65,9 @@ table ,tr,th,td
     height:340px;
     float:right;
     border: 1px solid #808080;
+
 }
+
 #content-4 {
     width: 984px;
     margin-right: 20px;

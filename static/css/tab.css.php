@@ -100,6 +100,7 @@ h2 {
     width:220px;
     text-align:left;
     font-size:15px;
+    border:none;
 }
 
 .tabs hr{

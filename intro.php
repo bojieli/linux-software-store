@@ -36,19 +36,24 @@ include "static/public/head.html"
        <?php include"static/public/search.html"?>
        <div id="header"></div>
         <!--this area is designed for show software information-->
+        <style>
+	table ,tr,th,td 
+	{ border: 1px solid #808080; border-collapse:collapse; }
+
+	</style>
         <div id="comm">
             <div id="content-3">
                 <div id="intro">
                     <table id="brf">
                         <tr class="sw_img">
-                            <td class="sw_dtl">
-                                <img src="<?php echo $package->getszIcon();?>" alt="此处显示软件的图片">
+                            <td>
+                                <img src="<?php echo $package->getszIcon();?>" alt="此处显示软件的图片"style="width:60px;height:60px">
                             </td>
 							<td class="sw_name">
 								<?php echo $package->getszName();?>
                             </td>
                         </tr>
-                        <tr class="sw_info  ">
+                        <tr class="sw_info">
                            <td class="sw_dtl">
 						   软件大小：<?php echo $package->getuFileSize();?>MB
                            </td>
