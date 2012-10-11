@@ -15,7 +15,7 @@ $distname = firstLetterToUpper($dist);
 function getSimplePackageInfo($dist, $section, $num = 10){
 	// get dataset from Mysql
 	$sql = "SELECT name FROM cz_pack WHERE did = (SELECT did FROM cz_dist WHERE name = '".$dist."') AND pid IN (SELECT pid FROM cz_sec_pack WHERE sid = (SELECT sid FROM cz_section WHERE name = '".$section."')) LIMIT 0,".$num;	//TODO:add order by subquery
-//	echo $sql;
+	echo $sql;
 	if (!($result = mysql_query($sql)))
 		return array();
 	$realNum = mysql_num_rows($result);
@@ -27,10 +27,10 @@ function getSimplePackageInfo($dist, $section, $num = 10){
 	}
 	return $simplePackages;
 }
-
+/*
 function printVoid(){
 	echo '<td class="icon">';
-	echo '<a href="#" img src="" alt="软件图片" style="width: 50px;height: 50px;"/></a>';
+	echo '<a href="#"/>< img src="" alt="软件图片" style="width: 50px;height: 50px;"/></a>';
 	echo '</td>';
 	echo '<td class="bre">';
 	echo '<p><a href=""></a></p>';
@@ -38,7 +38,7 @@ function printVoid(){
 	echo '</td>';
 }
 ?>
-
+*/
 <div id="content-1">
     <script type="text/javascript" language="javascript" src="static/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="static/js/tab.js"></script>

@@ -1,8 +1,8 @@
 <?php
 $host="localhost";
 $db_user="root";
-$db_pass="";
-$db_name="package";
+$db_pass="czdy2010";
+$db_name="software";
 $timezone="Asia/Shanghai";
 
 $link=mysql_connect($host,$db_user,$db_pass);
