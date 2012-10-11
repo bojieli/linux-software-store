@@ -73,20 +73,22 @@ class CPackage{
 	public function getuFileSize(){
 	       $size_KB = $this->uFileSize/1024.0;
                if($size_KB<1.0){
-	       return $this->uFileSize."B"
+               return $this->uFileSize."B";
                }
                else{
-		$size_MB=$size_KB/1024.0;
+                $size_MB=$size_KB/1024.0;
                 if($size_MB>1.0){
-			return $size_MB."MB";  	
-		   }
-		else return $size_KB."KB";
-	       }
+                        return $size_MB."MB";   
+                   }
+                else return $size_KB."KB";
+               }
+
+
 	}
 	public function getuInstallSize(){
 		$size_KB = $this->uInstallSize/1024.0;
                if($size_KB<1.0){
-               return $this->uFileSize."B"
+               return $this->uInstallSize."B";
                }
                else{
                 $size_MB=$size_KB/1024.0;
