@@ -53,11 +53,11 @@ include "static/public/head.html";
                         </tr>
                         <tr class="sw_info">
                            <td class="sw_dtl">
-						   软件大小：<?php echo $package->getuFileSize();?>MB
+						   软件大小：<?php echo $package->getuFileSize();?>
                            </td>
                            <td class="sw_dtl">
                                
-						   安装之后：所需硬盘空间<?php echo $package->getuInstallSize();?>  MB
+						   安装之后：所需硬盘空间<?php echo $package->getuInstallSize();?>
                                 
                            </td>
                         </tr>

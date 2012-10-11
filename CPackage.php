@@ -67,14 +67,35 @@ class CPackage{
 	public function getszUrl(){
 		return $this->szUrl;
 	}
-	public function getszSummary(){
-		return $this->szSummary;
+	public function getszSummary(){	       
+                return $this->szSummary;
 	}
 	public function getuFileSize(){
-		return $this->uFileSize;
+	       $size_KB = $this->uFileSize/1024.0;
+               if($size_KB<1.0){
+	       return $this->uFileSize."B"
+               }
+               else{
+		$size_MB=$size_KB/1024.0;
+                if($size_MB>1.0){
+			return $size_MB."MB";  	
+		   }
+		else return $size_KB."KB";
+	       }
 	}
 	public function getuInstallSize(){
-		return $this->uInstallSize;
+		$size_KB = $this->uInstallSize/1024.0;
+               if($size_KB<1.0){
+               return $this->uFileSize."B"
+               }
+               else{
+                $size_MB=$size_KB/1024.0;
+                if($size_MB>1.0){
+                        return $size_MB."MB";   
+                   }
+                else return $size_KB."KB";
+               }
+
 	}
 	public function getszExtension(){
 		return $this->szExtension;

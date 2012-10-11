@@ -5,4 +5,4 @@ blog/
 datasource/*
 !datasource/*.php
 !datasource/*.sh
-db/db_config.php
+phpmyadmin/*
