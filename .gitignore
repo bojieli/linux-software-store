@@ -6,5 +6,5 @@ datasource/*
 !datasource/*.php
 !datasource/*.sh
 phpmyadmin/*
-~ini
+*.ini
 
