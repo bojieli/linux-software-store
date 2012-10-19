@@ -3,7 +3,7 @@
 // 实际应用中 data 一般从数据库读取
 
 $data = array();
-
+/*
 $data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'sadnf', 'comments'=>'这个软件是个好软件');
 $data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'cfv','comments'=>'这个软件是个好软件');
 $data[] = (object)array('image'=>'static/img/star1.png',  'name'=>'nvc n' ,'comments'=>'这个软件是个好软件');
@@ -25,7 +25,7 @@ $data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'sdlkjni' ,'com
 $data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'llvxc' ,'comments'=>'这个软件是个好软件');
 $data[] = (object)array('image'=>'static/img/star1.png', 'name'=>'vnzxcz' ,'comments'=>'这个软件是个好软件');
 
-
+*/
 // 随机抽取9条记录以模拟实际情况
 $keys = array_rand($data, 10);
 
