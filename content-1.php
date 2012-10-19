@@ -33,7 +33,7 @@ function getSimplePackageInfo($dist, $section, $num = 10){
 
 function printVoid(){
 	echo '<td class="icon">';
-	echo '<a href="#"/>< img src="" alt="软件图片" style="width: 50px;height: 50px;"/></a>';
+	echo '<a href="#"><img src="" alt="软件图片" style="width: 50px;height: 50px;"/></a>';
 	echo '</td>';
 	echo '<td class="bre">';
 	echo '<p><a href=""></a></p>';
