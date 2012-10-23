@@ -13,14 +13,14 @@ $distname = firstLetterToUpper($dist);
  * out: an array contains the package info which meet the query
  */
 function getSimplePackageInfo($dist, $section, $num = 10){
+	$dist = strtolower($dist);
 	// get dataset from Mysql
 	$sql = "SELECT name FROM cz_pack WHERE did = (SELECT did FROM cz_dist WHERE name = '".$dist."') AND pid IN (SELECT pid FROM cz_sec_pack WHERE sid = (SELECT sid FROM cz_section WHERE name = '".$section."')) LIMIT 0,".$num;	//TODO:add order by subquery
 	//echo $sql;
 	if (!($result = mysql_query($sql)))
-		{
-			echo $result
-			return array();
-		}
+	{
+		return array();
+	}
 	$realNum = mysql_num_rows($result);
 	$simplePackages = array();
 	for($i = 0; $i < $realNum; $i++){

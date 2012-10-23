@@ -1,5 +1,6 @@
 devwiki/
 blog/
+db/db_config.php
 .*
 *~
 datasource/*
