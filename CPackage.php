@@ -71,32 +71,31 @@ class CPackage{
                 return $this->szSummary;
 	}
 	public function getuFileSize(){
-	       $size_KB = $this->uFileSize/1024;
-               if($size_KB<1){
-               return $this->uFileSize."B";
-               }
-               else{
-                $size_MB=$size_KB/1024;
-                if($size_MB>1){
-                        return $size_MB."MB";   
-                   }
-                else return $size_KB."KB";
-               }
-
-
+	       if($this->uFileSize<1024)
+		{
+			return $this->uFileSize."B";
+		}
+	       else {
+			$size_KB=(float)$this->uFileSize/1024;
+			if($size_KB<1024)
+			{
+				return $size_KB."KB";
+			}
+			else return ((float)$size_KB/1024)."MB";
+		}
 	}
 	public function getuInstallSize(){
-		$size_KB = $this->uInstallSize/1024;
-               if($size_KB<1){
-               return $this->uInstallSize."B";
-               }
-               else{
-                $size_MB=$size_KB/1024;
-                if($size_MB>1){
-                        return $size_MB."MB";   
-                   }
-                else return $size_KB."KB";
-               }
+		 if($this->uInstallSize<1024)
+                {
+                        return $this->uInstallSize."KB";
+                }
+               else {
+                        $size_KB=(float)$this->uInstallSize/1024;
+                        if($size_KB<1024)
+                        {
+                                return $size_KB."MB";
+                        }
+                }
 
 	}
 	public function getszExtension(){

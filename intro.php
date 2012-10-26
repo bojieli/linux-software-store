@@ -100,7 +100,7 @@ include "static/public/head.html";
 
                         <tr class="sw_info  ">
                            <td class="sw_dtl">
-                               软件评分：0～5分
+                               软件评分：
                            </td>
                            <td class="sw_dtl">
                                推荐指数：
