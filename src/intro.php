@@ -19,9 +19,9 @@ try {
 	die($e->getMessage());
 }
 //var_dump($package); //for debug
-include "static/public/head.html";
+include "../static/public/head.html";
 ?>
-<body background="static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:   center;background-repeat:   no-repeat;background-attachment:   fixed ">
+<body background="../static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:   center;background-repeat:   no-repeat;background-attachment:   fixed ">
 
 <div id="youjian">
 </div>
@@ -30,7 +30,7 @@ include "static/public/head.html";
     <!-- This is 'background' -->
     <div id="background" class="bg">
 
-       <?php include"static/public/search.html"?>
+       <?php include"../static/public/search.html"?>
        <div id="header"></div>
         <!--this area is designed for show software information-->
         <style>

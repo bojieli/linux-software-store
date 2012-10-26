@@ -18,17 +18,17 @@ $sql = "SELECT * FROM cz_pack WHERE name LIKE '%".$pkgName."%' AND did = (SELECT
 $result = mysql_query($sql);
 $nums = mysql_num_rows($result);
 $packages = array();
-include "static/public/head.html"
+include "../static/public/head.html"
 ?>
 
 
-<body background="static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:center;background-repeat:no-repeat;background-attachment:fixed ">
+<body background="../../static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:center;background-repeat:no-repeat;background-attachment:fixed ">
 
 <div id="wrapper">
     <!-- This is 'background' -->
     <div id="background" class="bg">
 
-    <?php include"static/public/search.html"?>
+    <?php include"../static/public/search.html"?>
     <div id="header"></div>
         <!-- This is 'content-1' -->
         <div id="content-1" class="content-arch scroll">
@@ -38,9 +38,8 @@ include "static/public/head.html"
             <br>
             <br>
             <hr>
-            <!--<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>-->
-            <link type="text/css" rel="stylesheet" href="static/css/waterfall.css" />
-            <script type="text/javascript" language="javascript" src="static/js/waterfall.js"></script>
+            <link type="text/css" rel="stylesheet" href="../static/css/waterfall.css" />
+            <script type="text/javascript" language="javascript" src="../static/js/waterfall.js"></script>
 			<ul id="intr">
 			<?php for($i = 0; $i < $nums; $i++){
 			$rows = mysql_fetch_array($result, MYSQL_ASSOC);
@@ -66,11 +65,16 @@ include "static/public/head.html"
         <!-- This is 'content-2' -->
          <?php include "content-2.php"?>
     </div>
-    <!-- UJian Button BEGIN -->
-    <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=3&pos=left&btn=4&uid=1674756"></script>
-    <!-- UJian Button END -->
-    <!-- UY BEGIN -->
 
+    <div id="uyan_container">
+    <div id="uyan_frame"></div>
+    </div>
 </div>
 </body>
+<script>
+$(document).ready(function(){
+    script = '<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=3&pos=left&btn=4&uid=1674756"></scr' + 'ipt>';
+    $('#uyan_container').append(script);
+});
+</script>
 </html>

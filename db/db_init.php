@@ -1,5 +1,5 @@
 <?php
-include_once 'db/db_config.php';
+include_once '../db/db_config.php';
 if (!mysql_pconnect($db['host'], $db['user'], $db['pass']))
 	die('Cannot connect to database!');
 if (!mysql_select_db($db['name']))
@@ -7,5 +7,5 @@ if (!mysql_select_db($db['name']))
 unset($db);
 
 date_default_timezone_set('Asia/Chongqing');
-mysql_query("SET CHARSET utf8");
+mysql_query("SET NAMES utf8");
 ?>

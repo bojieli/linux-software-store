@@ -135,7 +135,7 @@ CREATE TABLE `cz_pack` (
   KEY `key_name` (`name`),
   CONSTRAINT `cz_pack_ibfk_1` FOREIGN KEY (`did`) REFERENCES `cz_dist` (`did`),
   CONSTRAINT `cz_pack_ibfk_2` FOREIGN KEY (`rid`) REFERENCES `cz_repo` (`rid`)
-) ENGINE=InnoDB AUTO_INCREMENT=477138 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -281,20 +281,20 @@ CREATE TABLE `cz_repo` (
 -- Table structure for table `cz_sec_pack`
 --
 
-DROP TABLE IF EXISTS `cz_sec_pack`;
+DROP TABLE IF EXISTS `cz_pack_section`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cz_sec_pack` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `cz_pack_section` (
   `sid` int(11) NOT NULL COMMENT 'section id',
+  `subsid` int(11) NOT NULL COMMENT 'subsection id',
   `pid` int(11) NOT NULL COMMENT 'package id',
-  PRIMARY KEY (`id`),
   KEY `cz_sec_pack_ibfk_1` (`pid`),
-  KEY `cz_sec_pack_ibfk_3` (`sid`),
+  KEY `cz_sec_pack_ibfk_2` (`sid`),
+  KEY `cz_sec_pack_ibfk_3` (`subsid`),
   CONSTRAINT `cz_sec_pack_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `cz_pack` (`pid`),
   CONSTRAINT `cz_sec_pack_ibfk_2` FOREIGN KEY (`sid`) REFERENCES `cz_section` (`sid`),
-  CONSTRAINT `cz_sec_pack_ibfk_3` FOREIGN KEY (`sid`) REFERENCES `cz_section` (`sid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='associate table';
+  CONSTRAINT `cz_sec_pack_ibfk_3` FOREIGN KEY (`subsid`) REFERENCES `cz_subsection` (`subsid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='associate table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

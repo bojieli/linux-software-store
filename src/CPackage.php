@@ -4,7 +4,7 @@
  * Date: 2012/09/09
  * Desc: This file contain a class which contain the data and method of a Package.
  */
-require_once('db/db_init.php');
+require_once('../db/db_init.php');
 class CPackage{
 	private $szName;	//name
 	private $szVersion;	//version

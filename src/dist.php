@@ -6,10 +6,10 @@ if (empty($_GET['dist'])) {
 	$dist = $_GET['dist'];
 }
 $distname = firstLetterToUpper($dist);
-include "static/public/head.html"
+include "../static/public/head.html"
 ?>
 
-<body background="static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:center;background-repeat:no-repeat;background-attachment:fixed">
+<body background="../static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:center;background-repeat:no-repeat;background-attachment:fixed">
 
 <div id="wrapper">
   <!-- This is 'background' -->
@@ -17,7 +17,7 @@ include "static/public/head.html"
 
   <!--This search area-->
 
-  <?php include"static/public/search.html"?>
+  <?php include "../static/public/search.html"?>
   <div id="header"></div>
 
    <!-- This is 'content-2' -->
