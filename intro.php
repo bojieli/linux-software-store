@@ -23,9 +23,8 @@ include "static/public/head.html";
 ?>
 <body background="static/img/<?=$dist?>/<?=$dist?>.jpg" style= "background-position:   center;background-repeat:   no-repeat;background-attachment:   fixed ">
 
-<!-- UJian Button BEGIN -->
-<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=3&pos=left&btn=4&uid=1674756"></script>
-<!-- UJian Button END -->
+<div id="youjian">
+</div>
 
   <div id="wrapper">
     <!-- This is 'background' -->
@@ -121,7 +120,7 @@ include "static/public/head.html";
                 <div id="sw_intro">
                     <h1>软件简介</h1>
                     &nbsp;&nbsp;<p style="text-align: left"><?php echo $package->getszSummary();?></p>
-		    <p><?=$package->getszDescription();?></p>
+		    <p style="font-size:14px"><?=$package->getszDescription();?></p>
                 </div>
             </div>
 
@@ -129,10 +128,17 @@ include "static/public/head.html";
             <div id="content-4">
              <!-- UY BEGIN -->
              <div id="uyan_frame"></div>
-             <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></script>
              <!-- UY END -->
              </div>
         </div>
     </div>
   </div>
 </body>
+<script>
+$(document).ready(function(){
+    script = '<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1674756" async=""></scr' + 'ipt>';
+    $('#content-4').append(script);
+    yjscript = '<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&num=3&pos=left&btn=4&uid=1674756"></scr' + 'ipt>';
+    $('#youjian').html(yjscript);
+});
+</script>
