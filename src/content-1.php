@@ -43,8 +43,8 @@ function printVoid(){
 ?>
 
 <div id="content-1">
-    <script type="text/javascript" language="javascript" src="static/js/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="static/js/tab.js"></script>
+    <script type="text/javascript" language="javascript" src="../static/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/tab.js"></script>
     <div class="tabs">
 		<ul>
 		<?php

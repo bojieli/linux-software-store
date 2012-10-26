@@ -1,9 +1,9 @@
 <?php require_once 'common_funcs.php'; ?>
 <div id="content-2">
     <!-- This is 'dist info' -->
-    <div id="info" class="info" style="background-image:url(static/img/info.png);border:0px;text-align: left;">
+    <div id="info" class="info" style="background-image:url(../static/img/info.png);border:0px;text-align: left;">
         <!--此处盛放%dist的相关信息-->
-        <script type="text/javascript" src="./static/js/text_float.js"></script>
+        <script type="text/javascript" src="../static/js/text_float.js"></script>
         <div class="breakNewsblock">
             <div id="breakNews">
                 <ul id="breakNewsList" class="list6">
@@ -66,7 +66,7 @@
 
     <!-- This is 'home-button' -->
     <div id="home-button" class="home-button" style="background-image:url(static/img/<?=$dist?>/button-1.png);width:230px;height:55px;border:0px;" >
-        <a href="index.html" style="font-size:30px;">返回首页</a>
+        <a href="../index.html" style="font-size:30px;">返回首页</a>
     </div>
 
 
