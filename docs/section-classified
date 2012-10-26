@@ -1,4 +1,4 @@
-办公  
+办公
 	邮件：mail contrib/mail  non-free/mail multiverse/mail universe/mail
 	图形：graphics contrib/graphics  non-free/graphics  multiverse/graphics universe/graphics
 	文本：text contrib/text non-free/text multiverse/text universe/text 
@@ -7,67 +7,64 @@
 	文档：doc non-free/doc contrib/doc multiverse/doc universe/doc 
 	通讯：comm universe/comm  multiverse/comm non-free/comm 
 	
-学习  
-	教育：universe/education
-		数学：math contrib/math non-free/math  universe/math multiverse/math 
-		电子：electronics contrib/electronics non-free/electronics universe/electronics multiverse/electronics
-		科学：science non-free/science contrib/science multiverse/science universe/science
-		统计：gnu-r contrib/gnu-r non-free/gnu-r multiverse/gnu-r universe/gnu-r 
-	编程：
-		编辑：editor non-free/editors multiverse/editors universe/editors 
-		调试：debug contrib/debug multiverse/debug non-free/debug  universe/debug
-                版本：vcs universe/vcs
-		机器语言：
-			haskell:haskell  universe/haskell
-			java：java contrib/java  non-free/java universe/java multiverse/java
-			perl：perl contrib/perl non-free/perl universe/perl multiverse/perl 
-			php：php universe/php
-			python:python non-free/python universe/python contrib/python multiverse/python
-			ocaml：ocaml non-free/ocaml universe/ocaml 
-			objective-c: gnustep universe/gnustep  
-			ruby：ruby contrib/ruby non-free/ruby multiverse/ruby  universe/ruby
-			lisp:lisp contrib/lisp universe/lisp 
-		开发：devel contrib/devel  non-free/devel multiverse/devel  universe/devel restricted/devel  
-                数据库：databaseuniverse/database
-                服务器：zope universe/zope
-		网站 ：httpd  non-free/httpd universe/httpd 
-                库：libdevel universe/libdevel contrib/libdevel non-free/libdevel multiverse/libdevel
-		嵌入式：embedded universe/embedded 
-                   
-游戏  games contrib/games non-free/games multiverse/games universe/games
+教育：
+    教学：universe/education
+	数学：math contrib/math non-free/math  universe/math multiverse/math 
+	电子：electronics contrib/electronics non-free/electronics universe/electronics multiverse/electronics
+	科学：science non-free/science contrib/science multiverse/science universe/science
+	统计：gnu-r contrib/gnu-r non-free/gnu-r multiverse/gnu-r universe/gnu-r 
 
+编程：
+	编辑：editor non-free/editors multiverse/editors universe/editors 
+	调试：debug contrib/debug multiverse/debug non-free/debug  universe/debug
+            版本：vcs universe/vcs
+	机器语言：
+		haskell:haskell  universe/haskell
+		java：java contrib/java  non-free/java universe/java multiverse/java
+		perl：perl contrib/perl non-free/perl universe/perl multiverse/perl 
+		php：php universe/php
+		python:python non-free/python universe/python contrib/python multiverse/python
+		ocaml：ocaml non-free/ocaml universe/ocaml 
+		objective-c: gnustep universe/gnustep  
+		ruby：ruby contrib/ruby non-free/ruby multiverse/ruby  universe/ruby
+		lisp:lisp contrib/lisp universe/lisp 
+	开发：devel contrib/devel  non-free/devel multiverse/devel  universe/devel restricted/devel  
+            数据库：databaseuniverse/database
+            服务器：zope universe/zope
+	网站 ：httpd  non-free/httpd universe/httpd 
+            库：libdevel universe/libdevel contrib/libdevel non-free/libdevel multiverse/libdevel
+	嵌入式：embedded universe/embedded 
+                   
 娱乐  
+    游戏  games contrib/games non-free/games multiverse/games universe/games
 	视频：video contrib/video non-free/video  multiverse/video universe/video 
    	音乐：sound contrib/sound non-free/sound universe/sound multiverse/sound non-free/sound
-        电台：hamradio universe/hamradio
-	网络：web contrib/web  non-free/web  multiverse/web universe/web
-     	     net universe/net  non-free/net  contrib/net  multiverse/net
+    电台：hamradio universe/hamradio
+    网络：web contrib/web  non-free/web  multiverse/web universe/web
 
 系统  
-	管理：admin contrib/admin non-free/admin multiverse/admin restricted/admin universe/admin
-	字体：fonts contrib/fonts universe/fonts contrib/fonts multiverse/fonts
-	内核：kernel contrib/kernel non-free/kernel multiverse/kernel universe/kernel
-	工具：utils contrib/utils non-free/utils multiverse/utils universe/utils
-        桌面：
-		gnome：gnome multiverse/gnome universe/gnome
-		kde:kde universe/kde multiverse/kde
-		xfce:xfce universe/xfce
-	窗口：x11 contrib/x11  non-free/x11 restricted/x11 universe/x11 multiverse/x11
-        终端：shells universe/shells 
-        自然语言：
-		本地化：localization universe/localization
-		输入法：input 
-		翻译：interpreters multiverse/interpreters universe/interpreters translations universe/translations
-	自检：introspection universe/introspection   
-  
+    管理：admin contrib/admin non-free/admin multiverse/admin restricted/admin universe/admin
+    字体：fonts contrib/fonts universe/fonts contrib/fonts multiverse/fonts
+    内核：kernel contrib/kernel non-free/kernel multiverse/kernel universe/kernel
+    工具：utils contrib/utils non-free/utils multiverse/utils universe/utils
+    桌面：
+        gnome：gnome multiverse/gnome universe/gnome
+        kde:kde universe/kde multiverse/kde
+        xfce:xfce universe/xfce
+    窗口：x11 contrib/x11  non-free/x11 restricted/x11 universe/x11 multiverse/x11
+    终端：shells universe/shells 
+    自然语言：
+    本地化：localization universe/localization
+    输入法：input 
+    翻译：interpreters multiverse/interpreters universe/interpreters translations universe/translations
+    自检：introspection universe/introspection   
+    网络：net universe/net  non-free/net  contrib/net  multiverse/net
+
 其它   
-	系统库：libs universe/libs non-free/libs multiverse/libs contrib/libs 
-	系统旧库： oldlibs non-free/oldlibsuniverse/oldlibs multiverse/oldlibs
-        元件包：metapackages multiverse/metapackages restricted/metapackages universe/metapackages
-	基本：base restricted/base universe/base
-        其它系统文件：otherosfs contrib/otherosfs non-free/otherosfs multiverse/otherosfs universe/otherosfs
-	命令行：cli-mono universe/cli-mono
-        杂项：misc  contrib/misc  non-free/misc  restricted/misc  multiverse/misc universe/misc
-       
- 
-     
+    系统库：libs universe/libs non-free/libs multiverse/libs contrib/libs 
+    系统旧库： oldlibs non-free/oldlibsuniverse/oldlibs multiverse/oldlibs
+    元件包：metapackages multiverse/metapackages restricted/metapackages universe/metapackages
+    基本：base restricted/base universe/base
+    其它系统文件：otherosfs contrib/otherosfs non-free/otherosfs multiverse/otherosfs universe/otherosfs
+    命令行：cli-mono universe/cli-mono
+    杂项：misc  contrib/misc  non-free/misc  restricted/misc  multiverse/misc universe/misc

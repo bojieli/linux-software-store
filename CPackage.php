@@ -36,23 +36,23 @@ class CPackage{
 		// get the package infomation
 		$sql = "SELECT * FROM cz_pack WHERE name = '".$name."' and did = (SELECT did FROM cz_dist WHERE name = '".$dist."')";
 		$result = mysql_query($sql) or die("Database query error");
-		$rows = mysql_fetch_array($result, MYSQL_ASSOC);
+		$row = mysql_fetch_array($result, MYSQL_ASSOC);
 
-		if (empty($rows))
+		if (empty($row))
 			throw new Exception("Package Not Found");
 
 		// fill the package infomation field
-		$this->szName = $rows["name"];
-		$this->szVersion = $rows["version"];
-		$this->szUrl = $rows["url"];
-		$this->szSummary = $rows["summary"];
-		$this->uFileSize = $rows["filesize"];
-		$this->uInstallSize = $rows["install_size"];
-		$this->szExtension = $rows["extension"];
+		$this->szName = $row["name"];
+		$this->szVersion = $row["version"];
+		$this->szUrl = $row["url"];
+		$this->szSummary = $row["summary"];
+		$this->uFileSize = $row["filesize"];
+		$this->uInstallSize = $row["install_size"];
+		$this->szExtension = $row["extension"];
 
-		$this->uPid = $rows["pid"];
-		$this->uDid = $rows["did"];
-		$this->uRid = $rows["rid"];
+		$this->uPid = $row["pid"];
+		$this->uDid = $row["did"];
+		$this->uRid = $row["rid"];
 	}
 
 	/*

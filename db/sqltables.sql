@@ -19,7 +19,7 @@
 -- Current Database: `software`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `software` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `software` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
 USE `software`;
 
@@ -67,7 +67,7 @@ CREATE TABLE `cz_dist` (
   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`did`),
   KEY `key_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -312,19 +312,6 @@ CREATE TABLE `cz_section` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `cz_section_map`
---
-
-DROP TABLE IF EXISTS `cz_section_map`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cz_section_map` (
-  `subsid` varchar(255) NOT NULL,
-  `deb_section` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `cz_subsection`
 --
 
@@ -335,9 +322,10 @@ CREATE TABLE `cz_subsection` (
   `subsid` int(10) NOT NULL AUTO_INCREMENT,
   `sid` int(10) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `deb_keyword` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`subsid`),
   KEY `key_sid` (`sid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
