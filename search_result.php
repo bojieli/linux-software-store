@@ -12,12 +12,6 @@ if (empty($_GET['package'])) {
 	$pkgName = addslashes($_GET['package']);
 }
 
-function firstLetterToUpper($word) {
-	if ($word[0] >= 'a'&& $word[0] <= 'z') {
-$word[0] = chr(ord($word[0])- ord('a') + ord('A'));
-}
-return $word;
-}
 $distname = firstLetterToUpper($dist);
 $sql = "SELECT * FROM cz_pack WHERE name LIKE '%".$pkgName."%' AND did = (SELECT did FROM cz_dist WHERE name = '".$distname."')";
 //echo $sql;
