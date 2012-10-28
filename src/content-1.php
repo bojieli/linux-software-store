@@ -17,6 +17,7 @@ function getSimplePackageInfo($dist, $section, $num = 10){
 	// get dataset from Mysql
 	$sql = "SELECT name FROM cz_pack WHERE did = (SELECT did FROM cz_dist WHERE name = '".$dist."') AND pid IN (SELECT pid FROM cz_sec_pack WHERE sid = (SELECT sid FROM cz_section WHERE name = '".$section."')) LIMIT 0,".$num;	//TODO:add order by subquery
 	//echo $sql;
+    echo $sql;
 	if (!($result = mysql_query($sql)))
 	{
 		return array();
@@ -25,6 +26,7 @@ function getSimplePackageInfo($dist, $section, $num = 10){
 	$simplePackages = array();
 	for($i = 0; $i < $realNum; $i++){
 		$rows = mysql_fetch_array($result,MYSQL_ASSOC);
+        var_dump($rows);
 		$tmp = new CPackage($rows["name"], $dist);
 		$simplePackages[$i] = $tmp; 
 	}
@@ -48,22 +50,18 @@ function printVoid(){
     <div class="tabs">
 		<ul>
 		<?php
-			$TabTitles = array("小站推荐", "办公", "学习","游戏","娱乐","系统","其他");
-			$sectionFields = array("recommend", "office", "study", "game","passtime","system","others");	//the name field in cz_section table
-			for($tabNo = 0; $tabNo < 7; $tabNo++){
+            $num = 0;
+            $rs = mysql_query("SELECT sid,name FROM cz_section");
+            while ($s = mysql_fetch_array($rs)) {
+                $num++;
 			?>
-			<li id="button-<?php echo $tabNo;?>" class="<?php if($tabNo==0) echo "first";?> tab_<?php echo $tabNo;?> button button-dist">
-				<?php if($tabNo == 0){?>
-				<h2 class="active">
-				<?php }else{?>
-				<h2>
-				<?php }?>
-				<?php echo $TabTitles[$tabNo];?></h2>
+			<li id="button-<?=$num?>" class="<?php if($num==1) echo "first";?> tab_<?=$num?> button button-dist">
+				<h2 class="<?=$num==1 ? 'active' : ''?>"><?=$s['name']?></h2>
 				<div>
-				<p><a href="search_result.php?dist=<?php echo $dist;?>&tid=<?php echo $sectionFields[$tabNo];?>" target="_blank"><?php echo $TabTitles[$tabNo];?>内容</a></p>
+				<p><a href="search_result.php?dist=<?=$dist?>&tid=<?=$s['name']?>" target="_blank"><?=$s['name']?>内容</a></p>
                 <table class="software">
 <?php
-				$packages = getSimplePackageInfo($distname, $sectionFields[$tabNo]);
+				$packages = getSimplePackageInfo($distname, $s['sid']);
 				for ($i=0; $i<5; $i++) {
 		    	?>
 					<tr>
