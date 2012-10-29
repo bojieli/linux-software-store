@@ -50,16 +50,13 @@ function printVoid(){
     <div class="tabs">
 		<ul>
 		<?php
-<<<<<<< HEAD
 			$TabTitles = array("小站推荐", "办公", "教育","编程","娱乐","系统","其他");
 			$sectionFields = array("recommend", "office", "education", "program","passtime","system","others");	//the name field in cz_section table
 			for($tabNo = 0; $tabNo < 7; $tabNo++){
-=======
             $num = 0;
             $rs = mysql_query("SELECT sid,name FROM cz_section");
             while ($s = mysql_fetch_array($rs)) {
                 $num++;
->>>>>>> 1c8e4ba355b715a19044dc3c9f77800ba2d9a835
 			?>
 			<li id="button-<?=$num?>" class="<?php if($num==1) echo "first";?> tab_<?=$num?> button button-dist">
 				<h2 class="<?=$num==1 ? 'active' : ''?>"><?=$s['name']?></h2>
