@@ -8,4 +8,4 @@ datasource/*
 !datasource/*.sh
 phpmyadmin/*
 *.ini
-
+*.swp

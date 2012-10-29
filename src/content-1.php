@@ -48,8 +48,8 @@ function printVoid(){
     <div class="tabs">
 		<ul>
 		<?php
-			$TabTitles = array("小站推荐", "办公", "学习","游戏","娱乐","系统","其他");
-			$sectionFields = array("recommend", "office", "study", "game","passtime","system","others");	//the name field in cz_section table
+			$TabTitles = array("小站推荐", "办公", "教育","编程","娱乐","系统","其他");
+			$sectionFields = array("recommend", "office", "education", "program","passtime","system","others");	//the name field in cz_section table
 			for($tabNo = 0; $tabNo < 7; $tabNo++){
 			?>
 			<li id="button-<?php echo $tabNo;?>" class="<?php if($tabNo==0) echo "first";?> tab_<?php echo $tabNo;?> button button-dist">

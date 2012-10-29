@@ -35,7 +35,7 @@ include "../static/public/head.html";
         <!--this area is designed for show software information-->
         <style>
 	table ,tr,th,td 
-	{ border: 1px solid #808080; border-collapse:collapse; }
+	{ border: 1px, border-collapse:collapse; }
 
 	</style>
         <div id="comm">
@@ -44,7 +44,7 @@ include "../static/public/head.html";
                     <table id="brf">
                         <tr class="sw_img">
                             <td>
-                                <img src="<?php echo $package->getszIcon();?>" alt="此处显示软件的图片"style="width:60px;height:60px">
+                                <img src="<?php echo $package->getszIcon();?>" alt="此处显示软件的图片"style="width:100px;height:100px">
                             </td>
 							<td class="sw_name">
 								<?php echo $package->getszName();?>
