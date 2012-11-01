@@ -1,5 +1,7 @@
 This is the repository for Linux Software Store.
 
+For more information, see wiki/
+
 All files which should be put in Web folder should be kept track of in Git.
 
 All changes should be made locally and tested throughly on localhost,
