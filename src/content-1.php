@@ -50,11 +50,8 @@ function printVoid(){
     <div class="tabs">
 		<ul>
 		<?php
-			$TabTitles = array("小站推荐", "办公", "教育","编程","娱乐","系统","其他");
-			$sectionFields = array("recommend", "office", "education", "program","passtime","system","others");	//the name field in cz_section table
-			for($tabNo = 0; $tabNo < 7; $tabNo++){
-            $num = 0;
             $rs = mysql_query("SELECT sid,name FROM cz_section");
+            $num = 0;
             while ($s = mysql_fetch_array($rs)) {
                 $num++;
 			?>
@@ -78,7 +75,7 @@ function printVoid(){
                              <img src="<?php echo $packages[$currIdx]->getszIcon();?>" alt="软件图片" style="width: 50px;height: 50px;" >
                             </a>
                         </td>
-                        <td class="bre" >
+                        <td class="bre">
 							  <p><a href="intro.php?dist=<?=$dist?>&package=<?php echo $packages[$currIdx]->getszName();?>"  target="_blank"><?php echo $packages[$currIdx]->getszName();?></a></p>
                               <comment><?php echo $packages[$currIdx]->getszSummary();?></comment>
                         </td>
